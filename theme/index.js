@@ -1,4 +1,5 @@
-export const theme = {
+import { createMuiTheme } from '@material-ui/core/styles';
+export const theme = createMuiTheme({
   typography: {
     fontFamily: '"Open Sans",sans-serif',
   },
@@ -38,4 +39,4 @@ export const theme = {
     }
     // error: will use the default color
   },
-};
+});

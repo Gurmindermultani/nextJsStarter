@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header';
+import HomePage from '../containers/HomePage';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        
+        <HomePage />
       </main>
 
       <footer>
@@ -26,7 +27,6 @@ export default function Home() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -34,12 +34,10 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          width: 100%;
+          margin-top: 80px;
+          padding: 40px 90px;
         }
 
         footer {
@@ -50,6 +48,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600|Poppins:400,500,600&display=swap'); 
       `}</style>
 
       <style jsx global>{`
