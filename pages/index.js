@@ -48,7 +48,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600|Poppins:400,500,600&display=swap'); 
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap'); 
       `}</style>
 
       <style jsx global>{`

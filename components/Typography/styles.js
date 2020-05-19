@@ -30,13 +30,13 @@ export const TypographyContainer = styled.span`
     `}
     ${props => props.fontSize && css`
         @media (max-width: ${props => props.theme.breakpoints[0]}) {
-            font-weight: ${props => props.fontSize};
+            font-size: ${props => props.fontSize};
         }
         @media (min-width: ${props => props.theme.breakpoints[0]}) and (max-width : ${props => props.theme.breakpoints[2]}) {
-            font-weight: ${props => props.fontSize};
+            font-size: ${props => props.fontSize};
         }
         @media (min-width: ${props => props.theme.breakpoints[2]}) {
-            font-weight: ${props => props.fontSize};
+            font-size: ${props => props.fontSize};
         }
     `}
 `;

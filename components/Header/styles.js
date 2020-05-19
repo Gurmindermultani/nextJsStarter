@@ -11,7 +11,7 @@ export const HeaderStyles = styled.div`
   top: 0px;
   z-index: 2;
   background: white;
-  padding: 0 30px;
+  padding: 0 70px;
   .mainHeader {
     display: flex;
     align-items: center;
