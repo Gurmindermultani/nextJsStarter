@@ -5,9 +5,7 @@ FROM node:14
 ARG SSH_PUBLIC_KEY
 ARG SSH_PRIVATE_KEY
 
-ENV NODE_ENV=production \
-  PROJECT_HOME=/usr/app \
-  BUILD_DEPS="git python openssh-server build-essential"
+ENV NODE_ENV=production 
 
 # configure SSH
 RUN mkdir -p /root/.ssh \
