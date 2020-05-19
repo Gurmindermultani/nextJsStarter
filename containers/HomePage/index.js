@@ -8,7 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 
 import Button from '../../components/Button';
-import { Typography } from 'leena_dls';
+import Typography from '../../components/Typography';
 import { HomePageStyles } from './styles';
 
 function Header(props) {

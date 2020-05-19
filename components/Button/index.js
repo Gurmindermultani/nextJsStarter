@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from 'leena_dls';
+import Typography from '../Typography';
 import Icon from '../Icon';
 import Loader from '../Loader';
 import { ButtonWrapper, FilterButtonWrapper } from './styles';
