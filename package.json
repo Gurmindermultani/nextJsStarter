@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.14",
-    "leena_dls": "git+ssh://git@bitbucket.org/chatteron/leena_dls.git#1.0.4",
     "next": "9.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
