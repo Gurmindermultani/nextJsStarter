@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
+  max-width: 1208px;
+  margin: auto;
   .halfBackground {
     position: relative;
     &:before {
@@ -18,6 +20,13 @@ export const HomePageStyles = styled.div`
   .topContainer {
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-height: 376px;
+    .bowlImage {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
     .demoInput {
       width: 40%;
       display: flex;

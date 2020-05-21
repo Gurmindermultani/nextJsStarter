@@ -12,6 +12,7 @@ import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 
 import IconHighlightsAll from './IconHighlightsAll';
+import DetailProducts from './DetailProducts';
 import { HomePageStyles } from './styles';
 
 function HomePage(props) {
@@ -25,6 +26,9 @@ function HomePage(props) {
           <Input name="schedule" placeholder="Your work email"/>
           <Button name="Schedule Demo" variant="contained" size="large"/>
         </div>
+        <div className="bowlImage">
+          <img src="/images/home/bowlImage.svg" />
+        </div>
       </div>
       <div className="quoteContainer">
         <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
@@ -36,6 +40,13 @@ function HomePage(props) {
       <div className="quoteContainer">
         <Typography variant="h3" fontSize="28px" text="Make employee service as smooth as"/>
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your customer service"/>
+      </div>
+      <div className="products">
+        <DetailProducts />
+      </div>
+      <div className="quoteContainer">
+        <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="A complete helpdesk that your employee needs"/>
       </div>
     </HomePageStyles>
   );

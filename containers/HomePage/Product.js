@@ -1,6 +1,6 @@
 /**
  *
- * IconHighlight
+ * Product
  *
  */
 
@@ -9,7 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 
-const IconHighlightStyles = styled.div`
+const ProductStyles = styled.div`
   flex-basis: 28%;
   display: flex;
   flex-direction: column;
@@ -18,18 +18,18 @@ const IconHighlightStyles = styled.div`
   }
 `;
 
-function IconHighlight(props) {
+function Product(props) {
   return (
-    <IconHighlightStyles>
+    <ProductStyles>
       <div>
-        <img alt="Product Icon" src={`/images/home/${props.imageUrl}.svg`}/>
+        <img src="/images/leenaLogo.png"/>
       </div>
       <Typography className="middleText" variant="h4" fontSize="20px" text={props.heading}/>
       <Typography variant="paragraph2" fontSize="16px" text={props.description}/>
-    </IconHighlightStyles>
+    </ProductStyles>
   );
 }
 
-IconHighlight.propTypes = {};
+Product.propTypes = {};
 
-export default memo(IconHighlight);
+export default memo(Product);
