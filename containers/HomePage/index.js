@@ -13,6 +13,9 @@ import Input from '../../components/Input';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import DetailProducts from './DetailProducts';
+import MobileDemo from './MobileDemo';
+import Platforms from './Platforms';
+import Customers from './Customers';
 import { HomePageStyles } from './styles';
 
 function HomePage(props) {
@@ -48,6 +51,17 @@ function HomePage(props) {
         <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="A complete helpdesk that your employee needs"/>
       </div>
+      <MobileDemo />
+      <div className="quoteContainer">
+        <Typography variant="h3" fontSize="28px" text="Bring it where you are"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
+      </div>
+      <Platforms />
+      <div className="quoteContainer">
+        <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
+      </div>
+      <Customers />
     </HomePageStyles>
   );
 }

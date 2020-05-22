@@ -37,7 +37,7 @@ export const HomePageStyles = styled.div`
         margin-top: 20px;
       }
       button {
-        width: 172px;
+        min-width: 172px;
       }
     }
     .halfBackground {

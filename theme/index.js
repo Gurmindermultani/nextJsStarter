@@ -3,25 +3,25 @@ export const theme = createMuiTheme({
   breakpoints: ['576px', '992px', '1000px'],
   typography: {
     'h1': {
-      fontSizes: [30, 34, 40],
+      fontSizes: [40, 40, 40],
 			fontWeight: '600',
 			fontFamily: 'Poppins',
       color: 'primaryText',
     },
     'h2': {
-      fontSizes: [24, 28, 32],
+      fontSizes: [32, 32, 32],
       fontWeight: '600',
 			fontFamily: 'Poppins',
       color: 'primaryText',
 		},
 		'h3': {
-      fontSizes: [26, 20, 20],
+      fontSizes: [20, 20, 20],
       fontWeight: '600',
 			fontFamily: 'Poppins',
       color: 'primaryText',
     },
     'h4': {
-      fontSizes: [22, 18, 18],
+      fontSizes: [18, 18, 18],
       fontWeight: '600',
 			fontFamily: 'Poppins',
       color: 'primaryText',
@@ -39,7 +39,7 @@ export const theme = createMuiTheme({
       color: 'primaryText',
     },
     'subHeading': {
-      fontSizes: [20, 14, 14],
+      fontSizes: [14, 14, 14],
       fontWeight: '400',
 			fontFamily: 'Open Sans',
       color: 'secondaryText',
