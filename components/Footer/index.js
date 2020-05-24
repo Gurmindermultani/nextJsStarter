@@ -42,6 +42,11 @@ const FooterStyles = styled.div`
       .links {
         .link {
           margin-top: 10px;
+          &:hover {
+            span {
+              color: #0F72EE;
+            }
+          }
         }
       }
     }
@@ -80,7 +85,7 @@ function Footer(props) {
               <div className="links">
                 {groupNav.links.map( link => 
                   <div className="link" key={link.name}>
-                    <Typography variant="paragraph2" fontSize="14px" color="#0F72EE" text={link.label}/>
+                    <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
                   </div>
                 )}
               </div>
