@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
-  max-width: 1208px;
   margin: auto;
   .halfBackground {
     position: relative;
@@ -60,6 +59,21 @@ export const HomePageStyles = styled.div`
     justify-content: center;
     align-items: center;
     margin: 150px 0 100px 0;
+    &.demoContainer {
+      .demoInput {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        .form-group {
+          width: 360px;
+          margin-right: 16px;
+          margin-top: 20px;
+        }
+        button {
+          min-width: 172px;
+        }
+      }
+    }
   }
 `;
 

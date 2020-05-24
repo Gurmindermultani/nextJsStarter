@@ -22,6 +22,47 @@ export const HeaderStyles = styled.div`
     align-items: center;
     align-self: center;
   }
+  .navigation {
+    display: flex;
+    .groupNav {
+      margin-right: 44px;
+      padding: 5px 0;
+      position: relative;
+      transition: all 0.5s ease;
+      .links {
+        display: none;
+        position: absolute;
+        top: 30px;
+        background: white;
+        padding: 6px 16px 16px 16px;
+        min-width: 200px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 16px #00000014;
+        .link {
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+      .groupName{
+        display: flex;
+        align-items: center;
+        img {
+          transition: all 0.5s ease;
+          width: 12px;
+          height: 6px;
+          margin-left: 8px;
+        }
+      }
+      &:hover {
+        .links {
+          display: block;
+        }
+        img {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
   @media only screen and (max-width: 760px) {
     padding: 0 15px;
   }

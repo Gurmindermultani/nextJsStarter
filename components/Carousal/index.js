@@ -9,6 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import CenterMode from './CenterMode';
+import SingleMode from './SingleMode';
 
 const CarousalStyles = styled.div`
   .slick-prev, .slick-next {
@@ -16,6 +17,7 @@ const CarousalStyles = styled.div`
     height: 48px;
     &:before {
       color: #103577;
+      font-size: 40px;
     }
   }
 `;
@@ -25,6 +27,9 @@ function Carousal(props) {
     <CarousalStyles>
       {props.variant === "centerMode" &&
         <CenterMode {...props}/>
+      }
+      {props.variant === "singleMode" &&
+        <SingleMode {...props}/>
       }
     </CarousalStyles>
   );

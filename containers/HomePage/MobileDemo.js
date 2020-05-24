@@ -18,6 +18,16 @@ const MobileDemoStyles = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+  .mobileImage {
+    position: relative;
+    overflow: hidden;
+    .mobileDemoContainer {
+      position: absolute;
+      top: 9px;
+      left: 54px;
+      z-index: -1;
+    }
+  }
   .boxDialog {
     position: absolute;
     max-width: 340px;
@@ -66,6 +76,9 @@ function MobileDemo(props) {
     <MobileDemoStyles>
       <div className="mobileImage">
         <img alt="Mobile View" src="/images/home/mobile.png"/>
+        <div className="mobileDemoContainer">
+          <img alt="Mobile View Demo" src="/images/home/mobileDemo1.svg"/>
+        </div>
       </div>
       <div className="boxDialog topLeft">
         <div className="textBox">

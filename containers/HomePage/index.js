@@ -16,6 +16,8 @@ import DetailProducts from './DetailProducts';
 import MobileDemo from './MobileDemo';
 import Platforms from './Platforms';
 import Customers from './Customers';
+import Reviews from './Reviews';
+import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
 
 function HomePage(props) {
@@ -62,6 +64,24 @@ function HomePage(props) {
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
       </div>
       <Customers />
+      <div className="quoteContainer">
+        <Typography variant="h3" fontSize="28px" text="Our customers love us"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for what we do"/>
+      </div>
+      <Reviews />
+      <div className="quoteContainer demoContainer">
+        <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+        <div className="demoInput">
+          <Input name="schedule" placeholder="Your work email"/>
+          <Button name="Schedule Demo" variant="contained" size="large"/>
+        </div>
+      </div>
+      <div className="quoteContainer">
+        <Typography variant="h3" fontSize="28px" text="Industry recognition"/>
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for our expertise in HR"/>
+      </div>
+      <Recognitions />
     </HomePageStyles>
   );
 }

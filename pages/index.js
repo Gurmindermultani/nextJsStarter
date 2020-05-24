@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import HomePage from '../containers/HomePage';
 
 export default function Home() {
@@ -15,13 +16,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by Leena.ai
-        </a>
+        <Footer />
       </footer>
 
       <style jsx>{`
@@ -37,16 +32,13 @@ export default function Home() {
           flex: 1;
           width: 100%;
           margin-top: 80px;
-          padding: 40px 90px;
+          padding: 40px 0px;
+          max-width: 1100px;
         }
 
         footer {
           width: 100%;
-          height: 100px;
           border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
         @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap'); 
       `}</style>
@@ -60,6 +52,30 @@ export default function Home() {
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
+
+        .pointer {
+          cursor: pointer;
+        }
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .halfBackground {
+          position: relative;
+        }
+
+        .halfBackground:before {
+            content: "";
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: #00CEFF;
+            opacity: 0.2;
+            z-index: -1;
+          }
 
         * {
           box-sizing: border-box;
