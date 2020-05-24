@@ -41,6 +41,11 @@ export const HeaderStyles = styled.div`
         .link {
           margin-top: 10px;
           cursor: pointer;
+          &:hover {
+            span {
+              color: #0F72EE;
+            }
+          }
         }
       }
       .groupName{
