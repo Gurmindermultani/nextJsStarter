@@ -45,10 +45,20 @@ export const ScheduleDemoStyles = styled.div`
       height: 40px;
       width: 100px;
       &.airasia {
-        height: 80px;
+        height: 90px;
+      }
+      &.rpg {
+        height: 30px;
+      }
+      &.oneplus {
+        width: 130px;
+      }
+      &.cocacola {
+        width: 130px;
       }
       &.tata {
         width: 160px;
+        height: 20px;
       }
     }
   }
