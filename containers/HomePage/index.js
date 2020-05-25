@@ -6,6 +6,7 @@
 
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
+import Link from 'next/link'
 
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
@@ -29,7 +30,9 @@ function HomePage(props) {
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
         <div className="demoInput">
           <Input name="schedule" placeholder="Your work email"/>
-          <Button name="Schedule Demo" variant="contained" size="large"/>
+          <Link href="/scheduleDemo">
+            <Button name="Schedule Demo" variant="contained" size="large"/>
+          </Link>
         </div>
         <div className="bowlImage">
           <img src="/images/home/bowlImage.svg" />

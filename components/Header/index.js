@@ -110,7 +110,9 @@ function Header(props) {
         )}
       </div>
       <div className="buttons">
-        <Button variant="contained" name="Schedule Demo" />
+        <Link href="/scheduleDemo">
+          <Button variant="contained" name="Schedule Demo" />
+        </Link>
       </div>
     </HeaderStyles>
   );
