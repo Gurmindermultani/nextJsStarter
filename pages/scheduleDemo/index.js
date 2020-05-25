@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="main">
+      <main>
         <ScheduleDemo />
-      </div>
+      </main>
 
       <style jsx>{`
         .container {
@@ -24,10 +24,11 @@ export default function Home() {
           align-items: center;
         }
 
-        .main {
-          margin-top: 80px;
+        main {
           flex: 1;
           width: 100%;
+          margin-top: 80px;
+          padding: 40px 0px;
           max-width: 1100px;
         }
 
