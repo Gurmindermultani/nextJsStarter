@@ -6,6 +6,7 @@
 
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
+import Link from 'next/link'
 
 import Button from '../Button';
 import Typography from '../Typography';
@@ -84,20 +85,24 @@ export const navigation = [
 function Header(props) {
   return (
     <HeaderStyles>
-      <div className="logo">
-        <img src="/images/leenaLogo.png"/>
+      <div className="logo pointer">
+        <Link href="/">
+          <img src="/images/leenaLogo.png"/>
+        </Link>
       </div>
       <div className="navigation">
         {navigation.map( groupNav => 
           <div key={groupNav.name} className="groupNav">
-            <div className="groupName">
+            <div className="groupName pointer">
               <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
               <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
             </div>
             <div className="links">
               {groupNav.links.map( link => 
                 <div className="link" key={link.name}>
-                  <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                  <Link href={`/${groupNav.name}/${link.name}`}>
+                   <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                  </Link>
                 </div>
               )}
             </div>
