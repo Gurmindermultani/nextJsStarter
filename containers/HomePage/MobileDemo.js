@@ -22,15 +22,15 @@ const MobileDemoStyles = styled.div`
     position: relative;
     overflow: hidden;
     .mobileRim {
-      width: 210px;
-      height: 420px;
+      width: 220px;
+      height: 440px;
     }
     .mobileDemoContainer {
       position: absolute;
       top: 12px;
       left: 14px;
       z-index: -1;
-      width: 185px;
+      width: 195px;
       img {
         width: 100%;
       }
