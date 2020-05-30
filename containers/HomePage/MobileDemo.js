@@ -23,9 +23,13 @@ const MobileDemoStyles = styled.div`
     overflow: hidden;
     .mobileDemoContainer {
       position: absolute;
-      top: 9px;
+      top: 13px;
       left: 54px;
       z-index: -1;
+      width: 200px;
+      img {
+        width: 100%;
+      }
     }
   }
   .boxDialog {
@@ -77,7 +81,7 @@ function MobileDemo(props) {
       <div className="mobileImage">
         <img alt="Mobile View" src="/images/home/mobile.png"/>
         <div className="mobileDemoContainer">
-          <img alt="Mobile View Demo" src="/images/home/mobileDemo1.svg"/>
+          <img alt="Mobile View Demo" src="/images/home/phoneanimation.gif"/>
         </div>
       </div>
       <div className="boxDialog topLeft">
