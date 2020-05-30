@@ -81,7 +81,7 @@ function MobileDemo(props) {
       <div className="mobileImage">
         <img alt="Mobile View" src="/images/home/mobile.png"/>
         <div className="mobileDemoContainer">
-          <img alt="Mobile View Demo" src="/images/home/phoneanimation.gif"/>
+          <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/>
         </div>
       </div>
       <div className="boxDialog topLeft">
