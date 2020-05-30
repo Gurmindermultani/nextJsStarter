@@ -21,12 +21,16 @@ const MobileDemoStyles = styled.div`
   .mobileImage {
     position: relative;
     overflow: hidden;
+    .mobileRim {
+      width: 210px;
+      height: 420px;
+    }
     .mobileDemoContainer {
       position: absolute;
-      top: 13px;
-      left: 54px;
+      top: 12px;
+      left: 14px;
       z-index: -1;
-      width: 200px;
+      width: 185px;
       img {
         width: 100%;
       }
@@ -79,7 +83,7 @@ function MobileDemo(props) {
   return (
     <MobileDemoStyles>
       <div className="mobileImage">
-        <img alt="Mobile View" src="/images/home/mobile.png"/>
+        <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
         <div className="mobileDemoContainer">
           <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/>
         </div>
