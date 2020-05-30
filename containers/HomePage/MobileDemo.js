@@ -85,7 +85,11 @@ function MobileDemo(props) {
       <div className="mobileImage">
         <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
         <div className="mobileDemoContainer">
-          <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/>
+          {/* <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/> */}
+          <video width="100%" height="100%" loop autoPlay muted>
+            <source src="/images/home/phoneAnimationVideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
       <div className="boxDialog topLeft">

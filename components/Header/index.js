@@ -101,7 +101,9 @@ function Header(props) {
               {groupNav.links.map( link => 
                 <div className="link" key={link.name}>
                   <Link href={`/${groupNav.name}/${link.name}`}>
-                   <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                    <div>
+                      <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                    </div>
                   </Link>
                 </div>
               )}
