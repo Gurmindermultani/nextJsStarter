@@ -6,7 +6,6 @@
 
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
-import Link from 'next/link'
 
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
@@ -20,24 +19,12 @@ import Customers from './Customers';
 import Reviews from './Reviews';
 import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
+import TopContainer from './TopContainer';
 
 function HomePage(props) {
   return (
     <HomePageStyles>
-      <div className="topContainer">
-        <Typography variant="h1" fontSize="46px" text="Redefine Employee Experience"/>
-        <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
-        <div className="demoInput">
-          <Input name="schedule" placeholder="Your work email"/>
-          <Link href="/scheduleDemo">
-            <Button name="Schedule Demo" variant="contained" size="large"/>
-          </Link>
-        </div>
-        <div className="bowlImage">
-          <img src="/images/home/bowlImage.svg" />
-        </div>
-      </div>
+      <TopContainer />
       <div className="quoteContainer">
         <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="with an excellent HR efficiency"/>
@@ -76,7 +63,7 @@ function HomePage(props) {
         <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
         <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
         <div className="demoInput">
-          <Input name="schedule" placeholder="Your work email"/>
+          <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
           <Button name="Schedule Demo" variant="contained" size="large"/>
         </div>
       </div>

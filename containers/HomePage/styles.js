@@ -16,43 +16,6 @@ export const HomePageStyles = styled.div`
       z-index: -1;
     }
   }
-  .topContainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    min-height: 376px;
-    .bowlImage {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-    .demoInput {
-      width: 40%;
-      display: flex;
-      align-items: center;
-      .form-group {
-        width: 360px;
-        margin-right: 16px;
-        margin-top: 20px;
-      }
-      button {
-        min-width: 172px;
-      }
-    }
-    .halfBackground {
-      position: relative;
-      width: fit-content;
-      &:before {
-        content: "";
-        width: 100%;
-        position: absolute;
-        bottom: 10px;
-        left: 0px;
-        height: 22px;
-        z-index: -1;
-      }
-    }
-  }
   .quoteContainer {
     display: flex;
     flex-direction: column;

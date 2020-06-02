@@ -95,7 +95,7 @@ function Footer(props) {
         <div className="subscribe">
           <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
           <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
-          <Input name="email" placeholder="Your Email"/>
+          <Input onChange={() => null} name="email" placeholder="Your Email"/>
           <Button fullWidth size="large" variant="contained" name="Subscribe"/>
         </div>
       </div>

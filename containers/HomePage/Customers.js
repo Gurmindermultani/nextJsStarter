@@ -35,7 +35,15 @@ const customers = [
 ];
 
 const CustomersStyles = styled.div`
-  
+  overflow: visible !important;
+  padding: 40px;
+  .carousalContainer {
+    text-align: center;
+    img {
+      height: 42px;
+      width: 73px;
+    }
+  }
 `;
 
 function Customers(props) {
@@ -43,8 +51,8 @@ function Customers(props) {
     <CustomersStyles>
       <Carousal variant="centerMode">
         {customers.map( customer => 
-          <div className="customer" key={customer.name}>
-            <img name={customer.name} src={`/images/home/${customer.name}.png`} />
+          <div className="carousalContainer" key={customer.name}>
+            <img name={customer.name} src={`/images/clients/${customer.name}.png`} />
           </div>
         )}
       </Carousal>

@@ -20,6 +20,12 @@ const CarousalStyles = styled.div`
       font-size: 40px;
     }
   }
+  .slick-prev {
+    left: -45px;
+  }
+  .slick-next {
+    right: -45px;
+  }
 `;
 
 function Carousal(props) {
