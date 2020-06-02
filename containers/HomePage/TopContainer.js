@@ -20,15 +20,18 @@ const TopContainerStyles = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 376px;
+  min-height: calc(100vh - 80px);
+  .animatedText {
+    margin-top: 40px;
+  }
   .bowlImage {
     position: absolute;
-    bottom: 0;
+    bottom: 250px;
     right: 0;
   }
   .demoInput {
     position: absolute;
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .animatedDemoInput {
     position: relative;
@@ -78,8 +81,8 @@ function TopContainer(props) {
   return (
     <TopContainerStyles>
       <div className="topContainer">
-        <animated.div style={topContainerProps}>
-          <Typography variant="h1" fontSize="46px" text="Redefine Employee Experience"/>
+        <animated.div className="animatedText" style={topContainerProps}>
+          <Typography variant="h1" fontSize="54px" text="Redefine Employee Experience"/>
           <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
           <br />
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
