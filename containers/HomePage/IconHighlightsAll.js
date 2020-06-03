@@ -25,14 +25,14 @@ function IconHighlightsAll(props) {
   return (
     <IconHighlightsAllStyles>
       <div className="highContainer bottomMargin">
-        <IconHighlight imageUrl="resolution" heading="Quick resolution" description="Listen to your employees round the clock and help them on the go."/>
-        <IconHighlight imageUrl="intelligence" heading="Predictive intelligence" description="Answer your employee queries instantly via AI-powered automated conversations."/>
-        <IconHighlight imageUrl="waiting" heading="Zero waiting time" description="Save your employees’ time by giving instant replies to all their policy related queries."/>
+        <IconHighlight name="resolution" heading="Quick resolution" description="Listen to your employees round the clock and help them on the go."/>
+        <IconHighlight name="intelligence" heading="Predictive intelligence" description="Answer your employee queries instantly via AI-powered automated conversations."/>
+        <IconHighlight name="waiting" heading="Zero waiting time" description="Save your employees’ time by giving instant replies to all their policy related queries."/>
       </div>
       <div className="highContainer">
-        <IconHighlight imageUrl="satisfaction" heading="Employee satisfaction" description="Know your employees inside out. Talk to them about their motivation and challenges."/>
-        <IconHighlight imageUrl="conversation" heading="Parallel conversations" description="Go beyond your capabilities. Connect to multiple employees at the same time."/>
-        <IconHighlight imageUrl="ui" heading="Conversational UI" description="Get rid of complicated employee platforms. Get a single interface for all employee needs."/>
+        <IconHighlight name="satisfaction" heading="Employee satisfaction" description="Know your employees inside out. Talk to them about their motivation and challenges."/>
+        <IconHighlight name="conversation" heading="Parallel conversations" description="Go beyond your capabilities. Connect to multiple employees at the same time."/>
+        <IconHighlight name="ui" heading="Conversational UI" description="Get rid of complicated employee platforms. Get a single interface for all employee needs."/>
       </div>
     </IconHighlightsAllStyles>
   );

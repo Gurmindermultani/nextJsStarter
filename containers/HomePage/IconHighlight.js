@@ -20,10 +20,21 @@ const IconHighlightStyles = styled.div`
 `;
 
 function IconHighlight(props) {
+  const [ anim, setAnim ] = useState({});
+
+  const mouseEnter = () => {
+    anim.setDirection(1);
+    anim.play();
+  };
+
+  const mouseLeave = () => {
+    anim.setDirection(-1);
+    anim.play();
+  };
   return (
-    <IconHighlightStyles>
+    <IconHighlightStyles onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
       <div>
-        <GrowIcon />
+        <GrowIcon setAnim={setAnim} name={props.name} />
       </div>
       <Typography className="middleText" variant="h4" fontSize="20px" text={props.heading}/>
       <Typography variant="paragraph2" fontSize="16px" text={props.description}/>

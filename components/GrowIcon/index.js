@@ -27,9 +27,12 @@ function GrowIcon(props) {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/morphIcons/resolution/data.json' // the path to the animation json
+      path: `/images/morphIcons/${props.name}/data.json` // the path to the animation json
     });
     setAnim(newAnim);
+    if(props.setAnim) {
+      props.setAnim(newAnim);
+    }
     return () => {
       // Clean up the subscription
       newAnim.destroy();
@@ -47,7 +50,7 @@ function GrowIcon(props) {
   };
 
   return (
-    <GrowIconStyles onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <GrowIconStyles>
       <div ref={lottieRef} />
     </GrowIconStyles>
   );
