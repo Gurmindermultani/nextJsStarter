@@ -2,16 +2,24 @@ import styled from 'styled-components';
 
 export const HeaderStyles = styled.div`
   height: 80px;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100vw;
-  top: 0px;
   z-index: 2;
-  background: white;
-  padding: 0 70px;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  .logo {
+    min-width: 114px;
+  }
+  .animatedHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    background: white;
+    position: absolute;
+    width: 100%;
+    padding: 0 70px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  }
   .mainHeader {
     display: flex;
     align-items: center;

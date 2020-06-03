@@ -7,6 +7,7 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
+import { useSpring, animated, config } from 'react-spring';
 
 import Button from '../Button';
 import Typography from '../Typography';
@@ -83,41 +84,47 @@ export const navigation = [
 ];
 
 function Header(props) {
+  const animatedHeader = useSpring({
+    from: { opacity: 1, top: '-80px', height: '0px' },
+    to: { opacity: 1, top: '0px', height: '80px',},
+  });
   return (
     <HeaderStyles>
-      <div className="logo pointer">
-        <Link href="/">
-          <img src="/images/leenaLogo.png"/>
-        </Link>
-      </div>
-      <div className="navigation">
-        {navigation.map( groupNav => 
-          <div key={groupNav.name} className="groupNav">
-            <div className="groupName pointer">
-              <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
-              <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
+      <animated.div className="animatedHeader" style={animatedHeader}>
+        <div className="logo pointer">
+          <Link href="/">
+            <img src="/images/leenaLogo.png"/>
+          </Link>
+        </div>
+        <div className="navigation">
+          {navigation.map( groupNav => 
+            <div key={groupNav.name} className="groupNav">
+              <div className="groupName pointer">
+                <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
+                <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
+              </div>
+              <div className="links">
+                {groupNav.links.map( link => 
+                  <div className="link" key={link.name}>
+                    <Link href={`/${groupNav.name}/${link.name}`}>
+                      <div>
+                        <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="links">
-              {groupNav.links.map( link => 
-                <div className="link" key={link.name}>
-                  <Link href={`/${groupNav.name}/${link.name}`}>
-                    <div>
-                      <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
-                    </div>
-                  </Link>
-                </div>
-              )}
+          )}
+        </div>
+        <div className="buttons">
+          <Link href="/scheduleDemo">
+            <div>
+              <Button variant="contained" name="Schedule Demo" />
             </div>
-          </div>
-        )}
-      </div>
-      <div className="buttons">
-        <Link href="/scheduleDemo">
-          <div>
-            <Button variant="contained" name="Schedule Demo" />
-          </div>
-        </Link>
-      </div>
+          </Link>
+        </div>
+      </animated.div>
     </HeaderStyles>
   );
 }
