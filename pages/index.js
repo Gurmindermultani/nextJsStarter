@@ -31,8 +31,6 @@ export default function Home() {
         main {
           flex: 1;
           width: 100%;
-          margin-top: 80px;
-          padding: 40px 0px;
           max-width: 1100px;
         }
 

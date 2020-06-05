@@ -8,15 +8,12 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link'
-import { useSpring, animated as a, config } from 'react-spring';
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "react-visibility-sensor";
 
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-
-console.log(config);
 
 const TopContainerStyles = styled.div`
   display: flex;
@@ -28,7 +25,7 @@ const TopContainerStyles = styled.div`
   }
   .bowlImage {
     position: absolute;
-    bottom: 250px;
+    bottom: 30%;
     right: 0;
   }
   .demoInput {
@@ -50,37 +47,9 @@ const TopContainerStyles = styled.div`
       min-width: 172px;
     }
   }
-  .halfBackground {
-    position: relative;
-    width: fit-content;
-    &:before {
-      content: "";
-      width: 100%;
-      position: absolute;
-      bottom: 10px;
-      left: 0px;
-      height: 22px;
-      z-index: -1;
-    }
-  }
 `;
 
 function TopContainer(props) {
-  const topContainerProps = useSpring({
-    from: { opacity: 0,left: '0%', top: '2%', width: '100%', height: '100%' },
-    to: { opacity: 1,left: '0%', top: '0%', width: '100%', height: '100%',},
-    config: config.slow,
-  });
-  const demoProps = useSpring({
-    from: { opacity: 0, left: '0%', top: '100px' },
-    to: { opacity: 1, left: '0%', top: '0px',},
-    config: config.slow,
-  });
-  const bowlProps = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: config.stiff,
-  });
   return (
     <TopContainerStyles>
       <VisibilitySensor>

@@ -2,18 +2,19 @@ import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
   margin: auto;
-  .block {
-    min-height: calc(100vh - 80px);
+  .section {
+    min-height: calc(100vh);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
   .quoteContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px 0 100px 0;
     &.demoContainer {
       .demoInput {
         padding-top: 40px;
