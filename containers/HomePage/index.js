@@ -6,6 +6,8 @@
 
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
+import { Spring } from 'react-spring/renderprops.cjs';
+import VisibilitySensor from "react-visibility-sensor";
 
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
@@ -25,19 +27,33 @@ function HomePage(props) {
   return (
     <HomePageStyles>
       <TopContainer />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="with an excellent HR efficiency"/>
+      <div className="block">
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <Spring delay={500} to={{ 
+              opacity: isVisible ? 1 : 0,
+            }}>
+              {({ opacity }) => (
+                <div style={ { opacity} } className="quoteContainer">
+                  <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
+                  <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="with an excellent HR efficiency"/>
+                </div>
+              )}
+            </Spring>
+          )}
+        </VisibilitySensor>
+        <div className="iconHighlightsContainer">
+          <IconHighlightsAll></IconHighlightsAll>
+        </div>
       </div>
-      <div className="iconHighlightsContainer">
-        <IconHighlightsAll></IconHighlightsAll>
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Make employee service as smooth as"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your customer service"/>
-      </div>
-      <div className="products">
-        <DetailProducts />
+      <div className="block">
+        <div className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Make employee service as smooth as"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your customer service"/>
+        </div>
+        <div className="products">
+          <DetailProducts />
+        </div>
       </div>
       <div className="quoteContainer">
         <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>

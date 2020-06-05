@@ -8,7 +8,9 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link'
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, animated as a, config } from 'react-spring';
+import { Spring } from 'react-spring/renderprops.cjs';
+import VisibilitySensor from "react-visibility-sensor";
 
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
@@ -38,6 +40,7 @@ const TopContainerStyles = styled.div`
     width: 40%;
     display: flex;
     align-items: center;
+    margin-top: 20px;
     .form-group {
       width: 360px;
       margin-right: 16px;
@@ -80,29 +83,68 @@ function TopContainer(props) {
   });
   return (
     <TopContainerStyles>
-      <div className="topContainer">
-        <animated.div className="animatedText" style={topContainerProps}>
-          <Typography variant="h1" fontSize="54px" text="Redefine Employee Experience"/>
-          <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
-          <br />
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
-        </animated.div>
-        <div className="demoInput">
-          <animated.div className="animatedDemoInput" style={demoProps}>
-            <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
-            <Link href="/scheduleDemo">
-              <div>
-                <Button name="Schedule Demo" variant="contained" size="large"/>
-              </div>
-            </Link>
-          </animated.div>
-        </div>
-        <animated.div style={bowlProps}>
-          <div className="bowlImage">
-            <img src="/images/home/bowlImage.svg" />
+      <VisibilitySensor>
+        {({ isVisible }) => (
+          <div className="topContainer">
+            <VisibilitySensor partialVisibility>
+              {({ isVisible }) => (
+                <Spring delay={100} to={{ 
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                      ? "translateY(0)"
+                      : "translateY(0px)",
+                }}>
+                  {({ opacity, transform }) => (
+                    <div style={{ opacity, transform }} className="animatedText">
+                      <Typography variant="h1" fontSize="54px" text="Redefine Employee Experience"/>
+                      <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
+                      <br />
+                      <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
+                    </div>
+                  )}
+                </Spring>
+              )}
+          </VisibilitySensor>
+          <VisibilitySensor partialVisibility>
+              {({ isVisible }) => (
+                <Spring delay={500} to={{ 
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                      ? "translateY(0)"
+                      : "translateY(200px)",
+                }}>
+                  {({ opacity, transform }) => (
+                    <div style={{ opacity, transform }} className="animatedDemoInput">
+                      <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+                      <Link href="/scheduleDemo">
+                        <div>
+                          <Button name="Schedule Demo" variant="contained" size="large"/>
+                        </div>
+                      </Link>
+                    </div>
+                  )}
+                </Spring>
+              )}
+          </VisibilitySensor>
+          <VisibilitySensor partialVisibility>
+              {({ isVisible }) => (
+                <Spring delay={500} to={{ 
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                      ? "translateX(0)"
+                      : "translateX(200px)",
+                }}>
+                  {({ opacity, transform }) => (
+                    <div style={{ opacity, transform }} className="bowlImage">
+                      <img src="/images/home/bowlImage.svg" />
+                    </div>
+                  )}
+                </Spring>
+              )}
+          </VisibilitySensor>
           </div>
-        </animated.div>
-      </div>
+        )}
+      </VisibilitySensor>
     </TopContainerStyles>
   );
 }

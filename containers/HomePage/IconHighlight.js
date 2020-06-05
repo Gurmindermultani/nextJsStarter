@@ -32,7 +32,7 @@ function IconHighlight(props) {
     anim.play();
   };
   return (
-    <IconHighlightStyles onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <IconHighlightStyles style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
       <div>
         <GrowIcon setAnim={setAnim} name={props.name} />
       </div>

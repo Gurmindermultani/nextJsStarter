@@ -2,26 +2,18 @@ import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
   margin: auto;
-  .halfBackground {
-    position: relative;
-    &:before {
-      content: "";
-      width: 100%;
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      background: #00CEFF;
-      height: 21px;
-      opacity: 0.2;
-      z-index: -1;
-    }
+  .block {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .quoteContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 100px 0;
+    margin: 0px 0 100px 0;
     &.demoContainer {
       .demoInput {
         padding-top: 40px;
