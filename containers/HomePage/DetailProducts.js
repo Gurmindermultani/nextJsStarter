@@ -12,14 +12,6 @@ import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 
 const DetailsProductsStyles = styled.div`
-  .highContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    &.bottomMargin {
-      margin-bottom: 93px;
-    }
-  }
 `;
 
 function DetailsProducts(props) {

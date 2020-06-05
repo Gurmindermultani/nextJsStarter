@@ -15,7 +15,8 @@ import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 
 import IconHighlightsAll from './IconHighlightsAll';
-import DetailProducts from './DetailProducts';
+import ProductHr from './ProductHr';
+import EmployeeExperience from './EmployeeExperience';
 import MobileDemo from './MobileDemo';
 import Platforms from './Platforms';
 import Customers from './Customers';
@@ -55,6 +56,24 @@ function scrollTo(element, to, duration = 1000) {
   animateScroll();
 }
 let currentSection = 0;
+
+function QuoteAnimator (props) {
+  return (
+    <VisibilitySensor partialVisibility>
+      {({ isVisible }) => (
+        <Spring delay={500} to={{ 
+          opacity: isVisible ? 1 : 0,
+        }}>
+          {({ opacity }) => (
+            <div style={ { opacity} } className="quoteContainer">
+              {props.children}
+            </div>
+          )}
+        </Spring>
+      )}
+    </VisibilitySensor>
+  );
+}
 
 function HomePage(props) {
   const goDown = () => {
@@ -102,66 +121,75 @@ function HomePage(props) {
         <TopContainer />
       </section>
       <section className="section section1">
-        <VisibilitySensor partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={500} to={{ 
-              opacity: isVisible ? 1 : 0,
-            }}>
-              {({ opacity }) => (
-                <div style={ { opacity} } className="quoteContainer">
-                  <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
-                  <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="with an excellent HR efficiency"/>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <QuoteAnimator>
+          <Typography variant="h3" fontSize="28px" text="Empower your organization"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="with an excellent HR efficiency"/>
+        </QuoteAnimator>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
         </div>
       </section>
       <section className="section section2">
-        <div className="quoteContainer">
+        <QuoteAnimator>
           <Typography variant="h3" fontSize="28px" text="Make employee service as smooth as"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your customer service"/>
-        </div>
+        </QuoteAnimator>
         <div className="products">
-          <DetailProducts />
+          <ProductHr heading="HR helpdesk" description="Take a step ahead to make your workplace happier. Let the virtual HR assistant be available for your employees round the clock."/>
         </div>
       </section>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="A complete helpdesk that your employee needs"/>
-      </div>
-      <MobileDemo />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Bring it where you are"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
-      </div>
-      <Platforms />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
-      </div>
-      <Customers />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Our customers love us"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for what we do"/>
-      </div>
-      <Reviews />
-      <div className="quoteContainer demoContainer">
-        <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
-        <div className="demoInput">
-          <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
-          <Button name="Schedule Demo" variant="contained" size="large"/>
+      <section className="section section3">
+        <div className="products">
+          <EmployeeExperience heading="Employee experience" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
         </div>
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Industry recognition"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for our expertise in HR"/>
-      </div>
-      <Recognitions />
+      </section>
+      <section className="section section4">
+        <QuoteAnimator>
+          <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="A complete helpdesk that your employee needs"/>
+        </QuoteAnimator>
+        <MobileDemo />
+      </section>
+      <section className="section section5">
+        <QuoteAnimator>
+          <Typography variant="h3" fontSize="28px" text="Bring it where you are"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
+        </QuoteAnimator>
+        <Platforms />
+      </section>
+      <section className="section section6">
+        <QuoteAnimator className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
+        </QuoteAnimator>
+        <Customers />
+      </section>
+      <section className="section section7">
+        <QuoteAnimator className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for what we do"/>
+        </QuoteAnimator>
+        <Reviews />
+      </section>
+      <section className="section section8">
+        <div className="quoteContainer demoContainer">
+          <QuoteAnimator>
+            <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+          </QuoteAnimator>
+          <div className="demoInput">
+            <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+            <Button name="Schedule Demo" variant="contained" size="large"/>
+          </div>
+        </div>
+      </section>
+      <section className="section section9">
+        <QuoteAnimator className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Industry recognition"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for our expertise in HR"/>
+        </QuoteAnimator>
+        <Recognitions />
+      </section>
     </HomePageStyles>
   );
 }

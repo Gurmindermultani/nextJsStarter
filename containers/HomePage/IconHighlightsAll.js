@@ -73,7 +73,7 @@ function IconHighlightsAll(props) {
       <div className="highContainer">
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={300} to={{ 
+            <Spring delay={600} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -87,7 +87,7 @@ function IconHighlightsAll(props) {
         </VisibilitySensor>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={400} to={{ 
+            <Spring delay={700} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -101,7 +101,7 @@ function IconHighlightsAll(props) {
         </VisibilitySensor>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={500} to={{ 
+            <Spring delay={800} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"

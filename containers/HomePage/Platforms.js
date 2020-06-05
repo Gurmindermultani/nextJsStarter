@@ -14,6 +14,8 @@ import EmployeeExperience from './EmployeeExperience';
 const PlatformsStyles = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: auto;
+  margin-top: 126px;
   .platform {
     display: flex;
     flex-direction: column;

@@ -8,7 +8,7 @@ export const HomePageStyles = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
   .quoteContainer {
     display: flex;
@@ -16,6 +16,7 @@ export const HomePageStyles = styled.div`
     justify-content: center;
     align-items: center;
     &.demoContainer {
+      flex: 1;
       .demoInput {
         padding-top: 40px;
         display: flex;

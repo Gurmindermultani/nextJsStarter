@@ -39,6 +39,8 @@ const recognitions = [
 const RecognitionsStyles = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: auto;
+  margin-top: 126px;
   .singleCard {
     margin-right: 24px;
   }

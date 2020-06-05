@@ -33,6 +33,8 @@ const reviews = [
 ];
 
 const ReviewsStyles = styled.div`
+  margin-bottom: auto;
+  margin-top: 126px;
   .carousalContainer {
     padding: 40px 0;
     .review {
