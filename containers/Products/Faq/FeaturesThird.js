@@ -42,12 +42,12 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <Slide from='left' className="first">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Smart ticketing"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Get rid of answering repetitive questions. Add frequently asked questions directly to your knowledge base with a single click and auto-answer repetitive queries."}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Conversational Interface"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Give your employees an interactive user interface where they chat directly with the virtual HR assistant."}/>
         </Slide>
         <Slide from='left' className="second">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Automated updates"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Keep your employees updated with the automated ticket status and eliminate the need of employee follow-ups."}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Nudge notifications"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Inform all employees about important announcements and events at once by sending bulk notifications."}/>
         </Slide>
       </div>
       <div className="rightContainer">

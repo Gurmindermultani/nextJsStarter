@@ -13,8 +13,7 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 const FeaturesFirstStyles = styled.div`
   display: flex;
   height: 430px;
-  margin-top: 200px;
-  .leftContainer {
+  .rightContainer {
     flex-basis: 50%;
     .headingText {
       line-height: 33px;
@@ -27,7 +26,7 @@ const FeaturesFirstStyles = styled.div`
       margin-top: 88px;
     }
   }
-  .rightContainer {
+  .leftContainer {
     flex-basis: 50%;
     position: relative;
     .fg {
@@ -41,16 +40,6 @@ function FeaturesFirst(props) {
   return (
     <FeaturesFirstStyles>
       <div className="leftContainer">
-        <Slide from='left' className="first">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Smart ticketing"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Get rid of answering repetitive questions. Add frequently asked questions directly to your knowledge base with a single click and auto-answer repetitive queries."}/>
-        </Slide>
-        <Slide from='left' className="second">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Automated updates"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Keep your employees updated with the automated ticket status and eliminate the need of employee follow-ups."}/>
-        </Slide>
-      </div>
-      <div className="rightContainer">
         <div className="bg center">
           <img alt="feature img" src="/images/caseManagement/featuresOne/bg.svg"/>
         </div>
@@ -61,6 +50,16 @@ function FeaturesFirst(props) {
           {/* <img alt="feature img" src="/images/caseManagement/featuresOne/img2.svg"/>
           <img alt="feature img" src="/images/caseManagement/featuresOne/img31.svg"/> */}
         </div>
+      </div>
+      <div className="rightContainer">
+        <Slide from='right' className="first">
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Multiple platforms and channels"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Easily integrate your existing HRIS and collaboration platforms to enterprise conversational AI experience."}/>
+        </Slide>
+        <Slide from='right' className="second">
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Self-learning AI Experience"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Employee experience platform improves itself with every user-interaction and AI-driven feedback loop."}/>
+        </Slide>
       </div>
     </FeaturesFirstStyles>
   );

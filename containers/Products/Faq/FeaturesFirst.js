@@ -13,7 +13,6 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 const FeaturesFirstStyles = styled.div`
   display: flex;
   height: 430px;
-  margin-top: 200px;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -42,12 +41,12 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <Slide from='left' className="first">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Smart ticketing"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Get rid of answering repetitive questions. Add frequently asked questions directly to your knowledge base with a single click and auto-answer repetitive queries."}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Natural Language Understanding"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Understand your employee queries accurately and let their virtual HR assistant reply instantly."}/>
         </Slide>
         <Slide from='left' className="second">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Automated updates"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Keep your employees updated with the automated ticket status and eliminate the need of employee follow-ups."}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Knowledge Management"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Combine your policy documents with our intelligent knowledge base and give your employees personalized experience."}/>
         </Slide>
       </div>
       <div className="rightContainer">
