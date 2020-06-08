@@ -6,11 +6,12 @@ export const HomePageStyles = styled.div`
     height: calc(100vh);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 100px;
     padding-bottom: 40px;
     &.shortSection {
-      height: 550px;
+      height: 450px;
+      padding-bottom: 100px;
     }
     .knowMore {
       button {

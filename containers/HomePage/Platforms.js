@@ -8,7 +8,8 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import FadeIn from '../../components/VisibilitySensor/FadeIn';
+import Slide from '../../components/VisibilitySensor/Slide';
 
 const PlatformsStyles = styled.div`
   display: flex;
@@ -105,7 +106,7 @@ const apps = [
 function Platforms(props) {
   return (
     <PlatformsStyles>
-      <div className="platform">
+      <Slide from='up' className="platform">
         <Typography variant="paragraph2" fontSize="16px" text="HRIS"/>
         <div className="tools">
           {hris.map( tool => 
@@ -114,8 +115,8 @@ function Platforms(props) {
             </div>
           )}
         </div>
-      </div>
-      <div className="platform">
+      </Slide>
+      <Slide from='up' className="platform">
         <Typography variant="paragraph2" fontSize="16px" text="Collaboration tools"/>
         <div className="tools">
           {collabTools.map( tool => 
@@ -124,8 +125,8 @@ function Platforms(props) {
             </div>
           )}
         </div>
-      </div>
-      <div className="platform">
+      </Slide>
+      <Slide from='up' className="platform">
         <Typography variant="paragraph2" fontSize="16px" text="Mobile and desktop apps"/>
         <div className="tools">
           {apps.map( tool => 
@@ -134,7 +135,7 @@ function Platforms(props) {
             </div>
           )}
         </div>
-      </div>
+      </Slide>
     </PlatformsStyles>
   );
 }

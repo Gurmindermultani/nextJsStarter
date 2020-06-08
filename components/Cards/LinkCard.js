@@ -10,9 +10,14 @@ import styled from 'styled-components';
 import Typography from '../../components/Typography';
 
 const LinkCardStyles = styled.div`
-  box-shadow: 0px 12px 24px #00000029;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+  transition: transform 420ms cubic-bezier(.165,.84,.44,1);
+  cursor: pointer;
   border-radius: 4px;
   width: 220px;
+  &:hover {
+    transform: scale(1.05);
+  }
   .header {
     height: 172px;
     display: flex;

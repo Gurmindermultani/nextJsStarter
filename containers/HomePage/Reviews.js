@@ -14,7 +14,7 @@ import UserAvatar from '../../components/UserAvatar';
 const reviews = [
   {
     name: 'tataReview',
-    text: 'Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.',
+    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
     user: {
       img: '/images/people/nikhil.png',
       name: '~ Nikhil Morade',
@@ -23,7 +23,7 @@ const reviews = [
   },
   {
     name: 'cocacolaReview',
-    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.',
+    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
     user: {
       img: '/images/people/nikhil.png',
       name: '~ Nikhil Morade',
@@ -42,7 +42,12 @@ const ReviewsStyles = styled.div`
       width: 973px;
       display: flex;
       margin: auto;
-      box-shadow: 0px 12px 24px #00000029;
+      box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+      transition: transform 420ms cubic-bezier(.165,.84,.44,1);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
       .leftContainer {
         width: 370px;
         display: flex;
@@ -57,6 +62,10 @@ const ReviewsStyles = styled.div`
       .rightContainer {
         flex: 1;
         padding: 50px;
+        span {
+          font-style: italic;
+          line-height: 26px;
+        }
         .user {
           margin-top: 34px;
           display: flex;

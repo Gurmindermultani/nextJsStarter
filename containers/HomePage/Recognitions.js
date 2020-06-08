@@ -8,6 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Card from '../../components/Cards';
+import Slide from "../../components/VisibilitySensor/Slide";
 
 const recognitions = [
   {
@@ -39,8 +40,6 @@ const recognitions = [
 const RecognitionsStyles = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: auto;
-  margin-top: 126px;
   .singleCard {
     margin-right: 24px;
   }
@@ -50,7 +49,9 @@ function Recognitions(props) {
   return (
     <RecognitionsStyles>
       {recognitions.map( recognition => 
-        <Card variant="linkCard" key={recognition.name} data={recognition} />
+        <Slide key={recognition.name}>
+          <Card variant="linkCard" data={recognition} />
+        </Slide>
       )}
     </RecognitionsStyles>
   );

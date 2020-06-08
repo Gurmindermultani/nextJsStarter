@@ -8,6 +8,7 @@ import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
+import Slide from "../../components/VisibilitySensor/Slide";
 import { throttle, debounce } from 'lodash';
 
 import Button from '../../components/Button';
@@ -160,7 +161,7 @@ function HomePage(props) {
           <Button variant="contained" size="large" name="Know More" />
         </div>
       </section>
-      <section className="section section6 shortSection">
+      <section className="section section6">
         <QuoteAnimator className="quoteContainer">
           <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
@@ -174,16 +175,16 @@ function HomePage(props) {
         </QuoteAnimator>
         <Reviews />
       </section>
-      <section className="section section8">
+      <section className="section section8 shortSection">
         <div className="quoteContainer demoContainer">
           <QuoteAnimator>
             <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
           </QuoteAnimator>
-          <div className="demoInput">
+          <Slide className="demoInput">
             <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
             <Button name="Schedule Demo" variant="contained" size="large"/>
-          </div>
+          </Slide>
         </div>
       </section>
       <section className="section section9">
