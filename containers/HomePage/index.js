@@ -7,7 +7,7 @@
 import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "react-visibility-sensor";
+import VisibilitySensor from "../../components/VisibilitySensor";
 import { throttle, debounce } from 'lodash';
 
 import Button from '../../components/Button';
@@ -59,7 +59,7 @@ let currentSection = 0;
 
 function QuoteAnimator (props) {
   return (
-    <VisibilitySensor partialVisibility>
+    <VisibilitySensor once partialVisibility>
       {({ isVisible }) => (
         <Spring delay={500} to={{ 
           opacity: isVisible ? 1 : 0,
@@ -107,13 +107,13 @@ function HomePage(props) {
     }
   }
   useEffect(() => {
-    window.scrollTo(0, 0);
-    window.addEventListener('wheel', throttle(doSomething, 1000, { trailing: true, leading: false }));
-    return () => {
-      window.removeEventListener('wheel', function(e) {
-        console.log('remved');
-      });
-    }
+    // window.scrollTo(0, 0);
+    // window.addEventListener('wheel', throttle(doSomething, 1000, { trailing: true, leading: false }));
+    // return () => {
+    //   window.removeEventListener('wheel', function(e) {
+    //     console.log('remved');
+    //   });
+    // }
   },[]);
   return (
     <HomePageStyles>
@@ -156,8 +156,11 @@ function HomePage(props) {
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
         </QuoteAnimator>
         <Platforms />
+        <div className="knowMore center">
+          <Button variant="contained" size="large" name="Know More" />
+        </div>
       </section>
-      <section className="section section6">
+      <section className="section section6 shortSection">
         <QuoteAnimator className="quoteContainer">
           <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>

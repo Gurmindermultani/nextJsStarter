@@ -37,8 +37,6 @@ const customers = [
 const CustomersStyles = styled.div`
   overflow: visible !important;
   padding: 40px;
-  margin-bottom: auto;
-  margin-top: 126px;
   .carousalContainer {
     text-align: center;
     img {

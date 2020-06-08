@@ -9,7 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "react-visibility-sensor";
+import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
@@ -86,7 +86,7 @@ const MobileDemoStyles = styled.div`
 function MobileDemo(props) {
   return (
     <MobileDemoStyles>
-      <VisibilitySensor partialVisibility>
+      <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
@@ -109,7 +109,7 @@ function MobileDemo(props) {
           </Spring>
         )}
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility>
+      <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
@@ -128,7 +128,7 @@ function MobileDemo(props) {
           </Spring>
         )}
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility>
+      <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
@@ -147,7 +147,7 @@ function MobileDemo(props) {
           </Spring>
         )}
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility>
+      <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
@@ -166,7 +166,7 @@ function MobileDemo(props) {
           </Spring>
         )}
       </VisibilitySensor>
-      <VisibilitySensor partialVisibility>
+      <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,

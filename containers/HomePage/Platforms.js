@@ -8,14 +8,11 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
-import ProductHr from './ProductHr';
-import EmployeeExperience from './EmployeeExperience';
+import Button from '../../components/Button';
 
 const PlatformsStyles = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: auto;
-  margin-top: 126px;
   .platform {
     display: flex;
     flex-direction: column;

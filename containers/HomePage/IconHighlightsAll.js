@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import IconHighlight from './IconHighlight';
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "react-visibility-sensor";
+import VisibilitySensor from "../../components/VisibilitySensor";
 
 const IconHighlightsAllStyles = styled.div`
   .highContainer {
@@ -27,9 +27,9 @@ function IconHighlightsAll(props) {
   return (
     <IconHighlightsAllStyles>
       <div className="highContainer bottomMargin">
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={300} to={{ 
+            <Spring to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -41,9 +41,9 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={400} to={{ 
+            <Spring delay={100} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -55,9 +55,9 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={500} to={{ 
+            <Spring delay={200} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -71,9 +71,9 @@ function IconHighlightsAll(props) {
         </VisibilitySensor>
       </div>
       <div className="highContainer">
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={600} to={{ 
+            <Spring to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -85,9 +85,9 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={700} to={{ 
+            <Spring delay={100} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
@@ -99,9 +99,9 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
-            <Spring delay={800} to={{ 
+            <Spring delay={200} to={{ 
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"

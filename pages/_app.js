@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { theme } from '../theme';
+import GlobalStyle from './_globalStyles';
 
 export default class MyApp extends App {
   render() {
@@ -11,6 +12,7 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+        <GlobalStyle />
       </ThemeProvider>
     )
   }

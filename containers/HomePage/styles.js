@@ -3,12 +3,20 @@ import styled from 'styled-components';
 export const HomePageStyles = styled.div`
   margin: auto;
   .section {
-    min-height: calc(100vh);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 100px;
     padding-bottom: 40px;
+    &.shortSection {
+      height: 550px;
+    }
+    .knowMore {
+      button {
+        width: 172px;
+      }
+    }
   }
   .quoteContainer {
     display: flex;

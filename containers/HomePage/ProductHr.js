@@ -11,7 +11,7 @@ import Typography from '../../components/Typography';
 import Button from '../../components/Button';
 
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "react-visibility-sensor";
+import VisibilitySensor from "../../components/VisibilitySensor";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -87,7 +87,7 @@ function ProductHr(props) {
   };
   return (
     <ProductStyles>
-    <VisibilitySensor partialVisibility>
+    <VisibilitySensor once partialVisibility>
         {({ isVisible }) => (
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
@@ -110,7 +110,7 @@ function ProductHr(props) {
         )}
       </VisibilitySensor>
       <div className="body">
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
             <Spring delay={300} to={{ 
               opacity: isVisible ? 1 : 0,
@@ -170,7 +170,7 @@ function ProductHr(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor partialVisibility>
+        <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
             <Spring delay={300} to={{ 
               opacity: isVisible ? 1 : 0,

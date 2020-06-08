@@ -30,8 +30,8 @@ const MainContainer = styled.div`
       color: ${props => props.theme.palette.text.secondary};
       font-size: 14px;
       border: solid 0.5px ${props => props.theme.palette.text.secondary};
-      font-weight: '400';
-      font-family: 'Poppins';
+      font-weight: 400;
+      font-family: 'Poppins',sans-serif;
       border-radius: 4px;
       height: 45px;
       line-height: 25px;

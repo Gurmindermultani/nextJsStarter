@@ -9,7 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link'
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "react-visibility-sensor";
+import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
@@ -18,33 +18,32 @@ import Button from '../../components/Button';
 const TopContainerStyles = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
-  min-height: calc(100vh - 80px);
-  .animatedText {
-    margin-top: 40px;
-  }
-  .bowlImage {
-    position: absolute;
-    bottom: 30%;
-    right: 0;
-  }
-  .demoInput {
-    position: absolute;
-    margin-top: 50px;
-  }
-  .animatedDemoInput {
-    position: relative;
-    width: 40%;
+  height: 100%;
+  .topContainer {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+  }
+  .animatedText {
+    margin-top: 80px;
+  }
+  .lowerContainer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    .form-group {
-      width: 360px;
-      margin-right: 16px;
+    flex: 1;
+    .animatedDemoInput {
+      display: flex;
+      align-items: center;
       margin-top: 20px;
-    }
-    button {
-      min-width: 172px;
+      .form-group {
+        width: 360px;
+        margin-right: 16px;
+        margin-top: 20px;
+      }
+      button {
+        min-width: 172px;
+      }
     }
   }
 `;
@@ -52,10 +51,10 @@ const TopContainerStyles = styled.div`
 function TopContainer(props) {
   return (
     <TopContainerStyles>
-      <VisibilitySensor>
+      <VisibilitySensor once>
         {({ isVisible }) => (
           <div className="topContainer">
-            <VisibilitySensor partialVisibility>
+            <VisibilitySensor once partialVisibility>
               {({ isVisible }) => (
                 <Spring delay={100} to={{ 
                   opacity: isVisible ? 1 : 0,
@@ -73,44 +72,46 @@ function TopContainer(props) {
                   )}
                 </Spring>
               )}
-          </VisibilitySensor>
-          <VisibilitySensor partialVisibility>
-              {({ isVisible }) => (
-                <Spring delay={500} to={{ 
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                      ? "translateY(0)"
-                      : "translateY(200px)",
-                }}>
-                  {({ opacity, transform }) => (
-                    <div style={{ opacity, transform }} className="animatedDemoInput">
-                      <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
-                      <Link href="/scheduleDemo">
-                        <div>
-                          <Button name="Schedule Demo" variant="contained" size="large"/>
+            </VisibilitySensor>
+            <div className="lowerContainer">
+              <VisibilitySensor once partialVisibility>
+                  {({ isVisible }) => (
+                    <Spring delay={500} to={{ 
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible
+                          ? "translateY(0)"
+                          : "translateY(200px)",
+                    }}>
+                      {({ opacity, transform }) => (
+                        <div style={{ opacity, transform }} className="animatedDemoInput">
+                          <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+                          <Link href="/scheduleDemo">
+                            <div>
+                              <Button name="Schedule Demo" variant="contained" size="large"/>
+                            </div>
+                          </Link>
                         </div>
-                      </Link>
-                    </div>
+                      )}
+                    </Spring>
                   )}
-                </Spring>
-              )}
-          </VisibilitySensor>
-          <VisibilitySensor partialVisibility>
-              {({ isVisible }) => (
-                <Spring delay={500} to={{ 
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                      ? "translateX(0)"
-                      : "translateX(200px)",
-                }}>
-                  {({ opacity, transform }) => (
-                    <div style={{ opacity, transform }} className="bowlImage">
-                      <img src="/images/home/bowlImage.svg" />
-                    </div>
+              </VisibilitySensor>
+              <VisibilitySensor once partialVisibility>
+                  {({ isVisible }) => (
+                    <Spring delay={500} to={{ 
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible
+                          ? "translateX(0)"
+                          : "translateX(200px)",
+                    }}>
+                      {({ opacity, transform }) => (
+                        <div style={{ opacity, transform }} className="bowlImage">
+                          <img src="/images/home/bowlImage.svg" />
+                        </div>
+                      )}
+                    </Spring>
                   )}
-                </Spring>
-              )}
-          </VisibilitySensor>
+              </VisibilitySensor>
+            </div>
           </div>
         )}
       </VisibilitySensor>
