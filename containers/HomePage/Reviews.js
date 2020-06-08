@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import Carousal from '../../components/Carousal';
 import UserAvatar from '../../components/UserAvatar';
+import FadeIn from '../../components/VisibilitySensor/FadeIn';
 
 const reviews = [
   {
@@ -82,27 +83,29 @@ const ReviewsStyles = styled.div`
 function Reviews(props) {
   return (
     <ReviewsStyles>
-      <Carousal variant="singleMode">
-        {reviews.map( review => 
-          <div className="carousalContainer" key={review.name}>
-            <div className="review">
-              <div className="leftContainer">
-                <img src={review.name} src={`/images/home/${review.name}.png`}/>
-              </div>
-              <div className="rightContainer">
-                <div className="content">
-                  <Typography size="16px" variant="paragraph2" text={review.text}/>
+      <FadeIn>
+        <Carousal variant="singleMode">
+          {reviews.map( review => 
+            <div className="carousalContainer" key={review.name}>
+              <div className="review">
+                <div className="leftContainer">
+                  <img src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
-                <div className="user">
-                  <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
-                  <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
-                  <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+                <div className="rightContainer">
+                  <div className="content">
+                    <Typography size="16px" variant="paragraph2" text={review.text}/>
+                  </div>
+                  <div className="user">
+                    <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
+                    <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                    <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
-      </Carousal>
+          )}
+        </Carousal>
+      </FadeIn>
     </ReviewsStyles>
   );
 }

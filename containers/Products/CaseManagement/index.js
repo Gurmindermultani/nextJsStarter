@@ -10,9 +10,14 @@ import React, { memo, useState } from 'react';
 import Button from '../../../components/Button';
 import Typography from '../../../components/Typography';
 import Input from '../../../components/Input';
+import FadeIn from '../../../components/VisibilitySensor/FadeIn';
+import Slide from '../../../components/VisibilitySensor/Slide';
+import LottieAnimation from "../../../components/LottieAnimation";
 
 import IconHighlightsAll from './IconHighlightsAll';
-import DetailProducts from './DetailProducts';
+import FeaturesFirst from './FeaturesFirst';
+import FeaturesSecond from './FeaturesSecond';
+import FeaturesThird from './FeaturesThird';
 import MobileDemo from './MobileDemo';
 import Platforms from './Platforms';
 import Customers from './Customers';
@@ -23,66 +28,75 @@ import { CaseManagmentStyles } from './styles';
 function CaseManagment(props) {
   return (
     <CaseManagmentStyles>
-      <div className="topContainer">
-        <Typography variant="h1" fontSize="40px" text="Discover employee satisfaction"/>
-        <Typography variant="h1" fontSize="40px" text="with conversational case management"/>
-        <Typography className="secondHeading" fontWeight="300" color="#212121" fontSize="22px" variant="paragraph2" text="Make it easy for your employees to raise query tickets and get"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="22px" variant="paragraph2" text="real-time updates directly through the conversational interface."/>
-        <div className="demoInput">
-          <Input name="schedule" placeholder="Your work email"/>
-          <Button name="Schedule Demo" variant="contained" size="large"/>
+      <section className="section section0">
+        <div className="topContainer">
+          <FadeIn className="text">
+            <Typography className="topText" variant="h1" fontSize="40px" text="Discover employee satisfaction"/>
+            <Typography variant="h1" fontSize="40px" text="with conversational case management"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSize="22px" variant="paragraph2" text="Make it easy for your employees to raise query tickets and get"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="22px" variant="paragraph2" text="real-time updates directly through the conversational interface."/>
+            <Slide className="demoInput">
+              <Input name="schedule" placeholder="Your work email"/>
+              <Button name="Schedule Demo" variant="contained" size="large"/>
+            </Slide>
+          </FadeIn>
+          <Slide from='right' className="bowlImage">
+            <img src="/images/home/mobile.png" />
+            <LottieAnimation dataUrl="/images/caseManagement/phone.json" />
+          </Slide>
+      </div>
+      </section>
+      <section className="section section1">
+        <FadeIn className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Give your employees the mental peace"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="they deserve"/>
+        </FadeIn>
+        <div className="iconHighlightsContainer">
+          <IconHighlightsAll></IconHighlightsAll>
         </div>
-        <div className="bowlImage">
-          <img src="/images/home/mobile.png" />
+      </section>
+      <section className="section section2">
+        <FadeIn className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Key features that unlock"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="employee happiness"/>
+        </FadeIn>
+        <FeaturesFirst></FeaturesFirst>
+      </section>
+      <section className="section section3 shortSection">
+        <FeaturesSecond />
+      </section>
+      <section className="section section3 shortSection">
+        <FeaturesThird />
+      </section>
+      <section className="section section5">
+        <FadeIn className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Bring it where you are"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
+        </FadeIn>
+        <Platforms />
+        <div className="knowMore center">
+          <Button variant="contained" size="large" name="Know More" />
         </div>
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Give your employees the mental peace"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="they deserve"/>
-      </div>
-      <div className="iconHighlightsContainer">
-        <IconHighlightsAll></IconHighlightsAll>
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Make employee service as smooth as"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your customer service"/>
-      </div>
-      <div className="products">
-        <DetailProducts />
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="It’s simpler than you think"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="A complete helpdesk that your employee needs"/>
-      </div>
-      <MobileDemo />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Bring it where you are"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="We integrate with all the platforms you love"/>
-      </div>
-      <Platforms />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Know our extended family"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
-      </div>
-      <Customers />
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Our customers love us"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for what we do"/>
-      </div>
-      <Reviews />
-      <div className="quoteContainer demoContainer">
-        <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
-        <div className="demoInput">
-          <Input name="schedule" placeholder="Your work email"/>
-          <Button name="Schedule Demo" variant="contained" size="large"/>
+      </section>
+      <section className="section section7">
+        <FadeIn className="quoteContainer">
+          <Typography variant="h3" fontSize="28px" text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for what we do"/>
+        </FadeIn>
+        <Reviews />
+      </section>
+      <section className="section section8 shortSection noPadding">
+        <div className="quoteContainer demoContainer">
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSize="28px" color="#fff" text="You’re one step away from an excellent employee experience."/>
+            <Typography className="halfBackground" fontWeight="300" color="#fff" fontSize="28px" variant="paragraph2" text="Sign up for a free demo right away"/>
+          </FadeIn>
+          <Slide className="demoInput">
+            <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+            <Button name="Schedule Demo" variant="inverted" size="large"/>
+          </Slide>
         </div>
-      </div>
-      <div className="quoteContainer">
-        <Typography variant="h3" fontSize="28px" text="Industry recognition"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="for our expertise in HR"/>
-      </div>
-      <Recognitions />
+      </section>
     </CaseManagmentStyles>
   );
 }

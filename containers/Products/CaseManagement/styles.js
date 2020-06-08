@@ -1,37 +1,59 @@
 import styled from 'styled-components';
 
 export const CaseManagmentStyles = styled.div`
-  margin: auto;
-  margin-top: 98px;
-  .halfBackground {
-    position: relative;
-    &:before {
-      content: "";
-      width: 100%;
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      background: #00CEFF;
-      height: 21px;
-      opacity: 0.2;
-      z-index: -1;
+  .section {
+    height: calc(100vh);
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &.section0 {
+      padding-top: 80px;
+    }
+    &.shortSection {
+      height: 350px;
+      padding-bottom: 100px;
+    }
+    &.noPadding {
+      max-width: 100vw;
+      background: #0F72EE;
+      padding-bottom: 0px;
+      .halfBackground {
+        z-index: 1;
+      }
+      .halfBackground:before {
+        background: #1166D6;
+        z-index: 0;
+      }
+    }
+    .knowMore {
+      button {
+        width: 172px;
+      }
     }
   }
   .topContainer {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    min-height: 376px;
+    .topText {
+      margin-bottom: 16px;
+    }
     .secondHeading {
-      margin-top: 24px;
+      margin-top: 28px;
+      margin-bottom: 10px;
     }
     .bowlImage {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      position: relative;
+      .animation {
+        position: absolute;
+        top: 12px;
+        left: 56px;
+        z-index: -1;
+        width: 200px;
+      }
     }
     .demoInput {
-      margin-top: 32px;
+      margin-top: 48px;
       width: 40%;
       display: flex;
       align-items: center;
@@ -44,27 +66,17 @@ export const CaseManagmentStyles = styled.div`
         min-width: 172px;
       }
     }
-    .halfBackground {
-      position: relative;
-      width: fit-content;
-      &:before {
-        content: "";
-        width: 100%;
-        position: absolute;
-        bottom: 10px;
-        left: 0px;
-        height: 22px;
-        z-index: -1;
-      }
-    }
   }
   .quoteContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 100px 0;
+    .halfBackground {
+      margin-top: 10px;
+    }
     &.demoContainer {
+      flex: 1;
       .demoInput {
         padding-top: 40px;
         display: flex;
@@ -81,4 +93,6 @@ export const CaseManagmentStyles = styled.div`
     }
   }
 `;
+
+
 

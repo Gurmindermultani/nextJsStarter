@@ -24,6 +24,9 @@ export const HomePageStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .halfBackground {
+      margin-top: 10px;
+    }
     &.demoContainer {
       flex: 1;
       .demoInput {

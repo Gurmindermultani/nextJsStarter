@@ -12,6 +12,8 @@ import VisibilitySensor from "./index";
 const slideMap = {
   up: ['translateY(0)', 'translateY(200px)'],
   down: ['translateY(0)', 'translateY(-200px)'],
+  right: ['translateX(0)', 'translateX(200px)'],
+  left: ['translateX(0)', 'translateX(-200px)'],
 }
 
 function Slide(props) {

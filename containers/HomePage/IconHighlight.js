@@ -17,6 +17,9 @@ const IconHighlightStyles = styled.div`
   .middleText {
     margin: 32px 0 12px 0%;
   }
+  .descriptionText {
+    line-height: 25px;
+  }
 `;
 
 function IconHighlight(props) {
@@ -37,7 +40,7 @@ function IconHighlight(props) {
         <GrowIcon setAnim={setAnim} name={props.name} />
       </div>
       <Typography className="middleText" variant="h4" fontSize="20px" text={props.heading}/>
-      <Typography variant="paragraph2" fontSize="16px" text={props.description}/>
+      <Typography variant="paragraph2" className="descriptionText" fontSize="16px" text={props.description}/>
     </IconHighlightStyles>
   );
 }

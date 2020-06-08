@@ -118,6 +118,32 @@ export const ButtonWrapper = styled.button`
     }
   }
 
+  &.inverted {
+    background-color: ${props => props.theme.palette.white};
+    border: 0.8px solid ${props => props.theme.palette.primary.white};
+    i {
+      color: ${props => props.theme.palette.primary.main};
+    }
+    span {
+      color: ${props => props.theme.palette.primary.main};
+    }
+
+    &:hover {
+      background-color: #fcfcfc;
+    }
+    &.disabled {
+      background-color: ${props => props.theme.palette.border.main};
+      border-color: ${props => props.theme.palette.border.main};
+      pointer-events: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+      &:hover {
+        background-color: ${props => props.theme.palette.border.main};
+      }
+    }
+  }
+
   &.error {
     background-color: ${props => `${props.theme.palette.accent.error }F2`};
     border: 0.8px solid ${props => props.theme.palette.accent.error};
