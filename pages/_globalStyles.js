@@ -63,6 +63,10 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
   }
+  .anchor {
+    text-decoration: underline;
+    cursor: pointer;
+  }
   .halfBackground {
     position: relative;
   }

@@ -7,6 +7,7 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
+import { withRouter } from 'next/router'
 import { useSpring, animated, config } from 'react-spring';
 
 import Button from '../Button';
@@ -118,7 +119,7 @@ function Header(props) {
           )}
         </div>
         <div className="buttons">
-          {window.location.href.indexOf('scheduleDemo') > -1 &&
+          {props.router.pathname.indexOf('scheduleDemo') > -1 &&
             <div className="demo">
               <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
               <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
@@ -126,7 +127,7 @@ function Header(props) {
               <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
             </div>
           }
-          {window.location.href.indexOf('scheduleDemo') === -1 &&
+          {props.router.pathname.indexOf('scheduleDemo') === -1 &&
             <Link href="/scheduleDemo">
               <div>
                 <Button variant="contained" name="Schedule Demo" />
@@ -141,4 +142,4 @@ function Header(props) {
 
 Header.propTypes = {};
 
-export default memo(Header);
+export default memo(withRouter(Header));

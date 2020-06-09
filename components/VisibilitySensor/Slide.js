@@ -20,7 +20,7 @@ function Slide(props) {
   return (
     <VisibilitySensor once partialVisibility>
       {({ isVisible }) => (
-        <Spring to={{ 
+        <Spring delay={props.delay ? props.delay : null} to={{ 
           opacity: isVisible ? 1 : 0,
           transform: isVisible
               ? slideMap[props.from ? props.from : 'up'][0]

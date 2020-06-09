@@ -120,7 +120,7 @@ export const ButtonWrapper = styled.button`
 
   &.inverted {
     background-color: ${props => props.theme.palette.white};
-    border: 0.8px solid ${props => props.theme.palette.primary.white};
+    border: 0.8px solid ${props => props.theme.palette.primary.main};
     i {
       color: ${props => props.theme.palette.primary.main};
     }
@@ -129,7 +129,10 @@ export const ButtonWrapper = styled.button`
     }
 
     &:hover {
-      background-color: #fcfcfc;
+      background-color: ${props => props.theme.palette.primary.main};
+      span {
+        color: ${props => props.theme.palette.white};
+      }
     }
     &.disabled {
       background-color: ${props => props.theme.palette.border.main};
