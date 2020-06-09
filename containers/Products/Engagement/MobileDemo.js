@@ -9,10 +9,10 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
+import VisibilitySensor from "../../../components/VisibilitySensor";
 
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import Typography from '../../../components/Typography';
+import Button from '../../../components/Button';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 
@@ -123,8 +123,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="Employees chat with the virtual HR assistant."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated invites"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Invite your employees to participate in a survey."/>
                 </div>
               </div>
             )}
@@ -142,8 +142,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog bottomLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated replies"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="They get quick automated replies to their queries."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Employees take part in the conversational survey."/>
                 </div>
               </div>
             )}
@@ -161,8 +161,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topRight">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Real-time ticketing"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="There’s an option to raise tickets when needed."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Textual answers"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Ask open-ended questions when required."/>
                 </div>
               </div>
             )}

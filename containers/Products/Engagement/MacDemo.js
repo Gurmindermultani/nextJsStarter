@@ -9,25 +9,25 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
+import VisibilitySensor from "../../../components/VisibilitySensor";
 
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import Typography from '../../../components/Typography';
+import Button from '../../../components/Button';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 
 const MobileDemoStyles = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
   position: relative;
   .mobileImage {
     position: relative;
     overflow: hidden;
     .mobileRim {
-      width: 220px;
-      height: 440px;
+      width: 740px;
+      height: 430px;
     }
     .mobileDemoContainer {
       position: absolute;
@@ -47,13 +47,13 @@ const MobileDemoStyles = styled.div`
     padding: 16px 24px;
     &.topLeft {
       left: 0px;
-      top: 100px;
+      top: 30px;
       border: 1px solid #212121;
       box-shadow: 0px 4px 16px #00000014;
     }
     &.bottomLeft {
-      left: 16px;
-      top: 300px;
+      left: 10px;
+      top: 260px;
       border: 1px solid #103577;
       box-shadow: 0px 4px 16px #00000014;
     }
@@ -79,6 +79,7 @@ const MobileDemoStyles = styled.div`
     }
   }
   .button {
+    align-self: center;
     margin-top: 40px;
     button {
       min-width: 172px;
@@ -99,13 +100,9 @@ function MobileDemo(props) {
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
-                <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
+                <img className="mobileRim" alt="Mobile View" src="/images/mac.png"/>
                 <div className="mobileDemoContainer">
-                  {/* <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/> */}
-                  <video width="100%" height="100%" loop autoPlay muted>
-                    <source src="/images/home/phoneAnimationVideo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  
                 </div>
               </div>
             )}
@@ -123,8 +120,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="Employees chat with the virtual HR assistant."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Analytical reports"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Get intelligent reports on engagment dashboard."/>
                 </div>
               </div>
             )}
@@ -142,46 +139,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog bottomLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated replies"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="They get quick automated replies to their queries."/>
-                </div>
-              </div>
-            )}
-          </Spring>
-        )}
-      </VisibilitySensor>
-      <VisibilitySensor once partialVisibility>
-        {({ isVisible }) => (
-          <Spring delay={300} to={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible
-                ? "translateX(0)"
-                : "translateX(200px)",
-          }}>
-            {({ opacity, transform }) => (
-              <div style={{opacity, transform}} className="boxDialog topRight">
-                <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Real-time ticketing"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="There’s an option to raise tickets when needed."/>
-                </div>
-              </div>
-            )}
-          </Spring>
-        )}
-      </VisibilitySensor>
-      <VisibilitySensor once partialVisibility>
-        {({ isVisible }) => (
-          <Spring delay={300} to={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible
-                ? "translateX(0)"
-                : "translateX(200px)",
-          }}>
-            {({ opacity, transform }) => (
-              <div style={{opacity, transform}} className="boxDialog bottomRight">
-                <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Employee self-service"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="Employees also submit their leave request via chat."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Measure Engagement"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Know your score against employee engagement parameters."/>
                 </div>
               </div>
             )}

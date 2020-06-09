@@ -1,18 +1,23 @@
 import Head from 'next/head'
 import Header from '../../components/Header';
-import ScheduleDemo from '../../containers/ScheduleDemo';
+import Footer from '../../components/Footer';
+import HrWorkflows from '../../containers/Products/HrWorkflows';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena.AI - Schedule Demo</title>
+        <title>Leena.AI - Hr Workflows</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main>
-        <ScheduleDemo />
+        <HrWorkflows />
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
 
       <style jsx>{`
         .container {

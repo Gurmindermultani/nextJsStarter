@@ -2,63 +2,66 @@ import styled from 'styled-components';
 
 export const ScheduleDemoStyles = styled.div`
   display: flex;
-  flex-direction: column;
   height: calc(100vh - 80px);
-  padding: 20px 0;
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .phoneImage {
-      margin-right: 16px;
+  margin-top: 80px;
+  justify-content: space-around;
+  align-items: center;
+  .leftContainer {
+    flex-basis: 40%;
+    .demoText {
+      margin: 10px 0;
     }
-    .mailImage {
-      margin: 0 16px 0 32px;
+    .middleText {
+      margin: 10px 0;
     }
-    span {
-      opacity: 0.8;
+    .textDetail {
+      margin: 30px 0;
+      line-height: 32px;
+    }
+    .clients {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      opacity: 0.4;
+      img {
+        height: 51px;
+        width: 90px;
+        filter: grayscale(100%);
+        margin-bottom: 10px;
+        &.airasia {
+          height: 90px;
+        }
+        &.rpg {
+          height: 30px;
+          margin-top: 30px;
+        }
+        &.oneplus {
+          width: 130px;
+          margin-top: 10px;
+        }
+        &.cocacola {
+          width: 130px;
+          margin-top: 5px;
+        }
+        &.tata {
+          width: 160px;
+          height: 20px;
+          margin-top: 30px;
+        }
+      }
     }
   }
-  .body {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  .rightContainer {
+    flex-basis: 40%;
     .form {
-      width: 400px;
-      margin-top: 24px;
-      .errorContainer {
-        padding: 0;
-      }
-      button {
-        margin-top: 25px;
-      }
-    }
-  }
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 0.4;
-    img {
-      height: 40px;
-      width: 100px;
-      &.airasia {
-        height: 90px;
-      }
-      &.rpg {
-        height: 30px;
-      }
-      &.oneplus {
-        width: 130px;
-      }
-      &.cocacola {
-        width: 130px;
-      }
-      &.tata {
-        width: 160px;
-        height: 20px;
+      padding: 56px;
+      width: 80%;
+      margin: auto;
+      box-shadow: 0px 6px 40px #00000029;
+      border-radius: 20px;
+      .form-group {
+        margin-top: 0;
       }
     }
   }

@@ -34,7 +34,7 @@ export const HeaderStyles = styled.div`
     display: flex;
     .groupNav {
       margin-right: 44px;
-      padding: 5px 0;
+      padding: 6px 0;
       position: relative;
       transition: all 0.5s ease;
       .links {
@@ -74,6 +74,20 @@ export const HeaderStyles = styled.div`
           transform: rotate(-180deg);
         }
       }
+    }
+  }
+  .demo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .phoneImage {
+      margin-right: 16px;
+    }
+    .mailImage {
+      margin: 0 16px 0 32px;
+    }
+    span {
+      opacity: 0.8;
     }
   }
   @media only screen and (max-width: 760px) {

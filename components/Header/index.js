@@ -118,11 +118,21 @@ function Header(props) {
           )}
         </div>
         <div className="buttons">
-          <Link href="/scheduleDemo">
-            <div>
-              <Button variant="contained" name="Schedule Demo" />
+          {window.location.href.indexOf('scheduleDemo') > -1 &&
+            <div className="demo">
+              <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
+              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
+              <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
+              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
             </div>
-          </Link>
+          }
+          {window.location.href.indexOf('scheduleDemo') === -1 &&
+            <Link href="/scheduleDemo">
+              <div>
+                <Button variant="contained" name="Schedule Demo" />
+              </div>
+            </Link>
+          }
         </div>
       </animated.div>
     </HeaderStyles>

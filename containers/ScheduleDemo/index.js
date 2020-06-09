@@ -30,15 +30,20 @@ function HomePage(props) {
   });
   return (
     <ScheduleDemoStyles>
-      <div className="header">
-        <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
-        <Typography fontWeight="300" color="#212121" fontSize="20px" variant="paragraph2" text="+91 8851168842"/>
-        <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
-        <Typography fontWeight="300" color="#212121" fontSize="20px" variant="paragraph2" text="sales@leena.ai"/>
+      <div className="leftContainer">
+        <Typography className="demoText" variant="h1" fontSize="40px" text="Book your live demo"/>
+        <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="Know more how Leena AI can help you"/>
+        <br />
+        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="and your organization."/>
+        <br />
+        <Typography className="textDetail" fontWeight="500" color="#212121" fontSize="20px" variant="paragraph2" text="In the demo session, our product consultants will walk you through the conversational AI platform, analytical dashboards, and how Leena AI can help you resolve your challenges."/>
+        <div className="clients">
+          {clients.map( client => 
+            <img className={'client ' + client} alt={'client ' + client} src={`/images/clients/${client}.png`}/>
+          )} 
+        </div>     
       </div>
-      <div className="body">
-        <Typography variant="h1" fontSize="40px" text="Book your live demo"/>
-        <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="Know more how Leena AI can help you and your organization."/>
+      <div className="rightContainer">
         <div className="form">
           <form onSubmit={form.onSubmit}>
             <Input {...fullName} placeholder='Full Name' name="fullName"/>
@@ -48,14 +53,9 @@ function HomePage(props) {
             </div>
             <Input {...fullName} placeholder='Company' name="company"/>
             <Input {...fullName} placeholder='Job Role' name="jobRole"/>
-            <Button size="large" fullWidth type="submit" name="Save" variant="contained" />
+            <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
           </form>
         </div>
-      </div>
-      <div className="footer">
-        {clients.map( client => 
-          <img className={'client ' + client} alt={'client ' + client} src={`/images/clients/${client}.png`}/>
-        )}
       </div>
     </ScheduleDemoStyles>
   );

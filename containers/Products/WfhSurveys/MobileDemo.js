@@ -9,10 +9,10 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 
 import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
+import VisibilitySensor from "../../../components/VisibilitySensor";
 
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import Typography from '../../../components/Typography';
+import Button from '../../../components/Button';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 
@@ -101,11 +101,7 @@ function MobileDemo(props) {
               <div style={{opacity, transform}} className="mobileImage">
                 <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
                 <div className="mobileDemoContainer">
-                  {/* <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/> */}
-                  <video width="100%" height="100%" loop autoPlay muted>
-                    <source src="/images/home/phoneAnimationVideo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/>
                 </div>
               </div>
             )}
@@ -123,8 +119,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="Employees chat with the virtual HR assistant."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated invites"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Invite your employees to participate in a survey."/>
                 </div>
               </div>
             )}
@@ -142,8 +138,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog bottomLeft">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated replies"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="They get quick automated replies to their queries."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="WFH challenges"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Ask about the work challenges employees might be facing."/>
                 </div>
               </div>
             )}
@@ -161,8 +157,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topRight">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Real-time ticketing"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="There’s an option to raise tickets when needed."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational Interface"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Take feedback via AI-enabled interactive chat."/>
                 </div>
               </div>
             )}
@@ -180,8 +176,8 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog bottomRight">
                 <div className="textBox">
-                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Employee self-service"/>
-                  <Typography variant="paragraph2" fontSize="16px" text="Employees also submit their leave request via chat."/>
+                  <Typography className="textHeading" variant="h6" fontSize="20px" text="Employee wellness"/>
+                  <Typography variant="paragraph2" fontSize="16px" text="Ask remote employees if they are doing okay."/>
                 </div>
               </div>
             )}
