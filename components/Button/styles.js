@@ -129,7 +129,7 @@ export const ButtonWrapper = styled.button`
     }
 
     &:hover {
-      background-color: ${props => props.theme.palette.primary.main};
+      background-color: #103577;
       span {
         color: ${props => props.theme.palette.white};
       }

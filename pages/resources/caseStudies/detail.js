@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import CaseStudies from '../../containers/Resources/CaseStudies';
+import Header from '../../../components/Header';
+import Footer from '../../../components/Footer';
+import Detail from '../../../containers/Resources/CaseStudies/Detail';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena.AI - Case Studies</title>
+        <title>Leena.AI - Case Study</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main>
-        <CaseStudies />
+        <Detail />
       </main>
 
       <footer>

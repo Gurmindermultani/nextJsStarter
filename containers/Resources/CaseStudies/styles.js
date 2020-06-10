@@ -17,9 +17,11 @@ export const CaseStudiesStyles = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
+      height: auto;
       .slideCard {
         flex-basis: 30%;
         margin-right: 35px;
+        margin-bottom: 35px;
         img {
           &.airasia {
             width: 110px;

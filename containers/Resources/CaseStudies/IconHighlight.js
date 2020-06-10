@@ -15,7 +15,7 @@ const CaseStudyStyles = styled.div`
 
 function CaseStudy(props) {
   return (
-    <CaseStudyStyles style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <CaseStudyStyles>
       asdasdads
     </CaseStudyStyles>
   );

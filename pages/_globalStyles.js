@@ -70,6 +70,9 @@ const GlobalStyle = createGlobalStyle`
   .halfBackground {
     position: relative;
   }
+  a {
+    text-decoration: none;
+  }
 
   .halfBackground:before {
     content: "";

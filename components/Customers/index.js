@@ -9,6 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../Typography';
 import Carousal from '../Carousal';
+import Slide from '../VisibilitySensor/Slide';
 
 const customers = [
   {
@@ -103,27 +104,29 @@ const CustomersStyles = styled.div`
 
 function Customers(props) {
   return (
-    <CustomersStyles>
-      <Carousal variant="centerMode">
-        {customers.map( customer => 
-          <div className="carousalContainer center" key={customer.name}>
-            <img className={customer.name} name={customer.name} src={`/images/clients/${customer.name}.png`} />
-            <div className="details">
-              <div className="row">
-                <Typography className="heading" variant="paragraph2" fontSize="13px" text="Type"/>
-                <br/>
-                <Typography variant="h6" fontSize="13px" text={customer.type}/>
-              </div>
-              <div className="row">
-                <Typography className="heading" variant="paragraph2" fontSize="13px" text="Employees"/>
-                <br/>
-                <Typography variant="h6" fontSize="13px" text={customer.employees}/>
+    <Slide>
+      <CustomersStyles>
+        <Carousal variant="centerMode">
+          {customers.map( customer => 
+            <div className="carousalContainer center" key={customer.name}>
+              <img className={customer.name} name={customer.name} src={`/images/clients/${customer.name}.png`} />
+              <div className="details">
+                <div className="row">
+                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Type"/>
+                  <br/>
+                  <Typography variant="h6" fontSize="13px" text={customer.type}/>
+                </div>
+                <div className="row">
+                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Employees"/>
+                  <br/>
+                  <Typography variant="h6" fontSize="13px" text={customer.employees}/>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </Carousal>
-    </CustomersStyles>
+          )}
+        </Carousal>
+      </CustomersStyles>
+    </Slide>
   );
 }
 

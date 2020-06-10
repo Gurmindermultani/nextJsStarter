@@ -18,7 +18,7 @@ function FadeIn(props) {
           opacity: isVisible ? 1 : 0,
         }}>
           {({ opacity }) => (
-            <div style={ { opacity} } className={props.className}>
+            <div style={ { opacity } } className={props.className}>
               {props.children}
             </div>
           )}

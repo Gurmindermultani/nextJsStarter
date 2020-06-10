@@ -6,6 +6,7 @@
 
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
+import Link from 'next/link'
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
@@ -51,7 +52,11 @@ function ButtonLinkCard(props) {
         <Typography fontWeight="500" variant="paragraph2" fontSize="18px" color="#212121" text={props.data.text}/>
       </div>
       <div className="footer">
-        <Button variant="inverted" size="large" name="Read Case Study"/>
+        <Link href={`/resources/caseStudies/detail?name=${props.data.name}`} >
+          <a>
+            <Button variant="inverted" size="large" name="Read Case Study"/>
+          </a>
+        </Link>
       </div>
     </ButtonLinkCardStyles>
   );
