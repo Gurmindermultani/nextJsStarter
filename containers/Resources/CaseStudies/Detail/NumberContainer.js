@@ -39,6 +39,7 @@ const NumberContainerStyles = styled.div`
     .footer {
       border-top: 1px solid white;
       padding-top: 10px;
+      margin-top: 20px;
     }
   }
 `;
