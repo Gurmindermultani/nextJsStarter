@@ -11,7 +11,9 @@ import Typography from '../../components/Typography';
 import Slider from "react-slick";
 
 const CenterModeStyles = styled.div`
-  .slick-center {}
+  .slick-center {
+    
+  }
 `;
 
 function CenterMode(props) {
@@ -19,8 +21,10 @@ function CenterMode(props) {
     className: "center",
     centerMode: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     speed: 500,
+    adaptiveHeight: true,
+    variableWidth: true,
   };
   return (
     <CenterModeStyles>

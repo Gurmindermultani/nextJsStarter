@@ -14,13 +14,13 @@ import { throttle, debounce } from 'lodash';
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
+import Customers from '../../components/Customers';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 import MobileDemo from './MobileDemo';
 import Platforms from './Platforms';
-import Customers from './Customers';
 import Reviews from './Reviews';
 import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
