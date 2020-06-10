@@ -90,6 +90,9 @@ const ProductStyles = styled.div`
     height: 310px;
     div {
       position: absolute;
+      img {
+        box-shadow: 0px 4px 16px #00000014;
+      }
       &.a1 {
         top: 0;
         left: 0;
