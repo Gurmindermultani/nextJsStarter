@@ -7,8 +7,12 @@ export const HomePageStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-top: 100px;
-    padding-bottom: 40px;
+    &.section0 {
+      padding-top: 100px;
+    }
+    &.section3 {
+      height: calc(100vh - 100px);
+    }
     &.shortSection {
       height: 450px;
       padding-bottom: 100px;

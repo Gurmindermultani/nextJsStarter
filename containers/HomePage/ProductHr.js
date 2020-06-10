@@ -12,6 +12,8 @@ import Button from '../../components/Button';
 
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
+import Slide from "../../components/VisibilitySensor/Slide";
+import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -26,6 +28,8 @@ const ProductStyles = styled.div`
       margin-left: 16px;
       .description {
         max-width: 710px;
+        margin-top: 10px;
+        line-height: 26px;
       }
     }
   }
@@ -70,11 +74,34 @@ const ProductStyles = styled.div`
         }
       }
     }
+    .description {
+      line-height: 26px;
+    }
   }
   .buttons {
     margin-top: 48px;
     button {
       min-width: 172px;
+    }
+  }
+  .image {
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      &.a1 {
+        top: 0;
+        left: 0;
+      }
+      &.a2 {
+        top: 45px;
+        left: 253px;
+      }
+      &.a3 {
+        bottom: 0;
+        right: 0;
+      }
     }
   }
 `;
@@ -170,24 +197,24 @@ function ProductHr(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="rightContainer">
-                  <div className="image">
-                    <img src="/images/home/faq.svg"/>
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="rightContainer">
+          {expanded === "panel1" &&
+            <div className="image center">
+              <FadeIn>
+                <img src="/images/bg.svg"/>
+              </FadeIn>
+              <Slide from='left' className="a1">
+                <img src="/images/home/helpdesk/a1.png"/>
+              </Slide>
+              <Slide from='right' className="a2">
+                <img src="/images/home/helpdesk/a2.png"/>
+              </Slide>
+              <Slide from='up' className="a3">
+                <img src="/images/home/helpdesk/a3.png"/>
+              </Slide>
+            </div>
+          }
+        </div>
       </div>
     </ProductStyles>
   );

@@ -19,7 +19,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const ProductStyles = styled.div`
-  margin-top: 96px;
+  margin-top: 46px;
   .productHeader {
     display: flex;
     justify-content: flex-end;
@@ -30,6 +30,8 @@ const ProductStyles = styled.div`
       text-align: right;
       .description {
         max-width: 710px;
+        margin-top: 10px;
+        line-height: 26px;
       }
     }
   }
@@ -73,6 +75,9 @@ const ProductStyles = styled.div`
           background: ${props => props.theme.palette.white};
         }
       }
+    }
+    .description {
+      line-height: 26px;
     }
   }
   .buttons {
