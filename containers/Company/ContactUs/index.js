@@ -12,18 +12,49 @@ import Button from '../../../components/Button';
 import Typography from '../../../components/Typography';
 import Input from '../../../components/Input';
 import { useForm, useField } from '../../../components/Input/formHooks';
+import Utils from '../../../utils';
+
 import { ContactUsStyles } from './styles';
 
 function ContactUs(props) {
   const form = useForm({
     onSubmit: (formData, valid) => {
       if (!valid) return;
-      addUserApi();
+      fetch('https://staging.chatteron.io/api/leena/contact-us', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      }).then((res) => {
+        res.status === 200 ? console.log(res.data) : ''
+      })
     }
   });
-  const fullName = useField('fullName', form, {
+  const name = useField('name', form, {
     defaultValue: '',
-    validations: [formData => !formData['fullName'] && 'Please enter your full name.'],
+    validations: [formData => !formData['name'] && 'Please enter your full name.'],
+    fieldsToValidateOnChange: [],
+  });
+  const email = useField('email', form, {
+    defaultValue: '',
+    validations: [formData => !(formData['email'] && Utils.checkValidEmail(formData['email']) ) && 'Please enter valid email.'],
+    fieldsToValidateOnChange: [],
+  });
+  const phone = useField('phone', form, {
+    defaultValue: '',
+    validations: [formData => !formData['phone'] && 'Please enter your phone number.'],
+    fieldsToValidateOnChange: [],
+  });
+  const company = useField('company', form, {
+    defaultValue: '',
+    validations: [formData => !formData['company'] && 'Please enter company name.'],
+    fieldsToValidateOnChange: [],
+  });
+  const jobtitle = useField('jobtitle', form, {
+    defaultValue: '',
+    validations: [formData => !formData['jobtitle'] && 'Please enter jobtitle.'],
     fieldsToValidateOnChange: [],
   });
   return (
@@ -68,13 +99,13 @@ function ContactUs(props) {
       <div className="rightContainer">
         <div className="form">
           <form onSubmit={form.onSubmit}>
-            <Input {...fullName} placeholder='Full Name' name="fullName"/>
-            <Input {...fullName} placeholder='Your Work Email' name="email"/>
+            <Input {...name} placeholder='Full Name' name="name"/>
+            <Input {...email} placeholder='Your Work Email' name="email"/>
             <div className="phone">
-              <Input {...fullName} placeholder='Your Phone Number' name=" number"/>
+              <Input {...phone} placeholder='Your Phone Number' name=" number"/>
             </div>
-            <Input {...fullName} placeholder='Company' name="company"/>
-            <Input {...fullName} placeholder='Job Role' name="jobRole"/>
+            <Input {...company} placeholder='Company' name="company"/>
+            <Input {...jobtitle} placeholder='Job Role' name="jobRole"/>
             <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
           </form>
         </div>

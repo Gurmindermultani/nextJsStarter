@@ -91,19 +91,18 @@ const ProductStyles = styled.div`
     div {
       position: absolute;
       img {
-        box-shadow: 0px 4px 16px #00000014;
       }
       &.a1 {
         top: 0;
         left: 0;
       }
       &.a2 {
-        top: 45px;
-        left: 253px;
+        top: -8px;
+        left: 198px;
       }
       &.a3 {
-        bottom: 0;
-        right: 0;
+        bottom: -66px;
+        right: -74px;
       }
     }
   }
@@ -210,10 +209,10 @@ function ProductHr(props) {
                 <img src="/images/home/helpdesk/a1.png"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.png"/>
+                <img src="/images/home/helpdesk/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.png"/>
+                <img src="/images/home/helpdesk/a3.svg"/>
               </Slide>
             </div>
           }
