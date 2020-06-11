@@ -36,6 +36,13 @@ const PlatformsStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    .platform {
+      width: 100%;
+      margin-bottom: 38px;
+    }
+  }
 `;
 
 const hris = [

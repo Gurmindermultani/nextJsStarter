@@ -95,27 +95,30 @@ const MobileDemoStyles = styled.div`
       display: block;
       width: calc(100vw - 60px);
       margin-top: 16px;
+      .slick-slide {
+        padding: 0 15px;
+      }
       .slick-center {
-        transform: scale(1.2);
-        margin: 0 10px;
+        
       }
       .carousalDialog {
         border-radius: 4px;
-        padding: 16px 24px;
+        padding: 16px 20px;
+        color: white;
         &.topLeft {
-          border: 1px solid #212121;
+          background: #212121;
           box-shadow: 0px 4px 16px #00000014;
         }
         &.bottomLeft {
-          border: 1px solid #103577;
+          background: #103577;
           box-shadow: 0px 4px 16px #00000014;
         }
         &.topRight {
-          border: 1px solid #00CEFF;
+          background: #00CEFF;
           box-shadow: 0px 4px 16px #00000014;
         }
         &.bottomRight {
-          border: 1px solid #0F72EE;
+          background: #0F72EE;
           box-shadow: 0px 4px 16px #00000014;
         }
         .textBox {
