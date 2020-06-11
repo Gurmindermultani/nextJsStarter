@@ -17,6 +17,7 @@ import Typography from '../../components/Typography';
 import Button from '../../components/Button';
 
 const MobileDemoStyles = styled.div`
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +94,7 @@ const MobileDemoStyles = styled.div`
     }
     .mobileCaraousal {
       display: block;
-      width: calc(100vw - 60px);
+      width: calc(100vw - 10px);
       margin-top: 16px;
       .slick-slide {
         padding: 0 15px;
