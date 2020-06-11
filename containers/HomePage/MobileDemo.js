@@ -94,8 +94,8 @@ const MobileDemoStyles = styled.div`
     }
     .mobileCaraousal {
       display: block;
-      width: calc(100vw - 10px);
       margin-top: 16px;
+      width: calc(100vw - 10px);
       .slick-slide {
         padding: 0 15px;
       }
@@ -239,7 +239,7 @@ function MobileDemo(props) {
         )}
       </VisibilitySensor>
       <div className="mobileCaraousal">
-        <Carousal numSlides={1} variant="mobileCarousal">
+        <Carousal variant="mobileCarousal">
           <div className="carousalDialog topLeft">
             <div className="textBox">
               <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>

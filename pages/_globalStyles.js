@@ -85,9 +85,15 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0.2;
     z-index: -1;
   }
+  .mobile {
+    display: none;
+  }
   @media only screen and (max-width: 760px) {
-    .mobileHidden {
+    .desktop {
       display: none;
+    }
+    .mobile {
+      display: block;
     }
   }
 `;

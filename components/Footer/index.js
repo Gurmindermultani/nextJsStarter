@@ -70,6 +70,7 @@ const FooterStyles = styled.div`
       }
       .subscribe {
         margin: 64px 0 48px 0;
+        max-width: none;
       }
     }
     .lowerContainer {

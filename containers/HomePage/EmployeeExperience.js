@@ -19,6 +19,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const ProductStyles = styled.div`
+  overflow: hidden;
   margin-top: 46px;
   .productHeader {
     display: flex;

@@ -31,16 +31,28 @@ const reviews = [
       position: 'Global Head HR Tech',
     }
   },
+  {
+    name: 'piramal',
+    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
+    user: {
+      img: '/images/people/nikhil.png',
+      name: '~ Nikhil Morade',
+      position: 'Global Head HR Tech',
+    }
+  },
 ];
 
 const ReviewsStyles = styled.div`
-  margin-bottom: auto;
-  margin-top: 126px;
+  overflow: hidden;
+  * {
+    outline: none;
+  }
+  .mobile{
+    display: none;
+  }
   .carousalContainer {
-    padding: 40px 0;
     .review {
       min-height: 318px;
-      width: 973px;
       display: flex;
       margin: auto;
       box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
@@ -64,7 +76,6 @@ const ReviewsStyles = styled.div`
         flex: 1;
         padding: 50px;
         span {
-          font-style: italic;
           line-height: 26px;
         }
         .user {
@@ -79,13 +90,35 @@ const ReviewsStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    .mobile{
+      display: block;
+    }
+    .deskTop{
+      display: none;
+    }
     .carousalContainer {
       .review {
         display: block;
+        width: 100%;
+        box-shadow: 0px 3px 6px #00000029;
+        padding-bottom: 10px;
+        &:hover {
+          transform: scale(1.0);
+        }
         .leftContainer {
-
+          width: 100%;
+          padding: 30px;
+        }
+        .rightContainer {
+          padding: 10px;
         }
       }
+    }
+    .slick-slide {
+      padding: 0 10px;
+    }
+    .slick-center {
+      
     }
   }
 `;
@@ -93,8 +126,31 @@ const ReviewsStyles = styled.div`
 function Reviews(props) {
   return (
     <ReviewsStyles>
-      <FadeIn>
+      <FadeIn className="deskTop">
         <Carousal variant="singleMode">
+          {reviews.map( review => 
+            <div className="carousalContainer" key={review.name}>
+              <div className="review">
+                <div className="leftContainer">
+                  <img src={review.name} src={`/images/home/${review.name}.png`}/>
+                </div>
+                <div className="rightContainer">
+                  <div className="content">
+                    <Typography size="16px" variant="paragraph2" text={review.text}/>
+                  </div>
+                  <div className="user">
+                    <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
+                    <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                    <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </Carousal>
+      </FadeIn>
+      <FadeIn className="mobile">
+        <Carousal variant="mobileCarousal">
           {reviews.map( review => 
             <div className="carousalContainer" key={review.name}>
               <div className="review">

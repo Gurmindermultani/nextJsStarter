@@ -50,6 +50,12 @@ export const HomePageStyles = styled.div`
     .quoteContainer {
       margin: 100px 0 72px 0;
     }
+    .section {
+      &.noMargin {
+        margin-top: 120px;
+        height: auto;
+      }
+    }
   }
 `;
 

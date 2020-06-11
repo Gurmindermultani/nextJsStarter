@@ -7,8 +7,9 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Typography from '../Typography';
-import Slide from '../VisibilitySensor/Slide';
+import Typography from '../../components/Typography';
+import FadeIn from '../../components/VisibilitySensor/FadeIn';
+import Slide from '../../components/VisibilitySensor/Slide';
 
 const PlatformsStyles = styled.div`
   display: flex;
@@ -33,6 +34,13 @@ const PlatformsStyles = styled.div`
           height: 100%;
         }
       }
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    .platform {
+      width: 100%;
+      margin-bottom: 38px;
     }
   }
 `;

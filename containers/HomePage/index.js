@@ -15,14 +15,14 @@ import Button from '../../components/Button';
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Customers from '../../components/Customers';
+import Reviews from '../../components/Reviews';
+import Platforms from '../../components/Platforms';
 import ScheduleDemo from '../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
 import MobileDemo from './MobileDemo';
-import Platforms from './Platforms';
-import Reviews from './Reviews';
 import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
 import TopContainer from './TopContainer';

@@ -9,7 +9,8 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Card from '../../components/Cards';
 import Slide from "../../components/VisibilitySensor/Slide";
-
+import FadeIn from "../../components/VisibilitySensor/FadeIn";
+import Carousal from "../../components/Carousal";
 const recognitions = [
   {
     name: 'forbes',
@@ -40,23 +41,38 @@ const recognitions = [
 const RecognitionsStyles = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   .singleCard {
     margin-right: 24px;
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
+    .cardsContainer {
+      padding-bottom: 50px;
+    }
   }
 `;
 
 function Recognitions(props) {
   return (
-    <RecognitionsStyles>
-      {recognitions.map( recognition => 
-        <Slide key={recognition.name}>
-          <Card variant="linkCard" data={recognition} />
-        </Slide>
-      )}
-    </RecognitionsStyles>
+    <>
+      <RecognitionsStyles className="desktop">
+        {recognitions.map( recognition => 
+          <Slide key={recognition.name}>
+            <Card variant="linkCard" data={recognition} />
+          </Slide>
+        )}
+      </RecognitionsStyles>
+      <RecognitionsStyles className="mobile">
+        <Carousal variant="mobileCarousal">
+          {recognitions.map( recognition => 
+            <FadeIn key={recognition.name}>
+              <Card variant="linkCard" data={recognition} />
+            </FadeIn>
+          )}
+        </Carousal>
+      </RecognitionsStyles>
+    </>
   );
 }
 
