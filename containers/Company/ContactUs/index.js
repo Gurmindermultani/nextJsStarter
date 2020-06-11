@@ -15,8 +15,10 @@ import { useForm, useField } from '../../../components/Input/formHooks';
 import Utils from '../../../utils';
 
 import { ContactUsStyles } from './styles';
+import Dialog from './Dialog';
 
 function ContactUs(props) {
+  const [showDialog, setShowDialog] = useState('');
   const form = useForm({
     onSubmit: (formData, valid) => {
       if (!valid) return;
@@ -28,8 +30,8 @@ function ContactUs(props) {
         },
         body: JSON.stringify(formData)
       }).then((res) => {
-        res.status === 200 ? console.log(res.data) : ''
-      })
+        res.status === 200 ? setShowDialog('success') : '';
+      });
     }
   });
   const name = useField('name', form, {
@@ -54,7 +56,7 @@ function ContactUs(props) {
   });
   const jobtitle = useField('jobtitle', form, {
     defaultValue: '',
-    validations: [formData => !formData['jobtitle'] && 'Please enter jobtitle.'],
+    validations: [formData => !formData['jobtitle'] && 'Please enter job role.'],
     fieldsToValidateOnChange: [],
   });
   return (
@@ -110,6 +112,10 @@ function ContactUs(props) {
           </form>
         </div>
       </div>
+      <Dialog
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+      />
     </ContactUsStyles>
   );
 }
