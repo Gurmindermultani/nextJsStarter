@@ -15,6 +15,7 @@ import Button from '../../components/Button';
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Customers from '../../components/Customers';
+import ScheduleDemo from '../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
@@ -175,17 +176,8 @@ function HomePage(props) {
         </QuoteAnimator>
         <Reviews />
       </section>
-      <section className="section section8 shortSection">
-        <div className="quoteContainer demoContainer">
-          <QuoteAnimator>
-            <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
-          </QuoteAnimator>
-          <Slide className="demoInput">
-            <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
-            <Button name="Schedule Demo" variant="contained" size="large"/>
-          </Slide>
-        </div>
+      <section className="section section8 noMargin">
+        <ScheduleDemo></ScheduleDemo>
       </section>
       <section className="section section9">
         <QuoteAnimator className="quoteContainer">

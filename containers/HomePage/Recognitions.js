@@ -43,6 +43,9 @@ const RecognitionsStyles = styled.div`
   .singleCard {
     margin-right: 24px;
   }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+  }
 `;
 
 function Recognitions(props) {

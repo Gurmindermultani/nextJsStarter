@@ -9,6 +9,8 @@ export default function Home() {
       <Head>
         <title>Leena.AI</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
@@ -31,7 +33,6 @@ export default function Home() {
         main {
           flex: 1;
           width: 100%;
-          max-width: 1100px;
         }
 
         footer {

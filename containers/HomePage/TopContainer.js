@@ -46,6 +46,23 @@ const TopContainerStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    .lowerContainer {
+      flex-wrap: wrap;
+      .animatedDemoInput {
+        flex-wrap: wrap;
+        .form-group {
+          width: 100%;
+        }
+      }
+      .bowlImage {
+        margin-top: 120px;
+        img {
+          width: calc(100vw - 80px);
+        }
+      }
+    }
+  }
 `;
 
 function TopContainer(props) {
@@ -65,6 +82,7 @@ function TopContainer(props) {
                   {({ opacity, transform }) => (
                     <div style={{ opacity, transform }} className="animatedText">
                       <Typography variant="h1" fontSize="54px" text="Redefine Employee Experience"/>
+                      <br />
                       <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
                       <br />
                       <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
@@ -84,7 +102,7 @@ function TopContainer(props) {
                     }}>
                       {({ opacity, transform }) => (
                         <div style={{ opacity, transform }} className="animatedDemoInput">
-                          <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+                          <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>
                           <Link href="/scheduleDemo">
                             <div>
                               <Button name="Schedule Demo" variant="contained" size="large"/>

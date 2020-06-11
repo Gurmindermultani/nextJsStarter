@@ -57,6 +57,29 @@ const FooterStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    padding: 0 30px;
+    .upperContainer {
+      flex-wrap: wrap;
+      .logo {
+        text-align: center;
+        width: 100%;
+      }
+      .navigation {
+        display: none;
+      }
+      .subscribe {
+        margin: 64px 0 48px 0;
+      }
+    }
+    .lowerContainer {
+      flex-wrap: wrap-reverse;
+      text-align: center;
+      .copyright, .terms {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 function Footer(props) {
@@ -101,7 +124,7 @@ function Footer(props) {
       </div>
       <div className="lowerContainer">
         <div className="copyright">
-          <Typography variant="paragraph2" color="#212121" text="Copyright © 2020 "/>
+          <Typography variant="paragraph2" color="#212121" text="© 2020 "/>
           {" "}
           <Typography variant="paragraph2" color="#0F72EE" text="Leena AI"/>
         </div>

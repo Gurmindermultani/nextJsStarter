@@ -29,14 +29,17 @@ export const TypographyContainer = styled.span`
         font-weight: ${props => props.fontWeight};
     `}
     ${props => props.fontSize && css`
+        font-size: ${props => props.fontSize};
+    `}
+    ${props => props.fontSizes && css`
         @media (max-width: ${props => props.theme.breakpoints[0]}) {
-            font-size: ${props => props.fontSize};
+            font-size: ${props => props.fontSizes[0]};
         }
         @media (min-width: ${props => props.theme.breakpoints[0]}) and (max-width : ${props => props.theme.breakpoints[2]}) {
-            font-size: ${props => props.fontSize};
+            font-size: ${props => props.fontSizes[1]};
         }
         @media (min-width: ${props => props.theme.breakpoints[2]}) {
-            font-size: ${props => props.fontSize};
+            font-size: ${props => props.fontSizes[2]};
         }
     `}
 `;

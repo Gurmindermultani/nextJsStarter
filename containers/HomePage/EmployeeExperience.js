@@ -86,6 +86,16 @@ const ProductStyles = styled.div`
       min-width: 172px;
     }
   }
+  @media only screen and (max-width: 760px) {
+    .body {
+      .rightContainer {
+        flex-basis: 100%;
+      }
+      .leftContainer {
+        display: none;
+      }
+    }
+  }
 `;
 
 function EmployeeExperience(props) {

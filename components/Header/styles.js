@@ -14,6 +14,7 @@ export const HeaderStyles = styled.div`
     align-items: center;
     justify-content: space-between;
     top: 0px;
+    left: 0;
     background: white;
     position: absolute;
     width: 100%;
@@ -91,7 +92,12 @@ export const HeaderStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    padding: 0 15px;
+    .animatedHeader {
+      padding: 0 30px;
+      .groupNav {
+        display: none;
+      }
+    }
   }
 `;
 

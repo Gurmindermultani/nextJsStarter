@@ -30,13 +30,21 @@ const ScheduleDemoStyles = styled.div`
       min-width: 172px;
     }
   }
+  .quoteContainer {
+    margin: 0;
+  }
+  @media only screen and (max-width: 760px) {
+    .form-group, .left, .right {
+      display: none;
+    }
+  }
 `;
 
 function ScheduleDemo(props) {
   return (
     <ScheduleDemoStyles>
       <div>
-        <Slide from="left">
+        <Slide from="left" className="left">
           <img alt="animationImputs" src="/images/leftDemo.svg"/>
         </Slide>
       </div>
@@ -51,7 +59,7 @@ function ScheduleDemo(props) {
         </Slide>
       </div>
       <div>
-        <Slide from="right">
+        <Slide from="right" className="right">
           <img alt="animationImputs" src="/images/rightDemo.svg"/>
         </Slide>
       </div>

@@ -50,13 +50,13 @@ const ReviewsStyles = styled.div`
         transform: scale(1.05);
       }
       .leftContainer {
-        width: 370px;
+        width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
         background: #103577;
         img {
-          width: 262px;
+          width: 100%;
           height: 129px;
         }
       }
@@ -74,6 +74,16 @@ const ReviewsStyles = styled.div`
           span {
             margin-left: 15px;
           }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    .carousalContainer {
+      .review {
+        display: block;
+        .leftContainer {
+
         }
       }
     }

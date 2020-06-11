@@ -1,21 +1,17 @@
 import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
-  margin: auto;
+  padding: 0 10rem;
+  overflow-x: hidden;
   .section {
-    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     &.section0 {
       padding-top: 100px;
     }
-    &.section3 {
-      height: calc(100vh - 100px);
-    }
-    &.shortSection {
-      height: 450px;
-      padding-bottom: 100px;
+    &.noMargin {
+      height: 550px;
     }
     .knowMore {
       button {
@@ -28,6 +24,8 @@ export const HomePageStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 150px 0 120px 0;
+    text-align: center;
     .halfBackground {
       margin-top: 10px;
     }
@@ -47,6 +45,9 @@ export const HomePageStyles = styled.div`
         }
       }
     }
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 0 30px;
   }
 `;
 
