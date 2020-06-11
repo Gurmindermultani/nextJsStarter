@@ -44,9 +44,7 @@ function ScheduleDemo(props) {
   return (
     <ScheduleDemoStyles>
       <div>
-        <Slide from="left" className="left">
-          <img alt="animationImputs" src="/images/leftDemo.svg"/>
-        </Slide>
+        <img alt="animationImputs" src="/images/leftDemo.svg"/>
       </div>
       <div>
         <FadeIn className="quoteContainer">
@@ -59,9 +57,7 @@ function ScheduleDemo(props) {
         </Slide>
       </div>
       <div>
-        <Slide from="right" className="right">
-          <img alt="animationImputs" src="/images/rightDemo.svg"/>
-        </Slide>
+        <img alt="animationImputs" src="/images/rightDemo.svg"/>
       </div>
     </ScheduleDemoStyles>
   );

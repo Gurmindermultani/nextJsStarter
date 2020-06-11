@@ -51,7 +51,6 @@ const customers = [
 ];
 
 const CustomersStyles = styled.div`
-  overflow: hidden;
   &.deskTop {
     .carousalContainer {
       height: 100%;

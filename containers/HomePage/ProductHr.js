@@ -20,6 +20,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const ProductStyles = styled.div`
+  overflow: hidden; 
   .productHeader {
     display: flex;
     .text {
@@ -91,18 +92,24 @@ const ProductStyles = styled.div`
     div {
       position: absolute;
       img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 4px 16px #00000014;
       }
       &.a1 {
         top: 0;
         left: 0;
+        width: 60%;
       }
       &.a2 {
-        top: -8px;
-        left: 198px;
+        top: 43px;
+        right: 75px;
+        width: 17%;
       }
       &.a3 {
-        bottom: -66px;
-        right: -74px;
+        bottom: 0px;
+        right: 0px;
+        width: 60%;
       }
     }
   }
@@ -219,10 +226,10 @@ function ProductHr(props) {
                 <img src="/images/home/helpdesk/a1.png"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.svg"/>
+                <img src="/images/home/helpdesk/a2.png"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.svg"/>
+                <img src="/images/home/helpdesk/a3.png"/>
               </Slide>
             </div>
           }

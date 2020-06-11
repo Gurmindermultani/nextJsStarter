@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
 import Carousal from "../../components/Carousal";
+import LottieAnimation from "../../components/LottieAnimation";
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
@@ -30,12 +31,12 @@ const MobileDemoStyles = styled.div`
       width: 220px;
       height: 440px;
     }
-    .mobileDemoContainer {
+    .animation {
       position: absolute;
       top: 12px;
       left: 14px;
       z-index: -1;
-      width: 195px;
+      width: 193px;
       img {
         width: 100%;
       }
@@ -150,13 +151,7 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
                 <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
-                <div className="mobileDemoContainer">
-                  {/* <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/> */}
-                  <video width="100%" height="100%" loop autoPlay muted>
-                    <source src="/images/home/phoneAnimationVideo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+                <LottieAnimation dataUrl="/images/home/phone.json" />
               </div>
             )}
           </Spring>

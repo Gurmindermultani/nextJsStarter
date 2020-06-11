@@ -89,7 +89,7 @@ function Footer(props) {
       <div className="upperContainer">
         <div className="logo">
           <div className="image">
-            <img src="/images/leenaLogo.png"/>
+            <img src="/images/leenaLogo.svg"/>
           </div>
           <div className="phone">
             <Typography className="halfBackground" variant="paragraph2" fontSize="16px" color="#212121" text="Phone: "/>

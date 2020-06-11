@@ -43,10 +43,6 @@ const reviews = [
 ];
 
 const ReviewsStyles = styled.div`
-  overflow: hidden;
-  * {
-    outline: none;
-  }
   .mobile{
     display: none;
   }
@@ -54,7 +50,8 @@ const ReviewsStyles = styled.div`
     .review {
       min-height: 318px;
       display: flex;
-      box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+      margin: 20px 40px;
+      box-shadow: 0px 3px 6px #00000029;
       transition: transform 420ms cubic-bezier(.165,.84,.44,1);
       cursor: pointer;
       &:hover {
@@ -66,6 +63,7 @@ const ReviewsStyles = styled.div`
         justify-content: center;
         align-items: center;
         background: #103577;
+        padding: 60px;
         img {
           width: 100%;
           height: 129px;
@@ -100,6 +98,7 @@ const ReviewsStyles = styled.div`
         display: block;
         width: 100%;
         box-shadow: 0px 3px 6px #00000029;
+        margin: 0;
         margin-bottom: 10px;
         padding-bottom: 10px;
         &:hover {

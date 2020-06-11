@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  * {
+    outline: none;
+  }
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap'); 
   .pointer {
     cursor: pointer;

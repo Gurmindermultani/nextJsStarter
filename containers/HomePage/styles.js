@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
-  padding: 0 10rem;
   .section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0 10rem;
     &.section0 {
       padding-top: 100px;
     }
     &.noMargin {
-      height: 550px;
+      margin-top: 190px;
+      padding: 0;
     }
     .knowMore {
+      margin-top: 100px;
       button {
         width: 172px;
       }
@@ -46,11 +48,11 @@ export const HomePageStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    padding: 0 30px;
     .quoteContainer {
       margin: 100px 0 72px 0;
     }
     .section {
+      padding: 0 30px;
       &.noMargin {
         margin-top: 120px;
         height: auto;
