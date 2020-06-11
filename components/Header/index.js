@@ -94,7 +94,7 @@ function Header(props) {
       <animated.div className="animatedHeader" style={animatedHeader}>
         <div className="logo pointer">
           <Link href="/">
-            <img src="/images/leenaLogo.png"/>
+            <img src="/images/leenaLogo.svg"/>
           </Link>
         </div>
         <div className="navigation">

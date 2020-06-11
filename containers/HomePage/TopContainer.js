@@ -18,9 +18,7 @@ import Button from '../../components/Button';
 const TopContainerStyles = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   .topContainer {
-    height: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -47,10 +45,19 @@ const TopContainerStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    .animatedText {
+      text-align: center;
+      margin-top: 48px;
+      span {
+        line-height: 32px;
+      }
+    }
     .lowerContainer {
       flex-wrap: wrap;
       .animatedDemoInput {
         flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
         .form-group {
           width: 100%;
         }
@@ -58,8 +65,11 @@ const TopContainerStyles = styled.div`
       .bowlImage {
         margin-top: 120px;
         img {
-          width: calc(100vw - 80px);
+          width: 100%;
         }
+      }
+      .buttons {
+        width: 100%;
       }
     }
   }
@@ -81,11 +91,11 @@ function TopContainer(props) {
                 }}>
                   {({ opacity, transform }) => (
                     <div style={{ opacity, transform }} className="animatedText">
-                      <Typography variant="h1" fontSize="54px" text="Redefine Employee Experience"/>
+                      <Typography variant="h1" fontSizes={[20, 30, 54]} text="Redefine Employee Experience"/>
                       <br />
-                      <Typography fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="with conversational"/>
+                      <Typography fontWeight="300" color="#212121" fontSizes={[20, 30, 54]} variant="paragraph2" text="with conversational"/>
                       <br />
-                      <Typography className="halfBackground" fontWeight="300" color="#212121" fontSize="46px" variant="paragraph2" text="workflow automation"/>
+                      <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 30, 54]} variant="paragraph2" text="workflow automation"/>
                     </div>
                   )}
                 </Spring>
@@ -104,8 +114,8 @@ function TopContainer(props) {
                         <div style={{ opacity, transform }} className="animatedDemoInput">
                           <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>
                           <Link href="/scheduleDemo">
-                            <div>
-                              <Button name="Schedule Demo" variant="contained" size="large"/>
+                            <div className="buttons">
+                              <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
                             </div>
                           </Link>
                         </div>

@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 export const theme = createMuiTheme({
-  breakpoints: ['768px', '1300px'],
+  breakpoints: ['768px', '1400px'],
   typography: {
     'h1': {
       fontSizes: [40, 40, 40],

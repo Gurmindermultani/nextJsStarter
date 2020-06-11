@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HomePageStyles = styled.div`
   padding: 0 10rem;
-  overflow-x: hidden;
   .section {
     display: flex;
     flex-direction: column;
@@ -48,6 +47,9 @@ export const HomePageStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     padding: 0 30px;
+    .quoteContainer {
+      margin: 100px 0 72px 0;
+    }
   }
 `;
 

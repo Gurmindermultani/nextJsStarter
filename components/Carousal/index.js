@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import CenterMode from './CenterMode';
 import SingleMode from './SingleMode';
+import MobileCarousal from './MobileCarousal';
 
 const CarousalStyles = styled.div`
   .slick-prev, .slick-next {
@@ -33,6 +34,9 @@ function Carousal(props) {
     <CarousalStyles>
       {props.variant === "centerMode" &&
         <CenterMode {...props}/>
+      }
+      {props.variant === "mobileCarousal" &&
+        <MobileCarousal {...props}/>
       }
       {props.variant === "singleMode" &&
         <SingleMode {...props}/>

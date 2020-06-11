@@ -10,11 +10,11 @@ import styled from 'styled-components';
 
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
+import Carousal from "../../components/Carousal";
+import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
-import ProductHr from './ProductHr';
-import EmployeeExperience from './EmployeeExperience';
 
 const MobileDemoStyles = styled.div`
   display: flex;
@@ -82,6 +82,52 @@ const MobileDemoStyles = styled.div`
     margin-top: 40px;
     button {
       min-width: 172px;
+    }
+  }
+  .mobileCaraousal {
+      display: none;
+    }
+  @media only screen and (max-width: 760px) {
+    .boxDialog {
+      display: none;
+    }
+    .mobileCaraousal {
+      display: block;
+      width: calc(100vw - 60px);
+      margin-top: 16px;
+      .slick-center {
+        transform: scale(1.2);
+        margin: 0 10px;
+      }
+      .carousalDialog {
+        border-radius: 4px;
+        padding: 16px 24px;
+        &.topLeft {
+          border: 1px solid #212121;
+          box-shadow: 0px 4px 16px #00000014;
+        }
+        &.bottomLeft {
+          border: 1px solid #103577;
+          box-shadow: 0px 4px 16px #00000014;
+        }
+        &.topRight {
+          border: 1px solid #00CEFF;
+          box-shadow: 0px 4px 16px #00000014;
+        }
+        &.bottomRight {
+          border: 1px solid #0F72EE;
+          box-shadow: 0px 4px 16px #00000014;
+        }
+        .textBox {
+          text-align: center;
+          span {
+            line-height: 26px;
+          }
+          .textHeading {
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 `;
@@ -188,6 +234,34 @@ function MobileDemo(props) {
           </Spring>
         )}
       </VisibilitySensor>
+      <div className="mobileCaraousal">
+        <Carousal numSlides={1} variant="mobileCarousal">
+          <div className="carousalDialog topLeft">
+            <div className="textBox">
+              <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
+              <Typography variant="paragraph2" fontSize="16px" text="Employees chat with the virtual HR assistant."/>
+            </div>
+          </div>
+          <div className="carousalDialog bottomLeft">
+            <div className="textBox">
+              <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated replies"/>
+              <Typography variant="paragraph2" fontSize="16px" text="They get quick automated replies to their queries."/>
+            </div>
+          </div>
+          <div className="carousalDialog topRight">
+            <div className="textBox">
+              <Typography className="textHeading" variant="h6" fontSize="20px" text="Real-time ticketing"/>
+              <Typography variant="paragraph2" fontSize="16px" text="There’s an option to raise tickets when needed."/>
+            </div>
+          </div>
+          <div className="carousalDialog bottomRight">
+            <div className="textBox">
+              <Typography className="textHeading" variant="h6" fontSize="20px" text="Employee self-service"/>
+              <Typography variant="paragraph2" fontSize="16px" text="Employees also submit their leave request via chat."/>
+            </div>
+          </div>
+        </Carousal>
+      </div>
       <div className="button">
         <Button size="large" variant="contained" name="Schedule Demo"/>
       </div>
