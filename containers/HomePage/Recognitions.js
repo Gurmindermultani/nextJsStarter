@@ -39,11 +39,13 @@ const recognitions = [
 ];
 
 const RecognitionsStyles = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  .singleCard {
-    margin-right: 24px;
+  .contain{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    .singleCard {
+      margin-right: 24px;
+    } 
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
@@ -57,11 +59,13 @@ function Recognitions(props) {
   return (
     <>
       <RecognitionsStyles className="desktop">
-        {recognitions.map( recognition => 
-          <Slide key={recognition.name}>
-            <Card variant="linkCard" data={recognition} />
-          </Slide>
-        )}
+        <div className="contain">
+          {recognitions.map( recognition => 
+            <Slide key={recognition.name}>
+              <Card variant="linkCard" data={recognition} />
+            </Slide>
+          )}
+        </div>
       </RecognitionsStyles>
       <RecognitionsStyles className="mobile">
         <Carousal variant="mobileCarousal">

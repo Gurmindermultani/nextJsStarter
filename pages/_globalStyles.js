@@ -88,6 +88,9 @@ const GlobalStyle = createGlobalStyle`
   .mobile {
     display: none;
   }
+  .desktop {
+    display: block;
+  }
   @media only screen and (max-width: 760px) {
     .desktop {
       display: none;
