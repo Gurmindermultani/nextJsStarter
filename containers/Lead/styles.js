@@ -94,6 +94,9 @@ export const LeadStyles = styled.div`
         }
       }
     }
+    &.mobile {
+      display: none;
+    }
   }
   .quoteContainer {
     display: flex;
@@ -154,6 +157,7 @@ export const LeadStyles = styled.div`
         }
       }
       &.mobile {
+        display: block;
         padding: 30px 30px;
         >div {
           justify-content: space-between;
