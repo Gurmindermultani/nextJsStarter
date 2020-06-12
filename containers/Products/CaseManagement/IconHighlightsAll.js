@@ -21,6 +21,11 @@ const IconHighlightsAllStyles = styled.div`
       margin-bottom: 53px;
     }
   }
+  @media only screen and (max-width: 760px) {
+    .highContainer {
+      flex-wrap: wrap;
+    }
+  }
 `;
 
 function IconHighlightsAll(props) {

@@ -17,6 +17,25 @@ const slideMap = {
 }
 
 function Slide(props) {
+  if (props.onLoad) {
+    return (
+      <Spring delay={props.delay ? props.delay : null} 
+        to={{ 
+          opacity: 1,
+          transform: slideMap[props.from ? props.from : 'up'][0],
+        }}
+        from={{ 
+          opacity: 0,
+          transform: slideMap[props.from ? props.from : 'up'][1],
+        }}>
+        {({ opacity, transform }) => (
+          <div style={ { opacity, transform } } className={props.className}>
+            {props.children}
+          </div>
+        )}
+    </Spring>
+    );
+  }
   return (
     <VisibilitySensor once partialVisibility>
       {({ isVisible }) => (

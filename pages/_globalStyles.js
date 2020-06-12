@@ -70,11 +70,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
     cursor: pointer;
   }
-  .halfBackground {
-    position: relative;
-  }
   a {
     text-decoration: none;
+  }
+  .halfBackground {
+    position: relative;
   }
 
   .halfBackground:before {
@@ -93,6 +93,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .desktop {
     display: block;
+  }
+  .textCenter {
+    text-align: center;
   }
   @media only screen and (max-width: 760px) {
     .desktop {

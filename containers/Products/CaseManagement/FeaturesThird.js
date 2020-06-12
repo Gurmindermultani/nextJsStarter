@@ -13,7 +13,6 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 const FeaturesFirstStyles = styled.div`
   display: flex;
   height: 430px;
-  margin-top: 200px;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -33,6 +32,14 @@ const FeaturesFirstStyles = styled.div`
     .fg {
       position: absolute;
       top: 0px;
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    .rightContainer {
+      display: none;
+    }
+    .leftContainer {
+      flex-basis: 100%;
     }
   }
 `;
