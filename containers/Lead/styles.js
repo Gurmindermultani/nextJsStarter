@@ -28,7 +28,7 @@ export const LeadStyles = styled.div`
     &.header {
       justify-content: space-between;
       flex-direction: row;
-      margin-top: 64px;
+      margin-top: 32px;
     }
     &.section0 {
       position: relative;
@@ -36,9 +36,6 @@ export const LeadStyles = styled.div`
       z-index: 1;
       .textContainer {
         margin: 60px auto;
-        span {
-          line-height: 60px;
-        }
       }
       .formContainer {
         display: flex;
@@ -88,6 +85,7 @@ export const LeadStyles = styled.div`
       padding-bottom: 120px;
       .container {
         display: flex;
+        align-items: center;
         button {
           width: 272px;
           margin-left: 30px;
@@ -106,7 +104,7 @@ export const LeadStyles = styled.div`
     margin: 150px 0 120px 0;
     text-align: center;
     .halfBackground {
-      margin-top: 10px;
+      margin-top: 0px;
     }
   }
   @media only screen and (max-width: 760px) {
@@ -134,9 +132,6 @@ export const LeadStyles = styled.div`
       &.section0 {
         .textContainer {
           margin: 30px 20px;
-          span {
-            line-height: 32px;
-          }
         }
         .formContainer {
           flex-wrap: wrap-reverse;

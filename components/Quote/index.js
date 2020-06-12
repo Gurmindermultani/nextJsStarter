@@ -20,8 +20,7 @@ const CommentStyles = styled.div`
     position: relative;
     padding: 50px 0;
     span {
-      font-style: italic;
-      line-height: 40px;
+
     }
     .quotation {
       position: absolute;
@@ -77,7 +76,7 @@ function Comment(props) {
           <img className="quotation start" alt="quotation-start" src="/images/icons/quotation-mark-start.svg" />
           <img className="quotation end" alt="quotation-start" src="/images/icons/quotation-mark-end.svg" />
           <div className="text">
-            <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="20px" text={props.text}/>
+            <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16,18,20]} text={props.text}/>
           </div>
         </div>
         <div className="user">
@@ -85,9 +84,9 @@ function Comment(props) {
             <UserAvatar className="userAvatar" src={props.userIcon} />
           }
           {props.userName &&
-            <Typography className="userName" color="#0F72EE" fontWeight="500" variant="paragraph2" fontSize="22px" text={props.userName}/>
+            <Typography className="userName" color="#0F72EE" fontWeight="500" variant="paragraph2" fontSizes={[18,20,22]} text={props.userName}/>
           }
-          <Typography className="rowValue" color="#212121" fontWeight="500" variant="paragraph2" fontSize="22px" text={props.by}/>
+          <Typography className="rowValue" color="#212121" fontWeight="500" variant="paragraph2" fontSizes={[18,20,22]} text={props.by}/>
         </div>
       </CommentStyles>
     </Slide>

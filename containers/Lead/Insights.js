@@ -29,7 +29,7 @@ const InsightsStyles = styled.div`
         margin-bottom: 30px;
       }
       span {
-        line-height: 32px;
+        line-height: 24px;
       }
     }
   }
@@ -72,7 +72,7 @@ function CaseManagment(props) {
         {insights.map ( (insight, idx) => 
           <Slide className="insight" key={"insight" + idx} delay={idx*100} from='up'>
             <img src={insight.icon} />
-            <Typography className="insightText" color="#212121" variant="paragraph2" fontSizes={[14, 16, 20]} text={insight.text} />
+            <Typography className="insightText" color="#212121" variant="paragraph2" fontSizes={[14, 14, 20]} text={insight.text} />
           </Slide>
         )}
       </div>

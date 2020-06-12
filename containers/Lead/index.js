@@ -76,7 +76,7 @@ function CaseManagment(props) {
       </section>
       <section className="section section4">
         <FadeIn className="container">
-          <Typography color="#fff" className="textCenter" variant="h3" fontSizes={[20, 28, 32]} text="Do you want to witness this transformation journey of AirAsia?"/>
+          <Typography color="#fff" className="textCenter" variant="h3" fontSizes={[20, 22, 24]} text="Do you want to witness this transformation journey of AirAsia?"/>
           <Button 
             onClick={() => Utils.scrollToTop(100)} 
             size="large" 
