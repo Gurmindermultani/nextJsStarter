@@ -25,8 +25,15 @@ const FormStyles = styled.div`
   border-radius: 16px;
   background: #fff;
   max-width: 400px;
+  .halfBackground {
+    z-index: 0;
+    margin-bottom: 20px;
+  }
   .form-group {
     margin-top: 0;
+  }
+  button {
+    margin-top: 20px;
   }
 `;
 
@@ -69,7 +76,7 @@ function Form(props) {
   });
   const jobtitle = useField('jobtitle', form, {
     defaultValue: '',
-    validations: [formData => !formData['jobtitle'] && 'Please enter job role.'],
+    validations: [formData => !formData['jobtitle'] && 'Please enter job title.'],
     fieldsToValidateOnChange: [],
   });
   return (
