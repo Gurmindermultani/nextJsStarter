@@ -6,6 +6,7 @@ export const LeadStyles = styled.div`
     flex-direction: column;
     justify-content: space-around;
     padding: 0 10rem;
+    background: #fff;
     &.noPadding {
       margin-top: 150px;
       padding: 0;
@@ -47,6 +48,7 @@ export const LeadStyles = styled.div`
           flex-basis: 50%;
           img {
             width: 100%;
+            height: 100%;
           }
         }
         .rightContainer {
@@ -120,6 +122,41 @@ export const LeadStyles = styled.div`
         }
         button {
           margin-top: 30px;
+        }
+      }
+      &.header {
+        justify-content: center;
+        margin-top: 40px;
+      }
+      &.section0 {
+        .textContainer {
+          margin: 30px 20px;
+          span {
+            line-height: 32px;
+          }
+        }
+        .formContainer {
+          flex-wrap: wrap-reverse;
+          .leftContainer {
+            flex-basis: 100%;
+          }
+          .rightContainer {
+            flex-basis: 100%;
+          }
+        }
+      }
+      &.section4 {
+        .container {
+          flex-wrap: wrap;
+          button {
+            margin-top: 20px;
+          }
+        }
+      }
+      &.mobile {
+        padding: 30px 30px;
+        >div {
+          justify-content: space-between;
         }
       }
     }

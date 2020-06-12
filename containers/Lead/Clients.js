@@ -71,11 +71,15 @@ const ClientsStyles = styled.div`
         overflow: hidden;
         outline: none;
         .clientImage {
-          transform: scale(0.6);
           min-height: 210px;
           display: flex;
           align-items: center;
           transition: transform 420ms cubic-bezier(.165,.84,.44,1);
+          transform: scale(0.8);
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 7px 46px #00000029;
+          border-radius: 14px;
+          padding: 20px;
           img {
             width: 100%;
             height: 100%;

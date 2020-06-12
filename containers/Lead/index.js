@@ -30,7 +30,7 @@ function CaseManagment(props) {
           <img src="images/leenaLogo.svg"/>
         </Slide>
         <div />
-        <div className="contact">
+        <div className="contact desktop">
           <Slide delay={100} onLoad from='down'>
             <Contact />
           </Slide>
@@ -38,9 +38,9 @@ function CaseManagment(props) {
       </section>
       <section className="section section0">
         <FadeIn className="textContainer textCenter">
-          <Typography className="topText" variant="h1" fontSizes={[32, 46, 40]} text="Discover how AirAsia transformed"/>
+          <Typography className="topText" variant="h1" fontSizes={[20, 30, 40]} text="Discover how AirAsia transformed"/>
           <br />
-          <Typography className="topText" variant="h1" fontSizes={[32, 46, 40]} text="employee query resolution with Leena AI"/>
+          <Typography className="topText" variant="h1" fontSizes={[20, 30, 40]} text="employee query resolution with Leena AI"/>
         </FadeIn>
         <div className="formContainer">
           <Slide from='left' className="leftContainer center">
@@ -83,6 +83,9 @@ function CaseManagment(props) {
             variant="inverted" 
             name="Yes, I want the case study" />
         </FadeIn>
+      </section>
+      <section className="section section5 mobile">
+        <Contact />
       </section>
     </LeadStyles>
   );

@@ -35,6 +35,11 @@ const FormStyles = styled.div`
   button {
     margin-top: 20px;
   }
+  @media only screen and (max-width: 760px) {
+    box-shadow: none;
+    max-width: none;
+    padding: 40px 0px;
+  }
 `;
 
 function Form(props) {

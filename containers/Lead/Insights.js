@@ -33,6 +33,14 @@ const InsightsStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    .itemsContainer {
+      flex-wrap: wrap;
+      .insight {
+        margin-top: 20px;
+      }
+    }
+  }
 `;
 
 const insights = [

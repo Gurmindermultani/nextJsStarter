@@ -46,6 +46,27 @@ const CommentStyles = styled.div`
       margin: 0 8px 0 24px;
     }
   }
+  @media only screen and (max-width: 760px) {
+    .body {
+      .quotation {
+        transform: scale(0.5);
+        &.start {
+          left: -26px;
+          top: -2px;
+        }
+        &.end {
+          right: -26px;
+          bottom: 2px;
+        }
+      }
+    }
+    .user {
+      flex-wrap: wrap;
+      .rowValue {
+        margin-left: 90px;
+      }
+    }
+  }
 `;
 
 function Comment(props) {
