@@ -150,6 +150,9 @@ export const LeadStyles = styled.div`
           height: 85%;
         }
       }
+      &.section2 {
+        padding: 80px 0px;
+      }
       &.section4 {
         .container {
           flex-wrap: wrap;
