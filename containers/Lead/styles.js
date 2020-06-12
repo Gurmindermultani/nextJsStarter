@@ -86,6 +86,10 @@ export const LeadStyles = styled.div`
       .container {
         display: flex;
         align-items: center;
+        justify-content: center;
+        span {
+          flex: 1;
+        }
         button {
           width: 272px;
           margin-left: 30px;
@@ -101,7 +105,7 @@ export const LeadStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 120px 0;
+    margin: 72px 0 72px 0;
     text-align: center;
     .halfBackground {
       margin-top: 0px;
@@ -134,13 +138,16 @@ export const LeadStyles = styled.div`
           margin: 30px 20px;
         }
         .formContainer {
-          flex-wrap: wrap-reverse;
+          flex-wrap: wrap;
           .leftContainer {
             flex-basis: 100%;
           }
           .rightContainer {
             flex-basis: 100%;
           }
+        }
+        .trap {
+          height: 85%;
         }
       }
       &.section4 {

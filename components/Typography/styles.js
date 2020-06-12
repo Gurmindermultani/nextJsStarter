@@ -34,15 +34,15 @@ export const TypographyContainer = styled.span`
     ${props => props.fontSizes && css`
         @media (max-width: ${props => props.theme.breakpoints[0]}) {
             font-size: ${props => props.fontSizes[0] + 'px'};
-            line-height: ${props => (props.fontSizes[0]*2) + 'px'};
+            line-height: ${props => (props.fontSizes[0]*(props.variant.indexOf('h') === 0 ? 1.6 : 2)) + 'px'};
         }
         @media (min-width: ${props => props.theme.breakpoints[0]}) and (max-width : ${props => props.theme.breakpoints[1]}) {
             font-size: ${props => props.fontSizes[1] + 'px'};
-            line-height: ${props => (props.fontSizes[1]*2) + 'px'};
+            line-height: ${props => (props.fontSizes[1]*(props.variant.indexOf('h') === 0 ? 1.6 : 2)) + 'px'};
         }
         @media (min-width: ${props => props.theme.breakpoints[1]}) {
             font-size: ${props => props.fontSizes[2] + 'px'};
-            line-height: ${props => (props.fontSizes[2]*2) + 'px'};
+            line-height: ${props => (props.fontSizes[2]*(props.variant.indexOf('h') === 0 ? 1.6 : 2)) + 'px'};
         }
     `}
 `;

@@ -36,9 +36,8 @@ const FormStyles = styled.div`
     margin-top: 20px;
   }
   @media only screen and (max-width: 760px) {
-    box-shadow: none;
     max-width: none;
-    padding: 40px 0px;
+    padding: 48px 24px;
   }
 `;
 
