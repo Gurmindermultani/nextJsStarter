@@ -65,21 +65,31 @@ function Form(props) {
     let req = new XMLHttpRequest();
     req.open('GET', document.location, false);
     req.send(null);
-    let headers = req.getAllResponseHeaders().toLowerCase();
-    console.log(headers);
+    let headers = req.getAllResponseHeaders();
+    let countryName = req.getResponseHeader('country-code');
+    console.log(countryName);
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
       if (!valid) return;
-      fetch('https://staging.chatteron.io/api/leena/contact-us', {
+      let body = {...formData};
+      body.phone = countryCode + body.phone;
+      fetch('https://staging.chatteron.io/api/leena/lead', {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(body)
       }).then((res) => {
-        res.status === 200 ? setShowDialog('success') : ''
+        if (res.status === 200) {
+          setShowDialog('success');
+        } else {
+          alert('Some Error Occurred!');
+        }
+      }).catch((e) => {
+        console.log('error');
+        alert('Some Error Occurred!');
       });
     }
   });
@@ -113,9 +123,9 @@ function Form(props) {
     validations: [formData => !formData['company'] && 'Please enter company name.'],
     fieldsToValidateOnChange: [],
   });
-  const numberOfEmplyees = useField('numberOfEmplyees', form, {
+  const numberOfEmployees = useField('numberOfEmployees', form, {
     defaultValue: '',
-    validations: [formData => !formData['numberOfEmplyees'] && 'Please select number of employees.'],
+    validations: [formData => !formData['numberOfEmployees'] && 'Please select number of employees.'],
     fieldsToValidateOnChange: [],
   });
   const options = [
@@ -152,10 +162,10 @@ function Form(props) {
         <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
         <Input {...company} placeholder='Company name' name="company"/>
         <Select
-          {...numberOfEmplyees}
+          {...numberOfEmployees}
           placeholder='Number of employees'
           options={options}
-          value={numberOfEmplyees.value ? options[options.findIndex( elem => elem.value === numberOfEmplyees.value )] : ''}
+          value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
         />
         <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
       </form>

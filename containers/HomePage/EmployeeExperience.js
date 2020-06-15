@@ -13,6 +13,7 @@ import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
+import Slide from "../../components/VisibilitySensor/Slide";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -87,6 +88,64 @@ const ProductStyles = styled.div`
       min-width: 172px;
     }
   }
+  .image {
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.a1 {
+        bottom: 0px;
+        right: 0px;
+        width: 78%;
+      }
+      &.a2 {
+        top: 116px;
+        left: 58px;
+        width: 81%;
+        z-index: 1;
+      }
+      &.a3 {
+        top: 0;
+        left: 0;
+        width: 60%;
+      }
+      &.b1 {
+        top: -38px;
+        left: 0;
+        width: 90%;
+      }
+      &.b2 {
+        top: 76px;
+        right: 0px;
+        width: 31%;
+      }
+      &.b3 {
+        bottom: 0px;
+        right: 0px;
+        width: 78%;
+      }
+      &.c1 {
+        top: -38px;
+        left: 0;
+        width: 90%;
+      }
+      &.c2 {
+        top: 50px;
+        right: 0px;
+        width: 31%;
+      }
+      &.c3 {
+        bottom: 0px;
+        right: 0px;
+        width: 78%;
+      }
+    }
+  }
   @media only screen and (max-width: 760px) {
     .body {
       .rightContainer {
@@ -130,24 +189,36 @@ function EmployeeExperience(props) {
         )}
       </VisibilitySensor>
       <div className="body">
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(-200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="leftContainer">
-                  <div className="image">
-                    <img src="/images/home/connect.svg"/>
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="leftContainer">
+          {expanded === "panel1" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="a1">
+                <img src="/images/home/experience/a1.svg"/>
+              </Slide>
+              <Slide from='right' className="a2">
+                <img src="/images/home/experience/a2.svg"/>
+              </Slide>
+              <Slide from='up' className="a3">
+                <img src="/images/home/experience/a3.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel2" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="b1">
+                <img src="/images/home/experience/b1.svg"/>
+              </Slide>
+              <Slide from='right' className="b2">
+                <img src="/images/home/experience/b2.svg"/>
+              </Slide>
+              <Slide from='up' className="b3">
+                <img src="/images/home/experience/b3.svg"/>
+              </Slide>
+            </div>
+          }
+        </div>
         <VisibilitySensor once partialVisibility>
           {({ isVisible }) => (
             <Spring delay={300} to={{ 

@@ -110,6 +110,36 @@ const ProductStyles = styled.div`
         right: 0px;
         width: 78%;
       }
+      &.b1 {
+        top: -38px;
+        left: 0;
+        width: 90%;
+      }
+      &.b2 {
+        top: 76px;
+        right: 0px;
+        width: 31%;
+      }
+      &.b3 {
+        bottom: 0px;
+        right: 0px;
+        width: 78%;
+      }
+      &.c1 {
+        top: -38px;
+        left: 0;
+        width: 90%;
+      }
+      &.c2 {
+        top: 50px;
+        right: 0px;
+        width: 31%;
+      }
+      &.c3 {
+        bottom: 0px;
+        right: 0px;
+        width: 78%;
+      }
     }
   }
   @media only screen and (max-width: 760px) {
@@ -233,28 +263,28 @@ function ProductHr(props) {
           {expanded === "panel2" &&
             <div className="image center">
               <img src="/images/bg.svg"/>
-              <Slide from='left' className="a1">
-                <img src="/images/home/helpdesk/a1.svg"/>
+              <Slide from='left' className="b1">
+                <img src="/images/home/helpdesk/b1.svg"/>
               </Slide>
-              <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.svg"/>
+              <Slide from='right' className="b2">
+                <img src="/images/home/helpdesk/b2.svg"/>
               </Slide>
-              <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.svg"/>
+              <Slide from='up' className="b3">
+                <img src="/images/home/helpdesk/b3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel3" &&
             <div className="image center">
               <img src="/images/bg.svg"/>
-              <Slide from='left' className="a1">
-                <img src="/images/home/helpdesk/a1.svg"/>
+              <Slide from='left' className="c1">
+                <img src="/images/home/helpdesk/c1.svg"/>
               </Slide>
-              <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.svg"/>
+              <Slide from='right' className="c2">
+                <img src="/images/home/helpdesk/c2.svg"/>
               </Slide>
-              <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.svg"/>
+              <Slide from='up' className="c3">
+                <img src="/images/home/helpdesk/c3.svg"/>
               </Slide>
             </div>
           }
