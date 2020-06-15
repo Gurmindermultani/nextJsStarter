@@ -76,9 +76,6 @@ const TopContainerStyles = styled.div`
 `;
 
 function TopContainer(props) {
-  const demoStagingError = () => {
-    new Error("demo");
-  }
   return (
     <TopContainerStyles>
       <VisibilitySensor once>
@@ -118,7 +115,7 @@ function TopContainer(props) {
                           <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>
                           <Link href="/scheduleDemo">
                             <div className="buttons">
-                              <Button onClick={demoStagingError} fullWidth name="Schedule demo" variant="contained" size="large"/>
+                              <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
                             </div>
                           </Link>
                         </div>
