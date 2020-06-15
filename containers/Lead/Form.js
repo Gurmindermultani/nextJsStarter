@@ -71,7 +71,6 @@ function Form(props) {
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
-      console.log(process.env.NEXT_PUBLIC_API_URL);
       if (!valid) return;
       let body = {...formData};
       body.phone = countryCode + body.phone;
