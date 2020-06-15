@@ -76,6 +76,9 @@ const TopContainerStyles = styled.div`
 `;
 
 function TopContainer(props) {
+  const demoStagingError = () => {
+    new Error("demo");
+  }
   return (
     <TopContainerStyles>
       <VisibilitySensor once>
