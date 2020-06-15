@@ -1,7 +1,6 @@
 import * as Sentry from '@sentry/browser';
 import pjson from '../package.json';
 
-console.log(process.env.NEXT_PUBLIC_ENV);
 const CrashReporter = () => {
   try {
     if (process.env.NEXT_PUBLIC_ENV !== 'development') {
