@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
   .pointer {
     cursor: pointer;
   }
+  div {
+    font-family: Poppins, sans-serif;
+  }
   .subComponent{
     margin-top: 48px;
   }
