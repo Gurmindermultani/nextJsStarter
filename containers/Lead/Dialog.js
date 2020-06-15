@@ -9,6 +9,7 @@ import React, { memo, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
+import Slide from '../../components/VisibilitySensor/Slide';
 import MaterialDialog from '@material-ui/core/Dialog';
 
 const DialogContainer = styled.div`
@@ -21,7 +22,18 @@ const DialogContainer = styled.div`
     text-align: center;
     margin-top: 32px;
     .halfBackground {
-      margin-top: 20px;
+      margin-top: 5px;
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    button {
+      width: 232px;
+      margin-top: 16px;
     }
   }
 `;
@@ -63,17 +75,20 @@ function Dialog(props) {
       maxWidth="lg"
     >
       <DialogContainer>
-        <div className="header">
+        <Slide delay={200} className="header">
           <img alt="correct icon" src="/images/icons/correct.svg"/>
-        </div>
-        <div className="body">
-          <Typography className="demoText" variant="h1" fontSize="28px" text="We have received your request."/>
+        </Slide>
+        <Slide delay={400} className="body">
+          <Typography className="demoText" variant="h1" fontSize="28px" text="Check your inbox."/>
           <br />
-          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSize="24px" variant="paragraph2" text=" Our product experts will get back to you within 24 hours."/>
-        </div>
-        <div className="footer">
-        
-        </div>
+          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSize="24px" variant="paragraph2" text="We have emailed you the case study."/>
+        </Slide>
+        <Slide delay={600} className="footer">
+          <Typography fontWeight="400" color="#212121" fontSize="16px" variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?."/>
+          <a href="https://leena.ai/" target="_blank">
+            <Button size="large" variant="contained" name="Visit Leena.AI" />
+          </a>
+        </Slide>
       </DialogContainer>
     </MaterialDialog>
   );

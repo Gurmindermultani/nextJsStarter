@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../Typography';
-import { useTransition, animated } from 'react-spring';
+import Error from '../Error';
 import Info from '../Info';
 
 const MainContainer = styled.div`
@@ -27,7 +27,7 @@ const MainContainer = styled.div`
     input,
     textarea {
       width: 100%;
-      color: ${props => props.theme.palette.text.secondary};
+      color: ${props => props.theme.palette.text.primary};
       font-size: 14px;
       border: solid 0.5px ${props => props.theme.palette.text.secondary};
       font-weight: 400;
@@ -191,12 +191,6 @@ const Input = props => {
   const errors = props.errors ? props.errors : [];
   const showErrors = !!errors.length;
   const editText = props.editText ? props.editText : 'Edit';
-  const addActivityTransition = useTransition(showErrors, null, {
-    from: { opacity: 0, height: '0px' },
-    enter: { opacity: 1, height: '22px' },
-    leave: { opacity: 0, height: '0px' },
-    unique: true,
-  });
 
   const _handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -277,22 +271,7 @@ const Input = props => {
           </span>
         )}
       </div>
-      <div className="errorContainer">
-          {
-        addActivityTransition.map(
-          ({ item, key, props }) =>
-            item && (
-              <animated.div key={key} style={props}>
-                {errors.map(errorMsg => (
-                <span className="error" key={errorMsg}>
-                  <Typography className="errorMessage" variant="paragraphS2" text={errorMsg} />
-                </span>
-              ))}
-              </animated.div>
-            )
-        )
-      }
-      </div>
+      <Error errors={errors} showErrors={showErrors} />
     </MainContainer>
   );
 };

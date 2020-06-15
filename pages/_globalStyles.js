@@ -82,9 +82,8 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 40%;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 0px;
-    background: #00CEFF;
     opacity: 0.2;
     z-index: -1;
   }

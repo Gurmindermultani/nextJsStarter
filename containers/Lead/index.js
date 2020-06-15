@@ -27,7 +27,9 @@ function CaseManagment(props) {
     <LeadStyles>
       <section className="section header center">
         <Slide delay={100} onLoad from='down'>
-          <img src="images/leenaLogo.svg"/>
+          <a href="https://leena.ai/" target="_blank">
+            <img src="images/leenaLogo.svg"/>
+          </a>
         </Slide>
         <div />
         <div className="contact desktop">
