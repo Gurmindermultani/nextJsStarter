@@ -71,10 +71,11 @@ function Form(props) {
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
+      console.log(process.env.NEXT_PUBLIC_API_URL);
       if (!valid) return;
       let body = {...formData};
       body.phone = countryCode + body.phone;
-      fetch('https://staging.chatteron.io/api/leena/lead', {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/lead`, {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
