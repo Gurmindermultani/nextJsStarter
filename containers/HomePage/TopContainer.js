@@ -115,7 +115,7 @@ function TopContainer(props) {
                           <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>
                           <Link href="/scheduleDemo">
                             <div className="buttons">
-                              <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
+                              <Button onClick={demoStagingError} fullWidth name="Schedule demo" variant="contained" size="large"/>
                             </div>
                           </Link>
                         </div>

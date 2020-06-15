@@ -5,8 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { theme } from '../theme';
 import GlobalStyle from './_globalStyles';
+import CrashReporter from '../utils/carshReporter';
 
 export default class MyApp extends App {
+  componentDidMount() {
+    CrashReporter();
+  }
   render() {
     const { Component, pageProps } = this.props
     return (
