@@ -94,7 +94,6 @@ const ProductStyles = styled.div`
       img {
         width: 100%;
         height: 100%;
-        box-shadow: 0px 4px 16px #00000014;
       }
       &.a1 {
         top: 0;
@@ -102,14 +101,14 @@ const ProductStyles = styled.div`
         width: 60%;
       }
       &.a2 {
-        top: 43px;
-        right: 75px;
-        width: 17%;
+        top: 16px;
+        right: 58px;
+        width: 31%;
       }
       &.a3 {
         bottom: 0px;
         right: 0px;
-        width: 60%;
+        width: 78%;
       }
     }
   }
@@ -219,17 +218,43 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <FadeIn>
-                <img src="/images/bg.svg"/>
-              </FadeIn>
+              <img src="/images/bg.svg"/>
               <Slide from='left' className="a1">
-                <img src="/images/home/helpdesk/a1.png"/>
+                <img src="/images/home/helpdesk/a1.svg"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.png"/>
+                <img src="/images/home/helpdesk/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.png"/>
+                <img src="/images/home/helpdesk/a3.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel2" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="a1">
+                <img src="/images/home/helpdesk/a1.svg"/>
+              </Slide>
+              <Slide from='right' className="a2">
+                <img src="/images/home/helpdesk/a2.svg"/>
+              </Slide>
+              <Slide from='up' className="a3">
+                <img src="/images/home/helpdesk/a3.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel3" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="a1">
+                <img src="/images/home/helpdesk/a1.svg"/>
+              </Slide>
+              <Slide from='right' className="a2">
+                <img src="/images/home/helpdesk/a2.svg"/>
+              </Slide>
+              <Slide from='up' className="a3">
+                <img src="/images/home/helpdesk/a3.svg"/>
               </Slide>
             </div>
           }
