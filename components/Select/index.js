@@ -23,7 +23,6 @@ export const customStyles = {
       : `solid 0.5px ${theme.palette.text.secondary}`,
     overFlow: 'visible',
     fontSize : '14px',
-    fontFamily: 'Poppins',
     color: `${theme.palette.text.primary}`,
     boxShadow: 'none',
   }),
@@ -37,7 +36,6 @@ export const customStyles = {
     '&:hover': {
       background: theme.palette.primary.light,
     },
-    fontFamily: 'Poppins',
   }),
   dropdownIndicator: base => ({
     ...base,
@@ -57,7 +55,6 @@ export const customStyles = {
     border: 'none',
     boxShadow: 'rgba(9, 30, 66, 0.13) 0px 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 4px 11px',
     overFlow: 'hidden',
-    fontFamily: 'Poppins',
     minWidth: '220px'
   }),
   input: base => ({
@@ -70,7 +67,6 @@ export const customStyles = {
     fontSize : '14px',
     color: '#616161',
     opacity: '0.9',
-    fontFamily: 'Poppins',
   }),
   indicatorSeparator: base => ({
     ...base,
@@ -81,7 +77,6 @@ export const customStyles = {
     fontSize : '14px',
     color: `${theme.palette.text.primary}`,
     padding: '2px 15px',
-    fontFamily: 'Poppins',
   })
 };
 
