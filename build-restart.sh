@@ -2,6 +2,6 @@
 
 git pull
 # build the docker image
-docker build -t leena.site -f Dockerfile .
+docker build -t leena.site_2 -f Dockerfile .
 
-docker rm -f leena.site && ~/containers/leena-site.sh
+docker rm -f leena.site_2 && ~/containers/leena.site_2.sh
