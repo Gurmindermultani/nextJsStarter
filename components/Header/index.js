@@ -71,6 +71,7 @@ export const navigation = [
       {
         name: 'careers',
         label: 'Careers',
+        href: 'https://angel.co/company/leena_ai/jobs'
       },
       {
         name: 'aboutUs',
@@ -105,15 +106,28 @@ function Header(props) {
                 <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
               </div>
               <div className="links">
-                {groupNav.links.map( link => 
-                  <div className="link" key={link.name}>
-                    <Link href={`/${groupNav.name}/${link.name}`}>
-                      <div>
-                        <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                {groupNav.links.map( link => {
+                  if (link.href) {
+                    return (
+                      <div className="link" key={link.name}>
+                        <a href={`${link.href}`} target="_blank">
+                          <div>
+                            <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                          </div>
+                        </a>
                       </div>
-                    </Link>
-                  </div>
-                )}
+                    )
+                  }
+                  return (
+                    <div className="link" key={link.name}>
+                      <Link href={`/${groupNav.name}/${link.name}`}>
+                        <a>
+                          <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                        </a>
+                      </Link>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           )}

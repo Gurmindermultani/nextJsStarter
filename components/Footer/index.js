@@ -7,7 +7,7 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import Link from 'next/link'
 import Button from '../Button';
 import Typography from '../Typography';
 import Input from '../Input';
@@ -107,11 +107,28 @@ function Footer(props) {
             <div key={groupNav.name} className="groupNav">
               <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
               <div className="links">
-                {groupNav.links.map( link => 
-                  <div className="link" key={link.name}>
-                    <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
-                  </div>
-                )}
+                {groupNav.links.map( link => {
+                    if (link.href) {
+                      return (
+                        <div className="link" key={link.name}>
+                          <a href={`${link.href}`} target="_blank">
+                            <div>
+                              <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                            </div>
+                          </a>
+                        </div>
+                      )
+                    }
+                    return (
+                      <div className="link" key={link.name}>
+                        <Link href={`/${groupNav.name}/${link.name}`}>
+                          <a>
+                            <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                          </a>
+                        </Link>
+                      </div>
+                    )
+                  })}
               </div>
             </div>
           )}

@@ -130,9 +130,25 @@ function Form(props) {
   });
   const options = [
     {
-      label: '0-100',
-      value: '0-100',
-    }
+      label: '1-100',
+      value: '1-100',
+    },
+    {
+      label: '101-250',
+      value: '101-250',
+    },
+    {
+      label: '251-500',
+      value: '251-500',
+    },
+    {
+      label: '501-1000',
+      value: '501-1000',
+    },
+    {
+      label: '1000+',
+      value: '1000+',
+    },
   ];
   const phoneCountryOptions = Codes.map( code => {
     return {
