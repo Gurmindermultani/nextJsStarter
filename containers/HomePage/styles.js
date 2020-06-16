@@ -5,13 +5,18 @@ export const HomePageStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 10rem;
+    max-width: 1200px;
+    margin: auto;
     &.section0 {
-      padding-top: 100px;
+      padding: 180px 20px 0 20px;
     }
     &.noMargin {
       margin-top: 190px;
       padding: 0;
+      max-width: none;
+      .quoteContainer {
+        margin: 0;
+      }
     }
     .knowMore {
       margin-top: 100px;
@@ -45,6 +50,19 @@ export const HomePageStyles = styled.div`
           min-width: 172px;
         }
       }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .section {
+      padding: 0 40px;
+      &.section0 {
+        padding: 180px 0px 0 0px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .section {
+      padding: 0 80px;
     }
   }
   @media only screen and (max-width: 760px) {

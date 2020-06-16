@@ -15,18 +15,18 @@ import FadeIn from '../VisibilitySensor/FadeIn';
 const customers = [
   {
     name: 'lafarge',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'Building materials',
+    employees: '70,000+'
   },
   {
     name: 'oneplus',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'Consumer electronics',
+    employees: '2700+'
   },
   {
     name: 'cocacola',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'FMCG',
+    employees: '65,000+'
   },
   {
     name: 'airasia',
@@ -35,18 +35,18 @@ const customers = [
   },
   {
     name: 'sony',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'Consumer electronics',
+    employees: '110,000+'
   },
   {
     name: 'nestle',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'FMCG',
+    employees: '350,000+'
   },
   {
     name: 'tata',
-    type: 'Aviation',
-    employees: '20,000+'
+    type: 'Information Technology',
+    employees: '8500+'
   },
 ];
 

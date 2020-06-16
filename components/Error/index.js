@@ -35,7 +35,7 @@ function Error(props) {
     unique: true,
   });
   return (
-    <ErrorContainer>
+    <ErrorContainer className="errorContainer">
       {
         addActivityTransition.map(
           ({ item, key, props }) =>

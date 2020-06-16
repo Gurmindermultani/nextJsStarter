@@ -77,7 +77,7 @@ const GlobalStyle = createGlobalStyle`
   .halfBackground {
     position: relative;
     ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
-    background: linear-gradient(to top, #00CEFF40 50%, #fff 50% );
+    background: linear-gradient(to top, #fff 20%, #00CEFF40 20%, #00CEFF40 50%, #fff 50% );
   }
 
   .halfBackground:before {
