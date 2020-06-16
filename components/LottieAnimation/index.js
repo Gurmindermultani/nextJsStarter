@@ -14,6 +14,7 @@ import Typography from '../../components/Typography';
 const LottieAnimationStyles = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 function LottieAnimation(props) {
