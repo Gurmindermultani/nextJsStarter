@@ -99,50 +99,31 @@ const ProductStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        bottom: 0px;
+        bottom: 20px;
         right: 0px;
         width: 78%;
       }
       &.a2 {
-        top: 116px;
-        left: 58px;
-        width: 81%;
+        top: 112px;
+        left: 68px;
+        width: 88%;
         z-index: 1;
       }
       &.a3 {
         top: 0;
         left: 0;
-        width: 60%;
+        width: 76%;
       }
       &.b1 {
-        top: -38px;
-        left: 0;
-        width: 90%;
+        bottom: -57px;
+        right: -35px;
+        width: 70%;
+        z-index: 1;
       }
       &.b2 {
-        top: 76px;
-        right: 0px;
-        width: 31%;
-      }
-      &.b3 {
-        bottom: 0px;
-        right: 0px;
-        width: 78%;
-      }
-      &.c1 {
-        top: -38px;
-        left: 0;
-        width: 90%;
-      }
-      &.c2 {
-        top: 50px;
-        right: 0px;
-        width: 31%;
-      }
-      &.c3 {
-        bottom: 0px;
-        right: 0px;
-        width: 78%;
+        top: 0px;
+        left: 0px;
+        width: 81%;
       }
     }
   }
@@ -207,14 +188,11 @@ function EmployeeExperience(props) {
           {expanded === "panel2" &&
             <div className="image center">
               <img src="/images/bg.svg"/>
-              <Slide from='left' className="b1">
+              <Slide from='right' className="b1">
                 <img src="/images/home/experience/b1.svg"/>
               </Slide>
-              <Slide from='right' className="b2">
+              <Slide from='left' className="b2">
                 <img src="/images/home/experience/b2.svg"/>
-              </Slide>
-              <Slide from='up' className="b3">
-                <img src="/images/home/experience/b3.svg"/>
               </Slide>
             </div>
           }

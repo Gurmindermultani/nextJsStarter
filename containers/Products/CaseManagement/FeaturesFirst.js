@@ -34,6 +34,34 @@ const FeaturesFirstStyles = styled.div`
       top: 0px;
     }
   }
+  .image {
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.a1 {
+        top: 5px;
+        left: 0;
+        width: 90%;
+        z-index: 1;
+      }
+      &.a2 {
+        top: 98px;
+        left: 0px;
+        width: 90%;
+      }
+      &.a3 {
+        bottom: 0px;
+        left: 5px;
+        width: 90%;
+      }
+    }
+  }
   @media only screen and (max-width: 760px) {
     .rightContainer {
       display: none;
@@ -58,15 +86,17 @@ function FeaturesFirst(props) {
         </Slide>
       </div>
       <div className="rightContainer">
-        <div className="bg center">
-          <img alt="feature img" src="/images/caseManagement/featuresOne/bg.svg"/>
-        </div>
-        <div className="fg">
-          <div className="img1">
-            <img alt="feature img" src="/images/caseManagement/featuresOne/img1.svg"/>
-          </div>
-          {/* <img alt="feature img" src="/images/caseManagement/featuresOne/img2.svg"/>
-          <img alt="feature img" src="/images/caseManagement/featuresOne/img31.svg"/> */}
+        <div className="image center">
+          <img src="/images/bg.svg"/>
+          <Slide from='left' className="a1">
+            <img src="/images/caseManagement/featuresFirst/a1.svg"/>
+          </Slide>
+          <Slide from='right' className="a2">
+            <img src="/images/caseManagement/featuresFirst/a2.svg"/>
+          </Slide>
+          <Slide from='up' className="a3">
+            <img src="/images/caseManagement/featuresFirst/a3.svg"/>
+          </Slide>
         </div>
       </div>
     </FeaturesFirstStyles>

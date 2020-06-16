@@ -36,6 +36,28 @@ const FeaturesFirstStyles = styled.div`
       top: 0px;
     }
   }
+  .image {
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.b1 {
+        top: 0px;
+        left: -10px;
+        width: 80%;
+      }
+      &.b2 {
+        top: 96px;
+        right: 0px;
+        width: 70%;
+      }
+    }
+  }
 `;
 
 function FeaturesFirst(props) {
@@ -52,15 +74,14 @@ function FeaturesFirst(props) {
         </Slide>
       </div>
       <div className="rightContainer">
-        <div className="bg center">
-          <img alt="feature img" src="/images/caseManagement/featuresOne/bg.svg"/>
-        </div>
-        <div className="fg">
-          <div className="img1">
-            <img alt="feature img" src="/images/caseManagement/featuresOne/img1.svg"/>
-          </div>
-          {/* <img alt="feature img" src="/images/caseManagement/featuresOne/img2.svg"/>
-          <img alt="feature img" src="/images/caseManagement/featuresOne/img31.svg"/> */}
+        <div className="image center">
+          <img src="/images/bg.svg"/>
+          <Slide from='left' className="b1">
+            <img src="/images/wfhSurveys/featuresThird/b1.svg"/>
+          </Slide>
+          <Slide from='right' className="b2">
+            <img src="/images/wfhSurveys/featuresThird/b2.svg"/>
+          </Slide>
         </div>
       </div>
     </FeaturesFirstStyles>

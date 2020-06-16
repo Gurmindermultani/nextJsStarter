@@ -11,6 +11,7 @@ import Typography from '../../../components/Typography';
 import Button from '../../../components/Button';
 
 import { Spring } from 'react-spring/renderprops.cjs';
+import Slide from "../../../components/VisibilitySensor/Slide";
 import VisibilitySensor from "../../../components/VisibilitySensor";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -80,6 +81,108 @@ const ProductStyles = styled.div`
     margin-top: 48px;
     button {
       min-width: 172px;
+    }
+  }
+  .image {
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.a1 {
+        top: 10px;
+        left: 0;
+        width: 70%;
+      }
+      &.a2 {
+        top: 106px;
+        left: 78px;
+        width: 80%;
+      }
+      &.a3 {
+        bottom: 30px;
+        right: 0px;
+        width: 78%;
+      }
+      &.b1 {
+        top: 0px;
+        left: -10px;
+        width: 80%;
+      }
+      &.b2 {
+        top: 96px;
+        right: 0px;
+        width: 70%;
+      }
+      &.c1 {
+        top: 10px;
+        left: 0;
+        width: 70%;
+      }
+      &.c2 {
+        top: 106px;
+        left: 78px;
+        width: 80%;
+      }
+      &.c3 {
+        bottom: 30px;
+        right: 0px;
+        width: 78%;
+      }
+      &.d1 {
+        top: 0px;
+        left: -10px;
+        width: 80%;
+      }
+      &.d2 {
+        top: 96px;
+        right: 0px;
+        width: 70%;
+      }
+      &.e1 {
+        top: 10px;
+        left: 0;
+        width: 70%;
+      }
+      &.e2 {
+        top: 106px;
+        left: 78px;
+        width: 80%;
+      }
+      &.e3 {
+        top: 20px;
+        right: 40px;
+        width: 38%;
+      }
+      &.e4 {
+        bottom: 30px;
+        right: 0px;
+        width: 78%;
+      }
+      &.f1 {
+        top: 22px;
+        left: 0;
+        width: 80%;
+      }
+      &.f2 {
+        top: 0px;
+        right: 40px;
+        width: 40%;
+      }
+      &.f3 {
+        bottom: 68px;
+        right: -10px;
+        width: 40%;
+      }
+      &.f4 {
+        bottom: -10px;
+        right: 40px;
+        width: 40%;
+      }
     }
   }
 `;
@@ -195,24 +298,92 @@ function ProductHr(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="rightContainer">
-                  <div className="image">
-                    <img src="/images/home/faq.svg"/>
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="rightContainer">
+          {expanded === "panel1" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="a1">
+                <img src="/images/engage/a1.svg"/>
+              </Slide>
+              <Slide from='right' className="a2">
+                <img src="/images/engage/a2.svg"/>
+              </Slide>
+              <Slide from='up' className="a3">
+                <img src="/images/engage/a3.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel2" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="b1">
+                <img src="/images/engage/b1.svg"/>
+              </Slide>
+              <Slide from='right' className="b2">
+                <img src="/images/engage/b2.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel3" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="c1">
+                <img src="/images/engage/c1.svg"/>
+              </Slide>
+              <Slide from='right' className="c2">
+                <img src="/images/engage/c2.svg"/>
+              </Slide>
+              <Slide from='up' className="c3">
+                <img src="/images/engage/c3.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel4" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="d1">
+                <img src="/images/engage/d1.svg"/>
+              </Slide>
+              <Slide from='right' className="d2">
+                <img src="/images/engage/d2.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel5" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="e1">
+                <img src="/images/engage/e1.svg"/>
+              </Slide>
+              <Slide from='right' className="e2">
+                <img src="/images/engage/e2.svg"/>
+              </Slide>
+              <Slide from='up' className="e3">
+                <img src="/images/engage/e3.svg"/>
+              </Slide>
+              <Slide from='up' className="e4">
+                <img src="/images/engage/e4.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel6" &&
+            <div className="image center">
+              <img src="/images/bg.svg"/>
+              <Slide from='left' className="f1">
+                <img src="/images/engage/f1.svg"/>
+              </Slide>
+              <Slide from='right' className="f2">
+                <img src="/images/engage/f2.svg"/>
+              </Slide>
+              <Slide from='right' className="f3">
+                <img src="/images/engage/f3.svg"/>
+              </Slide>
+              <Slide from='right' className="f4">
+                <img src="/images/engage/f4.svg"/>
+              </Slide>
+            </div>
+          }
+        </div>
       </div>
     </ProductStyles>
   );

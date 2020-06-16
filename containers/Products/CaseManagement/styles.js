@@ -32,7 +32,6 @@ export const CaseManagmentStyles = styled.div`
     display: flex;
     .secondHeading {
       margin-top: 28px;
-      margin-bottom: 10px;
     }
     .bowlImage {
       position: relative;
@@ -67,7 +66,7 @@ export const CaseManagmentStyles = styled.div`
     margin: 150px 0 120px 0;
     text-align: center;
     .halfBackground {
-      margin-top: 10px;
+      margin-top: 0px;
     }
   }
   .demoContainer {

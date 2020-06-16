@@ -34,21 +34,60 @@ const FeaturesFirstStyles = styled.div`
       top: 0px;
     }
   }
+  .image {
+    position: relative;
+    position: relative;
+    width: 400px;
+    height: 310px;
+    div {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.a1 {
+        top: -20px;
+        left: 20px;
+        width: 70%;
+      }
+      &.a2 {
+        top: -57px;
+        right: -90px;
+        width: 85%;
+      }
+      &.a3 {
+        bottom: 139px;
+        right: 81px;
+        width: 20%;
+        z-index: 1;
+      }
+      &.a4 {
+        bottom: -11px;
+        right: -23px;
+        width: 50%;
+      }
+    }
+  }
 `;
 
 function FeaturesFirst(props) {
   return (
     <FeaturesFirstStyles>
       <div className="leftContainer">
-        <div className="bg center">
-          <img alt="feature img" src="/images/caseManagement/featuresOne/bg.svg"/>
-        </div>
-        <div className="fg">
-          <div className="img1">
-            <img alt="feature img" src="/images/caseManagement/featuresOne/img1.svg"/>
-          </div>
-          {/* <img alt="feature img" src="/images/caseManagement/featuresOne/img2.svg"/>
-          <img alt="feature img" src="/images/caseManagement/featuresOne/img31.svg"/> */}
+        <div className="image center">
+          <img src="/images/bg.svg"/>
+          <Slide from='left' className="a1">
+            <img src="/images/hrWorkflows/featuresSecond/a1.svg"/>
+          </Slide>
+          <Slide from='right' className="a2">
+            <img src="/images/hrWorkflows/featuresSecond/a2.svg"/>
+          </Slide>
+          <Slide from='right' className="a3">
+            <img src="/images/hrWorkflows/featuresSecond/a3.svg"/>
+          </Slide>
+          <Slide from='right' className="a4">
+            <img src="/images/hrWorkflows/featuresSecond/a4.svg"/>
+          </Slide>
         </div>
       </div>
       <div className="rightContainer">
