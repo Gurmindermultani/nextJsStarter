@@ -50,7 +50,7 @@ const RecognitionsStyles = styled.div`
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
     .cardsContainer {
-      padding-bottom: 50px;
+      padding: 0px 40px 50px 40px;
     }
   }
 `;
@@ -70,9 +70,7 @@ function Recognitions(props) {
       <RecognitionsStyles className="mobile">
         <Carousal variant="mobileCarousal">
           {recognitions.map( recognition => 
-            <FadeIn key={recognition.name}>
-              <Card variant="linkCard" data={recognition} />
-            </FadeIn>
+            <Card key={recognition.name} variant="linkCard" data={recognition} />
           )}
         </Carousal>
       </RecognitionsStyles>

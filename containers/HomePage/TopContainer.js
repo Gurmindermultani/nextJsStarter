@@ -35,7 +35,7 @@ const TopContainerStyles = styled.div`
         flex-basis: 60%;
         margin-right: 16px;
       }
-      button {
+      .buttons {
         width: 172px;
       }
     }
@@ -44,7 +44,37 @@ const TopContainerStyles = styled.div`
     flex-basis: 50%;
   }
   @media only screen and (max-width: 760px) {
-
+    flex-wrap: wrap;
+    .leftContainer {
+      flex-basis: 100%;
+      .animatedText {
+        text-align: center;
+      }
+      .animatedDemoInput {
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+        flex-wrap: wrap;
+        .form-group {
+          margin-top: 0;
+          display: none;
+        }
+        .errorContainer {
+          display: none;
+        }
+        .fullWidth {
+          flex-basis: 100%;
+          margin-right: 0px;
+        }
+        .buttons {
+          width: 100%;
+        }
+      }
+    }
+    .rightContainer {
+      flex-basis: 100%;
+      margin-top: 32px;
+    }
   }
 `;
 

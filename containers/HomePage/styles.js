@@ -33,7 +33,7 @@ export const HomePageStyles = styled.div`
     margin: 150px 0 120px 0;
     text-align: center;
     .halfBackground {
-      margin-top: 10px;
+      margin-top: 0px;
     }
     &.demoContainer {
       flex: 1;
@@ -71,6 +71,12 @@ export const HomePageStyles = styled.div`
     }
     .section {
       padding: 0 30px;
+      &.section0 {
+        padding-top: 150px
+      }
+      &.section4, &.section6, &.section7, &.section9 {
+        padding: 0;
+      }
       &.noMargin {
         margin-top: 120px;
         height: auto;

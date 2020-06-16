@@ -57,7 +57,7 @@ export const theme = createMuiTheme({
       color: 'primaryText',
     },
     'button': {
-      fontSizes: [12, 14, 16],
+      fontSizes: [16, 16, 16],
       fontWeight: '500',
 			fontFamily: 'Poppins',
       color: 'primaryText',

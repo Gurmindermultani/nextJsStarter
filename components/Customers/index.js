@@ -112,7 +112,7 @@ const CustomersStyles = styled.div`
         overflow: hidden;
         outline: none;
         .clientImage {
-          transform: scale(0.6);
+          transform: scale(0.8);
           min-height: 210px;
           display: flex;
           align-items: center;
