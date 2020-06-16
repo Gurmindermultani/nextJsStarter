@@ -55,6 +55,7 @@ export const HomePageStyles = styled.div`
   @media only screen and (min-width: 1400px) {
     .section {
       padding: 0 40px;
+      max-width: 1300px;
       &.section0 {
         padding: 180px 0px 0 0px;
       }
