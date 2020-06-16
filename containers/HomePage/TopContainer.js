@@ -85,9 +85,9 @@ function TopContainer(props) {
         <Slide from="left" className="animatedText">
           <Typography variant="h1" fontSizes={[20, 38, 40]} text="Redefine Employee Experience"/>
           <br />
-          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="paragraph2" text="with conversational"/>
+          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational"/>
           <br />
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="paragraph2" text="workflow automation"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="workflow automation"/>
         </Slide>
         <Slide from="left" className="animatedDemoInput">
           <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>

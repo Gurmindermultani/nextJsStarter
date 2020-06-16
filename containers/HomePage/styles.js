@@ -30,7 +30,7 @@ export const HomePageStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 120px 0;
+    margin: 140px 0 100px 0;
     text-align: center;
     .halfBackground {
       margin-top: 0px;
