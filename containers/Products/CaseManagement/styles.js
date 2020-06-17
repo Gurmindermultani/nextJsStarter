@@ -8,11 +8,14 @@ export const CaseManagmentStyles = styled.div`
     max-width: 1200px;
     margin: auto;
     &.section0 {
-      margin-top: 178px;
+      max-width: 100vw;
+      padding: 178px 200px 0 200px !important;
+      overflow: hidden;
     }
     &.noPadding {
       margin-top: 150px;
       padding: 0;
+      max-width: 100vw;
       background: #0F72EE;
       .halfBackground {
         z-index: 1;
@@ -31,6 +34,9 @@ export const CaseManagmentStyles = styled.div`
   }
   .topContainer {
     display: flex;
+    .text {
+      flex-basis: 70%;
+    }
     .secondHeading {
       margin-top: 16px;
     }
@@ -45,7 +51,7 @@ export const CaseManagmentStyles = styled.div`
       }
     }
     .demoInput {
-      margin-top: 9px;
+      margin-top: 32px;
       width: 40%;
       display: flex;
       align-items: center;
@@ -64,7 +70,7 @@ export const CaseManagmentStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 120px 0;
+    margin: 140px 0 100px 0;
     text-align: center;
     .halfBackground {
       margin-top: 0px;
@@ -78,6 +84,7 @@ export const CaseManagmentStyles = styled.div`
     flex: 1;
     .demoInput {
       display: flex;
+      margin-top: 16px;
       align-items: center;
       justify-content: center;
       .form-group {
@@ -109,11 +116,16 @@ export const CaseManagmentStyles = styled.div`
     }
     .section {
       padding: 0 30px;
+      &.section0 {
+        padding: 120px 30px 0 30px !important;
+      }
       &.noMargin {
         margin-top: 120px;
         height: auto;
+        padding: 0;
       }
       &.noPadding {
+        padding: 0;
         .form-group {
           display: none;
         }

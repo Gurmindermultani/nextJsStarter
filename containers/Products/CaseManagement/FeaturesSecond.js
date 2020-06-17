@@ -12,7 +12,7 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
+  margin-bottom: 120px;
   .rightContainer {
     flex-basis: 50%;
     .headingText {
@@ -22,8 +22,12 @@ const FeaturesFirstStyles = styled.div`
     .descriptionText {
       line-height: 28px;
     }
+    text-align: right;
+    .first {
+      margin-top: 32px;
+    }
     .second {
-      margin-top: 88px;
+      margin-top: 64px;
     }
   }
   .leftContainer {

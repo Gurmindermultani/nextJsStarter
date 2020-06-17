@@ -91,6 +91,11 @@ export const HeaderStyles = styled.div`
       opacity: 0.8;
     }
   }
+  .buttons {
+    button {
+      width: 142px;
+    }
+  }
   @media only screen and (max-width: 760px) {
     .animatedHeader {
       padding: 0 30px;

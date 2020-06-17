@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const ScheduleDemoStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
-  margin-top: 80px;
+  max-width: 1200px;
+  margin: 80px auto;
   justify-content: space-around;
   align-items: center;
   .leftContainer {

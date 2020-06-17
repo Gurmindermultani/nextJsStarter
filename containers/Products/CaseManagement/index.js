@@ -33,7 +33,7 @@ function CaseManagment(props) {
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h1" text="Make it easy for your employees to raise query tickets and get"/>
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h1" text="real-time updates directly through the conversational interface."/>
             <Slide className="demoInput">
-              <Input className="fullWidth" name="schedule" placeholder="Your work email"/>
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
                 <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
               </div>
@@ -41,6 +41,7 @@ function CaseManagment(props) {
           </FadeIn>
           <Slide from='right' className="bowlImage">
             <img src="/images/home/mobile.png" />
+            <img className="heroBg" src="/images/heroBg.svg" />
             <LottieAnimation dataUrl="/images/caseManagement/phone.json" />
           </Slide>
       </div>
@@ -77,21 +78,21 @@ function CaseManagment(props) {
           <Button variant="contained" size="large" name="Know More" />
         </div>
       </section>
-      <section className="section section7">
+      <section className="section section7 noMargin">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
         </FadeIn>
         <Reviews />
       </section>
-      <section className="section section8 shortSection noPadding">
+      <section className="section section8 noPadding">
         <div className="demoContainer">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="You’re one step away from an excellent employee experience."/>
             <Typography className="" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Sign up for a free demo right away"/>
           </FadeIn>
           <Slide className="demoInput">
-            <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Button name="Schedule Demo" variant="inverted" size="large"/>
           </Slide>
         </div>

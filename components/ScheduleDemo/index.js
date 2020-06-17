@@ -33,7 +33,7 @@ const ScheduleDemoStyles = styled.div`
     }
   }
   .quoteContainer {
-    margin: 0;
+    margin: 0 !important;
     span {
       color: white;
     }
@@ -57,7 +57,7 @@ function ScheduleDemo(props) {
           <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
         </FadeIn>
         <Slide className="demoInput center">
-          <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
+          {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Button name="Schedule Demo" variant="inverted" size="large"/>
         </Slide>
       </div>

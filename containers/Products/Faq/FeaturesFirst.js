@@ -12,7 +12,7 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
+  margin-bottom: 120px;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -22,13 +22,18 @@ const FeaturesFirstStyles = styled.div`
     .descriptionText {
       line-height: 28px;
     }
+    .first {
+      margin-top: 32px;
+    }
     .second {
-      margin-top: 88px;
+      margin-top: 64px;
     }
   }
   .rightContainer {
     flex-basis: 50%;
     position: relative;
+    display: flex;
+    justify-content: center;
     .fg {
       position: absolute;
       top: 0px;

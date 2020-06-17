@@ -99,6 +99,13 @@ const GlobalStyle = createGlobalStyle`
   .textCenter {
     text-align: center;
   }
+  .heroBg {
+    height: 780px;
+    position: absolute;
+    bottom: -40px;
+    left: -80px;
+    z-index: -1;
+  }
   @media only screen and (max-width: 760px) {
     .desktop {
       display: none;
