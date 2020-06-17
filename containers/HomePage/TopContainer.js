@@ -20,7 +20,7 @@ const TopContainerStyles = styled.div`
   display: flex;
   justify-content: space-between;
   .leftContainer {
-    flex-basis: 50%;
+    flex-basis: 55%;
     .animatedDemoInput {
       display: flex;
       align-items: center;
@@ -41,7 +41,7 @@ const TopContainerStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
@@ -90,7 +90,7 @@ function TopContainer(props) {
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="workflow automation"/>
         </Slide>
         <Slide from="left" className="animatedDemoInput">
-          <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/>
+          {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href="/scheduleDemo">
             <div className="buttons">
               <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
