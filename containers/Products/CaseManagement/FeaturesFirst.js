@@ -22,9 +22,6 @@ const FeaturesFirstStyles = styled.div`
     .descriptionText {
       line-height: 28px;
     }
-    .first {
-      margin-top: 32px;
-    }
     .second {
       margin-top: 64px;
     }
@@ -33,7 +30,7 @@ const FeaturesFirstStyles = styled.div`
     flex-basis: 50%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     .fg {
       position: absolute;
       top: 0px;
@@ -41,8 +38,6 @@ const FeaturesFirstStyles = styled.div`
   }
   .image {
     position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
@@ -50,20 +45,17 @@ const FeaturesFirstStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        top: 5px;
-        left: 0;
-        width: 90%;
+        top: -12px;
+        left: -20px;
         z-index: 1;
       }
       &.a2 {
-        top: 98px;
-        left: 0px;
-        width: 90%;
+        top: 114px;
+        left: -5px;
       }
       &.a3 {
-        bottom: 0px;
-        left: 5px;
-        width: 90%;
+        bottom: -20px;
+        left: -10px;
       }
     }
   }
@@ -91,7 +83,7 @@ function FeaturesFirst(props) {
         </Slide>
       </div>
       <div className="rightContainer">
-        <div className="image center">
+        <div className="image">
           <img src="/images/bg3.svg"/>
           <Slide from='left' className="a1">
             <img src="/images/caseManagement/featuresFirst/a1.svg"/>

@@ -99,7 +99,7 @@ function TopContainer(props) {
         </Slide>
       </div>
       <Slide from="right" className="rightContainer">
-        <LottieAnimation dataUrl="/images/home/home.json" />
+        {/* <LottieAnimation dataUrl="/images/home/home.json" /> */}
       </Slide>
     </TopContainerStyles>
   );
