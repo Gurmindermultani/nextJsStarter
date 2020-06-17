@@ -22,26 +22,6 @@ const allCaseStudies = [
     text: 'AirAsia transforms employee query resolution with Leena AI',
     img: '/images/clients/airasia.png',
   },
-  {
-    name: 'cocacola',
-    text: 'AirAsia transforms employee query resolution with Leena AI',
-    img: '/images/clients/cocacola.png',
-  },
-  {
-    name: 'lafarge',
-    text: 'AirAsia transforms employee query resolution with Leena AI',
-    img: '/images/clients/lafarge.png',
-  },
-  {
-    name: 'lafarge',
-    text: 'AirAsia transforms employee query resolution with Leena AI',
-    img: '/images/clients/lafarge.png',
-  },
-  {
-    name: 'lafarge',
-    text: 'AirAsia transforms employee query resolution with Leena AI',
-    img: '/images/clients/lafarge.png',
-  },
 ];
 
 function CaseStudies(props) {
@@ -68,8 +48,8 @@ function CaseStudies(props) {
       <section className="section section8 shortSection noPadding">
         <div className="quoteContainer demoContainer">
           <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSize="28px" color="#fff" text="Know how Leena AI can add value"/>
-            <Typography className="halfBackground" fontWeight="300" color="#fff" fontSize="28px" variant="paragraph2" text="to your organization."/>
+            <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="Know how Leena AI can add value"/>
+            <Typography className="invertedHalfBackground" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="to your organization."/>
           </FadeIn>
           <Slide className="demoInput">
             <Input onChange={() => null} name="schedule" placeholder="Your work email"/>

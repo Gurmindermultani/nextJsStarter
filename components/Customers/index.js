@@ -81,8 +81,8 @@ const CustomersStyles = styled.div`
       }
     }
     .slick-slide {
-      margin-top: 30px;
-      min-height: 200px;
+      margin-top: 64px;
+      min-height: 240px;
       padding-top: 30px;
       width: 200px;
     }
@@ -97,7 +97,7 @@ const CustomersStyles = styled.div`
         }
       }
       img {
-        transform: scale(2);
+        transform: scale(3);
         opacity: 1;
       }
     }

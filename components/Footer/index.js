@@ -20,6 +20,7 @@ const FooterStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 64px;
     .empty {
       min-width: 100px;
     }
@@ -54,6 +55,22 @@ const FooterStyles = styled.div`
       max-width: 288px;
       .middleText {
         margin: 12px 0;
+      }
+    }
+  }
+  .certs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      &.soc {
+        width: 134px;
+        height: 38px;
+      }
+      &.iso {
+        margin-left: 20px;
+        width: 88px;
+        height: 38px;
       }
     }
   }
@@ -151,7 +168,10 @@ function Footer(props) {
           {" | "}
           <Typography variant="paragraph2" color="#212121" text="Privacy Policies"/>
         </div>
-        <div className="empty"></div>
+        <div className="certs">
+          <img className="soc" alt="cert" src="/images/certs/soc.png" />
+          <img className="iso" alt="cert" src="/images/certs/iso.png" />
+        </div>
       </div>
     </FooterStyles>
   );

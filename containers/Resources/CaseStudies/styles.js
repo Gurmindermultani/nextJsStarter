@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CaseStudiesStyles = styled.div`
   .section {
     height: calc(100vh);
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
