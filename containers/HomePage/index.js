@@ -181,8 +181,7 @@ function HomePage(props) {
       </section>
       <section className="section section9">
         <QuoteAnimator className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Industry recognition"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for our expertise in HR"/>
+          <Typography variant="h3" fontSizes={[20, 28, 28]} text="We’re featured in"/>
         </QuoteAnimator>
         <Recognitions />
       </section>
