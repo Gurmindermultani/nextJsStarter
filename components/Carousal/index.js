@@ -16,18 +16,67 @@ const CarousalStyles = styled.div`
   .slick-prev, .slick-next {
     width: 48px;
     height: 48px;
-    &:before {
-      color: #103577;
-      font-size: 40px;
-    }
   }
   .slick-prev {
-    left: -45px;
+    /* left: -45px; */
   }
   .slick-next {
-    right: -45px;
+    /* right: -45px; */
   }
 `;
+
+const PrevArrowStyles = styled.div`
+  background: #0f72ee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  left: -40px;
+`;
+
+const NextArrowStyles = styled.div`
+  background: #0f72ee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: -40px;
+  img {
+    transform: scale(-1);
+  }
+`;
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <NextArrowStyles
+      className="nextArrow"
+      onClick={onClick}
+    >
+      <img src="/images/icons/arrow.svg" />
+    </NextArrowStyles>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <PrevArrowStyles
+      className="prevArrow"
+      onClick={onClick}
+    >
+      <img src="/images/icons/arrow.svg" />
+    </PrevArrowStyles>
+  );
+}
 
 function Carousal(props) {
   return (
@@ -43,6 +92,11 @@ function Carousal(props) {
       }
     </CarousalStyles>
   );
+}
+
+Carousal.defaultProps = {
+  SampleNextArrow,
+  SamplePrevArrow,
 }
 
 Carousal.propTypes = {};

@@ -25,6 +25,8 @@ function CenterMode(props) {
     speed: 500,
     adaptiveHeight: true,
     variableWidth: true,
+    nextArrow: <props.SampleNextArrow />,
+    prevArrow: <props.SamplePrevArrow />,
   };
   return (
     <CenterModeStyles>

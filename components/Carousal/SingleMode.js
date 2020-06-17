@@ -11,7 +11,12 @@ import Typography from '../../components/Typography';
 import Slider from "react-slick";
 
 const SingleModeStyles = styled.div`
-  
+  .nextArrow {
+    top: 47%;
+  }
+  .prevArrow {
+    bottom: 47%;
+  }
 `;
 
 function SingleMode(props) {
@@ -19,6 +24,8 @@ function SingleMode(props) {
     infinite: true,
     slidesToShow: 1,
     speed: 500,
+    nextArrow: <props.SampleNextArrow />,
+    prevArrow: <props.SamplePrevArrow />,
   };
   return (
     <SingleModeStyles>

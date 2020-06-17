@@ -51,10 +51,10 @@ function LinkCard(props) {
         <img alt={props.data.name} src={props.data.img} />
       </div>
       <div className="body">
-        <Typography variant="paragraph2" color="#212121" text={props.data.text}/>
+        <Typography fontSize="16px" variant="paragraph2" color="#212121" text={props.data.text}/>
       </div>
       <div className="footer">
-        <Typography variant="paragraphS2" color="#616161" text={"Read More"}/>
+        <Typography variant="paragraphS2" fontSize="12px" color="#616161" text={"Read More"}/>
         <img alt="right arrow" src="/images/icons/down-arrow.svg"/>
       </div>
     </LinkCardStyles>

@@ -28,10 +28,10 @@ function CaseManagment(props) {
       <section className="section section0">
         <div className="topContainer">
           <FadeIn className="text">
-            <Typography className="topText" variant="h1" fontSizes={[20, 30, 40]} text="Discover employee satisfaction"/>
-            <Typography variant="h1" fontSizes={[20, 30, 40]} text="with conversational case management"/>
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 22, 30]} variant="paragraph2" text="Make it easy for your employees to raise query tickets and get"/>
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 22, 30]} variant="paragraph2" text="real-time updates directly through the conversational interface."/>
+            <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Discover employee satisfaction"/>
+            <Typography variant="h1" fontSizes={[20, 34, 40]} text="with conversational case management"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h1" text="Make it easy for your employees to raise query tickets and get"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h1" text="real-time updates directly through the conversational interface."/>
             <Slide className="demoInput">
               <Input className="fullWidth" name="schedule" placeholder="Your work email"/>
               <div className="buttons">
@@ -88,7 +88,7 @@ function CaseManagment(props) {
         <div className="demoContainer">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="You’re one step away from an excellent employee experience."/>
-            <Typography className="halfBackground" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Sign up for a free demo right away"/>
+            <Typography className="" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Sign up for a free demo right away"/>
           </FadeIn>
           <Slide className="demoInput">
             <Input onChange={() => null} name="schedule" placeholder="Your work email"/>

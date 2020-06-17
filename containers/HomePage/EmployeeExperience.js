@@ -152,8 +152,8 @@ function EmployeeExperience(props) {
           <Spring delay={300} to={{ 
             opacity: isVisible ? 1 : 0,
             transform: isVisible
-                ? "translateY(0)"
-                : "translateY(200px)",
+                ? "translateX(0)"
+                : "translateX(200px)",
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="productHeader">

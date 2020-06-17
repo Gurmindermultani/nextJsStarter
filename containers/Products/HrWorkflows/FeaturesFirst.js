@@ -29,6 +29,8 @@ const FeaturesFirstStyles = styled.div`
   .rightContainer {
     flex-basis: 50%;
     position: relative;
+    display: flex;
+    justify-content: center;
     .fg {
       position: absolute;
       top: 0px;
@@ -79,7 +81,7 @@ function FeaturesFirst(props) {
       </div>
       <div className="rightContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
+          <img src="/images/hrWorkflows/featuresFirst/bg.svg"/>
           <Slide from='left' className="a1">
             <img src="/images/hrWorkflows/featuresFirst/a1.svg"/>
           </Slide>

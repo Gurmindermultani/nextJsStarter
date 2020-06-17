@@ -5,7 +5,8 @@ export const CaseManagmentStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 10rem;
+    max-width: 1200px;
+    margin: auto;
     &.section0 {
       margin-top: 178px;
     }
@@ -31,7 +32,7 @@ export const CaseManagmentStyles = styled.div`
   .topContainer {
     display: flex;
     .secondHeading {
-      margin-top: 28px;
+      margin-top: 16px;
     }
     .bowlImage {
       position: relative;
@@ -44,7 +45,7 @@ export const CaseManagmentStyles = styled.div`
       }
     }
     .demoInput {
-      margin-top: 48px;
+      margin-top: 9px;
       width: 40%;
       display: flex;
       align-items: center;
@@ -87,6 +88,19 @@ export const CaseManagmentStyles = styled.div`
       button {
         min-width: 172px;
       }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .section {
+      padding: 0 40px;
+      &.section0 {
+        padding: 0px 0px 0 0px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .section {
+      padding: 0 80px;
     }
   }
   @media only screen and (max-width: 760px) {
