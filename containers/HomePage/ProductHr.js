@@ -266,9 +266,7 @@ function ProductHr(props) {
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <FadeIn>
-                <img src="/images/bg1.svg"/>
-              </FadeIn>
+              <img src="/images/bg1.svg"/>
               <Slide from='left' className="b1">
                 <img src="/images/home/helpdesk/b1.svg"/>
               </Slide>
