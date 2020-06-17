@@ -43,6 +43,7 @@ const ProductStyles = styled.div`
     margin-top: 48px;
     .rightContainer {
       flex-basis: 50%;
+      padding-right: 10px;
       .MuiExpansionPanel-root {
         box-shadow: none;
         margin: 0px;
@@ -99,33 +100,36 @@ const ProductStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        bottom: 20px;
-        right: 0px;
-        width: 78%;
+        left: -40px;
+        top: -20px;
+        width: 88%;
       }
       &.a2 {
-        top: 112px;
+        top: 102px;
         left: 68px;
-        width: 88%;
+        width: 94%;
         z-index: 1;
       }
       &.a3 {
-        top: 0;
-        left: 0;
-        width: 76%;
+        right: 0;
+        bottom: 10px;
+        width: 90%;
       }
       &.b1 {
-        bottom: -57px;
-        right: -35px;
+        bottom: -27px;
+        right: -55px;
         width: 70%;
         z-index: 1;
       }
       &.b2 {
-        top: 0px;
+        top: -25px;
         left: 0px;
         width: 81%;
       }
     }
+  }
+  .leftContainer {
+    padding-left: 30px;
   }
   @media only screen and (max-width: 760px) {
     .body {
@@ -173,7 +177,7 @@ function EmployeeExperience(props) {
         <div className="leftContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <img src="/images/bg.svg"/>
+              <img src="/images/bg2.svg"/>
               <Slide from='left' className="a1">
                 <img src="/images/home/experience/a1.svg"/>
               </Slide>
@@ -187,7 +191,7 @@ function EmployeeExperience(props) {
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <img src="/images/bg.svg"/>
+              <img src="/images/bg2.svg"/>
               <Slide from='right' className="b1">
                 <img src="/images/home/experience/b1.svg"/>
               </Slide>
