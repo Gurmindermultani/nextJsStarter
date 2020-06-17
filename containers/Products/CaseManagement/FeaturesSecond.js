@@ -85,7 +85,7 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
+          <img src="/images/bg4.svg"/>
           <Slide from='left' className="a1">
             <img src="/images/caseManagement/featuresSecond/a1.svg"/>
           </Slide>

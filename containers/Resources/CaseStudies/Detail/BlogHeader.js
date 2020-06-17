@@ -15,27 +15,34 @@ const BlogHeaderStyles = styled.div`
   display: flex;
   padding: 100px 0;
   justify-content: space-between;
+  margin: auto;
   .leftContainer {
-    flex-basis: 40%;
-    img {
-      width: 100px;
+    flex-basis: 35%;
+    position: relative;
+    .logo {
+      width: 180px;
       height: 100px;
-    }
-    span {
-      line-height: 46px;
+      position: absolute;
+      left: -40px;
+      img {
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+      }
     }
     .headingText {
-      margin: 32px 0 0 0;
+      margin: 142px 0 0 0;
     }
     .buttons {
-      margin-top: 72px;
+      margin-top: 48px;
     }
     button {
       width: 240px;
     }
   }
   .rightContainer {
-    flex-basis: 55%;
+    flex-basis: 62%;
     .featureImg {
       width: 100%;
       height: 300px;
@@ -48,11 +55,11 @@ const BlogHeaderStyles = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding: 30px 0 0 0;
+      padding: 50px 0 0 0;
       .row {
         text-align: center;
         .rowValue {
-          margin-top: 20px;
+          margin-top: 8px;
         }
       }
     }
@@ -63,13 +70,14 @@ function BlogHeader(props) {
   return (
     <BlogHeaderStyles>
       <Slide from='left' className="leftContainer">
-        <img alt={props.name} src={props.img}/>
+        <div className="logo">
+          <img alt={props.name} src={props.img}/>
+        </div>
+        <Typography className="headingText" variant="h1" fontSizes={[28, 34, 34]} text={props.mainHeading}/>
         <br />
-        <Typography className="headingText" variant="h1" fontSize="46px" text={props.mainHeading}/>
+        <Typography className="secondHeading" fontWeight="300" color="#212121" fontSizes={[28, 34, 34]} variant="h1" text={props.subHeading1}/>
         <br />
-        <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSize="34px" variant="paragraph2" text={props.subHeading1}/>
-        <br />
-        <Typography className="lastHeadeing halfBackground" fontWeight="300" color="#212121" fontSize="34px" variant="paragraph2" text={props.subHeading2}/>
+        <Typography className="lastHeadeing halfBackground" fontWeight="300" color="#212121" fontSizes={[28, 34, 34]} variant="h1" text={props.subHeading2}/>
         <div className="buttons">
           <Button size="large" variant="inverted" name="Download Case Study"/>
         </div>

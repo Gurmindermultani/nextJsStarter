@@ -47,16 +47,12 @@ export const navigation = [
     label: 'Resources',
     links: [
       {
-        name: 'blogs',
-        label: 'Blogs',
+        name: 'blog',
+        label: 'Blog',
       },
       {
         name: 'caseStudies',
         label: 'Case Studies',
-      },
-      {
-        name: 'newsAndMedia',
-        label: 'News and Media',
       },
       {
         name: 'roiCalculator',

@@ -104,7 +104,7 @@ const GlobalStyle = createGlobalStyle`
     position: absolute;
     bottom: -40px;
     left: -80px;
-    z-index: -1;
+    z-index: -2;
   }
   @media only screen and (max-width: 760px) {
     .desktop {

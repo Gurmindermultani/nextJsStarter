@@ -14,6 +14,11 @@ import FadeIn from '../VisibilitySensor/FadeIn';
 
 const customers = [
   {
+    name: 'airasia',
+    type: 'Aviation',
+    employees: '20,000+'
+  },
+  {
     name: 'lafarge',
     type: 'Building materials',
     employees: '70,000+'
@@ -27,11 +32,6 @@ const customers = [
     name: 'cocacola',
     type: 'FMCG',
     employees: '65,000+'
-  },
-  {
-    name: 'airasia',
-    type: 'Aviation',
-    employees: '20,000+'
   },
   {
     name: 'sony',

@@ -15,13 +15,12 @@ const NumberContainerStyles = styled.div`
   display: flex;
   .detail {
     flex: 1;
-    height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .padded {
-      padding: 100px;
+      padding: 60px 8rem;
       flex: 1;
       width: 100%;
     }
@@ -37,6 +36,7 @@ const NumberContainerStyles = styled.div`
       }
     }
     .footer {
+      max-width: 428px;
       border-top: 1px solid white;
       padding-top: 10px;
       margin-top: 20px;

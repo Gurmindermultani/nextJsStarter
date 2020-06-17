@@ -30,26 +30,6 @@ export const ScheduleDemoStyles = styled.div`
         width: 90px;
         filter: grayscale(100%);
         margin-bottom: 10px;
-        &.airasia {
-          height: 90px;
-        }
-        &.rpg {
-          height: 30px;
-          margin-top: 30px;
-        }
-        &.oneplus {
-          width: 130px;
-          margin-top: 10px;
-        }
-        &.cocacola {
-          width: 130px;
-          margin-top: 5px;
-        }
-        &.tata {
-          width: 160px;
-          height: 20px;
-          margin-top: 30px;
-        }
       }
     }
   }

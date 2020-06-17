@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CaseStudiesStyles = styled.div`
   margin-top: 80px;
   .section {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,7 @@ export const CaseStudiesStyles = styled.div`
       max-width: 100vw;
       button {
         margin: 5px 0 0 80px;
+        min-width: 200px;
       }
     }
   }

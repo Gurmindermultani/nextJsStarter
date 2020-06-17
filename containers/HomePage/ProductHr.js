@@ -40,6 +40,7 @@ const ProductStyles = styled.div`
     margin-top: 48px;
     .leftContainer {
       flex-basis: 50%;
+      padding-left: 10px;
       .MuiExpansionPanel-root {
         box-shadow: none;
         margin: 0px;
@@ -96,51 +97,54 @@ const ProductStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        top: 0;
+        top: -45px;
         left: 0;
-        width: 60%;
+        width: 70%;
       }
       &.a2 {
         top: 16px;
-        right: 58px;
-        width: 31%;
+        right: 38px;
+        width: 36%;
       }
       &.a3 {
-        bottom: 0px;
-        right: 0px;
-        width: 78%;
+        bottom: -30px;
+        right: -40px;
+        width: 88%;
       }
       &.b1 {
-        top: -38px;
+        top: -28px;
         left: 0;
-        width: 90%;
+        width: 85%;
       }
       &.b2 {
         top: 76px;
-        right: 0px;
+        right: -30px;
         width: 31%;
       }
       &.b3 {
-        bottom: 0px;
-        right: 0px;
-        width: 78%;
+        bottom: -10px;
+        right: -10px;
+        width: 88%;
       }
       &.c1 {
-        top: -38px;
+        top: -28px;
         left: 0;
-        width: 90%;
+        width: 80%;
       }
       &.c2 {
-        top: 50px;
-        right: 0px;
+        top: 40px;
+        right: -10px;
         width: 31%;
       }
       &.c3 {
         bottom: 0px;
         right: 0px;
-        width: 78%;
+        width: 82%;
       }
     }
+  }
+  .rightContainer {
+    padding-right: 30px;
   }
   @media only screen and (max-width: 760px) {
     .body {
@@ -248,7 +252,7 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <img src="/images/bg.svg"/>
+              <img src="/images/bg1.svg"/>
               <Slide from='left' className="a1">
                 <img src="/images/home/helpdesk/a1.svg"/>
               </Slide>
@@ -262,7 +266,9 @@ function ProductHr(props) {
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <img src="/images/bg.svg"/>
+              <FadeIn>
+                <img src="/images/bg1.svg"/>
+              </FadeIn>
               <Slide from='left' className="b1">
                 <img src="/images/home/helpdesk/b1.svg"/>
               </Slide>
@@ -276,7 +282,7 @@ function ProductHr(props) {
           }
           {expanded === "panel3" &&
             <div className="image center">
-              <img src="/images/bg.svg"/>
+              <img src="/images/bg1.svg"/>
               <Slide from='left' className="c1">
                 <img src="/images/home/helpdesk/c1.svg"/>
               </Slide>

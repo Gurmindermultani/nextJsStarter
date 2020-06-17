@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const CaseStudiesStyles = styled.div`
   .section {
-    height: calc(100vh);
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -17,6 +16,7 @@ export const CaseStudiesStyles = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
+      margin: 64px auto;
       height: auto;
       .slideCard {
         flex-basis: 30%;
@@ -34,33 +34,12 @@ export const CaseStudiesStyles = styled.div`
       }
     }
     &.section0 {
-      margin-top: 20px;
-      height: calc(100vh - 400px);
-    }
-    &.section2 {
-      margin: 50px auto;
-      height: calc(100vh + 150px);
-    }
-    &.section5 {
-      .quoteContainer {
-        margin-bottom: 40px;
-      }
-    }
-    &.section7 {
-      height: calc(100vh - 350px);
-    }
-    &.section8 {
-      height: calc(100vh - 450px);
-    }
-    &.demoSecion {
-      height: calc(100vh - 150px);
-      margin: 0;
-      max-width: 100vw;
+      margin-top: 120px;
     }
     &.noPadding {
       max-width: 100vw;
       background: #0F72EE;
-      padding-bottom: 0px;
+      padding: 80px 0;
       .halfBackground {
         z-index: 1;
       }
@@ -83,8 +62,7 @@ export const CaseStudiesStyles = styled.div`
       margin-bottom: 16px;
     }
     .secondHeading {
-      margin-top: 10px;
-      margin-bottom: 5px;
+      
     }
     .bowlImage {
       position: relative;
