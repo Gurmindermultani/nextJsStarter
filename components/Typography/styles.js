@@ -19,7 +19,7 @@ export const TypographyContainer = styled.span`
             font-size: ${props => props.theme.typography[props.variant]['fontSizes'][2] }px;
         }
         font-weight: ${props => props.theme.typography[props.variant]['fontWeight'] };
-        font-family: ${props => "'" + props.theme.typography[props.variant]['fontFamily'] + "'"}, sans-serif;
+        font-family: ${props => "" + props.theme.typography[props.variant]['fontFamily'] + ""};
         color : ${props => props.theme.palette.text[props.theme.typography[props.variant]['color']] };
     `}
     ${props => props.color && css`

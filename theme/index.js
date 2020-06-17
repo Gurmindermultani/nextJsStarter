@@ -41,13 +41,13 @@ export const theme = createMuiTheme({
     'subHeading': {
       fontSizes: [14, 14, 14],
       fontWeight: '400',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'secondaryText',
     },
     'caption': {
       fontSizes: [11, 10, 10],
       fontWeight: '600',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'secondaryText',
     },
     'tags': {
@@ -71,7 +71,7 @@ export const theme = createMuiTheme({
     'paragraph1': {
       fontSizes: [14, 14, 14],
       fontWeight: '400',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'secondaryText',
     },
     'paragraph2': {
@@ -83,7 +83,7 @@ export const theme = createMuiTheme({
     'paragraphM1': {
       fontSizes: [13, 13, 13],
       fontWeight: '400',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'secondaryText',
     },
     'paragraphM2': {
@@ -95,7 +95,7 @@ export const theme = createMuiTheme({
     'paragraphS1': {
       fontSizes: [12, 12, 12],
       fontWeight: '500',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'primaryText',
     },
     'paragraphS2': {
@@ -107,7 +107,7 @@ export const theme = createMuiTheme({
     'highlight1': {
       fontSizes: [10, 10, 10],
       fontWeight: '600',
-			fontFamily: 'Open Sans',
+			fontFamily: 'Poppins',
       color: 'primaryText',
     },
     'highlight2': {

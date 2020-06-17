@@ -1,11 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap'); 
   html,
   body {
     padding: 0;
     margin: 0;
-    font-family: Poppins, sans-serif;
+    font-family: Poppins;
   }
   * {
     box-sizing: border-box;
@@ -13,12 +14,11 @@ const GlobalStyle = createGlobalStyle`
   * {
     outline: none;
   }
-  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap'); 
   .pointer {
     cursor: pointer;
   }
   div {
-    font-family: Poppins, sans-serif;
+    font-family: Poppins;
   }
   .subComponent{
     margin-top: 48px;
