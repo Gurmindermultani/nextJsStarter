@@ -12,9 +12,7 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
-  margin-top: 200px;
-  margin-bottom: 120px;
+  justify-content: space-between;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -25,11 +23,13 @@ const FeaturesFirstStyles = styled.div`
       line-height: 28px;
     }
     .second {
-      margin-top: 88px;
+      margin-top: 64px;
     }
   }
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
     position: relative;
     .fg {
       position: absolute;
@@ -38,23 +38,21 @@ const FeaturesFirstStyles = styled.div`
   }
   .image {
     position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
         width: 100%;
         height: 100%;
       }
-      &.b1 {
-        top: 0px;
-        left: -10px;
-        width: 80%;
+      &.a1 {
+        top: -20px;
+        left: -100px;
+        width: 130%;
       }
-      &.b2 {
-        top: 96px;
-        right: 0px;
-        width: 70%;
+      &.a2 {
+        bottom: -46px;
+        right: -120px;
+        width: 130%;
       }
     }
   }
@@ -75,12 +73,12 @@ function FeaturesFirst(props) {
       </div>
       <div className="rightContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
-          <Slide from='left' className="b1">
-            <img src="/images/wfhSurveys/featuresThird/b1.svg"/>
+          <img src="/images/wfhSurveys/featuresThird/bg.svg"/>
+          <Slide from='left' className="a1">
+            <img src="/images/wfhSurveys/featuresThird/a1.svg"/>
           </Slide>
-          <Slide from='right' className="b2">
-            <img src="/images/wfhSurveys/featuresThird/b2.svg"/>
+          <Slide from='right' className="a2">
+            <img src="/images/wfhSurveys/featuresThird/a2.svg"/>
           </Slide>
         </div>
       </div>

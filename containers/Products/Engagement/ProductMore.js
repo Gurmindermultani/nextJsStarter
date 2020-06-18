@@ -19,7 +19,6 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
 const ProductStyles = styled.div`
-  margin-bottom: 100px;
   .productHeader {
     display: flex;
     .text {
@@ -35,6 +34,7 @@ const ProductStyles = styled.div`
   }
   .body {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 48px;
     .leftContainer {
@@ -84,64 +84,72 @@ const ProductStyles = styled.div`
       min-width: 172px;
     }
   }
-  .rightContainer {
-    display: flex;
-    padding-right: 30px;
-  }
   .image {
     position: relative;
+    width: 400px;
+    height: 310px;
     div {
       position: absolute;
       img {
         width: 100%;
         height: 100%;
       }
-      &.a1 {
-        top: -50px;
-        left: -70px;
-        width: 105%;
-      }
-      &.a2 {
-        top: 86px;
-        left: 28px;
-        width: 110%;
-      }
-      &.a3 {
-        bottom: 80px;
-        right: -50px;
-        width: 100%;
-      }
-      &.b1 {
+      &.d1 {
         top: -30px;
         left: -50px;
         width: 100%;
       }
-      &.b2 {
+      &.d2 {
         top: 96px;
         right: -70px;
         width: 80%;
       }
-      &.c1 {
-        top: -50px;
-        left: -70px;
-        width: 105%;
+      &.e1 {
+        top: -30px;
+        left: -60px;
+        width: 100%;
       }
-      &.c2 {
-        top: 95px;
-        left: 28px;
+      &.e2 {
+        top: 116px;
+        left: 38px;
         width: 110%;
       }
-      &.c3 {
-        bottom: 80px;
-        right: -50px;
+      &.e3 {
+        top: 20px;
+        right: -20px;
+        width: 38%;
+      }
+      &.e4 {
+        bottom: -20px;
+        right: -60px;
         width: 100%;
+      }
+      &.f1 {
+        top: -10px;
+        left: -40px;
+        width: 110%;
+      }
+      &.f2 {
+        top: -30px;
+        right: -20px;
+        width: 46%;
+      }
+      &.f3 {
+        bottom: 48px;
+        right: -90px;
+        width: 46%;
+      }
+      &.f4 {
+        bottom: -60px;
+        right: -30px;
+        width: 46%;
       }
     }
   }
 `;
 
 function ProductHr(props) {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState('panel4');
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : panel);
@@ -159,46 +167,46 @@ function ProductHr(props) {
             }}>
               {({ opacity, transform }) => (
                 <div style={{opacity, transform}} className="leftContainer">
-                  <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                    <ExpansionPanelSummary>
-                      <div className="accordianHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Conversational surveys`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make your surveys conversational and employee-friendly. Get rid of long boring forms and poor user interface."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                  <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                     <ExpansionPanelSummary>
                       <div className="questionHeader">
                         <Typography
                           variant="h4" 
                           fontSize="20px"
-                          text={`Analytical reports`}
+                          text={`Actionable insights`}
                         />
                       </div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Access survey feedback instantly on your dashboard. Get high-quality actionable insights about happiness score of your organization, and know about your unhappy employees."}/>
+                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get to know real-time actionable insights right on your dashboard. Know the factors that require improvement and challenges faced by employees."}/>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                  <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                     <ExpansionPanelSummary>
                       <div className="questionHeader">
                         <Typography
                           variant="h4" 
                           fontSize="20px"
-                          text={`Periodic surveys`}
+                          text={`Timely reminders`}
                         />
                       </div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct surveys periodically throughout the employees’ lifecycle. Save your HR from biased and inaccurate feedback."}/>
+                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Set automated reminders for your employees to participate in the engagement surveys. Ensure that all your employees give the feedback."}/>
+                    </ExpansionPanelDetails>
+                  </ExpansionPanel>
+                  <ExpansionPanel expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+                    <ExpansionPanelSummary>
+                      <div className="questionHeader">
+                        <Typography
+                          variant="h4" 
+                          fontSize="20px"
+                          text={`Easy integration`}
+                        />
+                      </div>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Integrate your engagement platform easily with your existing HRIS or workflow channels. Take the survey where your employees are."}/>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
                   <div className="buttons">
@@ -210,42 +218,48 @@ function ProductHr(props) {
           )}
         </VisibilitySensor>
         <div className="rightContainer">
-          {expanded === "panel1" &&
-            <div className="image">
-              <img src="/images/engage/abg.svg"/>
-              <Slide from='left' className="a1">
-                <img src="/images/engage/a1.svg"/>
-              </Slide>
-              <Slide from='right' className="a2">
-                <img src="/images/engage/a2.svg"/>
-              </Slide>
-              <Slide from='up' className="a3">
-                <img src="/images/engage/a3.svg"/>
-              </Slide>
-            </div>
-          }
-          {expanded === "panel2" &&
-            <div className="image">
+          {expanded === "panel4" &&
+            <div className="image center">
               <img src="/images/bg4.svg"/>
-              <Slide from='left' className="b1">
-                <img src="/images/engage/b1.svg"/>
+              <Slide from='left' className="d1">
+                <img src="/images/engage/d1.svg"/>
               </Slide>
-              <Slide from='right' className="b2">
-                <img src="/images/engage/b2.svg"/>
+              <Slide from='right' className="d2">
+                <img src="/images/engage/d2.svg"/>
               </Slide>
             </div>
           }
-          {expanded === "panel3" &&
-            <div className="image">
-              <img src="/images/engage/abg.svg"/>
-              <Slide from='left' className="c1">
-                <img src="/images/engage/c1.svg"/>
+          {expanded === "panel5" &&
+            <div className="image center">
+              <img src="/images/bg4.svg"/>
+              <Slide from='left' className="e1">
+                <img src="/images/engage/e1.svg"/>
               </Slide>
-              <Slide from='right' className="c2">
-                <img src="/images/engage/c2.svg"/>
+              <Slide from='right' className="e2">
+                <img src="/images/engage/e2.svg"/>
               </Slide>
-              <Slide from='up' className="c3">
-                <img src="/images/engage/c3.svg"/>
+              <Slide from='up' className="e3">
+                <img src="/images/engage/e3.svg"/>
+              </Slide>
+              <Slide from='up' className="e4">
+                <img src="/images/engage/e4.svg"/>
+              </Slide>
+            </div>
+          }
+          {expanded === "panel6" &&
+            <div className="image center">
+              <img src="/images/bg4.svg"/>
+              <Slide from='left' className="f1">
+                <img src="/images/engage/f1.svg"/>
+              </Slide>
+              <Slide from='right' className="f2">
+                <img src="/images/engage/f2.svg"/>
+              </Slide>
+              <Slide from='right' className="f3">
+                <img src="/images/engage/f3.svg"/>
+              </Slide>
+              <Slide from='right' className="f4">
+                <img src="/images/engage/f4.svg"/>
               </Slide>
             </div>
           }

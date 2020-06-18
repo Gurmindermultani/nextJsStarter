@@ -22,9 +22,6 @@ const FeaturesFirstStyles = styled.div`
     .descriptionText {
       line-height: 28px;
     }
-    .first {
-      margin-top: 32px;
-    }
     .second {
       margin-top: 64px;
     }
@@ -33,7 +30,7 @@ const FeaturesFirstStyles = styled.div`
     flex-basis: 50%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     .fg {
       position: absolute;
       top: 0px;
@@ -51,8 +48,8 @@ const FeaturesFirstStyles = styled.div`
       }
       &.a1 {
         top: 0;
-        left: 0;
-        width: 70%;
+        left: -40px;
+        width: 85%;
       }
       &.a2 {
         top: 16px;
@@ -60,9 +57,9 @@ const FeaturesFirstStyles = styled.div`
         width: 31%;
       }
       &.a3 {
-        bottom: 19px;
-        right: 0px;
-        width: 78%;
+        bottom: -15px;
+        right: -30px;
+        width: 90%;
       }
     }
   }

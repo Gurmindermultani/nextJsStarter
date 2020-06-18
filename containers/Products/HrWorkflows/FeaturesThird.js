@@ -12,8 +12,7 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
-  margin-top: 200px;
+  justify-content: space-between;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -28,8 +27,10 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 40%;
     position: relative;
+    display: flex;
+    justify-content: center;
     .fg {
       position: absolute;
       top: 0px;
@@ -37,9 +38,6 @@ const FeaturesFirstStyles = styled.div`
   }
   .image {
     position: relative;
-    position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
@@ -47,25 +45,25 @@ const FeaturesFirstStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        top: -20px;
-        left: 20px;
-        width: 70%;
-      }
-      &.a2 {
-        top: 22px;
-        right: -20px;
-        width: 50%;
-      }
-      &.a3 {
-        bottom: -32px;
-        left: 74px;
-        width: 40%;
+        bottom: -35px;
+        right: -85px;
+        width: 110%;
         z-index: 1;
       }
+      &.a3 {
+        top: 52px;
+        right: -70px;
+        width: 80%;
+      }
+      &.a2 {
+        bottom: -12px;
+        left: -14px;
+        width: 50%;
+      }
       &.a4 {
-        bottom: -56px;
-        right: -33px;
-        width: 70%;
+        top: 20px;
+        left: -76px;
+        width: 100%;
       }
     }
   }
@@ -86,17 +84,17 @@ function FeaturesFirst(props) {
       </div>
       <div className="rightContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
-          <Slide from='left' className="a1">
+          <img src="/images/hrWorkflows/featuresThird/bg.svg"/>
+          <Slide from='right' className="a1">
             <img src="/images/hrWorkflows/featuresThird/a1.svg"/>
           </Slide>
-          <Slide from='right' className="a2">
+          <Slide from='down' className="a2">
             <img src="/images/hrWorkflows/featuresThird/a2.svg"/>
           </Slide>
-          <Slide from='right' className="a3">
+          <Slide from='up' className="a3">
             <img src="/images/hrWorkflows/featuresThird/a3.svg"/>
           </Slide>
-          <Slide from='right' className="a4">
+          <Slide from='left' className="a4">
             <img src="/images/hrWorkflows/featuresThird/a4.svg"/>
           </Slide>
         </div>

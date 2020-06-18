@@ -12,10 +12,6 @@ export const FaqStyles = styled.div`
       padding: 178px 200px 0 200px !important;
       overflow: hidden;
     }
-    &.shortSection {
-      height: 350px;
-      padding-bottom: 100px;
-    }
     &.noPadding {
       max-width: 100vw;
       background: #0F72EE;

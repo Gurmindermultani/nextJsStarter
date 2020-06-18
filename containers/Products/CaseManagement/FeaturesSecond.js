@@ -23,9 +23,6 @@ const FeaturesFirstStyles = styled.div`
       line-height: 28px;
     }
     text-align: right;
-    .first {
-      margin-top: 32px;
-    }
     .second {
       margin-top: 64px;
     }
@@ -33,6 +30,8 @@ const FeaturesFirstStyles = styled.div`
   .leftContainer {
     flex-basis: 50%;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
     .fg {
       position: absolute;
       top: 0px;
@@ -40,8 +39,6 @@ const FeaturesFirstStyles = styled.div`
   }
   .image {
     position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
@@ -51,22 +48,22 @@ const FeaturesFirstStyles = styled.div`
       &.a1 {
         top: 22px;
         left: 0;
-        width: 80%;
+        width: 88%;
       }
       &.a2 {
-        top: 0px;
-        right: 40px;
-        width: 40%;
+        top: -10px;
+        right: 10px;
+        width: 36%;
       }
       &.a3 {
         bottom: 68px;
-        right: -10px;
-        width: 40%;
+        right: -60px;
+        width: 36%;
       }
       &.a4 {
-        bottom: -10px;
-        right: 40px;
-        width: 40%;
+        bottom: -40px;
+        right: -10px;
+        width: 36%;
       }
     }
   }

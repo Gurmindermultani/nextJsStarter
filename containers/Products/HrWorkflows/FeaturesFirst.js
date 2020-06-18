@@ -12,7 +12,8 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
+  margin-bottom: 120px;
+  justify-content: space-between;
   .leftContainer {
     flex-basis: 50%;
     .headingText {
@@ -23,11 +24,11 @@ const FeaturesFirstStyles = styled.div`
       line-height: 28px;
     }
     .second {
-      margin-top: 88px;
+      margin-top: 64px;
     }
   }
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 40%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -39,8 +40,6 @@ const FeaturesFirstStyles = styled.div`
   .image {
     position: relative;
     position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
@@ -48,19 +47,19 @@ const FeaturesFirstStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        top: -20px;
-        left: 20px;
-        width: 70%;
+        top: -30px;
+        left: -90px;
+        width: 110%;
       }
       &.a2 {
-        top: 16px;
-        right: 20px;
-        width: 31%;
+        top: 0px;
+        right: -40px;
+        width: 50%;
       }
       &.a3 {
-        bottom: -53px;
-        right: 0px;
-        width: 70%;
+        bottom: -63px;
+        right: -90px;
+        width: 110%;
       }
     }
   }

@@ -12,9 +12,11 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
+  justify-content: space-between;
+  margin-bottom: 120px;
   .rightContainer {
     flex-basis: 50%;
+    text-align: right;
     .headingText {
       line-height: 33px;
       margin-bottom: 12px;
@@ -27,8 +29,10 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   .leftContainer {
-    flex-basis: 50%;
+    flex-basis: 40%;
     position: relative;
+    display: flex;
+    justify-content: center;
     .fg {
       position: absolute;
       top: 0px;
@@ -44,25 +48,25 @@ const FeaturesFirstStyles = styled.div`
         width: 100%;
         height: 100%;
       }
-      &.f1 {
+      &.a1 {
         top: 22px;
         left: 0;
-        width: 80%;
+        width: 88%;
       }
-      &.f2 {
-        top: 0px;
-        right: 40px;
-        width: 40%;
+      &.a2 {
+        top: -10px;
+        right: 10px;
+        width: 36%;
       }
-      &.f3 {
+      &.a3 {
         bottom: 68px;
-        right: -10px;
-        width: 40%;
+        right: -60px;
+        width: 36%;
       }
-      &.f4 {
-        bottom: -10px;
-        right: 40px;
-        width: 40%;
+      &.a4 {
+        bottom: -40px;
+        right: -10px;
+        width: 36%;
       }
     }
   }
@@ -73,18 +77,18 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
-          <Slide from='left' className="f1">
-            <img src="/images/wfhSurveys/featuresSecond/f1.svg"/>
+          <img src="/images/wfhSurveys/featuresSecond/bg.svg"/>
+          <Slide from='left' className="a1">
+            <img src="/images/wfhSurveys/featuresSecond/a1.svg"/>
           </Slide>
-          <Slide from='right' className="f2">
-            <img src="/images/wfhSurveys/featuresSecond/f2.svg"/>
+          <Slide from='right' className="a2">
+            <img src="/images/wfhSurveys/featuresSecond/a2.svg"/>
           </Slide>
-          <Slide from='up' className="f3">
-            <img src="/images/wfhSurveys/featuresSecond/f3.svg"/>
+          <Slide from='up' className="a3">
+            <img src="/images/wfhSurveys/featuresSecond/a3.svg"/>
           </Slide>
-          <Slide from='up' className="f4">
-            <img src="/images/wfhSurveys/featuresSecond/f4.svg"/>
+          <Slide from='up' className="a4">
+            <img src="/images/wfhSurveys/featuresSecond/a4.svg"/>
           </Slide>
         </div>
       </div>

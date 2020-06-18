@@ -20,6 +20,7 @@ import ScheduleDemo from '../../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
+import ProductMore from './ProductMore';
 import MobileDemo from './MobileDemo';
 import MacDemo from './MacDemo';
 import { EngagementStyles } from './styles';
@@ -63,7 +64,10 @@ function Engagement(props) {
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="to excellent employee engagement"/>
         </FadeIn>
         <div className="products">
-          <ProductHr heading="HR helpdesk" description="Take a step ahead to make your workplace happier. Let the virtual HR assistant be available for your employees round the clock."/>
+          <ProductHr />
+        </div>
+        <div className="products">
+          <ProductMore />
         </div>
       </section>
       <section className="section section3">

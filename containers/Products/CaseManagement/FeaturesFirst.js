@@ -46,16 +46,19 @@ const FeaturesFirstStyles = styled.div`
       }
       &.a1 {
         top: -12px;
-        left: -20px;
+        left: -50px;
+        width: 120%;
         z-index: 1;
       }
       &.a2 {
         top: 114px;
-        left: -5px;
+        left: -33px;
+        width: 110%;
       }
       &.a3 {
-        bottom: -20px;
-        left: -10px;
+        bottom: -40px;
+        left: -50px;
+        width: 120%;
       }
     }
   }

@@ -12,9 +12,11 @@ import Slide from '../../../components/VisibilitySensor/Slide';
 
 const FeaturesFirstStyles = styled.div`
   display: flex;
-  height: 430px;
+  margin-bottom: 120px;
+  justify-content: space-between;
   .rightContainer {
     flex-basis: 50%;
+    text-align: right;
     .headingText {
       line-height: 33px;
       margin-bottom: 12px;
@@ -27,8 +29,10 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   .leftContainer {
-    flex-basis: 50%;
+    flex-basis: 40%;
     position: relative;
+    display: flex;
+    justify-content: center;
     .fg {
       position: absolute;
       top: 0px;
@@ -36,9 +40,6 @@ const FeaturesFirstStyles = styled.div`
   }
   .image {
     position: relative;
-    position: relative;
-    width: 400px;
-    height: 310px;
     div {
       position: absolute;
       img {
@@ -46,14 +47,14 @@ const FeaturesFirstStyles = styled.div`
         height: 100%;
       }
       &.a1 {
-        top: -20px;
-        left: 20px;
-        width: 70%;
+        top: 50px;
+        left: -110px;
+        width: 90%;
       }
       &.a2 {
-        top: -57px;
-        right: -90px;
-        width: 85%;
+        top: 20px;
+        right: -50px;
+        width: 100%;
       }
       &.a3 {
         bottom: 139px;
@@ -62,9 +63,9 @@ const FeaturesFirstStyles = styled.div`
         z-index: 1;
       }
       &.a4 {
-        bottom: -11px;
-        right: -23px;
-        width: 50%;
+        bottom: -71px;
+        right: -33px;
+        width: 70%;
       }
     }
   }
@@ -75,16 +76,16 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
+          <img src="/images/hrWorkflows/featuresSecond/bg.svg"/>
           <Slide from='left' className="a1">
             <img src="/images/hrWorkflows/featuresSecond/a1.svg"/>
           </Slide>
           <Slide from='right' className="a2">
             <img src="/images/hrWorkflows/featuresSecond/a2.svg"/>
           </Slide>
-          <Slide from='right' className="a3">
+          {/* <Slide from='right' className="a3">
             <img src="/images/hrWorkflows/featuresSecond/a3.svg"/>
-          </Slide>
+          </Slide> */}
           <Slide from='right' className="a4">
             <img src="/images/hrWorkflows/featuresSecond/a4.svg"/>
           </Slide>

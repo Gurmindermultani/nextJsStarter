@@ -62,10 +62,10 @@ function Faq(props) {
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
-      <section className="section section3 shortSection">
+      <section className="section section3">
         <FeaturesSecond />
       </section>
-      <section className="section section3 shortSection">
+      <section className="section section3">
         <FeaturesThird />
       </section>
       <section className="section section5">
