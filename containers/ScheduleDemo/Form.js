@@ -23,10 +23,14 @@ const FormStyles = styled.div`
   width: 100%;
   padding: 40px 40px;
   margin: auto;
+  margin-right: 0;
   box-shadow: 0px 6px 46px #0000001F;
   border-radius: 16px;
   background: #fff;
   max-width: 400px;
+  .textCenter {
+    margin-bottom: 30px;
+  }
   .halfBackground {
     z-index: 0;
   }
@@ -66,7 +70,7 @@ function Form(props) {
     req.open('GET', document.location, false);
     req.send(null);
     let headers = req.getAllResponseHeaders();
-    let countryName = req.getResponseHeader('country-code');
+    let countryName = req.getResponseHeader('cc');
     console.log(countryName);
   },[]);
   const form = useForm({
@@ -74,7 +78,7 @@ function Form(props) {
       if (!valid) return;
       let body = {...formData};
       body.phone = countryCode + body.phone;
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/lead`, {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-demo`, {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -154,6 +158,9 @@ function Form(props) {
   });
   return (
     <FormStyles>
+      <div className="textCenter">
+        <Typography className="" fontSizes={[14, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
+      </div>
       <form onSubmit={form.onSubmit}>
         <Input {...firstName} placeholder='First name' name="firstName"/>
         <Input {...lastName} placeholder='Last name' name="lastName"/>

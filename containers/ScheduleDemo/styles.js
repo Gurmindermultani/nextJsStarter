@@ -5,10 +5,10 @@ export const ScheduleDemoStyles = styled.div`
   height: calc(100vh - 80px);
   max-width: 1200px;
   margin: 80px auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   .leftContainer {
-    flex-basis: 40%;
+    flex-basis: 45%;
     .demoText {
       margin: 10px 0;
     }
@@ -16,8 +16,7 @@ export const ScheduleDemoStyles = styled.div`
       margin: 10px 0;
     }
     .textDetail {
-      margin: 30px 0;
-      line-height: 32px;
+      margin: 48px 0;
     }
     .clients {
       display: flex;
@@ -34,7 +33,7 @@ export const ScheduleDemoStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 40%;
+    flex-basis: 45%;
     .form {
       padding: 56px;
       width: 80%;
@@ -44,6 +43,21 @@ export const ScheduleDemoStyles = styled.div`
       .form-group {
         margin-top: 0;
       }
+    }
+  }
+  .lower {
+    border-top: 1px solid #EEEEEE;
+    padding-top: 38px;
+  }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    .leftContainer {
+      flex-basis: 100%;
+      padding: 60px 30px;
+    }
+    .rightContainer {
+      flex-basis: 100%;
+      padding: 0px 30px;
     }
   }
 `;

@@ -184,7 +184,7 @@ const GlobalStyle = createGlobalStyle`
   .halfBackground {
     position: relative;
     ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
-    background: linear-gradient(to top, #fff 20%, #00CEFF40 20%, #00CEFF40 50%, #fff 50% );
+    background: linear-gradient(to top, #fff 10%, #00CEFF40 20%, #00CEFF40 50%, #fff 50% );
   }
 
   .halfBackground:before {
@@ -212,6 +212,11 @@ const GlobalStyle = createGlobalStyle`
     bottom: -40px;
     left: -80px;
     z-index: -2;
+  }
+  ul {
+    li {
+      color: #0F72EE;
+    }
   }
   @media only screen and (max-width: 760px) {
     .desktop {
