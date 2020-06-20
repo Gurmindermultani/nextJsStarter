@@ -9,6 +9,7 @@ import React, { memo, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import Button from '../../components/Button';
+import Slide from '../../components/VisibilitySensor/Slide';
 import MaterialDialog from '@material-ui/core/Dialog';
 
 const DialogContainer = styled.div`
@@ -63,14 +64,14 @@ function Dialog(props) {
       maxWidth="lg"
     >
       <DialogContainer>
-        <div className="header">
+        <Slide className="header">
           <img alt="correct icon" src="/images/icons/correct.svg"/>
-        </div>
-        <div className="body">
+        </Slide>
+        <Slide delay={200} className="body">
           <Typography className="demoText" variant="h1" fontSize="28px" text="We have received your request."/>
           <br />
           <Typography className="halfBackground" fontWeight="400" color="#212121" fontSize="24px" variant="paragraph2" text=" Our product experts will get back to you within 24 hours."/>
-        </div>
+        </Slide>
         <div className="footer">
         
         </div>

@@ -63,7 +63,7 @@ const FormStyles = styled.div`
 `;
 
 function Form(props) {
-  const [showDialog, setShowDialog] = useState('');
+  const [showDialog, setShowDialog] = useState('success');
   const [countryCode, setCountryCode] = useState('+91');
   useEffect(() => {
     let req = new XMLHttpRequest();
@@ -159,7 +159,7 @@ function Form(props) {
   return (
     <FormStyles>
       <div className="textCenter">
-        <Typography className="" fontSizes={[14, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
+        <Typography className="" fontSizes={[16, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
       </div>
       <form onSubmit={form.onSubmit}>
         <Input {...firstName} placeholder='First name' name="firstName"/>

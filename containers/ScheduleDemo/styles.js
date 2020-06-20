@@ -5,6 +5,7 @@ export const ScheduleDemoStyles = styled.div`
   height: calc(100vh - 80px);
   max-width: 1200px;
   margin: 80px auto;
+  margin-bottom: 0;
   justify-content: space-between;
   align-items: center;
   .leftContainer {
@@ -51,13 +52,20 @@ export const ScheduleDemoStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
+    height: auto;
+    .demoText, .halfBackground {
+      text-align: center;
+    }
+    .mobile {
+      margin-top: 36px;
+    }
     .leftContainer {
       flex-basis: 100%;
       padding: 60px 30px;
     }
     .rightContainer {
       flex-basis: 100%;
-      padding: 0px 30px;
+      padding: 0px 0px;
     }
   }
 `;
