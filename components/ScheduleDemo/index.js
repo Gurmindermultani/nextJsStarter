@@ -8,7 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../Typography';
-import Input from '../Input';
+import Link from 'next/link'
 import Button from '../Button';
 import FadeIn from '../VisibilitySensor/FadeIn';
 import Slide from '../VisibilitySensor/Slide';
@@ -46,6 +46,26 @@ const ScheduleDemoStyles = styled.div`
 `;
 
 function ScheduleDemo(props) {
+  if (props.variant === "discover") {
+    return (
+      <ScheduleDemoStyles>
+        <div>
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSize="28px" text="Discover how Leena AI can help you transform "/>
+            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your employee experience."/>
+          </FadeIn>
+          <Slide className="demoInput center">
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
+            <Link href="/schedule-demo">
+              <div>
+                <Button name="Schedule Demo" variant="inverted" size="large"/>
+              </div>
+            </Link>
+          </Slide>
+        </div>
+      </ScheduleDemoStyles>
+    );
+  }
   return (
     <ScheduleDemoStyles>
       {/* <div>
@@ -58,7 +78,11 @@ function ScheduleDemo(props) {
         </FadeIn>
         <Slide className="demoInput center">
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-          <Button name="Schedule Demo" variant="inverted" size="large"/>
+          <Link href="/schedule-demo">
+            <div>
+              <Button name="Schedule Demo" variant="inverted" size="large"/>
+            </div>
+          </Link>
         </Slide>
       </div>
       {/* <div>

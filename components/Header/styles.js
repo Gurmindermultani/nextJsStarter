@@ -18,6 +18,7 @@ export const HeaderStyles = styled.div`
     background: white;
     position: absolute;
     width: 100%;
+    height: 100%;
     padding: 0 70px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
   }
@@ -96,11 +97,27 @@ export const HeaderStyles = styled.div`
       width: 142px;
     }
   }
+  .mobileMenu {
+    z-index: 2;
+    width: 100vw;
+    position: fixed;
+    top: 60px;
+  }
   @media only screen and (max-width: 760px) {
+    height: 60px;
     .animatedHeader {
-      padding: 0 30px;
+      padding: 0 6px 0 30px;
       .groupNav {
         display: none;
+      }
+    }
+    .mobile {
+      .playDiv {
+        > div {
+          > div {
+            height: 50px;
+          }
+        }
       }
     }
   }

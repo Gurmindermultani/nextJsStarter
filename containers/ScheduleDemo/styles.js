@@ -10,6 +10,9 @@ export const ScheduleDemoStyles = styled.div`
   align-items: center;
   .leftContainer {
     flex-basis: 45%;
+    .textCenter {
+      text-align: left;
+    }
     .demoText {
       margin: 10px 0;
     }
@@ -62,6 +65,9 @@ export const ScheduleDemoStyles = styled.div`
     .leftContainer {
       flex-basis: 100%;
       padding: 60px 30px;
+      .textCenter {
+        text-align: center;
+      }
     }
     .rightContainer {
       flex-basis: 100%;

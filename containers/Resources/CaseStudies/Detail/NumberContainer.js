@@ -42,6 +42,16 @@ const NumberContainerStyles = styled.div`
       margin-top: 20px;
     }
   }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    .detail {
+      .padded {
+        padding: 40px 3rem;
+        flex: 1;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 function NumberContainer(props) {
@@ -54,14 +64,14 @@ function NumberContainer(props) {
               <div className="padded" style={{ background: detail.bg }}>
                 {detail.text &&
                   <div className="heading">
-                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.text}/>
+                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.text}/>
                   </div>
                 }
                 <div className="body">
-                  <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSize="100px" text={detail.number}/>
+                  <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSizes={[78, 92, 100]} text={detail.number}/>
                 </div>
                 <div className="footer">
-                  <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.subText}/>
+                  <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.subText}/>
                 </div>
               </div>
             </Slide>
@@ -73,14 +83,14 @@ function NumberContainer(props) {
               <div className="padded" style={{ background: detail.bg }}>
                 {detail.text &&
                   <div className="heading">
-                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.text}/>
+                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.text}/>
                   </div>
                 }
                 <div className="body">
-                  <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSize="100px" text={detail.number}/>
+                  <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSizes={[78, 92, 100]} text={detail.number}/>
                 </div>
                 <div className="footer">
-                  <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.subText}/>
+                  <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.subText}/>
                 </div>
               </div>
             </Slide>
@@ -91,14 +101,14 @@ function NumberContainer(props) {
             <div className="padded" style={{ background: detail.bg }}>
               {detail.text &&
                   <div className="heading">
-                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.text}/>
+                    <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.text}/>
                   </div>
                 }
               <div className="body">
-                <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSize="100px" text={detail.number}/>
+                <Typography className="rowValue" fontWeight="600" color="#212121" variant="paragraph2" fontSizes={[78, 92, 100]} text={detail.number}/>
               </div>
               <div className="footer">
-                <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="24px" text={detail.subText}/>
+                <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 24]} text={detail.subText}/>
               </div>
             </div>
           </FadeIn>

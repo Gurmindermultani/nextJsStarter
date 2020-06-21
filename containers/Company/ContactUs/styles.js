@@ -3,11 +3,16 @@ import styled from 'styled-components';
 export const ContactUsStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
-  margin-top: 80px;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin: 80px auto;
+  margin-bottom: 0;
+  justify-content: space-between;
   align-items: center;
   .leftContainer {
     flex-basis: 50%;
+    .textCenter {
+      text-align: left;
+    }
     .demoText {
       margin: 10px 0;
     }
@@ -49,13 +54,35 @@ export const ContactUsStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 30%;
+    flex-basis: 35%;
     .form {
       width: 80%;
       margin: auto;
       .form-group {
         margin-top: 0;
       }
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    height: auto;
+    .demoText, .middleText {
+      text-align: center;
+    }
+    .mobile {
+      margin-top: 0px;
+    }
+    .leftContainer {
+      flex-basis: 100%;
+      padding: 60px 30px;
+      .textCenter {
+        text-align: center;
+      }
+    }
+    .rightContainer {
+      flex-basis: 100%;
+      padding: 0px 0px;
+      margin-top: 24px;
     }
   }
 `;

@@ -18,7 +18,7 @@ export const CaseStudiesStyles = styled.div`
       max-width: 100vw;
       button {
         margin: 5px 0 0 80px;
-        min-width: 200px;
+        width: 200px;
       }
     }
   }
@@ -43,6 +43,19 @@ export const CaseStudiesStyles = styled.div`
         }
         button {
           min-width: 172px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 40px 0px;
+    .section {
+      &.readFull {
+        .center {
+          flex-wrap: wrap;
+        }
+        button {
+          margin: 24px 0 0 0px;
         }
       }
     }

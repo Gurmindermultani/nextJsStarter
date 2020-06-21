@@ -8,13 +8,13 @@ import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Button from '../../components/Button';
-import Typography from '../../components/Typography';
-import Input from '../../components/Input';
-import Select from '../../components/Select';
-import { useForm, useField } from '../../components/Input/formHooks';
-import Utils from '../../utils';
-import Codes from '../../static/contries';
+import Button from '../../../components/Button';
+import Typography from '../../../components/Typography';
+import Input from '../../../components/Input';
+import Select from '../../../components/Select';
+import { useForm, useField } from '../../../components/Input/formHooks';
+import Utils from '../../../utils';
+import Codes from '../../../static/contries';
 
 import Dialog from './Dialog';
 
@@ -24,8 +24,8 @@ const FormStyles = styled.div`
   padding: 40px 40px;
   margin: auto;
   margin-right: 0;
-  box-shadow: 0px 6px 46px #0000001F;
   border-radius: 16px;
+  box-shadow: 0px 6px 46px #0000001F;
   background: #fff;
   max-width: 400px;
   .textCenter {
@@ -71,7 +71,6 @@ function Form(props) {
     req.send(null);
     let headers = req.getAllResponseHeaders();
     let countryName = req.getResponseHeader('cc');
-    console.log(countryName);
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
@@ -117,36 +116,40 @@ function Form(props) {
     validations: [formData => !(formData['phone'] && Utils.checkValidPhone(formData['phone']) ) && 'Enter valid number.'],
     fieldsToValidateOnChange: [],
   });
-  const jobTitle = useField('jobTitle', form, {
+  const queryType = useField('queryType', form, {
     defaultValue: '',
-    validations: [formData => !formData['jobTitle'] && 'Please enter job title.'],
+    validations: [formData => !formData['queryType'] && 'Please select query type.'],
     fieldsToValidateOnChange: [],
   });
-  const company = useField('company', form, {
+  const message = useField('message', form, {
     defaultValue: '',
-    validations: [formData => !formData['company'] && 'Please enter company name.'],
+    validations: [formData => !formData['message'] && 'Please enter your message.'],
     fieldsToValidateOnChange: [],
   });
   const options = [
     {
-      label: '1-100',
-      value: '1-100',
+      label: 'Sales',
+      value: 'Sales',
     },
     {
-      label: '101-250',
-      value: '101-250',
+      label: 'Support',
+      value: 'Support',
     },
     {
-      label: '251-500',
-      value: '251-500',
+      label: 'Partnership',
+      value: 'Partnership',
     },
     {
-      label: '501-1000',
-      value: '501-1000',
+      label: 'Integration',
+      value: 'Integration',
     },
     {
-      label: '1000+',
-      value: '1000+',
+      label: 'Press',
+      value: 'Press',
+    },
+    {
+      label: 'Others',
+      value: 'Others',
     },
   ];
   const phoneCountryOptions = Codes.map( code => {
@@ -158,9 +161,6 @@ function Form(props) {
   });
   return (
     <FormStyles>
-      <div className="textCenter">
-        <Typography className="" fontSizes={[16, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
-      </div>
       <form onSubmit={form.onSubmit}>
         <Input {...firstName} placeholder='First name' name="firstName"/>
         <Input {...lastName} placeholder='Last name' name="lastName"/>
@@ -174,15 +174,14 @@ function Form(props) {
           />
           <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
         </div>
-        <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
-        <Input {...company} placeholder='Company name' name="company"/>
-        {/* <Select
-          {...numberOfEmployees}
-          placeholder='Number of employees'
+        <Select
+          {...queryType}
+          placeholder='Type of query'
           options={options}
-          value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
-        /> */}
-        <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
+          value={queryType.value ? options[options.findIndex( elem => elem.value === queryType.value )] : ''}
+        />
+        <Input {...message} type="textArea" className="fullWidth" placeholder='Write your message...' name="message"/>
+        <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
       </form>
       <Dialog
         setShowDialog={setShowDialog}

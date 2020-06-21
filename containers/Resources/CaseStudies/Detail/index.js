@@ -57,7 +57,7 @@ function CaseStudies(props) {
       )}
       <section className="section readFull ">
         <FadeIn className="text center">
-          <Typography className="topText" variant="h1" color="#fff" fontSize="32px" text="Read complete case study"/>
+          <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 24, 32]} text="Read complete case study"/>
           <Button size="large" variant="inverted" name="Download Case Study"/>
         </FadeIn>
       </section>

@@ -114,6 +114,14 @@ export const CaseStudiesStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    .section {
+      padding: 0 30px;
+      .singleCard {
+        width: calc(100vw - 60px);
+      }
+    }
+  }
 `;
 
 

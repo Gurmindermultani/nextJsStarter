@@ -12,7 +12,11 @@ import { useSpring, animated, config } from 'react-spring';
 
 import Button from '../Button';
 import Typography from '../Typography';
+import GrowIcon from '../GrowIcon';
+import FadeIn from '../VisibilitySensor/FadeIn';
+import Slide from '../VisibilitySensor/Slide';
 
+import MobileMenu from './MobileMenu';
 import { HeaderStyles } from './styles';
 
 export const navigation = [
@@ -70,7 +74,7 @@ export const navigation = [
         href: 'https://angel.co/company/leena_ai/jobs'
       },
       {
-        name: 'aboutUs',
+        name: 'about-us',
         label: 'About Us',
       },
       {
@@ -82,14 +86,31 @@ export const navigation = [
 ];
 
 function Header(props) {
-  const animatedHeader = useSpring({
-    from: { opacity: 1, top: '-80px', height: '0px' },
-    to: { opacity: 1, top: '0px', height: '80px',},
-  });
+  const [ anim, setAnim ] = useState({});
+  const [ showMenu, setShowMenu ] = useState(false);
+  const play = () => {
+    console.log('play');
+    if (showMenu) {
+      toggleAlt();
+    } else {
+      toggle();
+    }
+    anim.setSpeed(2);
+    setShowMenu(!showMenu);
+  }
+  const toggle = () => {
+    anim.playSegments([0,40], true);
+    // anim.stop();
+  };
+
+  const toggleAlt = () => {
+    anim.playSegments([40, 75]);
+    // anim.stop();
+  };
   return (
     <HeaderStyles>
-      <animated.div className="animatedHeader" style={animatedHeader}>
-        <div className="logo pointer">
+      <Slide onLoad from='down' className="animatedHeader">
+        <div className="logo pointer center">
           <Link href="/">
             <img src="/images/leenaLogo.svg"/>
           </Link>
@@ -116,7 +137,7 @@ function Header(props) {
                   }
                   return (
                     <div className="link" key={link.name}>
-                      <Link href={`/${groupNav.name}/${link.name}`}>
+                      <Link href={`/${link.name}`}>
                         <a>
                           <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
                         </a>
@@ -128,7 +149,7 @@ function Header(props) {
             </div>
           )}
         </div>
-        <div className="buttons">
+        <div className="buttons desktop">
           {props.router.pathname.indexOf('scheduleDemo') > -1 &&
             <div className="demo">
               <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
@@ -145,7 +166,17 @@ function Header(props) {
             </Link>
           }
         </div>
-      </animated.div>
+        <div className="buttons mobile">
+          <div className="playDiv" onClick={() => play()}>
+            <GrowIcon setAnim={setAnim} name='burger' />
+          </div>
+        </div>
+      </Slide>
+      {showMenu && 
+        <FadeIn className="mobileMenu">
+          <MobileMenu />
+        </FadeIn>
+      }
     </HeaderStyles>
   );
 }

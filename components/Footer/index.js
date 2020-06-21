@@ -93,9 +93,11 @@ const FooterStyles = styled.div`
     .lowerContainer {
       flex-wrap: wrap-reverse;
       text-align: center;
+      margin-top: 32px;
       .certs {
         justify-content: center;
         width: 100%;
+        margin-bottom: 16px;
       }
       .copyright, .terms {
         width: 100%;

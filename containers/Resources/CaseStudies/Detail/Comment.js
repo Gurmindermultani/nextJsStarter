@@ -22,11 +22,20 @@ const CommentStyles = styled.div`
     border-radius: 10px;
   }
   .body {
-    flex-basis: 90%;
+    flex-basis: 95%;
     height: 100%;
     span {
       font-style: italic;
       line-height: 40px;
+    }
+    .by {
+      margin-top: 16px;
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 40px 30px;
+    .line {
+      width: 0;
     }
   }
 `;
@@ -38,9 +47,9 @@ function Comment(props) {
         <div className="line"/>
         <div className="body">
           <div className="text">
-            <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="20px" text={props.text}/>
+            <Typography className="rowValue" color="#212121" variant="paragraph2" fontSizes={[16, 18, 20]} text={props.text}/>
             <br />
-            <Typography className="rowValue" color="#212121" variant="h1" fontSize="22px" text={props.by}/>
+            <Typography className="rowValue by" color="#212121" variant="h1" fontSizes={[18, 20, 22]} text={props.by}/>
           </div>
         </div>
       </CommentStyles>

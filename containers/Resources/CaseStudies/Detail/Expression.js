@@ -21,6 +21,9 @@ const ExpressionStyles = styled.div`
       line-height: 44px;
     }
   }
+  @media only screen and (max-width: 760px) {
+    padding: 40px 30px;
+  }
 `;
 
 function Expression(props) {
