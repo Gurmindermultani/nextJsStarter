@@ -9,12 +9,13 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 
-const LinkCardStyles = styled.div`
+const LinkCardStyles = styled.a`
   box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
   transition: transform 420ms cubic-bezier(.165,.84,.44,1);
   cursor: pointer;
   border-radius: 4px;
   width: 220px;
+  display: block;
   &:hover {
     transform: scale(1.05);
   }
@@ -46,7 +47,7 @@ const LinkCardStyles = styled.div`
 
 function LinkCard(props) {
   return (
-    <LinkCardStyles className="singleCard">
+    <LinkCardStyles href={props.data.href} target="_blank" className="singleCard">
       <div className="header" style={{'background': props.data.bg}}>
         <img alt={props.data.name} src={props.data.img} />
       </div>

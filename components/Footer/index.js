@@ -144,7 +144,7 @@ function Footer(props) {
                     }
                     return (
                       <div className="link" key={link.name}>
-                        <Link href={`/${groupNav.name}/${link.name}`}>
+                        <Link href={`/${link.name}`}>
                           <a>
                             <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
                           </a>

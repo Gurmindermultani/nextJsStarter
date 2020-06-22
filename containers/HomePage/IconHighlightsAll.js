@@ -32,7 +32,7 @@ function IconHighlightsAll(props) {
   return (
     <IconHighlightsAllStyles>
       <div className="highContainer bottomMargin">
-        <VisibilitySensor once partialVisibility>
+        <VisibilitySensor offset={{top:200}} once partialVisibility="top">
           {({ isVisible }) => (
             <Spring to={{ 
               opacity: isVisible ? 1 : 0,
@@ -46,7 +46,7 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor once partialVisibility>
+        <VisibilitySensor offset={{top:200}} once partialVisibility="top">
           {({ isVisible }) => (
             <Spring delay={100} to={{ 
               opacity: isVisible ? 1 : 0,
@@ -60,7 +60,7 @@ function IconHighlightsAll(props) {
             </Spring>
           )}
         </VisibilitySensor>
-        <VisibilitySensor once partialVisibility>
+        <VisibilitySensor offset={{top:200}} once partialVisibility="top">
           {({ isVisible }) => (
             <Spring delay={200} to={{ 
               opacity: isVisible ? 1 : 0,

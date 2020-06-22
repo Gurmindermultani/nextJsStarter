@@ -16,25 +16,29 @@ const recognitions = [
     name: 'forbes',
     text: 'Leena is like Siri for employees…',
     img: '/images/home/forbes.png',
-    bg: '#000'
+    bg: '#000',
+    href: 'https://www.forbes.com/profile/leena-ai/#701112c55b85',
   },
   {
     name: 'tc',
     text: 'Fresh out of Y Combinator…',
     img: '/images/home/tc.png',
-    bg: '#123577'
+    bg: '#123577',
+    href: 'https://techcrunch.com/2018/09/19/fresh-out-of-y-combinator-leena-ai-scores-2m-seed-round',
   },
   {
     name: 'mint',
     text: 'Leena AI secures $2 million seed..',
     img: '/images/home/mint.png',
-    bg: '#1172EE'
+    bg: '#1172EE',
+    href: 'https://www.livemint.com/Companies/4byNwfLVvh5wBJWmNFHvsO/Leena-AI-secures-2-million-seed-funding-from-Snapdeal-cofo.html',
   },
   {
     name: 'people',
     text: 'How Leena AI is helping employees…',
     img: '/images/home/people.png',
-    bg: '#04CEFF'
+    bg: '#04CEFF',
+    href: 'https://www.peoplematters.in/article/hr-technology/how-leena-ai-is-helping-employees-become-more-productive-23737'
   },
 ];
 

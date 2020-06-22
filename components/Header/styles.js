@@ -7,7 +7,7 @@ export const HeaderStyles = styled.div`
   position: fixed;
   top: 0px;
   .logo {
-    min-width: 114px;
+    padding-top: 8px;
   }
   .animatedHeader {
     display: flex;

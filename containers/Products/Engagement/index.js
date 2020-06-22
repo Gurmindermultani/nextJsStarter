@@ -38,14 +38,16 @@ function Engagement(props) {
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="employee engagement surveys."/>
             <br />
             <Slide className="demoInput">
-              {/* <Input name="schedule" placeholder="Your work email"/> */}
-              <Button name="Schedule Demo" variant="contained" size="large"/>
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
+              <div className="buttons">
+                <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
+              </div>
             </Slide>
           </FadeIn>
           <Slide from='right' className="bowlImage">
             <img src="/images/home/mobile.png" />
             <img className="heroBg" src="/images/heroBg.svg" />
-            <LottieAnimation dataUrl="/images/hrWorkflows/phone.json" />
+            <LottieAnimation dataUrl="/images/engage/phone.json" />
           </Slide>
       </div>
       </section>
@@ -91,14 +93,14 @@ function Engagement(props) {
         </FadeIn>
         <Platforms />
       </section>
-      <section className="section section6">
+      <section className="section section6 noMargin">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>
-      <section className="section section7">
+      <section className="section section7 noMargin">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>

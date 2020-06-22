@@ -35,8 +35,10 @@ function Faq(props) {
             <br />
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="instantly via AI-driven conversations."/>
             <Slide className="demoInput">
-              {/* <Input name="schedule" placeholder="Your work email"/> */}
-              <Button name="Schedule Demo" variant="contained" size="large"/>
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
+              <div className="buttons">
+                <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
+              </div>
             </Slide>
           </FadeIn>
           <Slide from='right' className="bowlImage">
@@ -78,7 +80,7 @@ function Faq(props) {
           <Button variant="contained" size="large" name="Know More" />
         </div>
       </section>
-      <section className="section section7">
+      <section className="section section7 noMargin">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>

@@ -20,6 +20,9 @@ const IconHighlightStyles = styled.div`
   .descriptionText {
     line-height: 25px;
   }
+  @media only screen and (max-width: 760px) {
+    flex-basis: 100%;
+  }
 `;
 
 function IconHighlight(props) {

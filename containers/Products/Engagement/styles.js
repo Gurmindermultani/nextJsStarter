@@ -48,10 +48,10 @@ export const EngagementStyles = styled.div`
       position: relative;
       .animation {
         position: absolute;
-        top: 2px;
-        left: 43px;
+        top: 12px;
+        left: 55px;
         z-index: -1;
-        width: 227px;
+        width: 200px;
       }
     }
     .demoInput {
@@ -127,6 +127,9 @@ export const EngagementStyles = styled.div`
         margin-top: 120px;
         height: auto;
         padding: 0;
+        .quoteContainer {
+          padding: 0 30px;
+        }
       }
       &.noPadding {
         padding: 0;

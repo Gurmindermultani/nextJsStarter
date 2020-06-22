@@ -123,9 +123,9 @@ export const theme = createMuiTheme({
     smoke : "#F6F6F6",
     hover: "#eeeeee",
     primary: {
-      light: '#E7F1FD',
-      main: '#0f72ee',
-      dark: "#195fcb",
+      light: '#00CEFF',
+      main: '#0F72EE',
+      dark: "#103577",
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {

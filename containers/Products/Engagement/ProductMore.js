@@ -146,6 +146,16 @@ const ProductStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    .body {
+      .leftContainer {
+        flex-basis: 100%;
+      }
+      .rightContainer {
+        display: none;
+      }
+    }
+  }
 `;
 
 function ProductHr(props) {

@@ -67,6 +67,14 @@ const FeaturesFirstStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 760px) {
+    .rightContainer {
+      display: none;
+    }
+    .leftContainer {
+      flex-basis: 100%;
+    }
+  }
 `;
 
 function FeaturesFirst(props) {

@@ -15,6 +15,7 @@ import FadeIn from '../../components/VisibilitySensor/FadeIn';
 const reviews = [
   {
     name: 'tataReview',
+    bg: 'dark',
     text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
     user: {
       img: '/images/people/nikhil.png',
@@ -24,20 +25,22 @@ const reviews = [
   },
   {
     name: 'cocacolaReview',
-    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
+    bg: 'primary',
+    text: '“Organisations must continuously experiment and fail fast or scale fast to be ahead of the curve. One also needs a good partner who shares the curiosity of solving business problems that were limited by the technology of the past. We found the right partner in Leena AI to collaborate and convert the ideas using the AI powered Chatbots, into the tangible results for the business.”',
     user: {
-      img: '/images/people/nikhil.png',
-      name: '~ Nikhil Morade',
-      position: 'Global Head HR Tech',
+      img: '/images/people/alok.jpg',
+      name: '~ Alok Saxena',
+      position: 'Associate Vice President',
     }
   },
   {
-    name: 'piramal',
-    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
+    name: 'kec',
+    bg: "light",
+    text: '“While the bot started out as an HR policy bot, we realized the potential of utilizing it for solving specific employee problems. Leena AI helped us figure out frequently repeating issues and helped us plan action steps against them. The bot has become a single point for capturing employee issues, whether they are HR problems or not.”',
     user: {
-      img: '/images/people/nikhil.png',
-      name: '~ Nikhil Morade',
-      position: 'Global Head HR Tech',
+      img: '/images/people/vasu.jpg',
+      name: '~ Vasudevan N',
+      position: 'Executive Director, Human resources',
     }
   },
 ];
@@ -63,16 +66,27 @@ const ReviewsStyles = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #103577;
         padding: 60px;
+        &.primary {
+          background: ${props => props.theme.palette.primary.main};
+        }
+        &.dark {
+          background: ${props => props.theme.palette.primary.dark};
+        }
+        &.light {
+          background: ${props => props.theme.palette.primary.light};
+        }
         img {
           width: 100%;
           height: 129px;
+          &.cocacolaReview {
+            width: 90%;
+          }
         }
       }
       .rightContainer {
         flex: 1;
-        padding: 50px;
+        padding: 40px;
         span {
           line-height: 26px;
         }
@@ -108,6 +122,15 @@ const ReviewsStyles = styled.div`
         .leftContainer {
           width: 100%;
           padding: 30px;
+          &.primary {
+            background: ${props => props.theme.palette.primary.main};
+          }
+          &.dark {
+            background: ${props => props.theme.palette.primary.dark};
+          }
+          &.light {
+            background: ${props => props.theme.palette.primary.light};
+          }
         }
         .rightContainer {
           padding: 10px;
@@ -131,8 +154,8 @@ function Reviews(props) {
           {reviews.map( review => 
             <div className="carousalContainer" key={review.name}>
               <div className="review">
-                <div className="leftContainer">
-                  <img src={review.name} src={`/images/home/${review.name}.png`}/>
+                <div className={"leftContainer " + review.bg}>
+                  <img className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">
@@ -154,7 +177,7 @@ function Reviews(props) {
           {reviews.map( review => 
             <div className="carousalContainer" key={review.name}>
               <div className="review">
-                <div className="leftContainer">
+                <div className={"leftContainer " + review.bg}>
                   <img src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
