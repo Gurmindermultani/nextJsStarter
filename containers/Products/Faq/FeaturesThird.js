@@ -75,7 +75,7 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <Slide from='left' className="first">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Conversational Interface"}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Conversational interface"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Give your employees an interactive user interface where they chat directly with the virtual HR assistant."}/>
         </Slide>
         <Slide from='left' className="second">

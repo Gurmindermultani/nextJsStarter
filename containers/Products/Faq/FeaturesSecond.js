@@ -103,7 +103,7 @@ function FeaturesFirst(props) {
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Easily integrate your existing HRIS and collaboration platforms to enterprise conversational AI experience."}/>
         </Slide>
         <Slide from='right' className="second">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Self-learning AI Experience"}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Self-learning AI experience"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Employee experience platform improves itself with every user-interaction and AI-driven feedback loop."}/>
         </Slide>
       </div>

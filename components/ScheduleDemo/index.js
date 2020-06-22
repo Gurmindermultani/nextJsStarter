@@ -46,13 +46,33 @@ const ScheduleDemoStyles = styled.div`
 `;
 
 function ScheduleDemo(props) {
+  if (props.variant === "engage") {
+    return (
+      <ScheduleDemoStyles>
+        <div>
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSize="28px" text=" Get started with outstanding employee engagement"/>
+            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+          </FadeIn>
+          <Slide className="demoInput center">
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
+            <Link href="/schedule-demo">
+              <div>
+                <Button name="Schedule Demo" variant="inverted" size="large"/>
+              </div>
+            </Link>
+          </Slide>
+        </div>
+      </ScheduleDemoStyles>
+    );
+  }
   if (props.variant === "discover") {
     return (
       <ScheduleDemoStyles>
         <div>
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSize="28px" text="Discover how Leena AI can help you transform "/>
-            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your employee experience."/>
+            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your employee experience"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

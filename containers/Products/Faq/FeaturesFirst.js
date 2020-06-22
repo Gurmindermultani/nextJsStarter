@@ -78,11 +78,11 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <Slide from='left' className="first">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Natural Language Understanding"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Understand your employee queries accurately and let their virtual HR assistant reply instantly."}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Natural language understanding"}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Understand your employee queries accurately and let the virtual HR assistant reply instantly."}/>
         </Slide>
         <Slide from='left' className="second">
-          <Typography className="headingText" variant="h4" fontSize="22px" text={"Knowledge Management"}/>
+          <Typography className="headingText" variant="h4" fontSize="22px" text={"Knowledge management"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Combine your policy documents with our intelligent knowledge base and give your employees personalized experience."}/>
         </Slide>
       </div>

@@ -107,7 +107,7 @@ const ProductStyles = styled.div`
         width: 110%;
       }
       &.a3 {
-        bottom: 80px;
+        bottom: 0px;
         right: -50px;
         width: 100%;
       }
@@ -132,7 +132,7 @@ const ProductStyles = styled.div`
         width: 110%;
       }
       &.c3 {
-        bottom: 80px;
+        bottom: 20px;
         right: -50px;
         width: 100%;
       }
@@ -211,9 +211,6 @@ function ProductHr(props) {
                       <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct surveys periodically throughout the employees’ lifecycle. Save your HR from biased and inaccurate feedback."}/>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  <div className="buttons">
-                    <ScheduleDemoButton type="link" />
-                  </div>
                 </div>
               )}
             </Spring>

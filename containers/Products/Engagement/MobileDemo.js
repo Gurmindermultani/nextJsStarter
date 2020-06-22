@@ -99,7 +99,7 @@ function MobileDemo(props) {
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
-                <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
+                <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png" alt="mobile" class="mobileRim"/>
                 <div className="mobileDemoContainer">
                   {/* <img alt="Mobile View Demo" src="/images/home/phoneAnimation.gif"/> */}
                   <video width="100%" height="100%" loop autoPlay muted>

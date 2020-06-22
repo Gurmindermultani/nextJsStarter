@@ -10,9 +10,10 @@ export const AboutUsStyles = styled.div`
     &.section0 {
       padding: 140px 30px 0 30px;
       display: flex;
+      justify-content: space-between;
       flex-direction: row;
       .leftContainer {
-        flex-basis: 80%;
+        flex-basis: 70%;
         .para {
           margin-top: 32px;
           &.first {
@@ -68,7 +69,7 @@ export const AboutUsStyles = styled.div`
     .section {
       padding: 0 30px;
       &.section0 {
-        padding-top: 150px;
+        padding-top: 120px;
         flex-wrap: wrap;
         .leftContainer {
           flex-basis: 100%;

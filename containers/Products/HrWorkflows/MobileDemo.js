@@ -75,7 +75,7 @@ function MobileDemo(props) {
   return (
     <MobileDemoStyles>
       <div className="mobileImage">
-        <img alt="Mobile View" src="/images/home/mobile.png"/>
+        <img alt="Mobile View" src="/images/home/phone.png" alt="mobile" class="mobileRim"/>
         <div className="mobileDemoContainer">
           <img alt="Mobile View Demo" src="/images/home/mobileDemo1.svg"/>
         </div>

@@ -36,7 +36,7 @@ function ContactUs(props) {
           <Typography className="para" variant="h3" fontWeight="300" fontSizes={[16, 18, 20]} text="Today, more than 300000 employees use Leena AI to make their day-to-day life easier. Enterprises across various sectors like automobiles, pharmaceutical, aviation, manufacturing, FMCG, telecommunications, information technology are using Leena AI."/>
         </Slide>
         <Slide from='right' className="rightContainer">
-          Image
+          <img alt="rocket image" src="/images/about-us.svg" />
         </Slide>
       </section>
       <section className="section section1">
