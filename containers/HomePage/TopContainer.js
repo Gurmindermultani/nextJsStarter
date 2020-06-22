@@ -83,7 +83,7 @@ function TopContainer(props) {
     <TopContainerStyles>
       <div className="leftContainer">
         <Slide from="left" className="animatedText">
-          <Typography variant="h1" fontSizes={[20, 38, 40]} text="Redefine Employee Experience"/>
+          <Typography variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
           <br />
           <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational"/>
           <br />

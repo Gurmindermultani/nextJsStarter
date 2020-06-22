@@ -6,7 +6,6 @@ export const ButtonWrapper = styled.button`
   vertical-align: middle;
   text-align: center;
   text-overflow: ellipsis;
-  text-transform: capitalize;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -82,6 +81,7 @@ export const ButtonWrapper = styled.button`
   &.large {
     font-size: 14px;
     height: 45px;
+    padding: 0 24px;
     i {
       height: 14px;
       line-height: 14px;

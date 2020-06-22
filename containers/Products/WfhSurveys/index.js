@@ -13,6 +13,7 @@ import Input from '../../../components/Input';
 import Platforms from '../../../components/Platforms';
 import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
+import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import LottieAnimation from "../../../components/LottieAnimation";
@@ -71,6 +72,9 @@ function WfhSurveys(props) {
       <section className="section section4 shortSection">
         <FeaturesThird />
       </section>
+      <section className="section buttonSection">
+        <ScheduleDemoButton name="Get WFH surveys" />
+      </section>
       <section className="section section5">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Simplest WFH feedback survey"/>
@@ -103,7 +107,7 @@ function WfhSurveys(props) {
         <div className="demoContainer">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="You’re one step away from an excellent employee experience."/>
-            <Typography className="" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Sign up for a free demo right away"/>
+            <Typography className="" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Book your live demo right away"/>
           </FadeIn>
           <Slide className="demoInput">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

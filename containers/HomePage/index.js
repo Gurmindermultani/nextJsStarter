@@ -142,7 +142,7 @@ function HomePage(props) {
       </section>
       <section className="section section3">
         <div className="products">
-          <EmployeeExperience heading="Employee experience" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
+          <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
         </div>
       </section>
       <section className="section section4">

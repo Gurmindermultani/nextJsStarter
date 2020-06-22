@@ -12,6 +12,9 @@ export const CaseManagmentStyles = styled.div`
       padding: 178px 200px 0 200px !important;
       overflow: hidden;
     }
+    &.buttonSection {
+
+    }
     &.noPadding {
       margin-top: 150px;
       padding: 0;

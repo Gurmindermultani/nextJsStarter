@@ -161,7 +161,7 @@ function Customers(props) {
               <img name={customer.name} src={`/images/clients/${customer.name}.png`} />
               <div className="details">
                 <div className="row">
-                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Type"/>
+                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Industry"/>
                   <br/>
                   <Typography variant="h6" fontSize="13px" text={customer.type}/>
                 </div>
@@ -184,7 +184,7 @@ function Customers(props) {
               </div>
               <FadeIn delay={10} className="details">
                 <div className="row">
-                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Type"/>
+                  <Typography className="heading" variant="paragraph2" fontSize="13px" text="Industry"/>
                   <br/>
                   <Typography variant="h6" fontSize="13px" text={customer.type}/>
                 </div>

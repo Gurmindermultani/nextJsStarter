@@ -22,15 +22,15 @@ import { HeaderStyles } from './styles';
 export const navigation = [
   {
     name: 'product',
-    label: 'Product',
+    label: 'Products',
     links: [
       {
-        name: 'hr-case-management',
-        label: 'Case Management',
+        name: 'employee-query-management',
+        label: 'FAQ automation',
       },
       {
-        name: 'employee-query-management',
-        label: 'FAQ Automation',
+        name: 'hr-case-management',
+        label: 'Case management',
       },
       {
         name: 'hr-workflows',
@@ -38,7 +38,7 @@ export const navigation = [
       },
       {
         name: 'employee-engagement',
-        label: 'Engagement',
+        label: 'Employee engagement',
       },
       {
         name: 'wfh-surveys',
@@ -56,7 +56,7 @@ export const navigation = [
       },
       {
         name: 'case-studies',
-        label: 'Case Studies',
+        label: 'Case studies',
       },
       {
         name: 'roi-calculator',
@@ -75,11 +75,11 @@ export const navigation = [
       },
       {
         name: 'about-us',
-        label: 'About Us',
+        label: 'About us',
       },
       {
         name: 'contact-us',
-        label: 'Contact Us',
+        label: 'Contact us',
       },
     ]
   },

@@ -205,7 +205,7 @@ function ProductHr(props) {
                         <Typography
                           variant="h4" 
                           fontSize="20px"
-                          text={`FAQ Automation`}
+                          text={`FAQ automation`}
                         />
                       </div>
                     </ExpansionPanelSummary>
@@ -219,12 +219,12 @@ function ProductHr(props) {
                         <Typography
                           variant="h4" 
                           fontSize="20px"
-                          text={`Case Management`}
+                          text={`Case management`}
                         />
                       </div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Transform your policy queries into AI-enabled conversational chat. Give instant automatic replies for all employee queries that’s documented in your knowledge base."}/>
+                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Let your employees raise tickets right on the chat. Also, give them real-time updates about the resolution status. It's intuitive, efficient and quick."}/>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
                   <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -233,7 +233,7 @@ function ProductHr(props) {
                         <Typography
                           variant="h4" 
                           fontSize="20px"
-                          text={`Employee Transactions`}
+                          text={`HR workflows`}
                         />
                       </div>
                     </ExpansionPanelSummary>

@@ -11,6 +11,7 @@ import Typography from '../../components/Typography';
 import GrowIcon from '../../components/GrowIcon';
 
 const IconHighlightStyles = styled.div`
+  max-width: 274px;
   flex-basis: 28%;
   display: flex;
   flex-direction: column;

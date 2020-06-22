@@ -165,7 +165,7 @@ function Footer(props) {
       </div>
       <div className="lowerContainer">
         <div className="copyright">
-          <Typography variant="paragraph2" color="#212121" text="© 2020 "/>
+          <Typography variant="paragraph2" color="#212121" text="©"/>
           {" "}
           <Typography variant="paragraph2" color="#0F72EE" text="Leena AI"/>
         </div>
