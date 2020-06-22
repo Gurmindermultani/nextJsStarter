@@ -14,7 +14,7 @@ function FadeIn(props) {
   return (
     <VisibilitySensor once partialVisibility>
       {({ isVisible }) => (
-        <Spring delay={props.delay ? props.delay : 500} to={{ 
+        <Spring delay={props.delay ? props.delay : 100} to={{ 
           opacity: isVisible ? 1 : 0,
         }}>
           {({ opacity }) => (

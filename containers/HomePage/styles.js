@@ -8,7 +8,7 @@ export const HomePageStyles = styled.div`
     max-width: 1200px;
     margin: auto;
     &.section0 {
-      padding: 180px 20px 0 20px;
+      padding: 180px 20px 120px 20px;
     }
     &.noMargin {
       margin-top: 190px;

@@ -38,10 +38,9 @@ function CaseStudies(props) {
   const [ loading, setLoading ] = useState(true);
   const [ caseStudy, setCaseStudy ] = useState('');
   useEffect(() => {
-    setCaseStudy(dataMap[Utils.getQueryParam('name')]);
+    setCaseStudy(dataMap[props.type]);
     setLoading(false);
   },[]);
-  console.log(caseStudy);
   if (loading) {
     return <div className="pageLoader">Loading...</div>;
   }

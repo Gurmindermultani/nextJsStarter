@@ -130,6 +130,7 @@ const ProductStyles = styled.div`
   }
   .leftContainer {
     padding-left: 30px;
+    padding-bottom: 40px;
   }
   @media only screen and (max-width: 760px) {
     .body {

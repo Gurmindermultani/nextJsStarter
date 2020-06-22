@@ -181,9 +181,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-  .halfBackground {
+  ${'' /* .halfBackground {
     position: relative;
-    ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
     background: linear-gradient(to top, #fff 10%, #00CEFF40 20%, #00CEFF40 50%, #fff 50% );
   }
 
@@ -196,6 +195,10 @@ const GlobalStyle = createGlobalStyle`
     left: 0px;
     opacity: 0.2;
     z-index: -1;
+  } */}
+  .highlight {
+    padding: 0 16px;
+    background: ${props => props.theme.palette.primary.light}40;
   }
   .mobile {
     display: none;

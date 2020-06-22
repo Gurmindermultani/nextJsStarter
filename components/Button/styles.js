@@ -95,6 +95,7 @@ export const ButtonWrapper = styled.button`
   &.contained {
     background-color: ${props => props.theme.palette.primary.main};
     border: 0.8px solid ${props => props.theme.palette.primary.main};
+    box-shadow: 0px 12px 16px #0F72EE4E;
     i {
       color: ${props => props.theme.palette.white};
     }
@@ -104,6 +105,7 @@ export const ButtonWrapper = styled.button`
 
     &:hover {
       background-color: ${props => props.theme.palette.primary.dark};
+      box-shadow: none;
     }
     &.disabled {
       background-color: ${props => props.theme.palette.border.main};

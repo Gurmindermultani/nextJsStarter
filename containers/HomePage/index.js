@@ -133,7 +133,7 @@ function HomePage(props) {
       </section>
       <section className="section section2">
         <QuoteAnimator>
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Make employee service as smooth as"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Make employee service as smooth as"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="your customer service"/>
         </QuoteAnimator>
         <div className="products">

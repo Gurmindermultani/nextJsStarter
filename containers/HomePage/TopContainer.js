@@ -20,10 +20,14 @@ const TopContainerStyles = styled.div`
   display: flex;
   justify-content: space-between;
   .leftContainer {
-    flex-basis: 55%;
+    flex-basis: 100%;
+    .animatedText {
+      text-align: center;
+    }
     .animatedDemoInput {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin-top: 32px;
       .form-group {
         margin-top: 0;
@@ -32,8 +36,8 @@ const TopContainerStyles = styled.div`
         display: none;
       }
       .fullWidth {
-        flex-basis: 60%;
-        margin-right: 16px;
+        flex-basis: 100%;
+        margin-right: 0px;
       }
       .buttons {
         width: 172px;
@@ -82,14 +86,13 @@ function TopContainer(props) {
   return (
     <TopContainerStyles>
       <div className="leftContainer">
-        <Slide from="left" className="animatedText">
-          <Typography variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
+        <Slide from="up" className="animatedText">
+          <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
           <br />
-          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational"/>
+          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational workflow automation"/>
           <br />
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="workflow automation"/>
         </Slide>
-        <Slide from="left" className="animatedDemoInput">
+        <Slide from="up" className="animatedDemoInput">
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href="/schedule-demo">
             <div className="buttons">
@@ -97,10 +100,15 @@ function TopContainer(props) {
             </div>
           </Link>
         </Slide>
+        {/* <svg>
+          <clipPath id="wave" clipPathUnits="objectBoundingBox">
+            <path class="st0" d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z"/>
+          </clipPath>
+        </svg> */}
       </div>
-      <Slide from="right" className="rightContainer">
-        {/* <LottieAnimation dataUrl="/images/home/home.json" /> */}
-      </Slide>
+      {/* <Slide from="right" className="rightContainer">
+        <LottieAnimation dataUrl="/images/home/home.json" />
+      </Slide> */}
     </TopContainerStyles>
   );
 }

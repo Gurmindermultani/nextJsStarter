@@ -175,8 +175,8 @@ function Footer(props) {
           <Typography variant="paragraph2" color="#212121" text="Privacy Policies"/>
         </div>
         <div className="certs">
-          <img className="soc" alt="cert" src="/images/certs/soc.png" />
-          <img className="iso" alt="cert" src="/images/certs/iso.png" />
+          <img className="soc" alt="cert" src="/images/certs/soc.svg" />
+          <img className="iso" alt="cert" src="/images/certs/iso.svg" />
         </div>
       </div>
     </FooterStyles>

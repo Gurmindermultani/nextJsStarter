@@ -9,7 +9,7 @@ export const EngagementStyles = styled.div`
     margin: auto;
     &.section0 {
       max-width: 100vw;
-      padding: 178px 120px 0 120px !important;
+      padding: 178px 160px 0 160px !important;
       overflow: hidden;
     }
     &.noPadding {
