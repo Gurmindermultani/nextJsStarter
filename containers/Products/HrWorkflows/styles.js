@@ -141,6 +141,10 @@ export const HrWorflowsStyles = styled.div`
     }
     .topContainer {
       display: flex;
+      .text {
+        flex-basis: 100%;
+        text-align: center;
+      }
       .secondHeading {
         margin-top: 28px;
         margin-bottom: 10px;

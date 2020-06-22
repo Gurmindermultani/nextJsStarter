@@ -58,7 +58,7 @@ function ContactUs(props) {
         </div>  
         <div className="demo">
           <Typography fontWeight="600" color="#212121" fontSize="18px" variant="paragraph2" text="Want to know more about our services?"/>
-          <Link href="/scheduleDemo">
+          <Link href="/schedule-demo">
             <span>
               <Typography className="anchor" fontWeight="600" color="#0F72EE" fontSize="18px" variant="paragraph2" text="Schedule demo"/>
             </span>

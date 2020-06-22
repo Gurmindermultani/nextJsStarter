@@ -91,7 +91,7 @@ function TopContainer(props) {
         </Slide>
         <Slide from="left" className="animatedDemoInput">
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-          <Link href="/scheduleDemo">
+          <Link href="/schedule-demo">
             <div className="buttons">
               <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
             </div>
