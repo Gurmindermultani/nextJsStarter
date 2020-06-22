@@ -115,7 +115,7 @@ export const HeaderStyles = styled.div`
       .playDiv {
         > div {
           > div {
-            height: 50px;
+            height: 40px;
           }
         }
       }

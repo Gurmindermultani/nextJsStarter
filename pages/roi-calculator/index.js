@@ -1,23 +1,23 @@
 import Head from 'next/head'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Engagement from '../../containers/Products/Engagement';
+import ROICalculator from '../../containers/Resources/ROICalculator';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena.AI - Engagement</title>
+        <title>RoI calculator | Leena AI</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Estimate the potential return on investment you'd derive from Leena AI for your business."></meta>
+        <meta name="keywords" content="Leena AI RoI calculator, estimate Leena AI RoI, potential RoI from Leena AI, Leena AI return on investment" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
-        <Engagement />
+        <ROICalculator />
       </main>
-
-      <footer>
-        <Footer />
-      </footer>
 
       <style jsx>{`
         .container {

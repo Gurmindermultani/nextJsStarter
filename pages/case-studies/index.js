@@ -1,18 +1,22 @@
 import Head from 'next/head'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Faq from '../../containers/Products/Faq';
+import CaseStudies from '../../containers/Resources/CaseStudies';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena.AI - FAQ Automation</title>
+        <title>Read customer success stories and case studies | Leena AI</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Explore Leena AI case studies and know the RoI our customers have achieved. Be the next to be featured in our customer success stories."></meta>
+        <meta name="keywords" content="Leena AI case studies, Leena AI customer success stories, Leena AI customers" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
-        <Faq />
+        <CaseStudies />
       </main>
 
       <footer>

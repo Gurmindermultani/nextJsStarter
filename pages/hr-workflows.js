@@ -1,22 +1,22 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import HomePage from '../containers/HomePage';
+import HrWorkflows from '../containers/Products/HrWorkflows';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena AI - Employee experience platform for enterprises</title>
+        <title>Automate HR workflows and employee request management | Leena AI </title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Leena AI is an enterprise conversational AI that enhances employee experience via HR helpdesk automation and employee enagagement software. "></meta>
-        <meta name="keywords" content="enterprise conversational AI, HR helpdesk, employee engagement platform, AI in HR, artificial intelligence in HR, employee engagement platform, employee service delivery" />
+        <meta name="description" content="Make employee request management simple with AI-enabled HR workflows. Take employee self service one notch up with enterprise conversations."></meta>
+        <meta name="keywords" content="HR workflows, HR workflow automation, Grievance management software, employee request management, ‎employee self service platform" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
-        <HomePage />
+        <HrWorkflows />
       </main>
 
       <footer>

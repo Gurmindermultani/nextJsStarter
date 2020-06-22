@@ -52,7 +52,7 @@ function ButtonLinkCard(props) {
         <Typography fontWeight="500" variant="paragraph2" fontSize="18px" color="#212121" text={props.data.text}/>
       </div>
       <div className="footer">
-        <Link href={`/resources/caseStudies/detail?name=${props.data.name}`} >
+        <Link href={`${props.data.link}`} >
           <a>
             <Button variant="inverted" size="large" name="Read Case Study"/>
           </a>

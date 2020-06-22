@@ -1,22 +1,22 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import HomePage from '../containers/HomePage';
+import WfhSurveys from '../containers/Products/WfhSurveys';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena AI - Employee experience platform for enterprises</title>
+        <title>AI-powered work from home survey for remote employees | Leena AI</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Leena AI is an enterprise conversational AI that enhances employee experience via HR helpdesk automation and employee enagagement software. "></meta>
-        <meta name="keywords" content="enterprise conversational AI, HR helpdesk, employee engagement platform, AI in HR, artificial intelligence in HR, employee engagement platform, employee service delivery" />
+        <meta name="description" content="Monitor mental health, wellness, and engagement of your remote workforce. Conduct automated WFH employee pulse surveys on any platform you want."></meta>
+        <meta name="keywords" content="work from home surveys, wfh surveys, work from home employee surveys, remote employee surveys, employee pulse survey, remote working survey, WFH survey for remote employees, wfh pulse surveys" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
-        <HomePage />
+        <WfhSurveys />
       </main>
 
       <footer>

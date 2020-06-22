@@ -25,23 +25,23 @@ export const navigation = [
     label: 'Product',
     links: [
       {
-        name: 'caseManagement',
+        name: 'hr-case-management',
         label: 'Case Management',
       },
       {
-        name: 'faqAutomation',
+        name: 'employee-query-management',
         label: 'FAQ Automation',
       },
       {
-        name: 'hrWorkflows',
+        name: 'hr-workflows',
         label: 'HR workflows',
       },
       {
-        name: 'engagement',
+        name: 'employee-engagement',
         label: 'Engagement',
       },
       {
-        name: 'wfhSurveys',
+        name: 'wfh-surveys',
         label: 'WFH surveys',
       },
     ]
@@ -55,11 +55,11 @@ export const navigation = [
         label: 'Blog',
       },
       {
-        name: 'caseStudies',
+        name: 'case-studies',
         label: 'Case Studies',
       },
       {
-        name: 'roiCalculator',
+        name: 'roi-calculator',
         label: 'ROI calculator',
       }
     ]
@@ -78,7 +78,7 @@ export const navigation = [
         label: 'About Us',
       },
       {
-        name: 'contactUs',
+        name: 'contact-us',
         label: 'Contact Us',
       },
     ]
@@ -89,7 +89,6 @@ function Header(props) {
   const [ anim, setAnim ] = useState({});
   const [ showMenu, setShowMenu ] = useState(false);
   const play = () => {
-    console.log('play');
     if (showMenu) {
       toggleAlt();
     } else {
@@ -159,7 +158,7 @@ function Header(props) {
             </div>
           }
           {props.router.pathname.indexOf('scheduleDemo') === -1 &&
-            <Link href="/scheduleDemo">
+            <Link href="/schedule-demo">
               <div>
                 <Button variant="contained" size="medium" name="Schedule Demo" />
               </div>
@@ -173,7 +172,7 @@ function Header(props) {
         </div>
       </Slide>
       {showMenu && 
-        <FadeIn className="mobileMenu">
+        <FadeIn delay={1} className="mobileMenu">
           <MobileMenu />
         </FadeIn>
       }

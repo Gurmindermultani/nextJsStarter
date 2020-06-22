@@ -1,23 +1,22 @@
 import Head from 'next/head'
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
-import Detail from '../../../containers/Resources/CaseStudies/Detail';
+import Header from '../components/Header';
+import ScheduleDemo from '../containers/ScheduleDemo';
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Leena.AI - Case Study</title>
+        <title>Schedule live product demo | Leena AI</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Book your live demo with product experts at Leena AI and discover how Leena AI can transform your employee experience."></meta>
+        <meta name="keywords" content="Leena AI demo, Leena AI schedule demo, Leena AI live demo, Leena AI product demo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes"></meta>
       </Head>
       <Header />
       <main>
-        <Detail />
+        <ScheduleDemo />
       </main>
-
-      <footer>
-        <Footer />
-      </footer>
 
       <style jsx>{`
         .container {
