@@ -111,7 +111,9 @@ function Header(props) {
       <Slide onLoad from='down' className="animatedHeader">
         <div className="logo pointer center">
           <Link href="/">
-            <img src="/images/leenaLogo.svg"/>
+            <a>
+              <img src="/images/leenaLogo.svg"/>
+            </a>
           </Link>
         </div>
         <div className="navigation">

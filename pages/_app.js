@@ -14,7 +14,6 @@ const tagManagerArgs = {
 
 export default class MyApp extends App {
   componentDidMount() {
-    console.log(process.env.NEXT_PUBLIC_ENV)
     if (process.env.NEXT_PUBLIC_ENV === "staging" || process.env.NEXT_PUBLIC_ENV === "production") {
       CrashReporter();
       TagManager.initialize(tagManagerArgs);
