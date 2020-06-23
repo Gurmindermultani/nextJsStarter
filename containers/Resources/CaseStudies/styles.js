@@ -24,7 +24,7 @@ export const CaseStudiesStyles = styled.div`
         margin-bottom: 35px;
         img {
           &.airasia {
-            width: 110px;
+            width: 180px;
           }
           &.cocacola {
             width: 130px;

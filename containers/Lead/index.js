@@ -27,7 +27,7 @@ function CaseManagment(props) {
     <LeadStyles>
       <section className="section header center">
         <Slide delay={100} onLoad from='down'>
-          <a href="https://leena.ai/" target="_blank">
+          <a href="https://leena.ai?utm_source=LeadGen_landingpage&utm_medium=AirAsia_case_study&utm_campaign=header" target="_blank">
             <img src="images/leenaLogo.svg"/>
           </a>
         </Slide>

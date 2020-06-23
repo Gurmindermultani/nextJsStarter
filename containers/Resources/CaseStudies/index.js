@@ -33,7 +33,7 @@ function CaseStudies(props) {
           <FadeIn className="text">
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Customer stories that speak volumes"/>
             <br />
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see real results and RoI"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see real results and ROI"/>
             <br />
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="our customers derived from us"/>
           </FadeIn>

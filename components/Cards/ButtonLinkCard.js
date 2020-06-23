@@ -27,9 +27,6 @@ const ButtonLinkCardStyles = styled.div`
   .body {
     text-align: center;
     margin: 16px 33px;
-    span {
-      line-height: 40px;
-    }
   }
   .footer {
     display: flex;

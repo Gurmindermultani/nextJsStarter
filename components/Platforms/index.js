@@ -101,6 +101,10 @@ const apps = [
     image: "/images/home/ios.png"
   },
   {
+    name: "whatsapp",
+    image: "/images/home/whatsapp.png"
+  },
+  {
     name: "microsoft",
     image: "/images/home/microsoft.png"
   },

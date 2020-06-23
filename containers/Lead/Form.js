@@ -61,13 +61,24 @@ const FormStyles = styled.div`
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
+  const phoneCountryOptions = Codes.map( code => {
+    return {
+      ...code,
+      label: code.dial_code + ", " + code.name,
+      value: code.dial_code
+    }
+  });
+  console.log(phoneCountryOptions);
   useEffect(() => {
     let req = new XMLHttpRequest();
     req.open('GET', document.location, false);
     req.send(null);
     let headers = req.getAllResponseHeaders();
-    let countryName = req.getResponseHeader('country-code');
+    let countryName = req.getResponseHeader('cc');
     console.log(countryName);
+    if (countryName) {
+      console.log(phoneCountryOptions.findIndex( elem => elem.code === countryName));
+    }
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
@@ -150,13 +161,6 @@ function Form(props) {
       value: '1000+',
     },
   ];
-  const phoneCountryOptions = Codes.map( code => {
-    return {
-      ...code,
-      label: code.dial_code + ", " + code.name,
-      value: code.dial_code
-    }
-  });
   return (
     <FormStyles>
       <div className="textCenter">
