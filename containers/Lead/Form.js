@@ -78,7 +78,6 @@ function Form(props) {
       const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
       if (foundIndex > -1) {
         setCountryCode(phoneCountryOptions[foundIndex].dial_code);
-        props.setCountryCode(phoneCountryOptions[foundIndex].dial_code);
       }
     }
   },[]);
