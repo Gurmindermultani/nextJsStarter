@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -26,10 +26,19 @@ const ContactStyles = styled.div`
 `;
 
 function Contact(props) {
+  const [countryCode, setCountryCode] = useState('+91');
+  useEffect(() => {
+    setCountryCode(props.countryCode);
+  },[props.countryCode]);
   return (
     <ContactStyles>
       <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
-      <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
+      {countryCode === "+91" && 
+        <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
+      }
+      {countryCode === "+1" && 
+        <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+1 650-690-6283"/>
+      }
       <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
       <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
     </ContactStyles>

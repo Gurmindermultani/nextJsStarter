@@ -60,7 +60,7 @@ const FormStyles = styled.div`
 
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
-  const [countryCode, setCountryCode] = useState('+61');
+  const [countryCode, setCountryCode] = useState('+91');
   const phoneCountryOptions = Codes.map( code => {
     return {
       ...code,
@@ -68,14 +68,12 @@ function Form(props) {
       value: code.dial_code
     }
   });
-  console.log(phoneCountryOptions);
   useEffect(() => {
     let req = new XMLHttpRequest();
     req.open('GET', document.location, false);
     req.send(null);
     let headers = req.getAllResponseHeaders();
     let countryName = req.getResponseHeader('cc');
-    console.log(countryName);
     if (countryName) {
       const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
       if (foundIndex > -1) {

@@ -88,7 +88,7 @@ function CaseManagment(props) {
         </FadeIn>
       </section>
       <section className="section section5 mobile">
-        <Contact />
+        <Contact countryCode={countryCode} />
       </section>
     </LeadStyles>
   );
