@@ -77,7 +77,8 @@ function Form(props) {
       if (!valid) return;
       let body = {...formData};
       body.phone = countryCode + body.phone;
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-demo`, {
+      body.siteUrl = window.location.href;
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-contact`, {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
