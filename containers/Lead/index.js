@@ -23,6 +23,7 @@ import Clients from './Clients';
 import { LeadStyles } from './styles';
 
 function CaseManagment(props) {
+  const [countryCode, setCountryCode] = useState('+91');
   return (
     <LeadStyles>
       <section className="section header center">
@@ -49,7 +50,7 @@ function CaseManagment(props) {
             <img src='/images/airasia/book.png'/>
           </Slide>
           <Slide from='right' className="rightContainer center">
-            <Form />
+            <Form setCountryCode={setCountryCode} />
           </Slide>
         </div>
         <Insights />
