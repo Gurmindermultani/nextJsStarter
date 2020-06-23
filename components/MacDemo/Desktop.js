@@ -66,10 +66,12 @@ const DeskTopStyles = styled.div`
       .prevArrow {
         left: 0;
         top: -85px;
+        background: ${props => props.theme.palette.primary.dark};
       }
       .nextArrow {
         left: 60px;
         top: -85px;
+        background: ${props => props.theme.palette.primary.dark};
       }
       .slick-slide {
         width: 260px;
