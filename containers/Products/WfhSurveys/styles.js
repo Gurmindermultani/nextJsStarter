@@ -59,6 +59,7 @@ export const WfhSurveysStyles = styled.div`
         left: 56px;
         z-index: -1;
         width: 200px;
+        height: 92%;
       }
     }
     .demoInput {

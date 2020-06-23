@@ -65,6 +65,7 @@ export const EngagementStyles = styled.div`
         left: 55px;
         z-index: -1;
         width: 200px;
+        height: 92%;
       }
     }
     .demoInput {
