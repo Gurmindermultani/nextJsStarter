@@ -39,7 +39,7 @@ export const CaseStudiesStyles = styled.div`
     &.noPadding {
       max-width: 100vw;
       background: #0F72EE;
-      padding: 80px 0;
+      padding: 0px 0;
       .halfBackground {
         z-index: 1;
       }

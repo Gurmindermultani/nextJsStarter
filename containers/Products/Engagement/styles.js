@@ -143,6 +143,13 @@ export const EngagementStyles = styled.div`
         padding: 0;
         .quoteContainer {
           padding: 0 30px;
+          margin: 10px 0 64px 0;
+        }
+      }
+      &.section6 {
+        padding: 0;
+        .quoteContainer {
+          padding: 0 30px;
         }
       }
       &.noPadding {

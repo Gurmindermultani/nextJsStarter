@@ -16,9 +16,6 @@ const LinkCardStyles = styled.a`
   border-radius: 4px;
   width: 220px;
   display: block;
-  &:hover {
-    transform: scale(1.05);
-  }
   .header {
     height: 172px;
     display: flex;
@@ -43,6 +40,15 @@ const LinkCardStyles = styled.a`
     }
     padding-bottom: 16px;
   }
+  &:hover {
+    transform: scale(1.05);
+    span {
+      color: #212121;
+    }
+    .readMore {
+      color: ${props => props.theme.palette.primary.main};
+    }
+  }
 `;
 
 function LinkCard(props) {
@@ -55,7 +61,7 @@ function LinkCard(props) {
         <Typography fontSize="14px" variant="paragraph2" color="#212121" text={props.data.text}/>
       </div>
       <div className="footer">
-        <Typography variant="paragraphS2" fontSize="12px" color="#616161" text={"Read More"}/>
+        <Typography className="readMore" variant="paragraphS2" fontSize="12px" color="#616161" text={"Read More"}/>
         <img alt="right arrow" src="/images/icons/down-arrow.svg"/>
       </div>
     </LinkCardStyles>

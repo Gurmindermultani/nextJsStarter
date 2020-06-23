@@ -12,6 +12,10 @@ import Button from '../Button';
 import Typography from '../Typography';
 import Input from '../Input';
 import { navigation } from '../Header';
+import { useForm, useField } from '../Input/formHooks';
+import Utils from '../../utils';
+
+import Dialog from './Dialog'
 
 const FooterStyles = styled.div`
   max-width: 1200px;
@@ -107,6 +111,35 @@ const FooterStyles = styled.div`
 `;
 
 function Footer(props) {
+  const [showDialog, setShowDialog] = useState('');
+  const form = useForm({
+    onSubmit: (formData, valid) => {
+      if (!valid) return;
+      let body = {...formData};
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/subscribe`, {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      }).then((res) => {
+        if (res.status === 200) {
+          setShowDialog('success');
+        } else {
+          alert('Some Error Occurred!');
+        }
+      }).catch((e) => {
+        console.log('error');
+        alert('Some Error Occurred!');
+      });
+    }
+  });
+  const email = useField('email', form, {
+    defaultValue: '',
+    validations: [formData => !(formData['email'] && Utils.checkValidEmail(formData['email']) ) && 'Please enter valid email.'],
+    fieldsToValidateOnChange: [],
+  });
   return (
     <FooterStyles>
       <div className="upperContainer">
@@ -156,12 +189,12 @@ function Footer(props) {
             </div>
           )}
         </div>
-        <div className="subscribe">
+        <form onSubmit={form.onSubmit} className="subscribe">
           <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
           <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
-          <Input onChange={() => null} name="email" placeholder="Your Email"/>
-          <Button fullWidth size="large" variant="contained" name="Subscribe"/>
-        </div>
+          <Input {...email} name="email" placeholder="Your Email"/>
+          <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
+        </form>
       </div>
       <div className="lowerContainer">
         <div className="copyright">
@@ -170,15 +203,23 @@ function Footer(props) {
           <Typography variant="paragraph2" color="#0F72EE" text="Leena AI"/>
         </div>
         <div className="terms">
-          <Typography variant="paragraph2" color="#212121" text="Terms of Use"/>
+          <a target="_blank" href="https://leena.ai/docs/tnc.pdf">
+            <Typography variant="paragraph2" color="#212121" text="Terms of Use"/>
+          </a>
           {" | "}
-          <Typography variant="paragraph2" color="#212121" text="Privacy Policies"/>
+          <a target="_blank" href="https://leena.ai/docs/pp.pdf">
+            <Typography variant="paragraph2" color="#212121" text="Privacy Policy"/>
+          </a>
         </div>
         <div className="certs">
           <img className="soc" alt="cert" src="/images/certs/soc.svg" />
           <img className="iso" alt="cert" src="/images/certs/iso.svg" />
         </div>
       </div>
+      <Dialog
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+      />
     </FooterStyles>
   );
 }

@@ -18,14 +18,34 @@ import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import LottieAnimation from "../../../components/LottieAnimation";
+import MobileDemo from "../../../components/MobileDemo";
 
 import IconHighlightsAll from './IconHighlightsAll';
 import FeaturesFirst from './FeaturesFirst';
 import FeaturesSecond from './FeaturesSecond';
 import FeaturesThird from './FeaturesThird';
-import MobileDemo from './MobileDemo';
 import Recognitions from './Recognitions';
 import { WfhSurveysStyles } from './styles';
+
+const mobileSlides = [
+  {
+    heading: "Automated invites",
+    text: "Invite your employees to participate in a survey."
+  },
+  {
+    heading: "WFH challenges",
+    text: "Ask about the work challenges employees might be facing.",
+  },
+  {
+    heading: "Conversational interface",
+    text: "Take feedback via AI-enabled interactive chat.",
+  },
+  {
+    heading: "Employee wellness",
+    text: "Ask remote employees if they are doing okay.",
+  },
+];
+
 
 function WfhSurveys(props) {
   return (
@@ -76,12 +96,14 @@ function WfhSurveys(props) {
       <section className="section buttonSection">
         <ScheduleDemoButton name="Get WFH surveys" />
       </section>
-      <section className="section section5">
-        <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Simplest WFH feedback survey"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="to begin with"/>
-        </FadeIn>
-        <MobileDemo />
+      <section className="section section5 noMargin">
+        <div className="mobile">
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Employee engagement"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="can’t be any simpler"/>
+          </FadeIn>
+        </div>
+        <MobileDemo phoneJson="/images/wfhSurveys/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Simplest", heading2: "WFH feedback", text: "survey to begin with" }} />
       </section>
       <section className="section section6 shortSection">
         <FadeIn className="quoteContainer">

@@ -67,6 +67,32 @@ const ScheduleDemoStyles = styled.div`
 `;
 
 function ScheduleDemo(props) {
+  if (props.variant === "knowHow") {
+    return (
+      <ScheduleDemoStyles>
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
+        <div>
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know how Leena AI can add value"/>
+            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="to your organization."/>
+          </FadeIn>
+          <Slide className="demoInput center">
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
+            <Link href="/schedule-demo">
+              <div>
+                <Button name="Schedule Demo" variant="inverted" size="large"/>
+              </div>
+            </Link>
+          </Slide>
+        </div>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
+      </ScheduleDemoStyles>
+    );
+  }
   if (props.variant === "engage") {
     return (
       <ScheduleDemoStyles>
@@ -75,8 +101,8 @@ function ScheduleDemo(props) {
         </div>
         <div>
           <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSize="28px" text=" Get started with outstanding employee engagement"/>
-            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text=" Get started with outstanding employee engagement"/>
+            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="right away"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
@@ -101,8 +127,8 @@ function ScheduleDemo(props) {
         </div>
         <div>
           <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSize="28px" text="You’re one step away from an excellent employee experience."/>
-            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="Book your live demo right away"/>
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="You’re one step away from an excellent employee experience."/>
+            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="Book your live demo right away"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
@@ -127,8 +153,8 @@ function ScheduleDemo(props) {
         </div>
         <div>
           <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSize="28px" text="Discover how Leena AI can help you transform "/>
-            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="your employee experience"/>
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Discover how Leena AI can help you transform "/>
+            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="your employee experience"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
@@ -152,8 +178,8 @@ function ScheduleDemo(props) {
       </div>
       <div>
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
-          <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Schedule your free demo"/>
+          <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="right away"/>
         </FadeIn>
         <Slide className="demoInput center">
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

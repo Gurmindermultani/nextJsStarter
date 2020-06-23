@@ -42,7 +42,7 @@ export const ButtonWrapper = styled.button`
     span {
       font-size: 13px;
     }
-    height: 32px;
+    height: 36px;
     line-height: 26px;
     padding: 0 12px;
     text-align: center;
@@ -134,6 +134,38 @@ export const ButtonWrapper = styled.button`
     &:hover {
       background-color: ${props => props.theme.palette.primary.dark};
       border: 0.8px solid ${props => props.theme.palette.primary.dark};
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+    }
+    &.disabled {
+      background-color: ${props => props.theme.palette.border.main};
+      border-color: ${props => props.theme.palette.border.main};
+      pointer-events: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+      &:hover {
+        background-color: ${props => props.theme.palette.border.main};
+      }
+    }
+  }
+
+  &.invertedLight {
+    background-color: ${props => props.theme.palette.white};
+    border: 0.8px solid ${props => props.theme.palette.primary.main};
+    box-shadow: 0px 12px 16px #0F72EE4E;
+    i {
+      color: ${props => props.theme.palette.primary.main};
+    }
+    span {
+      color: ${props => props.theme.palette.primary.main};
+    }
+
+    &:hover {
+      background-color: ${props => props.theme.palette.primary.main};
+      border: 0.8px solid ${props => props.theme.palette.primary.main};
+      box-shadow: none;
       span {
         color: ${props => props.theme.palette.white};
       }

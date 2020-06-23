@@ -9,6 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../Typography';
 import Carousal from '../Carousal';
+import ScheduleDemoButton from '../ScheduleDemoButton';
 import LottieAnimation from "../../components/LottieAnimation";
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
@@ -21,7 +22,7 @@ const DeskTopStyles = styled.div`
     .quote {
       width: 210px;
       position: absolute;
-      top: 120px;
+      top: 115px;
       right: 160px;
       .heading2 {
         margin: 4px 0 16px 0;
@@ -58,27 +59,27 @@ const DeskTopStyles = styled.div`
   .rightContainer {
     flex-basis: 60%;
     background: ${props => props.theme.palette.primary.dark};
-    padding: 200px 0 0 180px;
+    padding: 167px 0 42px 180px;
     overflow: hidden;
     .carousalMainContainer {
       width: 1000px;
-      height: 200px;
+      height: 123px;
       .prevArrow {
         left: 0;
-        top: -85px;
+        top: -75px;
       }
       .nextArrow {
         left: 60px;
-        top: -85px;
+        top: -75px;
       }
       .slick-slide {
-        width: 260px;
+        padding: 0 32px 0 0;
         span {
           color: #C5D0E6;
         }
         .subHeading {
           margin-top: 18px;
-          width: 180px;
+          width: 190px;
         }
         &.slick-active {
           span {
@@ -86,6 +87,9 @@ const DeskTopStyles = styled.div`
           }
         }
       }
+    }
+    button {
+      margin-top: 42px;
     }
   }
   @media only screen and (max-width: 760px) {
@@ -102,7 +106,7 @@ function DeskTop(props) {
           <br />
           <Typography className="invertedHighlight heading2" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading2}/>
           <br />
-          <Typography className="" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text={props.quote.text}/>
+          <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
         <div className="mobileImage">
           <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
@@ -116,10 +120,13 @@ function DeskTop(props) {
               <div className="" key={slide.heading}>
                 <Typography variant="h6" color="#fff" fontSizes={[18, 18, 18]} text={slide.heading} />
                 <br />
-                <Typography className="subHeading" variant="paragraph2" fontWeight="500" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
+                <Typography className="subHeading" variant="h2" fontWeight="400" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
               </div>
             )}
           </Carousal>
+        </div>
+        <div>
+          <ScheduleDemoButton type="link" variant="invertedLight"/>
         </div>
       </div>
     </DeskTopStyles>

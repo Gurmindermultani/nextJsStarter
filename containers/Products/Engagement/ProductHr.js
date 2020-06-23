@@ -36,7 +36,6 @@ const ProductStyles = styled.div`
   .body {
     display: flex;
     justify-content: space-between;
-    margin-top: 48px;
     .leftContainer {
       flex-basis: 50%;
       .MuiExpansionPanel-root {

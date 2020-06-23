@@ -180,6 +180,11 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    &:hover {
+      span {
+        color: ${props => props.theme.palette.primary.main};
+      }
+    }
   }
   ${'' /* .halfBackground {
     position: relative;

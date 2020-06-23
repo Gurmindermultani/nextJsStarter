@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const WfhSurveysStyles = styled.div`
+export const IntegrationsStyles = styled.div`
   .section {
     display: flex;
     flex-direction: column;
@@ -9,24 +9,8 @@ export const WfhSurveysStyles = styled.div`
     margin: auto;
     &.section0 {
       max-width: 100vw;
-      padding: 178px 160px 0 160px !important;
+      padding: 105px 160px 0 160px !important;
       overflow: hidden;
-    }
-    &.section5 {
-      margin-bottom: 50px;
-    }
-    &.noPadding {
-      margin-top: 150px;
-      padding: 0;
-      max-width: 100vw;
-      background: #0F72EE;
-      .halfBackground {
-        z-index: 1;
-      }
-      .halfBackground:before {
-        background: #1166D6;
-        z-index: 0;
-      }
     }
     &.noMargin {
       margin-top: 190px;
@@ -35,30 +19,21 @@ export const WfhSurveysStyles = styled.div`
       .quoteContainer {
         margin: 0;
       }
-    }
-    .knowMore {
-      margin-top: 100px;
-      button {
-        width: 172px;
-      }
+    } }
     }
   }
   .topContainer {
     display: flex;
+    align-items: center;
     .text {
       flex-basis: 70%;
     }
     .secondHeading {
-      margin-top: 16px;
+      margin-top: 8px;
     }
     .bowlImage {
-      position: relative;
-      .animation {
-        position: absolute;
-        top: 12px;
-        left: 56px;
-        z-index: -1;
-        width: 200px;
+      img {
+        width: 400px;
       }
     }
     .demoInput {
@@ -76,6 +51,14 @@ export const WfhSurveysStyles = styled.div`
       }
     }
   }
+  .icon {
+    width: 208px;
+    height: 102px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .quoteContainer {
     display: flex;
     flex-direction: column;
@@ -83,29 +66,12 @@ export const WfhSurveysStyles = styled.div`
     align-items: center;
     margin: 140px 0 100px 0;
     text-align: center;
+    .highlight {
+      margin-bottom: 16px;
+    }
     .halfBackground {
       margin-top: 0px;
-    }
-  }
-  .demoContainer {
-    padding: 80px 0;
-    .quoteContainer {
-      margin: 0;
-    }
-    flex: 1;
-    .demoInput {
-      display: flex;
-      margin-top: 16px;
-      align-items: center;
-      justify-content: center;
-      .form-group {
-        width: 360px;
-        margin-right: 16px;
-        margin-top: 20px;
-      }
-      button {
-        min-width: 172px;
-      }
+      max-width: 670px;
     }
   }
   @media only screen and (min-width: 1400px) {

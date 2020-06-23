@@ -109,7 +109,7 @@ function Header(props) {
   return (
     <HeaderStyles>
       <Slide onLoad from='down' className="animatedHeader">
-        <div className="logo pointer center">
+        <div className="logo pointer">
           <Link href="/">
             <a>
               <img src="/images/leenaLogo.svg"/>

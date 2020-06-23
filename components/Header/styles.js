@@ -8,6 +8,7 @@ export const HeaderStyles = styled.div`
   top: 0px;
   .logo {
     padding-top: 8px;
+    min-width: 142px;
   }
   .animatedHeader {
     display: flex;
@@ -35,8 +36,7 @@ export const HeaderStyles = styled.div`
   .navigation {
     display: flex;
     .groupNav {
-      margin-right: 44px;
-      padding: 6px 0;
+      padding: 6px 20px 6px 20px;
       position: relative;
       transition: all 0.5s ease;
       .links {

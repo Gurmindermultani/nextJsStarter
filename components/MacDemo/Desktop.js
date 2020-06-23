@@ -106,7 +106,7 @@ function DeskTop(props) {
           <br />
           <Typography className="invertedHighlight heading3" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading3}/>
           <br />
-          <Typography className="" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text={props.quote.text}/>
+          <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
         <div className="mobileImage">
           <img className="mobileRim" alt="Mobile View" src="/images/mac.png"/>
@@ -120,7 +120,7 @@ function DeskTop(props) {
               <div className="" key={slide.heading}>
                 <Typography variant="h6" color="#fff" fontSizes={[18, 18, 18]} text={slide.heading} />
                 <br />
-                <Typography className="subHeading" variant="paragraph2" fontWeight="500" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
+                <Typography className="subHeading" variant="h2" fontWeight="400" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
               </div>
             )}
           </Carousal>

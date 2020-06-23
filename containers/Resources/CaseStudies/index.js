@@ -11,6 +11,7 @@ import Button from '../../../components/Button';
 import Typography from '../../../components/Typography';
 import Input from '../../../components/Input';
 import Cards from '../../../components/Cards';
+import ScheduleDemo from '../../../components/ScheduleDemo';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import { CaseStudiesStyles } from './styles';
@@ -47,16 +48,7 @@ function CaseStudies(props) {
         )}
       </section>
       <section className="section section8 noPadding">
-        <div className="quoteContainer demoContainer">
-          <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="Know how Leena AI can add value"/>
-            <Typography className="invertedHalfBackground" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="to your organization."/>
-          </FadeIn>
-          <Slide className="demoInput">
-            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Button name="Schedule Demo" variant="inverted" size="large"/>
-          </Slide>
-        </div>
+        <ScheduleDemo variant="knowHow"></ScheduleDemo>
       </section>
     </CaseStudiesStyles>
   );

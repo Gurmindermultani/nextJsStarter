@@ -107,19 +107,19 @@ const MobileDemoStyles = styled.div`
         border-radius: 4px;
         padding: 16px 20px;
         color: white;
-        &.topLeft {
+        &.dialog0 {
           background: #212121;
           box-shadow: 0px 4px 16px #00000014;
         }
-        &.bottomLeft {
+        &.dialog1 {
           background: #103577;
           box-shadow: 0px 4px 16px #00000014;
         }
-        &.topRight {
+        &.dialog2 {
           background: #00CEFF;
           box-shadow: 0px 4px 16px #00000014;
         }
-        &.bottomRight {
+        &.dialog3 {
           background: #0F72EE;
           box-shadow: 0px 4px 16px #00000014;
         }
@@ -159,30 +159,14 @@ function MobileDemo(props) {
       </VisibilitySensor>
       <div className="mobileCaraousal">
         <Carousal variant="mobileCarousal">
-          <div className="carousalDialog topLeft">
-            <div className="textBox">
-              <Typography className="textHeading" variant="h6" fontSize="20px" text="Conversational interface"/>
-              <Typography variant="paragraph2" fontSize="16px" text="Employees chat with the virtual HR assistant."/>
+          {props.slides.map(( slide, idx) => 
+            <div key={"dialog" + idx} className={"carousalDialog topLeft " + ("dialog" + idx)}>
+              <div className="textBox">
+                <Typography className="textHeading" variant="h6" fontSize="20px" text={slide.heading} />
+                <Typography variant="paragraph2" fontSize="16px" text={slide.text}/>
+              </div>
             </div>
-          </div>
-          <div className="carousalDialog bottomLeft">
-            <div className="textBox">
-              <Typography className="textHeading" variant="h6" fontSize="20px" text="Automated replies"/>
-              <Typography variant="paragraph2" fontSize="16px" text="They get quick automated replies to their queries."/>
-            </div>
-          </div>
-          <div className="carousalDialog topRight">
-            <div className="textBox">
-              <Typography className="textHeading" variant="h6" fontSize="20px" text="Real-time ticketing"/>
-              <Typography variant="paragraph2" fontSize="16px" text="There’s an option to raise tickets when needed."/>
-            </div>
-          </div>
-          <div className="carousalDialog bottomRight">
-            <div className="textBox">
-              <Typography className="textHeading" variant="h6" fontSize="20px" text="Employee self-service"/>
-              <Typography variant="paragraph2" fontSize="16px" text="Employees also submit their leave request via chat."/>
-            </div>
-          </div>
+          )}
         </Carousal>
       </div>
       <div className="button">

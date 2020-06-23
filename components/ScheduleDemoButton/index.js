@@ -23,7 +23,9 @@ function ScheduleDemoButton(props) {
   if (props.type === "link") {
     return (
       <Link href="/schedule-demo">
-        <Button name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+        <div>
+          <Button name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+        </div>
       </Link>
     );
   }

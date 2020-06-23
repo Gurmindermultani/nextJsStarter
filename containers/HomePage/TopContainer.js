@@ -20,6 +20,17 @@ import FadeIn from '../../components/VisibilitySensor/FadeIn';
 const TopContainerStyles = styled.div`
   display: flex;
   justify-content: space-between;
+  position: relative;
+  .bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: aqua;
+    height: 100vh;
+    width: 500px;
+    z-index: -1;
+    clip-path: url(#wave);
+  }
   .leftContainer {
     flex-basis: 100%;
     .animatedText {
@@ -86,6 +97,13 @@ const TopContainerStyles = styled.div`
 function TopContainer(props) {
   return (
     <TopContainerStyles>
+      {/* <div className="bg">
+        <svg>
+          <clipPath id="wave" clipPathUnits="objectBoundingBox">
+            <path className="st0" d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z"/>
+          </clipPath>
+        </svg>
+       </div> */}
       <div className="leftContainer">
         <FadeIn className="animatedText">
           <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
@@ -101,11 +119,6 @@ function TopContainer(props) {
             </div>
           </Link>
         </Slide>
-        {/* <svg>
-          <clipPath id="wave" clipPathUnits="objectBoundingBox">
-            <path class="st0" d="M1,0c0,0-0.3,0.1-0.5,0.1S0.3,0,0,0.1V1h1L1,0z"/>
-          </clipPath>
-        </svg> */}
       </div>
       {/* <Slide from="right" className="rightContainer">
         <LottieAnimation dataUrl="/images/home/home.json" />
