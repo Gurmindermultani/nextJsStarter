@@ -28,8 +28,18 @@ const ContactStyles = styled.div`
 function Contact(props) {
   const [countryCode, setCountryCode] = useState('+91');
   useEffect(() => {
-    setCountryCode(props.countryCode);
-  },[props.countryCode]);
+    let req = new XMLHttpRequest();
+    req.open('GET', document.location, false);
+    req.send(null);
+    let headers = req.getAllResponseHeaders();
+    let countryName = req.getResponseHeader('cc');
+    if (countryName === "IN") {
+      setCountryCode('+91')
+    }
+    if (countryName === "US") {
+      setCountryCode('+1')
+    }
+  },[]);
   return (
     <ContactStyles>
       <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
