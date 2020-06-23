@@ -53,6 +53,16 @@ const ScheduleDemoStyles = styled.div`
     .form-group, .left, .right {
       display: none;
     }
+    .topLeft {
+      img {
+        width: 50px;
+      }
+    }
+    .bottomRight {
+      img {
+        width: 50px;
+      }
+    }
   }
 `;
 
@@ -67,6 +77,32 @@ function ScheduleDemo(props) {
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSize="28px" text=" Get started with outstanding employee engagement"/>
             <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="right away"/>
+          </FadeIn>
+          <Slide className="demoInput center">
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
+            <Link href="/schedule-demo">
+              <div>
+                <Button name="Schedule Demo" variant="inverted" size="large"/>
+              </div>
+            </Link>
+          </Slide>
+        </div>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
+      </ScheduleDemoStyles>
+    );
+  }
+  if (props.variant === "oneStep") {
+    return (
+      <ScheduleDemoStyles>
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
+        <div>
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSize="28px" text="You’re one step away from an excellent employee experience."/>
+            <Typography className="" fontWeight="300" color="#212121" fontSize="28px" variant="paragraph2" text="Book your live demo right away"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

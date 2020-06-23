@@ -15,7 +15,6 @@ const LottieAnimationStyles = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
 `;
 
 function LottieAnimation(props) {

@@ -23,6 +23,7 @@ const IconHighlightStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     flex-basis: 100%;
+    max-width: 100%;
   }
 `;
 

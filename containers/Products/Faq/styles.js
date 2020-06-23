@@ -28,6 +28,14 @@ export const FaqStyles = styled.div`
         margin: 0;
       }
     }
+    &.noMargin {
+      margin-top: 190px;
+      padding: 0;
+      max-width: none;
+      .quoteContainer {
+        margin: 0;
+      }
+    }
     .knowMore {
       margin-top: 100px;
       button {

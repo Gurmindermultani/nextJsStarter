@@ -13,6 +13,7 @@ import Input from '../../../components/Input';
 import Platforms from '../../../components/Platforms';
 import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
+import ScheduleDemo from '../../../components/ScheduleDemo';
 import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
@@ -89,31 +90,22 @@ function WfhSurveys(props) {
         </FadeIn>
         <Platforms />
       </section>
-      <section className="section section7 noMargin">
+      <section className="section section7">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>
-      <section className="section section8 noMargin">
+      <section className="section section8">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
         </FadeIn>
         <Reviews />
       </section>
-      <section className="section section8 noPadding">
-        <div className="demoContainer">
-          <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSizes={[20, 28, 28]} color="#fff" text="You’re one step away from an excellent employee experience."/>
-            <Typography className="" fontWeight="300" color="#fff" fontSizes={[20, 28, 28]} variant="paragraph2" text="Book your live demo right away"/>
-          </FadeIn>
-          <Slide className="demoInput">
-            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Button name="Schedule Demo" variant="inverted" size="large"/>
-          </Slide>
-        </div>
+      <section className="section section8 noMargin">
+        <ScheduleDemo variant="discover" />
       </section>
     </WfhSurveysStyles>
   );
