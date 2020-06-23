@@ -15,6 +15,7 @@ import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import LottieAnimation from "../../components/LottieAnimation";
+import FadeIn from '../../components/VisibilitySensor/FadeIn';
 
 const TopContainerStyles = styled.div`
   display: flex;
@@ -86,13 +87,13 @@ function TopContainer(props) {
   return (
     <TopContainerStyles>
       <div className="leftContainer">
-        <Slide from="up" className="animatedText">
+        <FadeIn className="animatedText">
           <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
           <br />
           <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational workflow automation"/>
           <br />
-        </Slide>
-        <Slide from="up" className="animatedDemoInput">
+        </FadeIn>
+        <Slide className="animatedDemoInput">
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href="/schedule-demo">
             <div className="buttons">

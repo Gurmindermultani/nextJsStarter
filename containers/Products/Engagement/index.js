@@ -17,13 +17,43 @@ import Platforms from '../../../components/Platforms';
 import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
 import ScheduleDemo from '../../../components/ScheduleDemo';
+import MobileDemo from '../../../components/MobileDemo';
+import MacDemo from '../../../components/MacDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import ProductMore from './ProductMore';
-import MobileDemo from './MobileDemo';
-import MacDemo from './MacDemo';
 import { EngagementStyles } from './styles';
+
+const mobileSlides = [
+  {
+    heading: "Automated invites",
+    text: "Invite your employees to participate in a survey."
+  },
+  {
+    heading: "Conversational interface",
+    text: "Employees take part in the conversational survey.",
+  },
+  {
+    heading: "Textual answers",
+    text: "Ask open-ended questions when required.",
+  },
+  {
+    heading: "Simple and customized",
+    text: "The survey is short, simple and employee-specific.",
+  },
+];
+
+const macSlides = [
+  {
+    heading: "Analytical reports",
+    text: "Get intelligent reports on engagment dashboard."
+  },
+  {
+    heading: "Measure Engagement",
+    text: "Know your score against employee engagement parameters.",
+  },
+];
 
 function Engagement(props) {
   return (
@@ -44,11 +74,11 @@ function Engagement(props) {
               </div>
             </Slide>
           </FadeIn>
-          <Slide from='right' className="bowlImage">
+          {/* <Slide from='right' className="bowlImage">
             <img src="/images/home/mobile.png" />
             <img className="heroBg" src="/images/heroBg.svg" />
             <LottieAnimation dataUrl="/images/engage/phone.json" />
-          </Slide>
+          </Slide> */}
       </div>
       </section>
       <section className="section section1">
@@ -72,19 +102,23 @@ function Engagement(props) {
           <ProductMore />
         </div>
       </section>
-      <section className="section section3">
-        <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Employee engagement"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="can’t be any simpler"/>
-        </FadeIn>
-        <MobileDemo />
+      <section className="section section3 noMargin">
+        <div className="mobile">
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Employee engagement"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="can’t be any simpler"/>
+          </FadeIn>
+        </div>
+        <MobileDemo phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
       </section>
-      <section className="section section4">
-        <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Enhance employee performance"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with real-time engagement metrics"/>
-        </FadeIn>
-        <MacDemo />
+      <section className="section section4 noMargin">
+        <div className="mobile">
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Enhance employee performance"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with real-time engagement metrics"/>
+          </FadeIn>
+        </div>
+        <MacDemo phoneJson="/images/engage/feature/mac.json" slides={macSlides} quote={{ heading1: "Enhance", heading2: "employee", heading3: " performance", text: "with real-time engagement metrics" }} />
       </section>
       <section className="section section5 shortSection">
         <FadeIn className="quoteContainer">

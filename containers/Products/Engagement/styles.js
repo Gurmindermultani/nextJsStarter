@@ -42,6 +42,8 @@ export const EngagementStyles = styled.div`
   }
   .topContainer {
     display: flex;
+    justify-content: center;
+    text-align: center;
     .text {
       flex-basis: 70%;
     }
@@ -64,9 +66,10 @@ export const EngagementStyles = styled.div`
     }
     .demoInput {
       margin-top: 32px;
-      width: 40%;
       display: flex;
       align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
       .form-group {
         width: 360px;
         margin-right: 16px;
