@@ -21,6 +21,17 @@ const ScheduleDemoStyles = styled.div`
   align-items: center;
   background: #0F72EE;
   padding: 80px 0;
+  position: relative;
+  .topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   .demoInput {
     padding-top: 40px;
     .form-group {
@@ -49,6 +60,9 @@ function ScheduleDemo(props) {
   if (props.variant === "engage") {
     return (
       <ScheduleDemoStyles>
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
         <div>
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSize="28px" text=" Get started with outstanding employee engagement"/>
@@ -63,12 +77,18 @@ function ScheduleDemo(props) {
             </Link>
           </Slide>
         </div>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
       </ScheduleDemoStyles>
     );
   }
   if (props.variant === "discover") {
     return (
       <ScheduleDemoStyles>
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
         <div>
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSize="28px" text="Discover how Leena AI can help you transform "/>
@@ -83,14 +103,17 @@ function ScheduleDemo(props) {
             </Link>
           </Slide>
         </div>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
       </ScheduleDemoStyles>
     );
   }
   return (
     <ScheduleDemoStyles>
-      {/* <div>
-        <img alt="animationImputs" src="/images/leftDemo.svg"/>
-      </div> */}
+      <div className="topLeft">
+        <img alt="animationImputs" src="/images/demo/1.svg"/>
+      </div>
       <div>
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSize="28px" text="Schedule your free demo"/>
@@ -105,9 +128,9 @@ function ScheduleDemo(props) {
           </Link>
         </Slide>
       </div>
-      {/* <div>
-        <img alt="animationImputs" src="/images/rightDemo.svg"/>
-      </div> */}
+      <div className="bottomRight">
+        <img alt="animationImputs" src="/images/demo/2.svg"/>
+      </div>
     </ScheduleDemoStyles>
   );
 }

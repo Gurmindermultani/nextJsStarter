@@ -197,8 +197,13 @@ const GlobalStyle = createGlobalStyle`
     z-index: -1;
   } */}
   .highlight {
-    padding: 0 16px;
+    padding: 0 8px;
     background: ${props => props.theme.palette.primary.light}40;
+  }
+  .invertedHighlight {
+    padding: 0 8px;
+    background: ${props => props.theme.palette.white};
+    color: ${props => props.theme.palette.primary.main} !important;
   }
   .mobile {
     display: none;
@@ -232,6 +237,15 @@ const GlobalStyle = createGlobalStyle`
       position: relative;
       ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
       background: none;
+    }
+    .highlight {
+      padding: 0;
+      background: inherit;
+    }
+    .invertedHighlight {
+      padding: 0;
+      background: inherit;
+      color: inherit;
     }
   }
 `;

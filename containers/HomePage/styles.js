@@ -18,6 +18,14 @@ export const HomePageStyles = styled.div`
         margin: 0;
       }
     }
+    &.section4 {
+      margin-top: 100px;
+      margin-bottom: 80px;
+      .quoteContainer {
+        margin: 10px 0 64px 0;
+        padding: 0 30px;
+      }
+    }
     .knowMore {
       margin-top: 100px;
       button {
@@ -68,14 +76,23 @@ export const HomePageStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
+      padding: 0 30px;
     }
     .section {
       padding: 0 30px;
       &.section0 {
-        padding-top: 150px
+        padding: 120px 20px 20px 20px;
       }
       &.section4, &.section6, &.section7, &.section9 {
         padding: 0;
+      }
+      &.section4 {
+        margin-top: 100px;
+        margin-bottom: 0px;
+        .quoteContainer {
+          margin: 10px 0 64px 0;
+          padding: 0 30px;
+        }
       }
       &.noMargin {
         margin-top: 120px;

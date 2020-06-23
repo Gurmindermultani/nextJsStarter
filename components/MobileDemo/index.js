@@ -7,20 +7,11 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Typography from '../Typography';
-import Slide from '../VisibilitySensor/Slide';
-import UserAvatar from '../UserAvatar';
+
+import Desktop from './Desktop';
+import Mobile from './Mobile';
 
 const MobileDemoStyles = styled.div`
-  display: flex;
-  .leftContainer {
-    flex-basis: 30%;
-    background: ${props => props.theme.palette.primary.main};
-  }
-  .rightContainer {
-    flex-basis: 70%;
-    background: ${props => props.theme.palette.primary.dark};
-  }
   @media only screen and (max-width: 760px) {
     
   }
@@ -29,11 +20,11 @@ const MobileDemoStyles = styled.div`
 function MobileDemo(props) {
   return (
     <MobileDemoStyles>
-      <div className="leftContainer">
-        adasd
+      <div className="desktop">
+        <Desktop {...props} />
       </div>
-      <div className="rightContainer">
-
+      <div className="mobile">
+        <Mobile {...props} />
       </div>
     </MobileDemoStyles>
   );

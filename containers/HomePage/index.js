@@ -16,48 +16,35 @@ import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Customers from '../../components/Customers';
 import Reviews from '../../components/Reviews';
+import MobileDemo from '../../components/MobileDemo';
 import Platforms from '../../components/Platforms';
 import ScheduleDemo from '../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
-import MobileDemo from './MobileDemo';
 import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
 import TopContainer from './TopContainer';
 
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
-  if (t < 1) return c/2*t*t + b;
-  t--;
-  return -c/2 * (t*(t-2) - 1) + b;
-};
-
-function scrollTo(element, to, duration = 1000) {
-  var start = element.scrollTop,
-      change = to - start,
-      currentTime = 0,
-      increment = 20;
-
-  console.log(to, duration);
-      
-  var animateScroll = function(){        
-      currentTime += increment;
-      var val = Math.easeInOutQuad(currentTime, start, change, duration);
-      console.log(currentTime);
-      element.scrollTop = val;
-      if(currentTime < duration) {
-          setTimeout(animateScroll, increment);
-      }
-  };
-  animateScroll();
-}
-let currentSection = 0;
+const mobileSlides = [
+  {
+    heading: "Conversational interface",
+    text: "Employees chat with the virtual HR assistant."
+  },
+  {
+    heading: "Automated replies",
+    text: "They get quick automated replies to their queries.",
+  },
+  {
+    heading: "Real-time ticketing",
+    text: "There’s an option to raise tickets when needed.",
+  },
+  {
+    heading: "Employee self-service",
+    text: "Employees also submit their leave request via chat.",
+  },
+];
 
 function QuoteAnimator (props) {
   return (
@@ -125,7 +112,7 @@ function HomePage(props) {
       <section className="section section1">
         <QuoteAnimator>
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Empower your organization"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with an excellent HR efficiency"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="with an excellent HR efficiency"/>
         </QuoteAnimator>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -134,7 +121,7 @@ function HomePage(props) {
       <section className="section section2">
         <QuoteAnimator>
           <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Make employee service as smooth as"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="your customer service"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="your customer service"/>
         </QuoteAnimator>
         <div className="products">
           <ProductHr heading="HR helpdesk" description="Take a step ahead to make your workplace happier. Let the virtual HR assistant be available for your employees round the clock."/>
@@ -145,17 +132,19 @@ function HomePage(props) {
           <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
         </div>
       </section>
-      <section className="section section4">
-        <QuoteAnimator>
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="It’s simpler than you think"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="A complete helpdesk that your employee needs"/>
-        </QuoteAnimator>
-        <MobileDemo />
+      <section className="section section4 noMargin">
+        <div className="mobile">
+          <QuoteAnimator>
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="It’s simpler than you think"/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="A complete helpdesk that your employee needs"/>
+          </QuoteAnimator>
+        </div>
+        <MobileDemo phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
       </section>
       <section className="section section5">
         <QuoteAnimator>
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
         </QuoteAnimator>
         <Platforms />
         <div className="knowMore center">
@@ -165,14 +154,14 @@ function HomePage(props) {
       <section className="section section6">
         <QuoteAnimator className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
         </QuoteAnimator>
         <Customers />
       </section>
       <section className="section section7">
         <QuoteAnimator className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="for what we do"/>
         </QuoteAnimator>
         <Reviews />
       </section>

@@ -9,6 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import CenterMode from './CenterMode';
+import LeftMode from './LeftMode';
 import SingleMode from './SingleMode';
 import MobileCarousal from './MobileCarousal';
 
@@ -50,7 +51,7 @@ const NextArrowStyles = styled.div`
   position: absolute;
   right: -40px;
   img {
-    transform: scale(-1);
+    transform: scale(-1) translate(-2px, 0px);
   }
 `;
 
@@ -80,9 +81,12 @@ function SamplePrevArrow(props) {
 
 function Carousal(props) {
   return (
-    <CarousalStyles>
+    <CarousalStyles className="carousalMainContainer">
       {props.variant === "centerMode" &&
         <CenterMode {...props}/>
+      }
+      {props.variant === "leftMode" &&
+        <LeftMode {...props}/>
       }
       {props.variant === "mobileCarousal" &&
         <MobileCarousal {...props}/>

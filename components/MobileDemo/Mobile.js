@@ -151,7 +151,7 @@ function MobileDemo(props) {
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
                 <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
-                <LottieAnimation dataUrl="/images/home/phone.json" />
+                <LottieAnimation dataUrl={props.phoneJson} />
               </div>
             )}
           </Spring>
