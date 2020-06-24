@@ -125,6 +125,7 @@ export const CaseManagmentStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
+      padding: 0 30px;
     }
     .section {
       padding: 0 30px;
@@ -134,6 +135,9 @@ export const CaseManagmentStyles = styled.div`
       &.noMargin {
         margin-top: 120px;
         height: auto;
+        padding: 0;
+      }
+      &.section7{
         padding: 0;
       }
       &.noPadding {

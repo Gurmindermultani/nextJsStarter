@@ -132,6 +132,7 @@ export const EngagementStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
+      padding: 0 30px;
     }
     .section {
       padding: 0 30px;
@@ -146,6 +147,9 @@ export const EngagementStyles = styled.div`
           padding: 0 30px;
           margin: 10px 0 64px 0;
         }
+      }
+      &.section7{
+        padding: 0;
       }
       &.section6 {
         padding: 0;

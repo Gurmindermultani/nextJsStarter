@@ -134,7 +134,7 @@ function Engagement(props) {
         </FadeIn>
         <Customers />
       </section>
-      <section className="section section7 noMargin">
+      <section className="section section7">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
