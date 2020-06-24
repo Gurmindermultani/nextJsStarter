@@ -94,15 +94,18 @@ function Form(props) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(body)
-      }).then((res) => {
-        if (res.status === 200) {
+      })
+      .then((result) => result.json())
+      .then((res) => {
+        if (res.message) {
           setShowDialog('success');
         } else {
-          alert('Some Error Occurred!');
+          const message = res.errors && res.errors[0] ? res.errors[0].message : '';
+          alert(message || 'Some Error Occurred!');
         }
       }).catch((e) => {
-        console.log('error');
-        alert('Some Error Occurred!');
+        console.log(e);
+        // alert('Some Error Occurred!');
       });
     }
   });
