@@ -12,6 +12,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
         <meta property="og:image" content="https://home.leena.ai/images/airasia/book.png" />
+        <meta property="og:title" content="AirAsia transforms employee experience with Leena AI" />
+        <meta property="og:description" content="Download the case study and discover the transformative journey of AirAsia." />
+        <meta property="og:url" content="https://home.leena.ai/lead" />
       </Head>
       <main>
         <Lead />

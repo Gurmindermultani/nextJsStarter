@@ -192,7 +192,7 @@ function Form(props) {
           options={options}
           value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
         />
-        <Button size="large" fullWidth type="submit" name="Download case study" variant="contained" />
+        <Button className="dowloadCaseStudy" size="large" fullWidth type="submit" name="Download case study" variant="contained" />
       </form>
       <Dialog
         setShowDialog={setShowDialog}

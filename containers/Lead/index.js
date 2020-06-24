@@ -81,7 +81,8 @@ function CaseManagment(props) {
           <Typography color="#fff" className="textCenter" variant="h3" fontSizes={[20, 22, 24]} text="Do you want to witness this transformation journey of AirAsia?"/>
           <Button 
             onClick={() => Utils.scrollToTop(100)} 
-            size="large" 
+            size="large"
+            className="takeMeToTop"
             variant="inverted" 
             name="Yes, I want the case study" />
         </FadeIn>
