@@ -74,14 +74,14 @@ function FeaturesFirst(props) {
   return (
     <FeaturesFirstStyles>
       <div className="leftContainer">
-        <Slide from='left' className="first">
+        <div from='left' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Conversational interface"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Give your employees an interactive user interface where they chat directly with the virtual HR assistant."}/>
-        </Slide>
-        <Slide from='left' className="second">
+        </div>
+        <div from='left' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Nudge notifications"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Inform all employees about important announcements and events at once by sending bulk notifications."}/>
-        </Slide>
+        </div>
       </div>
       <div className="rightContainer">
         <div className="image center">

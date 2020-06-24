@@ -167,66 +167,53 @@ function ProductHr(props) {
   return (
     <ProductStyles>
       <div className="body">
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(-200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="leftContainer">
-                  <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Actionable insights`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get to know real-time actionable insights right on your dashboard. Know the factors that require improvement and challenges faced by employees."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Timely reminders`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Set automated reminders for your employees to participate in the engagement surveys. Ensure that all your employees give the feedback."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Easy integration`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Integrate your engagement platform easily with your existing HRIS or workflow channels. Take the survey where your employees are."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <div className="buttons">
-                    <ScheduleDemoButton type="link" />
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="leftContainer">
+          <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Actionable insights`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get to know real-time actionable insights right on your dashboard. Know the factors that require improvement and challenges faced by employees."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Timely reminders`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Set automated reminders for your employees to participate in the engagement surveys. Ensure that all your employees give the feedback."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Easy integration`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Integrate your engagement platform easily with your existing HRIS or workflow channels. Take the survey where your employees are."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <div className="buttons">
+            <ScheduleDemoButton type="link" />
+          </div>
+        </div>
         <div className="rightContainer">
           {expanded === "panel4" &&
             <div className="image center">

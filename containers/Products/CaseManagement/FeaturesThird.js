@@ -74,14 +74,14 @@ function FeaturesFirst(props) {
   return (
     <FeaturesFirstStyles>
       <div className="leftContainer">
-        <Slide from='left' className="first">
+        <div from='left' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Smart ticketing"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Get rid of answering repetitive questions. Add frequently asked questions directly to your knowledge base with a single click and auto-answer repetitive queries."}/>
-        </Slide>
-        <Slide from='left' className="second">
+        </div>
+        <div from='left' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Automated updates"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Keep your employees updated with the automated ticket status and eliminate the need of employee follow-ups."}/>
-        </Slide>
+        </div>
       </div>
       <div className="rightContainer">
         <div className="image center">

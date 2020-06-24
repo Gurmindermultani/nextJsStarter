@@ -92,23 +92,23 @@ function FeaturesFirst(props) {
           <Slide from='right' className="a2">
             <img src="/images/wfhSurveys/featuresSecond/a2.svg"/>
           </Slide>
-          <Slide from='up' className="a3">
+          <Slide from='right' className="a3">
             <img src="/images/wfhSurveys/featuresSecond/a3.svg"/>
           </Slide>
-          <Slide from='up' className="a4">
+          <Slide from='right' className="a4">
             <img src="/images/wfhSurveys/featuresSecond/a4.svg"/>
           </Slide>
         </div>
       </div>
       <div className="rightContainer">
-        <Slide from='right' className="first">
+        <div from='right' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Easy integration"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Easily integrate WFH surveys with the workflow channels and HRIS you already use. Take the WFH feedback surveys where your employees are."}/>
-        </Slide>
-        <Slide from='right' className="second">
+        </div>
+        <div from='right' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Textual answers"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Allow your employees to give elaborate feedback through textual answers. Reply to these feedbacks separately while the rest get analyzed automatically."}/>
-        </Slide>
+        </div>
       </div>
     </FeaturesFirstStyles>
   );

@@ -98,14 +98,14 @@ function FeaturesFirst(props) {
         </div>
       </div>
       <div className="rightContainer">
-        <Slide from='right' className="first">
+        <div from='right' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Multiple platforms and channels"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Easily integrate your HRIS system and collaboration platforms you are using to the conversational ticketing platform."}/>
-        </Slide>
-        <Slide from='right' className="second">
+        </div>
+        <div from='right' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Intelligent case assignment"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Make the process super efficient by assigning the ticket automatically to the person responsible for resolving it."}/>
-        </Slide>
+        </div>
       </div>
     </FeaturesFirstStyles>
   );

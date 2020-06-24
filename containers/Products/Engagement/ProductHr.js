@@ -158,63 +158,50 @@ function ProductHr(props) {
   return (
     <ProductStyles>
       <div className="body">
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(-200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="leftContainer">
-                  <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                    <ExpansionPanelSummary>
-                      <div className="accordianHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Conversational surveys`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make your surveys conversational and employee-friendly. Get rid of long boring forms and poor user interface."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Analytical reports`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Access survey feedback instantly on your dashboard. Get high-quality actionable insights about happiness score of your organization, and know about your unhappy employees."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Periodic surveys`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct surveys periodically throughout the employees’ lifecycle. Save your HR from biased and inaccurate feedback."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="leftContainer">
+          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <ExpansionPanelSummary>
+              <div className="accordianHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Conversational surveys`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make your surveys conversational and employee-friendly. Get rid of long boring forms and poor user interface."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Analytical reports`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Access survey feedback instantly on your dashboard. Get high-quality actionable insights about happiness score of your organization, and know about your unhappy employees."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Periodic surveys`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct surveys periodically throughout the employees’ lifecycle. Save your HR from biased and inaccurate feedback."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </div>
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image">

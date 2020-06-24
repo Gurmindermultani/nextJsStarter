@@ -56,7 +56,6 @@ const ReviewsStyles = styled.div`
       margin: 20px auto;
       box-shadow: 0px 3px 6px #00000029;
       transition: transform 420ms cubic-bezier(.165,.84,.44,1);
-      cursor: pointer;
       max-width: 960px;
       &:hover {
         transform: scale(1.05);

@@ -100,14 +100,14 @@ function FeaturesFirst(props) {
         </div>
       </div>
       <div className="rightContainer">
-        <Slide from='right' className="first">
+        <div from='right' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Generate payslip"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Make it easy for your employees to extract all their payslips whenever they need. Just a simple message is all it takes."}/>
-        </Slide>
-        <Slide from='right' className="second">
+        </div>
+        <div from='right' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Know tax and deductions"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Don’t burden your HR folks with repetitive tax queries. Let the virtual HR assistant give instant replies to tax-related queries of your employees."}/>
-        </Slide>
+        </div>
       </div>
     </FeaturesFirstStyles>
   );

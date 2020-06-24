@@ -70,14 +70,14 @@ function FeaturesFirst(props) {
   return (
     <FeaturesFirstStyles>
       <div className="leftContainer">
-        <Slide from='left' className="first">
+        <div from='left' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Analytical dashboard"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Get detailed real-time actionable insights right on your analytical dashboard. Analyze employees’ response without any bias with the help of AI."}/>
-        </Slide>
-        <Slide from='left' className="second">
+        </div>
+        <div from='left' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Multiple parameters"}/>
           <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Measure your remote employee engagement on multiple parameters. Get separate scores against each parameter and see where you need to improve."}/>
-        </Slide>
+        </div>
       </div>
       <div className="rightContainer">
         <div className="image center">

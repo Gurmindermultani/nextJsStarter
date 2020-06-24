@@ -49,6 +49,17 @@ const LinkCardStyles = styled.a`
       color: ${props => props.theme.palette.primary.main};
     }
   }
+  @media only screen and (max-width: 760px) {
+    &:hover {
+    transform: none;
+    span {
+      color: #212121;
+    }
+    .readMore {
+      color: ${props => props.theme.palette.primary.main};
+    }
+  }
+  }
 `;
 
 function LinkCard(props) {
