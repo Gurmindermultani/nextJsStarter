@@ -30,7 +30,7 @@ function Integrations(props) {
         <div className="bg" />
         <div className="topContainer">
           <FadeIn className="text">
-            <Typography className="topText" variant="h1" fontSizes={[20, 44, 40]} text="Bring it where you are"/>
+            <Typography className="topText" variant="h1" fontSizes={[28, 44, 40]} text="Bring it where you are"/>
             <br />
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Leena AI integrates with all the platforms"/>
             <br />

@@ -20,7 +20,7 @@ export const LeadStyles = styled.div`
       }
     }
     .knowMore {
-      margin-top: 100px;
+      margin-top: 80px;
       button {
         width: 172px;
       }

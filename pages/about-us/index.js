@@ -38,6 +38,7 @@ export default function Main() {
         footer {
           width: 100%;
           border-top: 1px solid #eaeaea;
+          background: #f6fdff;
         }
       `}</style>
     </div>

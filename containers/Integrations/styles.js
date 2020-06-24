@@ -69,9 +69,7 @@ export const IntegrationsStyles = styled.div`
   .icons {
     display: flex;
     flex-wrap: wrap;
-    &.tickets {
-      justify-content: center;
-    }
+    justify-content: center;
     .icon {
       width: 168px;
       height: 102px;
@@ -117,6 +115,9 @@ export const IntegrationsStyles = styled.div`
       padding: 0 30px;
       &.section0 {
         padding: 120px 30px 0 30px !important;
+        .bg {
+          display: none;
+        }
       }
       &.noMargin {
         margin-top: 120px;
@@ -135,6 +136,8 @@ export const IntegrationsStyles = styled.div`
     }
     .topContainer {
       display: flex;
+      flex-wrap: wrap-reverse;
+      width: 100%;
       .text {
         flex-basis: 100%;
         text-align: center;
@@ -144,7 +147,10 @@ export const IntegrationsStyles = styled.div`
         margin-bottom: 10px;
       }
       .bowlImage {
-        display: none;
+        margin-bottom: 32px;
+        img {
+          width: 100%;
+        }
       }
       .demoInput {
         width: 100%;

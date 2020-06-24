@@ -155,7 +155,9 @@ function Footer(props) {
           <div className="email">
             <Typography className="halfBackground" variant="paragraph2" fontSize="16px" color="#212121" text="Email: "/>
             {" "}
-            <Typography variant="paragraph2" fontSize="16px" color="#0F72EE" text="sales@leena.ai"/>
+            <a href="mailto:sales@leena.ai">
+              <Typography variant="paragraph2" fontSize="16px" color="#0F72EE" text="sales@leena.ai"/>
+            </a>
           </div>
         </div>
         <div className="navigation">
