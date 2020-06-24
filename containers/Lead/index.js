@@ -46,7 +46,7 @@ function CaseManagment(props) {
         </FadeIn>
         <div className="formContainer">
           <Slide from='left' className="leftContainer center">
-            <img src='/images/airasia/book.png'/>
+            <img alt="AirAsia employee experience case study" src='/images/airasia/book.png'/>
           </Slide>
           <Slide from='right' className="rightContainer center">
             <Form />
