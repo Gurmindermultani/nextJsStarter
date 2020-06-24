@@ -43,12 +43,13 @@ const recognitions = [
 ];
 
 const RecognitionsStyles = styled.div`
+  margin-bottom: 48px;
   .contain{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
     .singleCard {
-      margin-right: 24px;
+      margin-right: 12px;
     } 
   }
   @media only screen and (max-width: 760px) {

@@ -66,12 +66,22 @@ export const IntegrationsStyles = styled.div`
       }
     }
   }
-  .icon {
-    width: 208px;
-    height: 102px;
-    img {
-      width: 100%;
-      height: 100%;
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    &.tickets {
+      justify-content: center;
+    }
+    .icon {
+      width: 168px;
+      height: 102px;
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.16);
+      border-radius: 4px;
+      margin: 0 16px 16px 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   .quoteContainer {
@@ -79,7 +89,7 @@ export const IntegrationsStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 140px 0 100px 0;
+    margin: 140px 0 80px 0;
     text-align: center;
     .highlight {
       margin-bottom: 16px;

@@ -18,7 +18,10 @@ import LottieAnimation from "../../components/LottieAnimation";
 
 import { IntegrationsStyles } from './styles';
 
-const social = ['workplace'];
+const social = ['workplace', 'slack', 'teams', 'whatsapp', 'android', 'ios', 'twilio', 'sip', 'web.svg', 'facebook', 'windows', 'mac'];
+const enterprise = ['sap', 'oracle', 'workday', 'kronos', 'adp', 'darwin'];
+const services = ['sheets', 'oneDrive', 'box', 'calender', 'office', 'sharePoint'];
+const tickets = ['bmc', 'summit', 'servicenow'];
 
 function Integrations(props) {
   return (
@@ -52,7 +55,46 @@ function Integrations(props) {
         <div className="social icons">
           {social.map( social => 
             <div className="icon" key={social}>
-              <img alt="" src={`/images/integrations/social/${social}.png`} />
+              <img alt="" src={`/images/integrations/social/${social.indexOf('.') > -1 ? social : (social + '.png')}`} />
+            </div>
+          )}
+        </div>
+      </section>
+      <section className="section section2">
+        <FadeIn className="quoteContainer">
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Carry out automated contextual conversation"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Our conversational AI works in sync with your HRIS system. Thus, it makes it easy for your employees to access personal information like salary slips, and tax deductions via enterprise conversations."/>
+        </FadeIn>
+        <div className="social icons">
+          {enterprise.map( enterprise => 
+            <div className="icon" key={enterprise}>
+              <img alt="" src={`/images/integrations/enterprise/${enterprise.indexOf('.') > -1 ? enterprise : (enterprise + '.png')}`} />
+            </div>
+          )}
+        </div>
+      </section>
+      <section className="section section2">
+        <FadeIn className="quoteContainer">
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Bring together all the information your employees need"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Enable your employees to access and sync all the information from third-party applications directly within enterprise conversational AI."/>
+        </FadeIn>
+        <div className="social icons">
+          {services.map( services => 
+            <div className="icon" key={services}>
+              <img alt="" src={`/images/integrations/services/${services.indexOf('.') > -1 ? services : (services + '.png')}`} />
+            </div>
+          )}
+        </div>
+      </section>
+      <section className="section section2">
+        <FadeIn className="quoteContainer">
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Move your tickets wherever you want to"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="If you want to move your tickets out of Leena AI and collaborate with other departments, we handle it with complete efficiency."/>
+        </FadeIn>
+        <div className="social icons tickets">
+          {tickets.map( tickets => 
+            <div className="icon" key={tickets}>
+              <img alt="" src={`/images/integrations/tickets/${tickets.indexOf('.') > -1 ? tickets : (tickets + '.png')}`} />
             </div>
           )}
         </div>
