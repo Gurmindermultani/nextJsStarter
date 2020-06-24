@@ -125,7 +125,6 @@ export const FaqStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
-      padding: 0 30px;
     }
     .section {
       padding: 0 30px;

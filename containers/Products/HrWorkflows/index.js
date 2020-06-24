@@ -13,6 +13,7 @@ import Input from '../../../components/Input';
 import Reviews from '../../../components/Reviews';
 import ScheduleDemo from '../../../components/ScheduleDemo';
 import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
+import KnowMore from '../../../components/KnowMore';
 import Platforms from '../../../components/Platforms';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
@@ -39,7 +40,7 @@ function HrWorkflows(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -82,7 +83,7 @@ function HrWorkflows(props) {
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
-          <Button variant="contained" size="large" name="Know More" />
+          <KnowMore variant="contained" size="large" name="Know More" />
         </div>
       </section>
       <section className="section section7">

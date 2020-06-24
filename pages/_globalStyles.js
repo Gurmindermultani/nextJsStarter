@@ -238,14 +238,14 @@ const GlobalStyle = createGlobalStyle`
     .mobile {
       display: block;
     }
+    .highlight {
+      background: none;
+      padding: 0;
+    }
     .halfBackground {
       position: relative;
       ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
       background: none;
-    }
-    .highlight {
-      padding: 0;
-      background: inherit;
     }
     .invertedHighlight {
       padding: 0;

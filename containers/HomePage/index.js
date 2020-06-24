@@ -18,6 +18,7 @@ import Customers from '../../components/Customers';
 import Reviews from '../../components/Reviews';
 import MobileDemo from '../../components/MobileDemo';
 import Platforms from '../../components/Platforms';
+import KnowMore from '../../components/KnowMore';
 import ScheduleDemo from '../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
@@ -148,7 +149,7 @@ function HomePage(props) {
         </QuoteAnimator>
         <Platforms />
         <div className="knowMore center">
-          <Button variant="contained" size="large" name="Know More" />
+          <KnowMore />
         </div>
       </section>
       <section className="section section6">

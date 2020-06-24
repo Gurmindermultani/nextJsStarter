@@ -9,7 +9,7 @@ export const EngagementStyles = styled.div`
     margin: auto;
     &.section0 {
       max-width: 100vw;
-      padding: 178px 160px 0 160px !important;
+      padding: 178px 0px 24px 0px !important;
       overflow: hidden;
     }
     &.noPadding {
@@ -47,6 +47,19 @@ export const EngagementStyles = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
+    .bg {
+      width: 100vw;
+      height: 400px;
+      position: absolute;
+      top: -103px;
+      left: 0px;
+      z-index: -1;
+      background: #f6fdff;
+      border: 1px solid #f6fdff;
+      border-color: #f6fdff #f6fdff #f6fdff #f6fdff;
+      border-radius: 0px 0px 100% 100%;
+    }
     .text {
       flex-basis: 70%;
     }
@@ -130,6 +143,9 @@ export const EngagementStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    .bg {
+      display: none;
+    }
     .quoteContainer {
       margin: 100px 0 72px 0;
       padding: 0 30px;

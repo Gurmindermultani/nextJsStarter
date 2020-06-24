@@ -24,7 +24,7 @@ function ScheduleDemoButton(props) {
     return (
       <Link href="/schedule-demo">
         <div>
-          <Button name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+          <Button fullWidth={props.fullWidth} name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
         </div>
       </Link>
     );

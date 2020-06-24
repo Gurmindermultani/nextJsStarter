@@ -17,6 +17,7 @@ import Platforms from '../../../components/Platforms';
 import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
 import ScheduleDemo from '../../../components/ScheduleDemo';
+import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
 import MobileDemo from '../../../components/MobileDemo';
 import MacDemo from '../../../components/MacDemo';
 
@@ -60,6 +61,7 @@ function Engagement(props) {
     <EngagementStyles>
       <section className="section section0">
         <div className="topContainer">
+          <div className="bg" />
           <FadeIn className="text">
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Build a world-class company culture"/>
             <br />
@@ -70,7 +72,7 @@ function Engagement(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>

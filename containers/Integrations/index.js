@@ -24,6 +24,7 @@ function Integrations(props) {
   return (
     <IntegrationsStyles>
       <section className="section section0">
+        <div className="bg" />
         <div className="topContainer">
           <FadeIn className="text">
             <Typography className="topText" variant="h1" fontSizes={[20, 44, 40]} text="Bring it where you are"/>

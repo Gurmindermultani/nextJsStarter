@@ -63,6 +63,9 @@ const TopContainerStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
+    .bg {
+      display: none;
+    }
     .leftContainer {
       flex-basis: 100%;
       .animatedText {

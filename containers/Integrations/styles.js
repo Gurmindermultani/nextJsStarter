@@ -9,8 +9,21 @@ export const IntegrationsStyles = styled.div`
     margin: auto;
     &.section0 {
       max-width: 100vw;
-      padding: 105px 160px 0 160px !important;
+      padding: 105px 0px 90px 0px !important;
       overflow: hidden;
+      position: relative;
+      .bg {
+        width: 100vw;
+        height: 650px;
+        position: absolute;
+        top: -103px;
+        left: 0px;
+        z-index: -1;
+        background: #f6fdff;
+        border: 1px solid #f6fdff;
+        border-color: #f6fdff #f6fdff #f6fdff #f6fdff;
+        border-radius: 0px 0px 100% 100%;
+      }
     }
     &.noMargin {
       margin-top: 190px;
@@ -19,12 +32,14 @@ export const IntegrationsStyles = styled.div`
       .quoteContainer {
         margin: 0;
       }
-    } }
     }
   }
   .topContainer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+    margin: auto;
     .text {
       flex-basis: 70%;
     }
@@ -77,9 +92,6 @@ export const IntegrationsStyles = styled.div`
   @media only screen and (min-width: 1400px) {
     .section {
       padding: 0 40px;
-      &.section0 {
-        padding: 0px 0px 0 0px;
-      }
     }
   }
   @media only screen and (max-width: 1400px) {
