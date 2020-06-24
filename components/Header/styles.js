@@ -51,6 +51,11 @@ export const HeaderStyles = styled.div`
         .link {
           margin-top: 10px;
           cursor: pointer;
+          &.selected {
+            span {
+              color: #0F72EE;
+            }
+          }
           &:hover {
             span {
               color: #0F72EE;

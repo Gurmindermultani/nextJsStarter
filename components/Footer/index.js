@@ -47,6 +47,11 @@ const FooterStyles = styled.div`
       .links {
         .link {
           margin-top: 10px;
+          &.selected {
+            span {
+              color: #0F72EE;
+            }
+          }
           &:hover {
             span {
               color: #0F72EE;
@@ -178,7 +183,7 @@ function Footer(props) {
                       )
                     }
                     return (
-                      <div className="link" key={link.name}>
+                      <div className={"link " + (window.location.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
                         <Link href={`/${link.name}`}>
                           <a>
                             <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
