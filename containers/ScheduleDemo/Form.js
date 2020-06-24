@@ -63,7 +63,7 @@ const FormStyles = styled.div`
 `;
 
 function Form(props) {
-  const [showDialog, setShowDialog] = useState('');
+  const [showDialog, setShowDialog] = useState('success');
   const [countryCode, setCountryCode] = useState('+91');
   useEffect(() => {
     let req = new XMLHttpRequest();
@@ -71,7 +71,12 @@ function Form(props) {
     req.send(null);
     let headers = req.getAllResponseHeaders();
     let countryName = req.getResponseHeader('cc');
-    console.log(countryName);
+    if (countryName) {
+      const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
+      if (foundIndex > -1) {
+        setCountryCode(phoneCountryOptions[foundIndex].dial_code);
+      }
+    }
   },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
@@ -86,15 +91,18 @@ function Form(props) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(body)
-      }).then((res) => {
-        if (res.status === 200) {
+      })
+      .then((result) => result.json())
+      .then((res) => {
+        if (res.message) {
           setShowDialog('success');
         } else {
-          alert('Some Error Occurred!');
+          const message = res.errors && res.errors[0] ? res.errors[0].message : '';
+          alert(message || 'Some Error Occurred!');
         }
       }).catch((e) => {
-        console.log('error');
-        alert('Some Error Occurred!');
+        console.log(e);
+        // alert('Some Error Occurred!');
       });
     }
   });

@@ -9,7 +9,7 @@ export const ContactUsStyles = styled.div`
   justify-content: space-between;
   align-items: center;
   .leftContainer {
-    flex-basis: 50%;
+    flex-basis: 60%;
     .textCenter {
       text-align: left;
     }
@@ -17,7 +17,7 @@ export const ContactUsStyles = styled.div`
       margin: 10px 0;
     }
     .middleText {
-      margin: 10px 0;
+      margin: 0px 0;
     }
     .textDetail {
       margin: 30px 0;

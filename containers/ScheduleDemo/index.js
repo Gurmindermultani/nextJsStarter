@@ -24,34 +24,34 @@ function HomePage(props) {
     <ScheduleDemoStyles>
       <div className="leftContainer">
         <div className="textCenter">
-          <Typography className="demoText" variant="h1" fontSizes={[24, 34, 40]} text="Book your live demo"/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 44, 48]} text="Book your live demo"/>
         </div>
         <div className="textCenter">
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="h1" text="Discover how Leena AI can help you"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 22]} variant="h1" text="Discover how Leena AI can help you"/>
         </div>
         <div className="textCenter">
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="h1" text="transform your employee experience."/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 22]} variant="h1" text="transform your employee experience."/>
         </div>
         <div className="rightContainer mobile">
           <Form />
         </div>
-        <Typography className="textDetail" fontWeight="500" color="#212121" fontSizes={[16, 16, 16]} variant="h1" text="In the demo session, our product consultants will walk you through the conversational AI platform, analytical dashboards, and how Leena AI can help you resolve your challenges."/>
+        <Typography className="textDetail" fontWeight="500" color="#212121" fontSizes={[16, 18, 18]} variant="h1" text="In the demo session, our product consultants will walk you through the conversational AI platform, analytical dashboards, and how Leena AI can help you resolve your challenges."/>
         {/* <div className="clients">
           {clients.map( client => 
             <img key={client} className={'client ' + client} alt={'client ' + client} src={`/images/clients/${client}.png`}/>
           )} 
         </div>      */}
         <div className="lower">
-          <Typography fontSizes={[16, 16, 16]} variant="paragraph2" color="#0F72EE" text="Get insights about how Leena AI can help you with:"/>
+          <Typography fontSizes={[16, 18, 18]} variant="paragraph2" color="#0F72EE" text="Get insights about how Leena AI can help you with:"/>
           <ul>
             <li>
-              <Typography fontSizes={[14, 14, 14]} variant="paragraphS2" fontWeight="300" color="#212121" text="Automatic resolution of employee queries"/>
+              <Typography fontSizes={[16, 18, 18]} variant="paragraphS2" fontWeight="300" color="#212121" text="Automatic resolution of employee queries"/>
             </li>
             <li>
-              <Typography fontSizes={[14, 14, 14]} variant="paragraphS2" fontWeight="300" color="#212121" text="Streamlining HR workflows"/>
+              <Typography fontSizes={[16, 18, 18]} variant="paragraphS2" fontWeight="300" color="#212121" text="Streamlining HR workflows"/>
             </li>
             <li>
-              <Typography fontSizes={[14, 14, 14]} variant="paragraphS2" fontWeight="300" color="#212121" text="Enhancing employee engagement"/>
+              <Typography fontSizes={[16, 18, 18]} variant="paragraphS2" fontWeight="300" color="#212121" text="Enhancing employee engagement"/>
             </li>
           </ul>
         </div>

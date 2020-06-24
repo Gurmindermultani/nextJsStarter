@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CaseStudiesStyles = styled.div`
   .section {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ export const CaseStudiesStyles = styled.div`
     justify-content: center;
     text-align: center;
     .topText {
-      margin-bottom: 16px;
+      margin-bottom: 4px;
     }
     .secondHeading {
       

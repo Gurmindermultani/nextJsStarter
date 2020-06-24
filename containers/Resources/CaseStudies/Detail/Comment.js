@@ -13,7 +13,7 @@ import Slide from '../../../../components/VisibilitySensor/Slide';
 const CommentStyles = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 80px 0;
   .line {

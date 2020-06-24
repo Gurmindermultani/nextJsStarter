@@ -101,7 +101,7 @@ function BlogHeader(props) {
         <br />
         <Typography className="secondHeading" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading1}/>
         <br />
-        <Typography className="lastHeadeing halfBackground" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading2}/>
+        <Typography className="highlight lastHeadeing halfBackground" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading2}/>
         <div className="buttons">
           <a target="_blank" href={props.pdf} download={props.pdfName}>
             <Button size="large" variant="inverted" name="Download Case Study"/>

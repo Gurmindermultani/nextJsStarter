@@ -13,7 +13,6 @@ import FadeIn from '../../../../components/VisibilitySensor/FadeIn';
 const ParaGraphsStyles = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
   .leftContainer {
     padding: 64px 80px 64px 0;
   }

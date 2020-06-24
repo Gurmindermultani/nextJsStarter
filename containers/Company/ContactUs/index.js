@@ -22,16 +22,16 @@ function ContactUs(props) {
     <ContactUsStyles>
       <div className="leftContainer">
         <div className="textCenter">
-          <Typography className="demoText" variant="h1" fontSizes={[24, 40, 40]} text="We’d love to hear from you"/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 40, 48]} text="We’d love to hear from you"/>
         </div>
         <div className="desktop">
-          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSize="18px" variant="paragraph2" text="Whether you have a question about product, features, pricing, "/>
+          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Whether you have a question about product, features, pricing, "/>
           <br />
-          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSize="18px" variant="paragraph2" text="live demo, or anything else, we are here to help."/>
+          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="live demo, or anything else, we are here to help."/>
           <br />
         </div>
         <div className="mobile textCenter">
-          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSize="18px" variant="paragraph2" text="Whether you have a question about product, features, pricing, live demo, or anything else, we are here to help."/>
+          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Whether you have a question about product, features, pricing, live demo, or anything else, we are here to help."/>
         </div>
         <div className="rightContainer mobile">
           <Form />
@@ -57,10 +57,10 @@ function ContactUs(props) {
           </div>
         </div>  
         <div className="demo">
-          <Typography fontWeight="600" color="#212121" fontSize="18px" variant="paragraph2" text="Want to know more about our services?"/>
+          <Typography fontWeight="600" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Want to know more about our services?"/>
           <Link href="/schedule-demo">
             <span>
-              <Typography className="anchor" fontWeight="600" color="#0F72EE" fontSize="18px" variant="paragraph2" text="Schedule demo"/>
+              <Typography className="anchor" fontWeight="600" color="#0F72EE" fontSizes={[16, 18, 20]} variant="paragraph2" text="Schedule demo"/>
             </span>
           </Link>
         </div>     

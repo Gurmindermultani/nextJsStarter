@@ -84,13 +84,13 @@ function Dialog(props) {
         <Slide delay={200} className="body">
           <Typography className="demoText" variant="h1" fontSizes={[14, 20, 28]} text="We have received your request."/>
           <br />
-          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSizes={[14, 20, 28]} variant="paragraph2" text=" Our product experts will get back to you within 24 hours."/>
+          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSizes={[14, 16, 18]} variant="paragraph2" text=" Our product experts will get back to you within 24 hours."/>
         </Slide>
         <div className="footer">
           <Slide delay={200} className="body">
-            <Typography className="" fontWeight="400" color="#212121" fontSizes={[14, 20, 28]} variant="paragraph2" text="Explore more about how we have helped enterprises enhance their employee experience."/>
+            <Typography className="" fontWeight="400" color="#212121" fontSizes={[14, 16, 18]} variant="paragraph2" text="Explore more about how we have helped enterprises enhance their employee experience."/>
           </Slide>
-          <Link href="/resources/caseStudies">
+          <Link href="/case-studies">
             <a>
               <Button size="large" className="caseStudy" variant="contained" name="Read Case Studies" />
             </a>
