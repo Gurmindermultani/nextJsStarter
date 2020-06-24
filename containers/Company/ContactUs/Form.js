@@ -14,7 +14,7 @@ import Input from '../../../components/Input';
 import Select from '../../../components/Select';
 import { useForm, useField } from '../../../components/Input/formHooks';
 import Utils from '../../../utils';
-import Codes from '../../../static/contries';
+import Codes from '../../../data/contries';
 
 import Dialog from './Dialog';
 
