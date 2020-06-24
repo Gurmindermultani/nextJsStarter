@@ -36,7 +36,7 @@ const BlogHeaderStyles = styled.div`
       margin: 142px 0 0 0;
     }
     .buttons {
-      margin-top: 48px;
+      margin-top: 60px;
     }
     button {
       width: 240px;
@@ -112,19 +112,14 @@ function BlogHeader(props) {
         </div>
         <div className="details">
           <div className="row">
-            <Typography className="rowName" fontWeight="300" variant="paragraph2" fontSize="14px" text={'Type'}/>
+            <Typography className="rowName" fontWeight="300" variant="paragraph2" fontSize="14px" text={'Industry'}/>
             <br />
-            <Typography className="rowValue" color="#0F72EE" variant="h1" fontSizes={[16, 16, 16]} text={props.type}/>
+            <Typography className="rowValue" color="#0F72EE" variant="h1" fontSizes={[16, 16, 16]} text={props.industry}/>
           </div>
           <div className="row">
             <Typography className="rowName" fontWeight="300" variant="paragraph2" fontSize="14px" text={'Employees'}/>
             <br />
             <Typography className="rowValue" color="#0F72EE" variant="h1" fontSizes={[16, 16, 16]} text={props.employees}/>
-          </div>
-          <div className="row">
-            <Typography className="rowName" fontWeight="300" variant="paragraph2" fontSize="14px" text={'Industry'}/>
-            <br />
-            <Typography className="rowValue" color="#0F72EE" variant="h1" fontSizes={[16, 16, 16]} text={props.industry}/>
           </div>
         </div>
       </Slide>

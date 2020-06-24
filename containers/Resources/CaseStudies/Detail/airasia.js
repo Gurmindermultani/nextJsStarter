@@ -8,9 +8,8 @@ const airasia = [
       subHeading1: 'employee query resolution',
       subHeading2: 'with Leena AI',
       featureImage: '/images/caseStudies/airAsiaPlane.png',
-      type: 'Travelling',
       employees: '20000+',
-      industry: 'MNC',
+      industry: 'Aviation',
     }
   },
   {
