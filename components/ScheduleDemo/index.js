@@ -49,6 +49,20 @@ const ScheduleDemoStyles = styled.div`
       color: white;
     }
   }
+  .demoButton {
+    position: relative;
+    img {
+      position: absolute;
+      right: -113px;
+      top: -28px;
+    }
+    .interested {
+      position: absolute;
+      right: -192px;
+      top: -30px;
+      transform: rotate(20deg);
+    }
+  }
   @media only screen and (max-width: 760px) {
     .form-group, .left, .right {
       display: none;
@@ -61,6 +75,11 @@ const ScheduleDemoStyles = styled.div`
     .bottomRight {
       img {
         width: 50px;
+      }
+    }
+    .demoButton {
+      img, .interested {
+        display: none;
       }
     }
   }
@@ -81,8 +100,10 @@ function ScheduleDemo(props) {
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href="/schedule-demo">
-              <div>
+              <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
+                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
             </Link>
           </Slide>
@@ -107,8 +128,10 @@ function ScheduleDemo(props) {
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href="/schedule-demo">
-              <div>
+              <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
+                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
             </Link>
           </Slide>
@@ -133,8 +156,10 @@ function ScheduleDemo(props) {
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href="/schedule-demo">
-              <div>
+              <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
+                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
             </Link>
           </Slide>
@@ -159,8 +184,10 @@ function ScheduleDemo(props) {
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href="/schedule-demo">
-              <div>
+              <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
+                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
             </Link>
           </Slide>
@@ -184,8 +211,10 @@ function ScheduleDemo(props) {
         <Slide className="demoInput center">
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href="/schedule-demo">
-            <div>
+            <div className="demoButton">
               <Button name="Schedule Demo" variant="inverted" size="large"/>
+              <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+              <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
             </div>
           </Link>
         </Slide>
