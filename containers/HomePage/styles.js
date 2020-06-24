@@ -8,7 +8,8 @@ export const HomePageStyles = styled.div`
     max-width: 1200px;
     margin: auto;
     &.section0 {
-      padding: 180px 20px 80px 20px;
+      max-width: none;
+      padding: 180px 0px 80px 0px;
     }
     &.noMargin {
       margin-top: 190px;
@@ -63,9 +64,6 @@ export const HomePageStyles = styled.div`
   @media only screen and (min-width: 1400px) {
     .section {
       padding: 0 40px;
-      &.section0 {
-        padding: 180px 0px 0 0px;
-      }
     }
   }
   @media only screen and (max-width: 1400px) {

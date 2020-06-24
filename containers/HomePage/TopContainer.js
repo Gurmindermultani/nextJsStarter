@@ -21,16 +21,6 @@ const TopContainerStyles = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  .bg {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: aqua;
-    height: 100vh;
-    width: 500px;
-    z-index: -1;
-    clip-path: url(#wave);
-  }
   .leftContainer {
     flex-basis: 100%;
     .animatedText {
@@ -58,6 +48,18 @@ const TopContainerStyles = styled.div`
   }
   .rightContainer {
     flex-basis: 45%;
+  }
+  .bg {
+    width: 100vw;
+    height: 400px;
+    position: absolute;
+    top: -103px;
+    left: 0px;
+    z-index: -1;
+    background: #f6fdff;
+    border: 1px solid #f6fdff;
+    border-color: #f6fdff #f6fdff #f6fdff #f6fdff;
+    border-radius: 0px 0px 100% 100%;
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
@@ -104,6 +106,8 @@ function TopContainer(props) {
           </clipPath>
         </svg>
        </div> */}
+      <div className="bg">
+      </div>
       <div className="leftContainer">
         <FadeIn className="animatedText">
           <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
