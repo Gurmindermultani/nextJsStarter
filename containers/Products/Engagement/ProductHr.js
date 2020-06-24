@@ -131,7 +131,7 @@ const ProductStyles = styled.div`
         width: 110%;
       }
       &.c3 {
-        bottom: 20px;
+        bottom: 0px;
         right: -50px;
         width: 100%;
       }

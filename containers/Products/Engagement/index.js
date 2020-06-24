@@ -63,9 +63,9 @@ function Engagement(props) {
           <FadeIn className="text">
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Build a world-class company culture"/>
             <br />
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Get real-time actionable insights with AI-driven"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Get real-time actionable insights with AI-driven"/>
             <br />
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="employee engagement surveys."/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="employee engagement surveys."/>
             <br />
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
@@ -84,7 +84,7 @@ function Engagement(props) {
       <section className="section section1">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Boost organizational happiness"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with outstanding employee experience"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with outstanding employee experience"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -92,8 +92,8 @@ function Engagement(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="to excellent employee engagement"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
         </FadeIn>
         <div className="products">
           <ProductHr />
@@ -106,7 +106,7 @@ function Engagement(props) {
         <div className="mobile">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} text="Employee engagement"/>
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="can’t be any simpler"/>
+            <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="can’t be any simpler"/>
           </FadeIn>
         </div>
         <MobileDemo phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
@@ -115,7 +115,7 @@ function Engagement(props) {
         <div className="mobile">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} text="Enhance employee performance"/>
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with real-time engagement metrics"/>
+            <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with real-time engagement metrics"/>
           </FadeIn>
         </div>
         <MacDemo phoneJson="/images/engage/feature/mac.json" slides={macSlides} quote={{ heading1: "Enhance", heading2: "employee", heading3: " performance", text: "with real-time engagement metrics" }} />
@@ -123,21 +123,21 @@ function Engagement(props) {
       <section className="section section5 shortSection">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="We integrate with all the platforms you love"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
         </FadeIn>
         <Platforms />
       </section>
       <section className="section section6">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="300000+ employees across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>
       <section className="section section7">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="for what we do"/>
         </FadeIn>
         <Reviews />
       </section>

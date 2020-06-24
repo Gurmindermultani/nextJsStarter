@@ -235,7 +235,7 @@ function ProductHr(props) {
               <Slide from='right' className="e2">
                 <img src="/images/engage/e2.svg"/>
               </Slide>
-              <Slide from='up' className="e3">
+              <Slide from='right' className="e3">
                 <img src="/images/engage/e3.svg"/>
               </Slide>
               <Slide from='up' className="e4">

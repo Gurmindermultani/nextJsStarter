@@ -33,9 +33,9 @@ function Faq(props) {
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Answer your employee queries instantly"/>
             <br />
             <Typography variant="h1" fontSizes={[20, 34, 40]} text="with enterprise conversational experience"/>
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Automatically reply policy-related HR queries"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Automatically reply policy-related HR queries"/>
             <br />
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="instantly via AI-driven conversations."/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="instantly via AI-driven conversations."/>
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
@@ -53,7 +53,7 @@ function Faq(props) {
       <section className="section section1">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Capabilities that help you build"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="an employee-friendly workplace"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="an employee-friendly workplace"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -61,8 +61,8 @@ function Faq(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="in the easiest possible way"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
@@ -78,7 +78,7 @@ function Faq(props) {
       <section className="section section5">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="We integrate with all the platforms you love"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
@@ -87,8 +87,8 @@ function Faq(props) {
       </section>
       <section className="section section7">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="for what we do"/>
         </FadeIn>
         <Reviews />
       </section>

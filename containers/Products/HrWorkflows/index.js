@@ -33,9 +33,9 @@ function HrWorkflows(props) {
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Streamline employee workflows with"/>
             <br />
             <Typography variant="h1" fontSizes={[20, 34, 40]} text="AI-enabled enterprise conversations"/>
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Let your employees request leaves, reimbursements, tax deductions"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Let your employees request leaves, reimbursements, tax deductions"/>
             <br />
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="and other HR transactions via single conversational platform."/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="and other HR transactions via single conversational platform."/>
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
@@ -52,8 +52,8 @@ function HrWorkflows(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Boost employee productivity"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="with simplified people management"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Boost employee productivity"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people management"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -62,7 +62,7 @@ function HrWorkflows(props) {
       <section className="section section2">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="in the easiest possible way"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
@@ -78,7 +78,7 @@ function HrWorkflows(props) {
       <section className="section section5">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="We integrate with all the platforms you love"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
@@ -87,8 +87,8 @@ function HrWorkflows(props) {
       </section>
       <section className="section section7">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="for what we do"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Our customers love us"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="for what we do"/>
         </FadeIn>
         <Reviews />
       </section>
