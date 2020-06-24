@@ -8,21 +8,16 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
 
-import Button from '../../components/Button';
 import Typography from '../../components/Typography';
-import Input from '../../components/Input';
-import { useForm, useField } from '../../components/Input/formHooks';
-import Utils from '../../utils';
+import Slide from '../../components/VisibilitySensor/Slide';
 
 import { ScheduleDemoStyles } from './styles';
 import Form from './Form';
 
-const clients = ['lafarge', 'oneplus', 'cocacola', 'airasia', 'tata', 'sony', 'vodafone'];
-
 function HomePage(props) {
   return (
     <ScheduleDemoStyles>
-      <div className="leftContainer">
+      <Slide from='left' className="leftContainer">
         <div className="textCenter">
           <Typography className="demoText" variant="h1" fontSizes={[24, 44, 48]} text="Book your live demo"/>
         </div>
@@ -55,10 +50,10 @@ function HomePage(props) {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="rightContainer desktop">
+      </Slide>
+      <Slide from='right' className="rightContainer desktop">
         <Form />
-      </div>
+      </Slide>
     </ScheduleDemoStyles>
   );
 }

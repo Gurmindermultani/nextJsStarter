@@ -8,11 +8,8 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
 
-import Button from '../../../components/Button';
 import Typography from '../../../components/Typography';
-import Input from '../../../components/Input';
-import { useForm, useField } from '../../../components/Input/formHooks';
-import Utils from '../../../utils';
+import Slide from '../../../components/VisibilitySensor/Slide';
 
 import { ContactUsStyles } from './styles';
 import Form from './Form';
@@ -20,7 +17,7 @@ import Form from './Form';
 function ContactUs(props) {
   return (
     <ContactUsStyles>
-      <div className="leftContainer">
+      <Slide from='left' className="leftContainer">
         <div className="textCenter">
           <Typography className="demoText" variant="h1" fontSizes={[24, 40, 48]} text="We’d love to hear from you"/>
         </div>
@@ -64,10 +61,10 @@ function ContactUs(props) {
             </span>
           </Link>
         </div>     
-      </div>
-      <div className="rightContainer desktop">
+      </Slide>
+      <Slide from='right' className="rightContainer desktop">
         <Form />
-      </div>
+      </Slide>
     </ContactUsStyles>
   );
 }
