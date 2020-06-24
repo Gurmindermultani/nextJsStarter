@@ -59,6 +59,7 @@ const CustomersStyles = styled.div`
         display: none;
         justify-content: space-between;
         text-align: center;
+        border-top: 1px solid #EEEEEE;
       }
       img {
         height: 42px;
@@ -91,6 +92,7 @@ const CustomersStyles = styled.div`
       width: 300px;
       .details {
         display: flex;
+        border-top: 1px solid #EEEEEE;
         .heading {
           margin-top: 20px;
           margin-bottom: 10px;
