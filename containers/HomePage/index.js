@@ -30,7 +30,7 @@ import TopContainer from './TopContainer';
 const mobileSlides = [
   {
     heading: "Conversational interface",
-    text: "Employees chat with the virtual HR assistant."
+    text: "Employees can chat with the virtual HR assistant."
   },
   {
     heading: "Automated replies",

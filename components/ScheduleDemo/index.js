@@ -53,14 +53,17 @@ const ScheduleDemoStyles = styled.div`
     position: relative;
     img {
       position: absolute;
+      display: none;
       right: -113px;
       top: -28px;
+      transform: scale(0.8);
     }
     .interested {
       position: absolute;
+      display: none;
       right: -192px;
       top: -30px;
-      transform: rotate(20deg);
+      transform: rotate(20deg) scale(0.8);
     }
   }
   @media only screen and (max-width: 760px) {

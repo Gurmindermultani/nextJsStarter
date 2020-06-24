@@ -29,7 +29,7 @@ export const CaseStudiesStyles = styled.div`
       }
       button {
         margin: 5px 0 0 80px;
-        width: 200px;
+        width: 210px;
       }
     }
   }

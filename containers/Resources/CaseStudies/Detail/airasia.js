@@ -10,6 +10,8 @@ const airasia = [
       featureImage: '/images/caseStudies/airAsiaPlane.png',
       employees: '20000+',
       industry: 'Aviation',
+      pdfName: "Airasia-Case-Study.pdf",
+      pdf: 'https://leena-ai-public.s3.ap-south-1.amazonaws.com/leena.ai/cast-studies/airasia-leena-ai-case-study.pdf'
     }
   },
   {

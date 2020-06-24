@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Detail type="airasia" />
+        <Detail pdfName="Airasia-Case-Study.pdf" pdf='https://leena-ai-public.s3.ap-south-1.amazonaws.com/leena.ai/cast-studies/airasia-leena-ai-case-study.pdf' type="airasia" />
       </main>
 
       <footer>

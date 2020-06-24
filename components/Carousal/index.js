@@ -37,6 +37,9 @@ const PrevArrowStyles = styled.div`
   cursor: pointer;
   position: absolute;
   left: -40px;
+  img {
+    transform: scale(1) translate(-1px, 0px);
+  }
 `;
 
 const NextArrowStyles = styled.div`
@@ -51,7 +54,7 @@ const NextArrowStyles = styled.div`
   position: absolute;
   right: -40px;
   img {
-    transform: scale(-1) translate(-2px, 0px);
+    transform: scale(-1) translate(-1px, 0px);
   }
 `;
 

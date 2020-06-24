@@ -22,7 +22,7 @@ const DeskTopStyles = styled.div`
     .quote {
       width: 210px;
       position: absolute;
-      top: 115px;
+      top: 125px;
       right: 160px;
       .heading2 {
         margin: 4px 0 16px 0;
@@ -37,19 +37,19 @@ const DeskTopStyles = styled.div`
       overflow: hidden;
       position: absolute;
       top: 60px;
-      right: -112px;
+      right: -140px;
       .mobileRim {
-        width: 220px;
-        height: 440px;
+        width: 280px;
+        height: 560px;
         z-index: 2;
         position: relative;
       }
       .animation {
         position: absolute;
-        top: 12px;
-        left: 14px;
+        top: 14px;
+        left: 18px;
         z-index: 1;
-        width: 193px;
+        width: 88%;
         img {
           width: 100%;
         }
@@ -59,7 +59,7 @@ const DeskTopStyles = styled.div`
   .rightContainer {
     flex-basis: 60%;
     background: ${props => props.theme.palette.primary.dark};
-    padding: 167px 0 42px 180px;
+    padding: 200px 0 100px 180px;
     overflow: hidden;
     .carousalMainContainer {
       width: 1000px;
