@@ -38,7 +38,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="resolution" heading="Quick resolution" description="Listen to your employees round the clock and help them on the go."/>
@@ -52,7 +52,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="intelligence" heading="Predictive intelligence" description="Answer your employee queries instantly via AI-powered automated conversations."/>
@@ -66,7 +66,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="waiting" heading="Zero waiting time" description="Save your employees’ time by giving instant replies to all their policy related queries."/>
@@ -82,7 +82,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="satisfaction" heading="Employee satisfaction" description="Know your employees inside out. Talk to them about their motivation and challenges."/>
@@ -96,7 +96,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="conversation" heading="Parallel conversations" description="Go beyond your capabilities. Connect to multiple employees at the same time."/>
@@ -110,7 +110,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="ui" heading="Conversational UI" description="Get rid of complicated employee platforms. Get a single interface for all employee needs."/>

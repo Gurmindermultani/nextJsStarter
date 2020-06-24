@@ -80,7 +80,7 @@ export const ButtonWrapper = styled.button`
 
   &.large {
     font-size: 14px;
-    height: 45px;
+    height: 52px;
     padding: 0 24px;
     i {
       height: 14px;

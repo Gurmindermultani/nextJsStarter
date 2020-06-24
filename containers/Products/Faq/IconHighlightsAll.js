@@ -38,7 +38,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="productivity" heading="Readily accessible" description="Answer all HR queries within a second. Save employees’ time and increase their productivity."/>
@@ -52,7 +52,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="resolution" heading="Simplified query resolution" description="Eliminate the need for going through long policy documents and contacting HR for simple queries."/>
@@ -66,7 +66,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="waiting" heading="On-demand answers" description="Ensure instant resolution of employees’ HR queries irrespective of their time and location."/>
@@ -82,7 +82,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="conversation" heading="Single platform" description="Save employees’ time by providing all information related to HR policies in a single window."/>
@@ -96,7 +96,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interface" heading="Parallel conversations" description="Resolve queries of multiple employees simultaneously with HR virtual assistant."/>
@@ -110,7 +110,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interaction" heading="Personalized experience" description="Give your employees a super smooth experience with a virtual HR assistant in place."/>

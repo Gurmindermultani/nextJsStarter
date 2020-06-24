@@ -152,28 +152,15 @@ function EmployeeExperience(props) {
   };
   return (
     <ProductStyles>
-      <VisibilitySensor once partialVisibility>
-        {({ isVisible }) => (
-          <Spring delay={300} to={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible
-                ? "translateX(0)"
-                : "translateX(200px)",
-          }}>
-            {({ opacity, transform }) => (
-              <div style={{opacity, transform}} className="productHeader">
-                <div className="text">
-                  <Typography variant="h4" fontSize="20px" text={props.heading}/>
-                  <Typography className="description" variant="paragraph2" fontSize="18px" text={props.description}/>
-                </div>
-                <div>
-                  <img src="/images/home/experience.svg"/>
-                </div>
-              </div>
-            )}
-          </Spring>
-        )}
-      </VisibilitySensor>
+      <div className="productHeader">
+        <div className="text">
+          <Typography variant="h4" fontSize="20px" text={props.heading}/>
+          <Typography className="description" variant="paragraph2" fontSize="18px" text={props.description}/>
+        </div>
+        <div>
+          <img src="/images/home/experience.svg"/>
+        </div>
+      </div>
       <div className="body">
         <div className="leftContainer">
           {expanded === "panel1" &&
@@ -202,52 +189,39 @@ function EmployeeExperience(props) {
             </div>
           }
         </div>
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="rightContainer">
-                  <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                    <ExpansionPanelSummary>
-                      <div className="accordianHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Connect with your employees`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct AI-driven surveys throughout the employees’ lifecycle. Build an open and transparent work culture."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Intelligent analytics`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get personalized reports about the happiness score of your employees. Know if they are aligned with the organization goals."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <div className="buttons">
-                    <Button variant="contained" size="large" name="Schedule Demo"/>
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="rightContainer">
+          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <ExpansionPanelSummary>
+              <div className="accordianHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Connect with your employees`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct AI-driven surveys throughout the employees’ lifecycle. Build an open and transparent work culture."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Intelligent analytics`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get personalized reports about the happiness score of your employees. Know if they are aligned with the organization goals."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <div className="buttons">
+            <Button variant="contained" size="large" name="Schedule Demo"/>
+          </div>
+        </div>
       </div>
     </ProductStyles>
   );

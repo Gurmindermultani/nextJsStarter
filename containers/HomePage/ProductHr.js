@@ -167,89 +167,63 @@ function ProductHr(props) {
   };
   return (
     <ProductStyles>
-    <VisibilitySensor once partialVisibility>
-        {({ isVisible }) => (
-          <Spring delay={300} to={{ 
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible
-                ? "translateX(0)"
-                : "translateX(-200px)",
-          }}>
-            {({ opacity, transform }) => (
-              <div style={{opacity, transform}} className="productHeader">
-                <div>
-                  <img src="/images/home/helpdesk.svg"/>
-                </div>
-                <div className="text">
-                  <Typography variant="h4" fontSize="20px" text={props.heading}/>
-                  <Typography className="description" variant="paragraph2" fontSize="18px" text={props.description}/>
-                </div>
-              </div>
-            )}
-          </Spring>
-        )}
-      </VisibilitySensor>
+    <div className="productHeader">
+      <div>
+        <img src="/images/home/helpdesk.svg"/>
+      </div>
+      <div className="text">
+        <Typography variant="h4" fontSize="20px" text={props.heading}/>
+        <Typography className="description" variant="paragraph2" fontSize="18px" text={props.description}/>
+      </div>
+    </div>
       <div className="body">
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <Spring delay={300} to={{ 
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible
-                  ? "translateX(0)"
-                  : "translateX(-200px)",
-            }}>
-              {({ opacity, transform }) => (
-                <div style={{opacity, transform}} className="leftContainer">
-                  <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                    <ExpansionPanelSummary>
-                      <div className="accordianHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`FAQ automation`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Transform your policy queries into AI-enabled conversational chat. Give instant automatic replies for all employee queries that’s documented in your knowledge base."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`Case management`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Let your employees raise tickets right on the chat. Also, give them real-time updates about the resolution status. It's intuitive, efficient and quick."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                    <ExpansionPanelSummary>
-                      <div className="questionHeader">
-                        <Typography
-                          variant="h4" 
-                          fontSize="20px"
-                          text={`HR workflows`}
-                        />
-                      </div>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make it easy for your employees to access the services they need. Get rid of complicated forms and tedious workflows."}/>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                  <div className="buttons">
-                    <Button variant="contained" size="large" name="Get HR helpdesk"/>
-                  </div>
-                </div>
-              )}
-            </Spring>
-          )}
-        </VisibilitySensor>
+        <div className="leftContainer">
+          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <ExpansionPanelSummary>
+              <div className="accordianHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`FAQ automation`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Transform your policy queries into AI-enabled conversational chat. Give instant automatic replies for all employee queries that’s documented in your knowledge base."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`Case management`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Let your employees raise tickets right on the chat. Also, give them real-time updates about the resolution status. It's intuitive, efficient and quick."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <ExpansionPanelSummary>
+              <div className="questionHeader">
+                <Typography
+                  variant="h4" 
+                  fontSize="20px"
+                  text={`HR workflows`}
+                />
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make it easy for your employees to access the services they need. Get rid of complicated forms and tedious workflows."}/>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <div className="buttons">
+            <Button variant="contained" size="large" name="Get HR helpdesk"/>
+          </div>
+        </div>
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">

@@ -24,10 +24,6 @@ const CommentStyles = styled.div`
   .body {
     flex-basis: 95%;
     height: 100%;
-    span {
-      font-style: italic;
-      line-height: 40px;
-    }
     .by {
       margin-top: 16px;
     }

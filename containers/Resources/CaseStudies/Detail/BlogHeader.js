@@ -36,7 +36,7 @@ const BlogHeaderStyles = styled.div`
       margin: 142px 0 0 0;
     }
     .buttons {
-      margin-top: 60px;
+      margin-top: 48px;
     }
     button {
       width: 240px;
@@ -56,7 +56,7 @@ const BlogHeaderStyles = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding: 50px 0 0 0;
+      padding: 44px 0 0 0;
       .row {
         text-align: center;
         .rowValue {

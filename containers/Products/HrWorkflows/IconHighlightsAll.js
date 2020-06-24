@@ -38,7 +38,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="productivity" heading="Employee productivity" description="Let your employees be mentally peaceful and productive with no pending reimbursement claim or leave requests."/>
@@ -52,7 +52,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interface" heading="Simple interface" description="Get rid of complicated forms and poor user interface. Turn conversations into employee requests."/>
@@ -66,7 +66,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="conversation" heading="Single platform" description="Bring all your employee transactions under a single roof. Help your employees manage leaves and reimbursements."/>
@@ -82,7 +82,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="integrable" heading="Easily integrable" description="Integrate your HRIS system and workflow channels with AI-enabled enterprise conversations."/>
@@ -96,7 +96,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="analytics" heading="Analytics and reporting" description="Save employees’ and HR’s time by eliminating personal employee queries for simple requests."/>
@@ -110,7 +110,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interaction" heading="Personalized experience" description="Give your employees a super smooth experience with a virtual HR assistant in place."/>

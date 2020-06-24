@@ -13,9 +13,20 @@ export const CaseStudiesStyles = styled.div`
       background: #F6F6F6;
     }
     &.readFull {
-      height: 365px;
+      height: 300px;
       background: #0F72EE;
       max-width: 100vw;
+      position: relative;
+      .topLeft {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .bottomRight {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
       button {
         margin: 5px 0 0 80px;
         width: 200px;
@@ -56,6 +67,16 @@ export const CaseStudiesStyles = styled.div`
         }
         button {
           margin: 24px 0 0 0px;
+        }
+        .topLeft {
+          img {
+            width: 50px;
+          }
+        }
+        .bottomRight {
+          img {
+            width: 50px;
+          }
         }
       }
     }

@@ -11,15 +11,12 @@ import Typography from '../../../../components/Typography';
 import FadeIn from '../../../../components/VisibilitySensor/FadeIn';
 
 const ExpressionStyles = styled.div`
-  padding: 70px 150px;
+  padding: 70px 100px;
   text-align: center;
   .header {
     margin-bottom: 48px;
   }
   .body {
-    span {
-      line-height: 44px;
-    }
   }
   @media only screen and (max-width: 760px) {
     padding: 40px 30px;
@@ -32,10 +29,10 @@ function Expression(props) {
     <FadeIn>
       <ExpressionStyles>
         <div className="header">
-          <Typography className="rowValue" color="#212121" variant="h1" fontSize="48px" text={props.heading}/>
+          <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[28, 34, 38]} text={props.heading}/>
         </div>
         <div className="body">
-          <Typography className="rowValue" color="#212121" variant="paragraph2" fontSize="20px" text={props.text}/>
+          <Typography className="rowValue" fontWeight="400" color="#212121" variant="h1" fontSizes={[18, 20, 22]} text={props.text}/>
         </div>
       </ExpressionStyles>
     </FadeIn>

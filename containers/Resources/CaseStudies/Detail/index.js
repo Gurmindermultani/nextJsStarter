@@ -10,7 +10,7 @@ import React, { memo, useState, useEffect } from 'react';
 import Button from '../../../../components/Button';
 import Typography from '../../../../components/Typography';
 import Input from '../../../../components/Input';
-import Cards from '../../../../components/Cards';
+import ScheduleDemo from '../../../../components/ScheduleDemo';
 import FadeIn from '../../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../../components/VisibilitySensor/Slide';
 import Utils from '../../../../utils';
@@ -21,6 +21,7 @@ import BlogHeader from './BlogHeader';
 import Comment from './Comment';
 import NumberContainer from './NumberContainer';
 import Expression from './Expression';
+import ParaGraphs from './ParaGraphs';
 
 
 const dataMap = {
@@ -31,7 +32,8 @@ const mapTypesToComponents = {
   header: BlogHeader,
   comment: Comment,
   numberContainer: NumberContainer,
-  expression: Expression
+  expression: Expression,
+  paraGraphs: ParaGraphs,
 };
 
 function CaseStudies(props) {
@@ -55,10 +57,16 @@ function CaseStudies(props) {
         </section>
       )}
       <section className="section readFull ">
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
         <FadeIn className="text center">
-          <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 24, 32]} text="Read complete case study"/>
+          <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 28, 32]} text="Read complete case study"/>
           <Button size="large" variant="inverted" name="Download Case Study"/>
         </FadeIn>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
       </section>
     </CaseStudiesStyles>
   );

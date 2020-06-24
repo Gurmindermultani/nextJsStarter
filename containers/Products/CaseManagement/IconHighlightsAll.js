@@ -38,7 +38,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="satisfaction" heading="Employee satisfaction" description="Keep your employees satisfied by giving them on-time resolution for their tickets."/>
@@ -52,7 +52,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="waiting" heading="Minimum TAT" description="Automate the entire process and minimize your turnaround time for resolving employee tickets."/>
@@ -66,7 +66,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interaction" heading="Personalized interaction" description="Give all your employees a personalized experience with an enterprise conversation platform."/>
@@ -82,7 +82,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="productivity" heading="Increased productivity" description="Eliminate the need for multiple follow-ups with the HR and ensure maximum employee productivity."/>
@@ -96,7 +96,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="integrable" heading="Easily integrable" description="Integrate your HRIS system and workflow channels with AI-enabled case management."/>
@@ -110,7 +110,7 @@ function IconHighlightsAll(props) {
               opacity: isVisible ? 1 : 0,
               transform: isVisible
                   ? "translateY(0)"
-                  : "translateY(200px)",
+                  : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
                 <IconHighlight style={{opacity, transform}} name="interface" heading="Simple interface" description="Get rid of complicated forms and poor interface. Turn conversations into employee query tickets."/>

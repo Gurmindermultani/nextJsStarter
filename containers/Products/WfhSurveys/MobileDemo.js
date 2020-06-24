@@ -152,7 +152,7 @@ function MobileDemo(props) {
             opacity: isVisible ? 1 : 0,
             transform: isVisible
                 ? "translateX(0)"
-                : "translateX(200px)",
+                : "translateX(50px)",
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog topRight">
@@ -171,7 +171,7 @@ function MobileDemo(props) {
             opacity: isVisible ? 1 : 0,
             transform: isVisible
                 ? "translateX(0)"
-                : "translateX(200px)",
+                : "translateX(50px)",
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="boxDialog bottomRight">
