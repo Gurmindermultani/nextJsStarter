@@ -28,6 +28,7 @@ const ErrorContainer = styled.div`
 
 function Error(props) {
   let that = props;
+  console.log(props);
   const addActivityTransition = useTransition(that.showErrors, null, {
     from: { opacity: 0, height: '0px' },
     enter: { opacity: 1, height: '22px' },
@@ -42,10 +43,10 @@ function Error(props) {
             item && (
               <animated.div key={key} style={props}>
                 {that.errors.map(errorMsg => (
-                <span className="error" key={errorMsg}>
-                  <Typography className="errorMessage" variant="paragraphS2" text={errorMsg} />
-                </span>
-              ))}
+                  <span className="error" key={errorMsg}>
+                    <Typography className="errorMessage" variant="paragraphS2" text={errorMsg} />
+                  </span>
+                ))}
               </animated.div>
             )
         )

@@ -121,7 +121,10 @@ function Form(props) {
   });
   const email = useField('email', form, {
     defaultValue: '',
-    validations: [formData => !(formData['email'] && Utils.checkValidEmail(formData['email']) ) && 'Please enter valid email.'],
+    validations: [
+      formData => !(formData['email'] && Utils.checkValidEmail(formData['email']) ) && 'Please enter valid email.',
+      formData => (Utils.checkWorkEmail(formData['email'])) && 'Please enter work email.'
+    ],
     fieldsToValidateOnChange: [],
   });
   const phone = useField('phone', form, {
