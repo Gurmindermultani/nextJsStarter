@@ -21,7 +21,7 @@ import { IntegrationsStyles } from './styles';
 const social = ['workplace', 'slack', 'teams', 'whatsapp', 'android', 'ios', 'twilio', 'sip', 'web.svg', 'facebook', 'windows', 'mac'];
 const enterprise = ['sap', 'oracle', 'workday', 'kronos', 'adp', 'darwin'];
 const services = ['sheets', 'oneDrive', 'box', 'calender', 'office', 'sharePoint'];
-const tickets = ['bmc', 'summit', 'servicenow'];
+const tickets = ['bmc', 'summit', 'serviceNow'];
 
 function Integrations(props) {
   return (

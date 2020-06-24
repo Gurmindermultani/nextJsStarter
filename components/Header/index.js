@@ -8,7 +8,6 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import { useSpring, animated, config } from 'react-spring';
 
 import Button from '../Button';
 import Typography from '../Typography';
@@ -137,7 +136,7 @@ function Header(props) {
                     )
                   }
                   return (
-                    <div className={"link " + (window.location.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
+                    <div className={"link " + (props.router.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
                       <Link href={`/${link.name}`}>
                         <a>
                           <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>

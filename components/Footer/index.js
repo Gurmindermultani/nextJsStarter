@@ -7,6 +7,7 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { withRouter } from 'next/router'
 import Link from 'next/link'
 import Button from '../Button';
 import Typography from '../Typography';
@@ -183,7 +184,7 @@ function Footer(props) {
                       )
                     }
                     return (
-                      <div className={"link " + (window.location.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
+                      <div className={"link " + (props.router.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
                         <Link href={`/${link.name}`}>
                           <a>
                             <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
@@ -233,4 +234,4 @@ function Footer(props) {
 
 Footer.propTypes = {};
 
-export default memo(Footer);
+export default memo(withRouter(Footer));
