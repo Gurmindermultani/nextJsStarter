@@ -28,7 +28,6 @@ const ErrorContainer = styled.div`
 
 function Error(props) {
   let that = props;
-  console.log(props);
   const addActivityTransition = useTransition(that.showErrors, null, {
     from: { opacity: 0, height: '0px' },
     enter: { opacity: 1, height: '22px' },
