@@ -37,7 +37,7 @@ export const ROIStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 45%;
+    flex-basis: 44%;
     .form {
       padding: 56px;
       width: 80%;

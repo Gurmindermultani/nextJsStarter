@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import Button from '../../../components/Button';
 import Typography from '../../../components/Typography';
 import Input from '../../../components/Input';
+import Slider from '../../../components/Slider';
 import Select from '../../../components/Select';
 import { useForm, useField } from '../../../components/Input/formHooks';
 import Utils from '../../../utils';
@@ -27,7 +28,6 @@ const FormStyles = styled.div`
   box-shadow: 0px 6px 46px #0000001F;
   border-radius: 16px;
   background: #fff;
-  max-width: 400px;
   .textCenter {
     margin-bottom: 30px;
   }
@@ -168,30 +168,17 @@ function Form(props) {
   return (
     <FormStyles>
       <div className="textCenter">
-        <Typography className="" fontSizes={[16, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
+        <Typography className="" fontSizes={[16, 18, 20]} fontWeight="500" variant="paragraph2" text="Just a few simple questions and you’re set to go"/>
       </div>
       <form onSubmit={form.onSubmit}>
-        <Input {...firstName} placeholder='First name' name="firstName"/>
-        <Input {...lastName} placeholder='Last name' name="lastName"/>
-        <Input {...email} placeholder='Your work email' name="email"/>
-        <div className="phone">
-          <Select
-            placeholder='Number of employees'
-            options={phoneCountryOptions}
-            onChange={ e => setCountryCode(e.target.value)}
-            value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
-          />
-          <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
-        </div>
-        <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
-        <Input {...company} placeholder='Company name' name="company"/>
+        <Slider min={0} max={500} label="What’s your employee size?"></Slider>
         {/* <Select
           {...numberOfEmployees}
           placeholder='Number of employees'
           options={options}
           value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
         /> */}
-        <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
+        <Button size="large" fullWidth type="submit" name="Calculate ROI" variant="contained" />
       </form>
       <Dialog
         setShowDialog={setShowDialog}
