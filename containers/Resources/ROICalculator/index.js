@@ -18,7 +18,7 @@ function CaseStudies(props) {
     <ROIStyles>
       <Slide from='left' className="leftContainer">
         <div className="image">
-          <img alt="top buildings" src="images/roi/roi.svg" />
+          <img alt="top buildings" src="/images/roi/roi1.svg" />
         </div>
         <div className="textCenter">
           <Typography className="demoText" variant="h1" fontSizes={[24, 40, 40]} text="Estimate the value you can achieve with Leena AI"/>

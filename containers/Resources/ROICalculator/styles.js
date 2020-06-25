@@ -9,7 +9,7 @@ export const ROIStyles = styled.div`
   justify-content: space-between;
   align-items: center;
   .leftContainer {
-    flex-basis: 45%;
+    flex-basis: 44%;
     .textCenter {
       text-align: left;
     }
@@ -37,7 +37,7 @@ export const ROIStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 44%;
+    flex-basis: 42%;
     .form {
       padding: 56px;
       width: 80%;

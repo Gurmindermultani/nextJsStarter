@@ -168,7 +168,7 @@ function Form(props) {
   return (
     <FormStyles>
       <div className="textCenter">
-        <Typography className="" fontSizes={[16, 18, 20]} fontWeight="500" variant="paragraph2" text="Just a few simple questions and you’re set to go"/>
+        <Typography className="" fontSizes={[16, 18, 18]} fontWeight="500" variant="paragraph2" text="Just a few simple questions and you’re set to go"/>
       </div>
       <form onSubmit={form.onSubmit}>
         <Slider min={0} max={500} label="What’s your employee size?"></Slider>
