@@ -56,11 +56,11 @@ export const HrWorflowsStyles = styled.div`
       position: relative;
       .animation {
         position: absolute;
-        top: 12px;
+        top: 20px;
         left: 56px;
         z-index: -1;
         width: 200px;
-        height: 92%;
+        height: 88%;
       }
     }
     .demoInput {
