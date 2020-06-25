@@ -14,31 +14,31 @@ import Carousal from "../../components/Carousal";
 const recognitions = [
   {
     name: 'forbes',
-    text: 'Leena is like Siri for employees…',
+    text: 'Leena is like Siri for employees...',
     img: '/images/home/forbes.png',
     bg: '#000',
     href: 'https://www.forbes.com/profile/leena-ai/#701112c55b85',
   },
   {
     name: 'tc',
-    text: 'Fresh out of Y Combinator…',
+    text: 'Fresh out of Y Combinator...',
     img: '/images/home/tc.png',
     bg: '#123577',
     href: 'https://techcrunch.com/2018/09/19/fresh-out-of-y-combinator-leena-ai-scores-2m-seed-round',
   },
   {
     name: 'mint',
-    text: 'Leena AI secures $2 million seed..',
+    text: 'Leena AI secures $2 million seed...',
     img: '/images/home/mint.png',
     bg: '#1172EE',
     href: 'https://www.livemint.com/Companies/4byNwfLVvh5wBJWmNFHvsO/Leena-AI-secures-2-million-seed-funding-from-Snapdeal-cofo.html',
   },
   {
-    name: 'people',
-    text: 'How Leena AI is helping employees…',
-    img: '/images/home/people.png',
+    name: 'business',
+    text: 'AI-based solutions surge in demand...',
+    img: '/images/home/business.png',
     bg: '#04CEFF',
-    href: 'https://www.peoplematters.in/article/hr-technology/how-leena-ai-is-helping-employees-become-more-productive-23737'
+    href: 'https://www.thehindubusinessline.com/info-tech/ai-based-solutions-see-surge-in-demand-to-help-companies-retain-business-continuity/article31508388.ece'
   },
 ];
 
@@ -50,6 +50,12 @@ const RecognitionsStyles = styled.div`
     margin-bottom: 50px;
     .singleCard {
       margin-right: 12px;
+      img {
+        &.business {
+          width: 182px;
+          height: 28px;
+        }
+      }
     } 
   }
   @media only screen and (max-width: 760px) {
