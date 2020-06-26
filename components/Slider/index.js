@@ -60,22 +60,49 @@ const LeenaSlider = withStyles({
 })(Slider);
 
 
+function abbreviateNumber(value) {
+  var newValue = value;
+  if (value >= 1000) {
+      var suffixes = ["", "k", "m", "b","t"];
+      var suffixNum = Math.floor( (""+value).length/3 );
+      var shortValue = '';
+      for (var precision = 2; precision >= 1; precision--) {
+          shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+          var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+          if (dotLessShortValue.length <= 2) { break; }
+      }
+      if (shortValue % 1 != 0)  shortValue = shortValue.toFixed(1);
+      newValue = shortValue+suffixes[suffixNum];
+  }
+  return newValue;
+}
 
 export default function CustomizedSlider(props) {
+  const onChange = (e, value) => {
+    if (props.handleChange) {
+      props.handleChange(value);
+    }
+    if (props.onChange) {
+      const e = { target: { value } };
+      props.onChange(e);
+    }
+  }
   return (
     <Styles className="sliderContainer">
-      <Typography className="label" variant="h6" fontWeight="500" fontSizes={[14, 16, 18]} text={props.label}></Typography>
+      <Typography className="label" variant="paragraph2" fontSizes={[14, 14, 14]}  text={props.label}></Typography>
       <LeenaSlider
         min={props.min ? props.min : 0}
         scale={(x) => x ** (props.scale ? props.scale : 1)}
         max={props.max ? props.max : 100}
         valueLabelDisplay="auto"
-        defaultValue={20} 
+        value={props.value ? props.value : 0}
+        valueLabelFormat={(x) => abbreviateNumber(x)}
+        onChange={onChange}
       />
       <div className="sliderLabels">
-        <Typography className="sliderLabel1" variant="h6" fontWeight="400" fontSizes={[14, 14, 14]} text={props.min}></Typography>
-        <Typography className="sliderLabel2" variant="h6" fontWeight="400" fontSizes={[14, 14, 14]} text={props.max/2}></Typography>
-        <Typography className="sliderLabel3" variant="h6" fontWeight="400" fontSizes={[14, 14, 14]} text={props.max}></Typography>
+        <Typography className="sliderLabel1" variant="paragraph2" fontSizes={[14, 14, 14]}  text={props.minLabel}></Typography>
+        <Typography className="sliderLabel2" variant="paragraph2" fontSizes={[14, 14, 14]}  text={props.midLabel}></Typography>
+        <Typography className="sliderLabel3" variant="paragraph2" fontSizes={[14, 14, 14]}  text={props.maxLabel}></Typography>
       </div>
     </Styles>
   );

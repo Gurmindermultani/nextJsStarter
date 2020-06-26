@@ -56,6 +56,33 @@ const FormStyles = styled.div`
       }
     }
   }
+  .row {
+    display: flex;
+    margin: 32px 0 16px 0;
+    .column {
+      flex-basis: 50%;
+      &.first {
+        margin-right: 16px;
+      }
+      .text {
+        margin-bottom: 16px;
+      }
+      .ratio {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .errorContainer {
+          display: none;
+        }
+        .form-group {
+          margin: 0;
+        }
+        .separator {
+          margin: 0 16px;
+        }
+      }
+    }
+  }
   @media only screen and (max-width: 760px) {
     max-width: none;
     padding: 48px 24px;
@@ -82,80 +109,41 @@ function Form(props) {
     onSubmit: (formData, valid) => {
       if (!valid) return;
       let body = {...formData};
-      body.phone = countryCode + body.phone;
-      body.siteUrl = window.location.href;
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-demo`, {
-        method: 'post',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-      })
-      .then((result) => result.json())
-      .then((res) => {
-        if (res.message) {
-          setShowDialog('success');
-        } else {
-          const message = res.errors && res.errors[0] ? res.errors[0].message : '';
-          alert(message || 'Some Error Occurred!');
-        }
-      }).catch((e) => {
-        console.log(e);
-        // alert('Some Error Occurred!');
-      });
+      console.log(body);
     }
   });
-  const firstName = useField('firstName', form, {
-    defaultValue: '',
-    validations: [formData => !formData['firstName'] && 'Please enter your First name.'],
+  const hrTimeSpent = useField('hrTimeSpent', form, {
+    defaultValue: 50,
+    validations: [],
     fieldsToValidateOnChange: [],
   });
-  const lastName = useField('lastName', form, {
-    defaultValue: '',
-    validations: [formData => !formData['lastName'] && 'Please enter your Last name.'],
+  const employeeSize = useField('employeeSize', form, {
+    defaultValue: 200,
+    validations: [],
     fieldsToValidateOnChange: [],
   });
-  const email = useField('email', form, {
-    defaultValue: '',
-    validations: [formData => !(formData['email'] && Utils.checkValidEmail(formData['email']) ) && 'Please enter valid email.'],
+  const ratio1 = useField('ratio1', form, {
+    defaultValue: 1,
+    validations: [],
     fieldsToValidateOnChange: [],
   });
-  const phone = useField('phone', form, {
-    defaultValue: '',
-    validations: [formData => !(formData['phone'] && Utils.checkValidPhone(formData['phone']) ) && 'Enter valid number.'],
+  const ratio2 = useField('ratio2', form, {
+    defaultValue: 125,
+    validations: [],
     fieldsToValidateOnChange: [],
   });
-  const jobTitle = useField('jobTitle', form, {
-    defaultValue: '',
-    validations: [formData => !formData['jobTitle'] && 'Please enter job title.'],
-    fieldsToValidateOnChange: [],
-  });
-  const company = useField('company', form, {
-    defaultValue: '',
-    validations: [formData => !formData['company'] && 'Please enter company name.'],
-    fieldsToValidateOnChange: [],
-  });
-  const options = [
+  const hrTimeOptions = [
     {
-      label: '1-100',
-      value: '1-100',
+      label: '25%',
+      value: 25,
     },
     {
-      label: '101-250',
-      value: '101-250',
+      label: '50%',
+      value: 50,
     },
     {
-      label: '251-500',
-      value: '251-500',
-    },
-    {
-      label: '501-1000',
-      value: '501-1000',
-    },
-    {
-      label: '1000+',
-      value: '1000+',
+      label: '75%',
+      value: 75,
     },
   ];
   const phoneCountryOptions = Codes.map( code => {
@@ -165,13 +153,43 @@ function Form(props) {
       value: code.dial_code
     }
   });
+  const handleChange = (value) => {
+    console.log(value);
+  }
   return (
     <FormStyles>
       <div className="textCenter">
         <Typography className="" fontSizes={[16, 18, 18]} fontWeight="500" variant="paragraph2" text="Just a few simple questions and you’re set to go"/>
       </div>
       <form onSubmit={form.onSubmit}>
-        <Slider min={0} max={500} label="What’s your employee size?"></Slider>
+        <Slider 
+          min={100} 
+          max={100000} 
+          label="What’s your employee size?"
+          minLabel="200"
+          midLabel="50,000"
+          maxLabel="100,000"
+          {...employeeSize}
+        ></Slider>
+        <div className="row">
+          <div className="column first">
+            <Typography className="text" variant="paragraph2" fontSizes={[14, 14, 14]} text="What percentage of time is spent by HRs on answering employee queries?"/>
+            <Select
+              {...hrTimeSpent}
+              placeholder='Time Spent by HR'
+              options={hrTimeOptions}
+              value={hrTimeSpent.value ? hrTimeOptions[hrTimeOptions.findIndex( elem => elem.value === hrTimeSpent.value )] : ''}
+            />
+          </div>
+          <div className="column">
+            <Typography className="text" variant="paragraph2" fontSizes={[14, 14, 14]} text="What is the the strength of your HR team across the organization?"/>
+            <div className="ratio">
+              <Input {...ratio1} name="ratio1"/>
+              <span className="separator">:</span>
+              <Input {...ratio2} name="ratio2"/>
+            </div>
+          </div>
+        </div>
         {/* <Select
           {...numberOfEmployees}
           placeholder='Number of employees'

@@ -16,7 +16,7 @@ const DeskTopStyles = styled.div`
   display: flex;
   .leftContainer {
     flex-basis: 40%;
-    background: ${props => props.theme.palette.primary.dark};
+    background: ${props => props.theme.palette.white};
     position: relative;
     .quote {
       width: 210px;
@@ -30,7 +30,6 @@ const DeskTopStyles = styled.div`
         margin: 4px 0 16px 0;
       }
       span {
-        color: white;
         padding: 0 8px;
       }
     }
@@ -57,7 +56,7 @@ const DeskTopStyles = styled.div`
   }
   .rightContainer {
     flex-basis: 60%;
-    background: ${props => props.theme.palette.primary.main};
+    background: ${props => props.theme.palette.white};
     padding: 200px 0 0 500px;
     overflow: hidden;
     .carousalMainContainer {
@@ -76,7 +75,8 @@ const DeskTopStyles = styled.div`
       .slick-slide {
         width: 260px;
         span {
-          color: #C5D0E6;
+          color: #212121;
+          opacity: 0.5;
         }
         .subHeading {
           margin-top: 18px;
@@ -84,7 +84,8 @@ const DeskTopStyles = styled.div`
         }
         &.slick-active {
           span {
-            color: #fff;
+            color: #212121;
+            opacity: 1;
           }
         }
       }
@@ -100,11 +101,11 @@ function DeskTop(props) {
     <DeskTopStyles>
       <div className="leftContainer">
         <div className="quote">
-          <Typography className="invertedHighlight" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading1}/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading1}/>
           <br />
-          <Typography className="invertedHighlight heading2" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading2}/>
+          <Typography className="highlight heading2" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading2}/>
           <br />
-          <Typography className="invertedHighlight heading3" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading3}/>
+          <Typography className="highlight heading3" variant="h3" fontSizes={[20, 24, 24]} text={props.quote.heading3}/>
           <br />
           <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
@@ -118,9 +119,9 @@ function DeskTop(props) {
           <Carousal variant="leftMode">
             {props.slides.map( slide => 
               <div className="" key={slide.heading}>
-                <Typography variant="h6" color="#fff" fontSizes={[18, 18, 18]} text={slide.heading} />
+                <Typography variant="h6" color="#212121" fontSizes={[18, 18, 18]} text={slide.heading} />
                 <br />
-                <Typography className="subHeading" variant="h2" fontWeight="400" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
+                <Typography className="subHeading" variant="h2" fontWeight="400" color="#212121" fontSizes={[16, 16, 16]} text={slide.text} />
               </div>
             )}
           </Carousal>
