@@ -88,7 +88,7 @@ export default function CustomizedSlider(props) {
     }
   }
   return (
-    <Styles className="sliderContainer">
+    <Styles className={"sliderContainer " + (props.className ? props.className : '')}>
       <Typography className="label" variant="paragraph2" fontSizes={[14, 14, 14]}  text={props.label}></Typography>
       <LeenaSlider
         min={props.min ? props.min : 0}

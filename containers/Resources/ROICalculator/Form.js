@@ -83,6 +83,9 @@ const FormStyles = styled.div`
       }
     }
   }
+  .hrSlider {
+    margin-top: 32px;
+  }
   @media only screen and (max-width: 760px) {
     max-width: none;
     padding: 48px 24px;
@@ -110,15 +113,23 @@ function Form(props) {
       if (!valid) return;
       let body = {...formData};
       console.log(body);
+      const numberOfHrs = body.employeeSize/parseInt(body.ratio2);
+      const hrSalaryPerYear = 50000;
+      const timeSpentByHr = 1/8;
     }
   });
   const hrTimeSpent = useField('hrTimeSpent', form, {
-    defaultValue: 50,
+    defaultValue: 12,
     validations: [],
     fieldsToValidateOnChange: [],
   });
   const employeeSize = useField('employeeSize', form, {
-    defaultValue: 200,
+    defaultValue: 1000,
+    validations: [],
+    fieldsToValidateOnChange: [],
+  });
+  const hrExpense = useField('hrExpense', form, {
+    defaultValue: 50000,
     validations: [],
     fieldsToValidateOnChange: [],
   });
@@ -128,11 +139,15 @@ function Form(props) {
     fieldsToValidateOnChange: [],
   });
   const ratio2 = useField('ratio2', form, {
-    defaultValue: 125,
+    defaultValue: 150,
     validations: [],
     fieldsToValidateOnChange: [],
   });
   const hrTimeOptions = [
+    {
+      label: '12%',
+      value: 12,
+    },
     {
       label: '25%',
       value: 25,
@@ -165,11 +180,21 @@ function Form(props) {
         <Slider 
           min={100} 
           max={100000} 
-          label="What’s your employee size?"
+          label="What’s your company size?"
           minLabel="200"
           midLabel="50,000"
           maxLabel="100,000"
           {...employeeSize}
+        ></Slider>
+        <Slider
+          className="hrSlider"
+          min={10000} 
+          max={200000} 
+          label="What’s your average HR executive expense per year?"
+          minLabel="$ 10,000"
+          midLabel="$ 100,000"
+          maxLabel="$ 200,000"
+          {...hrExpense}
         ></Slider>
         <div className="row">
           <div className="column first">
