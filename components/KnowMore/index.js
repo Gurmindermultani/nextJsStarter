@@ -14,7 +14,7 @@ import Link from 'next/link'
 function KnowMore(props) {
   return (
     <Slide>
-      <Link href="/integrations">
+      <Link href={props.to ? props.to : "/integrations"}>
         <div>
           <Button name={props.name ? props.name : 'Know More'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
         </div>

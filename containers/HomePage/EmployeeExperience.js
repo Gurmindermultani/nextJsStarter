@@ -12,7 +12,7 @@ import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
-import ScheduleDemoButton from '../../components/ScheduleDemoButton';
+import KnowMore from '../../components/KnowMore';
 import Slide from "../../components/VisibilitySensor/Slide";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -219,7 +219,7 @@ function EmployeeExperience(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <ScheduleDemoButton type="link"/>
+            <KnowMore to="/employee-engagement"/>
           </div>
         </div>
       </div>

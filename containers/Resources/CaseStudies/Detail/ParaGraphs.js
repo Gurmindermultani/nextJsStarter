@@ -22,6 +22,15 @@ const ParaGraphsStyles = styled.div`
   .heading{
     margin-bottom: 24px;
   }
+  @media only screen and (max-width: 760px) {
+    flex-wrap: wrap;
+    .leftContainer {
+      padding: 40px 30px;
+    }
+    .rightContainer {
+      padding: 40px 30px;
+    }
+  }
 `;
 
 function ParaGraphs(props) {

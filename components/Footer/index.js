@@ -185,7 +185,7 @@ function Footer(props) {
                     }
                     return (
                       <div className={"link " + (props.router.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
-                        <Link href={`/${link.name}`}>
+                        <Link href={{ pathname: `/${link.name}`, query: props.router.query }}>
                           <a>
                             <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
                           </a>

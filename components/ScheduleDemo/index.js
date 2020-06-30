@@ -5,6 +5,7 @@
  */
 
 import React, { memo, useState } from 'react';
+import { withRouter } from 'next/router'
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../Typography';
@@ -105,7 +106,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -133,7 +134,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -161,7 +162,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -189,7 +190,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
                 <Button name="Schedule Demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -216,7 +217,7 @@ function ScheduleDemo(props) {
         </FadeIn>
         <Slide className="demoInput center">
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-          <Link href="/schedule-demo">
+          <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
             <div className="demoButton">
               <Button name="Schedule Demo" variant="inverted" size="large"/>
               <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -234,4 +235,4 @@ function ScheduleDemo(props) {
 
 ScheduleDemo.propTypes = {};
 
-export default memo(ScheduleDemo);
+export default memo(withRouter(ScheduleDemo));

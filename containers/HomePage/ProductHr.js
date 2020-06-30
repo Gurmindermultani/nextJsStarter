@@ -8,7 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
-import ScheduleDemoButton from '../../components/ScheduleDemoButton';
+import KnowMore from '../../components/KnowMore';
 
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
@@ -221,7 +221,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <ScheduleDemoButton type="link" variant="contained" size="large" name="Get HR helpdesk"/>
+            <KnowMore to={"/employee-query-management"} type="link" variant="contained" size="large"/>
           </div>
         </div>
         <div className="rightContainer">

@@ -163,6 +163,12 @@ export const IntegrationsStyles = styled.div`
         }
       }
     }
+    .icons {
+      .icon {
+        width: 140px;
+        height: auto;
+      }
+    }
   }
 `;
 
