@@ -15,7 +15,7 @@ import LottieAnimation from "../../components/LottieAnimation";
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import ScheduleDemoButton from '../../components/ScheduleDemoButton';
 
 const MobileDemoStyles = styled.div`
   overflow: hidden;
@@ -172,7 +172,7 @@ function MobileDemo(props) {
         </Carousal>
       </div>
       <div className="button">
-        <Button size="large" variant="contained" name="Schedule Demo"/>
+        <ScheduleDemoButton type="link" size="large" variant="contained" name="Schedule Demo"/>
       </div>
     </MobileDemoStyles>
   );
