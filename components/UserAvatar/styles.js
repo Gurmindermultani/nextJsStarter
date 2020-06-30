@@ -8,12 +8,8 @@ export const AvatarContainer = styled.div`
         width: 100%;
         height: 100%;
         border-radius: 4px;
+        border-radius: 50%;
     }
-    ${props => props.round && css`
-        img{
-            border-radius: 50%;
-        }
-    `}
     ${props => props.variant === "namedInitial" && css`
         display: inline-flex;
         justify-content: center;
