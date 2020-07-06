@@ -124,7 +124,7 @@ export const ButtonWrapper = styled.button`
   &.inverted {
     background-color: ${props => props.theme.palette.white};
     border: 0.8px solid ${props => props.theme.palette.primary.main};
-    box-shadow: 0px 12px 16px #0F72EE4E;
+    box-shadow: none;
     i {
       color: ${props => props.theme.palette.primary.main};
     }

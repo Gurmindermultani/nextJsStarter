@@ -121,6 +121,11 @@ export const CaseStudiesStyles = styled.div`
         width: calc(100vw - 60px);
       }
     }
+    .topContainer {
+      .highlight {
+        margin-top: 16px;
+      }
+    }
   }
 `;
 

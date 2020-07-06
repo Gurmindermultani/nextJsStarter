@@ -62,12 +62,28 @@ function Engagement(props) {
       <section className="section section0">
         <div className="topContainer">
           <div className="bg" />
-          <FadeIn className="text">
+          <FadeIn className="text desktop">
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Build a world-class company culture"/>
             <br />
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Get real-time actionable insights with AI-driven"/>
             <br />
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="employee engagement surveys."/>
+            <br />
+            <Slide className="demoInput">
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
+              <div className="buttons">
+                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
+              </div>
+            </Slide>
+          </FadeIn>
+          <FadeIn className="text mobile">
+            <Typography className="" variant="h1" fontSizes={[20, 34, 40]} text="Build a world-class"/>
+            <br />
+            <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="company culture"/>
+            <br />
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Get real-time actionable insights with AI-driven employee engagement surveys."/>
+            <br />
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text=""/>
             <br />
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}

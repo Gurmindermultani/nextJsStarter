@@ -148,7 +148,7 @@ export const EngagementStyles = styled.div`
     }
     .quoteContainer {
       margin: 100px 0 72px 0;
-      padding: 0 30px;
+      padding: 0 0px;
     }
     .section {
       padding: 0 30px;
@@ -166,6 +166,9 @@ export const EngagementStyles = styled.div`
       }
       &.section7{
         padding: 0;
+      }
+      &.section5{
+        margin: 0;
       }
       &.section6 {
         padding: 0;
@@ -190,7 +193,6 @@ export const EngagementStyles = styled.div`
         text-align: center;
       }
       .secondHeading {
-        margin-top: 28px;
         margin-bottom: 10px;
       }
       .bowlImage {

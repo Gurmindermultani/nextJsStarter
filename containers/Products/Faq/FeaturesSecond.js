@@ -73,6 +73,7 @@ const FeaturesFirstStyles = styled.div`
     }
     .rightContainer {
       flex-basis: 100%;
+      text-align: left;
     }
   }
 `;

@@ -125,7 +125,7 @@ export const WfhSurveysStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
-      padding: 0 30px;
+      padding: 0px;
     }
     .section {
       padding: 0 30px;
@@ -139,8 +139,14 @@ export const WfhSurveysStyles = styled.div`
       }
       &.section7, &.section8 {
         padding: 0;
+        .quoteContainer {
+          padding: 0px 30px;
+        }
       }
       &.section5 {
+        .carousalDialog {
+          min-height: 146px;
+        }
         .quoteContainer {
           margin-bottom: 48px;
         }

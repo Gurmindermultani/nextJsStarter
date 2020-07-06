@@ -138,6 +138,7 @@ const ProductStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    margin-bottom: 0px;
     .body {
       .leftContainer {
         flex-basis: 100%;

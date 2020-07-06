@@ -24,6 +24,9 @@ const IconHighlightsAllStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .highContainer {
       flex-wrap: wrap;
+      &.bottomMargin {
+        margin-bottom: 0px;
+      }
     }
   }
 `;

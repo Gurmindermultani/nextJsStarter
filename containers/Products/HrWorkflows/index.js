@@ -30,13 +30,25 @@ function HrWorkflows(props) {
     <HrWorflowsStyles>
       <section className="section section0">
         <div className="topContainer">
-          <FadeIn className="text">
+          <FadeIn className="text desktop">
             <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Streamline employee workflows with"/>
             <br />
             <Typography variant="h1" fontSizes={[20, 34, 40]} text="AI-enabled enterprise conversations"/>
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Let your employees request leaves, reimbursements, tax deductions"/>
             <br />
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="and other HR transactions via single conversational platform."/>
+            <Slide className="demoInput">
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
+              <div className="buttons">
+                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
+              </div>
+            </Slide>
+          </FadeIn>
+          <FadeIn className="text mobile">
+            <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Streamline employee workflows"/>
+            <Typography variant="h1" fontSizes={[20, 34, 40]} text="with AI-enabled enterprise conversations"/>
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Let your employees request leaves, reimbursements, tax deductions and other HR transactions via single conversational platform."/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text=""/>
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
