@@ -74,7 +74,7 @@ export const HomePageStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       margin: 100px 0 72px 0;
-      padding: 0 30px;
+      padding: 0 0px;
     }
     .section {
       padding: 0 30px;
@@ -83,6 +83,9 @@ export const HomePageStyles = styled.div`
       }
       &.section4, &.section6, &.section7, &.section9 {
         padding: 0;
+        .quoteContainer {
+          padding: 0 30px;
+        }
       }
       &.section4 {
         margin-top: 100px;
