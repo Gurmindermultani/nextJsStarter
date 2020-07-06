@@ -129,7 +129,9 @@ const CustomersStyles = styled.div`
           display: none;
           justify-content: space-between;
           text-align: center;
+          border-top: 1px solid #EEEEEE;
           .heading {
+            margin-top: 20px;
             margin-bottom: 10px;
           }
         }

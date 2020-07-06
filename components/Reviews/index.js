@@ -96,6 +96,10 @@ const ReviewsStyles = styled.div`
           span {
             margin-left: 15px;
           }
+          img {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
     }
@@ -133,11 +137,15 @@ const ReviewsStyles = styled.div`
         }
         .rightContainer {
           padding: 10px;
+          .user {
+            display: flex;
+            align-items: flex-start;
+          }
         }
       }
     }
     .slick-slide {
-      padding: 0 10px;
+      padding: 0 12px;
     }
     .slick-center {
       
@@ -185,8 +193,11 @@ function Reviews(props) {
                   </div>
                   <div className="user">
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
-                    <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
-                    <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+                    <div className="text">
+                      <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                      <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+
+                    </div>
                   </div>
                 </div>
               </div>

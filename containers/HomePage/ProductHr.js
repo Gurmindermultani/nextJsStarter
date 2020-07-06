@@ -148,12 +148,23 @@ const ProductStyles = styled.div`
     padding-right: 30px;
   }
   @media only screen and (max-width: 760px) {
+    .productHeader {
+      display: block;
+      .text {
+        margin: 24px 0 0 0;
+      }
+    }
     .body {
       .leftContainer {
         flex-basis: 100%;
       }
       .rightContainer {
         display: none;
+      }
+    }
+    .buttons {
+      button {
+        margin: auto;
       }
     }
   }

@@ -104,13 +104,16 @@ const FooterStyles = styled.div`
       }
     }
     .lowerContainer {
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
       text-align: center;
-      margin-top: 32px;
+      margin-top: 0px;
       .certs {
         justify-content: center;
         width: 100%;
         margin-bottom: 16px;
+      }
+      .terms {
+        margin: 24px 0 48px 0;
       }
       .copyright, .terms {
         width: 100%;
@@ -172,22 +175,22 @@ function Footer(props) {
             </Link>
           </div>
           <div className="phone">
-            <Typography className="halfBackground" variant="paragraph2" fontSize="16px" color="#212121" text="Phone: "/>
+            <Typography className="halfBackground" variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="Phone: "/>
             {" "}
-            <Typography variant="paragraph2" fontSize="16px" color="#212121" text="+91 8851168842"/>
+            <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="+91 8851168842"/>
           </div>
           <div className="email">
-            <Typography className="halfBackground" variant="paragraph2" fontSize="16px" color="#212121" text="Email: "/>
+            <Typography className="halfBackground" variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="Email: "/>
             {" "}
             <a href="mailto:sales@leena.ai">
-              <Typography variant="paragraph2" fontSize="16px" color="#0F72EE" text="sales@leena.ai"/>
+              <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#0F72EE" text="sales@leena.ai"/>
             </a>
           </div>
         </div>
         <div className="navigation">
           {navigation.map( groupNav => 
             <div key={groupNav.name} className="groupNav">
-              <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
+              <Typography className="groupHeader" variant="h6" fontSizes={[16, 16, 16]} color="#212121" text={groupNav.label}/>
               <div className="links">
                 {groupNav.links.map( link => {
                     if (link.href) {
@@ -217,7 +220,7 @@ function Footer(props) {
         </div>
         {!subscribed && 
           <form onSubmit={form.onSubmit} className="subscribe">
-            <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
+            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay Connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <Input {...email} name="email" placeholder="Your Email"/>
             <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
@@ -225,7 +228,7 @@ function Footer(props) {
         }
         {subscribed && 
           <div className="subscribe">
-            <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
+            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay Connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <br />
             <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Successfully subscribed to the newsletter."/>
@@ -234,17 +237,17 @@ function Footer(props) {
       </div>
       <div className="lowerContainer">
         <div className="copyright">
-          <Typography variant="paragraph2" color="#212121" text="©"/>
+          <Typography fontSizes={[14, 14, 14]} variant="paragraph2"  color="#212121" text="©"/>
           {" "}
-          <Typography variant="paragraph2" color="#212121" text="Leena AI Inc"/>
+          <Typography fontWeight="600" fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Leena AI Inc"/>
         </div>
         <div className="terms">
           <a target="_blank" href="https://leena.ai/docs/tnc.pdf">
-            <Typography variant="paragraph2" color="#212121" text="Terms of Use"/>
+            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Terms of Use"/>
           </a>
           {" | "}
           <a target="_blank" href="https://leena.ai/docs/pp.pdf">
-            <Typography variant="paragraph2" color="#212121" text="Privacy Policy"/>
+            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Privacy Policy"/>
           </a>
         </div>
         <div className="certs">
