@@ -45,7 +45,7 @@ const customers = [
   },
   {
     name: 'tata',
-    type: 'Information Technology',
+    type: 'Technology',
     employees: '8500+'
   },
 ];
@@ -85,10 +85,10 @@ const CustomersStyles = styled.div`
       margin-top: 64px;
       min-height: 240px;
       padding-top: 30px;
-      width: 200px;
+      width: 150px;
     }
     .slick-center {
-      padding: 0px 30px;
+      padding: 0px 0px;
       width: 300px;
       .details {
         display: flex;
@@ -154,23 +154,26 @@ const CustomersStyles = styled.div`
 `;
 
 function Customers(props) {
+  const moveCarousal = (e) => {
+    console.log(e.target);
+  }
   return (
     <Slide>
       <CustomersStyles className="deskTop">
         <Carousal variant="centerMode">
           {customers.map( customer => 
-            <div className={"carousalContainer center " + customer.name} key={customer.name}>
+            <div onClick={(e) => moveCarousal(e)} className={"carousalContainer center " + customer.name} key={customer.name}>
               <img name={customer.name} src={`/images/clients/${customer.name}.png`} />
               <div className="details">
                 <div className="row">
                   <Typography className="heading" variant="paragraph2" fontSize="13px" text="Industry"/>
                   <br/>
-                  <Typography variant="h6" fontSize="13px" text={customer.type}/>
+                  <Typography variant="h6" fontSize="11px" text={customer.type}/>
                 </div>
                 <div className="row">
                   <Typography className="heading" variant="paragraph2" fontSize="13px" text="Employees"/>
                   <br/>
-                  <Typography variant="h6" fontSize="13px" text={customer.employees}/>
+                  <Typography variant="h6" fontSize="11px" text={customer.employees}/>
                 </div>
               </div>
             </div>

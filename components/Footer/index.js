@@ -66,6 +66,9 @@ const FooterStyles = styled.div`
       .middleText {
         margin: 12px 0;
       }
+      .successText {
+        min-height: 130px;
+      }
     }
   }
   .certs {
@@ -118,10 +121,19 @@ const FooterStyles = styled.div`
 
 function Footer(props) {
   const [showDialog, setShowDialog] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
   const form = useForm({
     onSubmit: (formData, valid) => {
       if (!valid) return;
-      let body = {...formData};
+      let body = {
+        "payload": {
+            "subscribers": [
+                {
+                    "email": formData.email
+                }
+            ]
+        }
+      };
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/subscribe`, {
         method: 'post',
         headers: {
@@ -129,15 +141,19 @@ function Footer(props) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(body)
-      }).then((res) => {
-        if (res.status === 200) {
+      })
+      .then((result) => result.json())
+      .then((res) => {
+        if (res.message) {
           setShowDialog('success');
+          setSubscribed(true);
         } else {
-          alert('Some Error Occurred!');
+          const message = res.errors && res.errors[0] ? res.errors[0].message : '';
+          alert(message || 'Some Error Occurred!');
         }
       }).catch((e) => {
-        console.log('error');
-        alert('Some Error Occurred!');
+        console.log(e);
+        // alert('Some Error Occurred!');
       });
     }
   });
@@ -150,8 +166,10 @@ function Footer(props) {
     <FooterStyles>
       <div className="upperContainer">
         <div className="logo">
-          <div className="image">
-            <img src="/images/leenaLogo.svg"/>
+          <div className="image pointer">
+            <Link href={{ pathname: `/`, query: props.router.query }}>
+              <img src="/images/leenaLogo.svg"/>
+            </Link>
           </div>
           <div className="phone">
             <Typography className="halfBackground" variant="paragraph2" fontSize="16px" color="#212121" text="Phone: "/>
@@ -197,18 +215,28 @@ function Footer(props) {
             </div>
           )}
         </div>
-        <form onSubmit={form.onSubmit} className="subscribe">
-          <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
-          <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
-          <Input {...email} name="email" placeholder="Your Email"/>
-          <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
-        </form>
+        {!subscribed && 
+          <form onSubmit={form.onSubmit} className="subscribe">
+            <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
+            <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
+            <Input {...email} name="email" placeholder="Your Email"/>
+            <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
+          </form>
+        }
+        {subscribed && 
+          <div className="subscribe">
+            <Typography variant="h6" fontSize="16px" color="#212121" text="Stay Connected"/>
+            <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
+            <br />
+            <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Successfully subscribed to the newsletter."/>
+          </div>
+        }
       </div>
       <div className="lowerContainer">
         <div className="copyright">
           <Typography variant="paragraph2" color="#212121" text="©"/>
           {" "}
-          <Typography variant="paragraph2" color="#0F72EE" text="Leena AI"/>
+          <Typography variant="paragraph2" color="#212121" text="Leena AI Inc"/>
         </div>
         <div className="terms">
           <a target="_blank" href="https://leena.ai/docs/tnc.pdf">

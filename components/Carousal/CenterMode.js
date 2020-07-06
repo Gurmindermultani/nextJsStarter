@@ -24,7 +24,6 @@ function CenterMode(props) {
     slidesToShow: 5,
     speed: 500,
     adaptiveHeight: true,
-    variableWidth: true,
     nextArrow: <props.SampleNextArrow />,
     prevArrow: <props.SamplePrevArrow />,
   };
