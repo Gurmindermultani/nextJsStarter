@@ -92,7 +92,7 @@ function TopContainer(props) {
             <Input onChange={() => null} name="schedule" placeholder="Your work email"/>
             <Link href="/schedule-demo">
               <div>
-                <Button name="Schedule Demo" variant="contained" size="large"/>
+                <Button name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Link>
           </animated.div>

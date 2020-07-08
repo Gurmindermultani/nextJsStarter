@@ -61,7 +61,7 @@ function WfhSurveys(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -73,7 +73,7 @@ function WfhSurveys(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <ScheduleDemoButton type="link" fullWidth name="Schedule Demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>

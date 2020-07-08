@@ -91,7 +91,7 @@ function Dialog(props) {
         <Slide delay={600} className="footer">
           <Typography fontWeight="400" color="#212121" fontSizes={[16, 20, 22]} variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
           <a href="https://leena.ai/get-started.html" target="_blank">
-            <Button size="large" variant="contained" name="Schedule Demo" />
+            <Button size="large" variant="contained" name="Schedule demo" />
           </a>
         </Slide>
       </DialogContainer>

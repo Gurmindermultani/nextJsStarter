@@ -132,7 +132,7 @@ function EmployeeExperience(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <Button variant="contained" size="large" name="Schedule Demo"/>
+            <Button variant="contained" size="large" name="Schedule demo"/>
           </div>
         </div>
       </div>

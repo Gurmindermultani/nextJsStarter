@@ -38,7 +38,7 @@ function Integrations(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button fullWidth name="Schedule Demo" variant="contained" size="large"/>
+                <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>

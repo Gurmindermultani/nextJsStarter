@@ -185,7 +185,7 @@ function MobileDemo(props) {
         )}
       </VisibilitySensor>
       <div className="button">
-        <Button size="large" variant="contained" name="Schedule Demo"/>
+        <Button size="large" variant="contained" name="Schedule demo"/>
       </div>
     </MobileDemoStyles>
   );
