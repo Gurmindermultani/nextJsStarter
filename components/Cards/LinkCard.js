@@ -29,7 +29,7 @@ const LinkCardStyles = styled.a`
   .body {
     max-width: 150px;
     text-align: center;
-    margin: 16px 33px;
+    margin: 16px auto;
   }
   .footer {
     display: flex;

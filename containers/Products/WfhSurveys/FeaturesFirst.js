@@ -62,6 +62,7 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    margin-bottom: 64px;
     .rightContainer {
       display: none;
     }

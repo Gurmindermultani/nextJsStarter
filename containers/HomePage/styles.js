@@ -95,6 +95,9 @@ export const HomePageStyles = styled.div`
           padding: 0 30px;
         }
       }
+      &.section8 {
+        padding: 0 00px;
+      }
       &.noMargin {
         margin-top: 120px;
         height: auto;

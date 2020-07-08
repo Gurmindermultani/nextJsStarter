@@ -70,6 +70,7 @@ export const ScheduleDemoStyles = styled.div`
     .leftContainer {
       flex-basis: 100%;
       padding: 60px 30px;
+      margin-top: 0;
       .textCenter {
         text-align: center;
       }

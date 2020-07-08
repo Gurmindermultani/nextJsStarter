@@ -61,8 +61,10 @@ const RecognitionsStyles = styled.div`
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
     .cardsContainer {
-      padding: 0px 20px 20px 35px;
+      padding: 0px 20px 20px 20px;
       .singleCard {
+        width: 100%;
+      }
       img {
         &.business {
           width: 182px;
