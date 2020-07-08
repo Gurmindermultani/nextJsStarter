@@ -45,12 +45,13 @@ export const HeaderStyles = styled.div`
         top: 30px;
         background: white;
         padding: 6px 16px 16px 16px;
-        min-width: 200px;
+        min-width: 230px;
         border-radius: 4px;
         box-shadow: 0px 4px 16px #00000014;
         .link {
           margin-top: 10px;
           cursor: pointer;
+          padding: 4px 8px;
           &.selected {
             span {
               color: #0F72EE;
@@ -60,6 +61,7 @@ export const HeaderStyles = styled.div`
             span {
               color: #0F72EE;
             }
+            background: #f6f6f6;
           }
         }
       }

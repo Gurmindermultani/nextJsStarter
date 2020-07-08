@@ -72,7 +72,7 @@ function CaseManagment(props) {
         <FeaturesThird />
       </section>
       <section className="section buttonSection">
-        <ScheduleDemoButton name="Get HR helpdesk" />
+        <ScheduleDemoButton name="Get case management" />
       </section>
       <section className="section section5">
         <FadeIn className="quoteContainer">
@@ -81,7 +81,7 @@ function CaseManagment(props) {
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
-          <KnowMore variant="contained" size="large" name="Know More" />
+          <KnowMore variant="contained" size="large" />
         </div>
       </section>
       <section className="section section7">

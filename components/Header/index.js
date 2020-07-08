@@ -123,7 +123,7 @@ function Header(props) {
           {navigation.map( groupNav => 
             <div key={groupNav.name} className="groupNav">
               <div className="groupName pointer">
-                <Typography className="groupHeader" variant="h6" fontSize="16px" color="#212121" text={groupNav.label}/>
+                <Typography className="groupHeader" variant="h6" fontWeight="500" fontSize="16px" color="#212121" text={groupNav.label}/>
                 <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
               </div>
               <div className="links">
@@ -133,7 +133,7 @@ function Header(props) {
                       <div className="link" key={link.name}>
                         <a href={`${link.href}`} target="_blank">
                           <div>
-                            <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                            <Typography variant="paragraph2" fontWeight="500" fontSize="15px" color="#212121" text={link.label}/>
                           </div>
                         </a>
                       </div>
@@ -143,7 +143,7 @@ function Header(props) {
                     <div className={"link " + (props.router.pathname === `/${link.name}` ? 'selected ' : ' ')} key={link.name}>
                       <Link href={{ pathname: `/${link.name}`, query: props.router.query }}>
                         <a>
-                          <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                          <Typography variant="paragraph2" fontWeight="500" fontSize="15px" color="#212121" text={link.label}/>
                         </a>
                       </Link>
                     </div>
@@ -154,15 +154,15 @@ function Header(props) {
           )}
         </div>
         <div className="buttons desktop">
-          {props.router.pathname.indexOf('scheduleDemo') > -1 &&
+          {props.router.pathname.indexOf('schedule-demo') > -1 &&
             <div className="demo">
               <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
               <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
               <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
-              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
+              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
             </div>
           }
-          {props.router.pathname.indexOf('scheduleDemo') === -1 &&
+          {props.router.pathname.indexOf('schedule-demo') === -1 &&
             <Link href="/schedule-demo">
               <div>
                 <Button variant="contained" size="medium" name="Schedule Demo" />

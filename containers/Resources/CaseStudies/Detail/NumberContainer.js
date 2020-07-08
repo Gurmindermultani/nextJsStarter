@@ -61,69 +61,25 @@ const NumberContainerStyles = styled.div`
 function NumberContainer(props) {
   return (
     <NumberContainerStyles>
-      {props.data.map( (detail, idx) => {
-        if (idx === 0) {
-          return (
-            <Slide key={detail.text + idx} from='left' className="detail">
-              <div className="padded" style={{ background: detail.bg }}>
-                <div className="inner">
-                  {detail.text &&
-                    <div className="heading">
-                      <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} fontWeight="400"  text={detail.text}/>
-                    </div>
-                  }
-                  <div className="body">
-                    <Typography className="rowValue" fontWeight="600" color="#212121" variant="h1" fontSizes={[78, 100, 100]} text={detail.number}/>
-                  </div>
-                  <div className="footer">
-                    <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} text={detail.subText}/>
-                  </div>
+      {props.data.map( (detail, idx) => (
+        <Slide key={detail.text + idx} className="detail">
+          <div className="padded" style={{ background: detail.bg }}>
+            <div className="inner">
+              {detail.text &&
+                <div className="heading">
+                  <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} fontWeight="400"  text={detail.text}/>
                 </div>
+              }
+              <div className="body">
+                <Typography className="rowValue" fontWeight="600" color="#212121" variant="h1" fontSizes={[78, 100, 100]} text={detail.number}/>
               </div>
-            </Slide>
-          );
-        }
-        if (idx === props.data.length - 1) {
-          return (
-            <Slide key={detail.text + idx} from='right' className="detail">
-              <div className="padded" style={{ background: detail.bg }}>
-                <div className="inner">
-                  {detail.text &&
-                    <div className="heading">
-                      <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} fontWeight="400"  text={detail.text}/>
-                    </div>
-                  }
-                  <div className="body">
-                    <Typography className="rowValue" fontWeight="600" color="#212121" variant="h1" fontSizes={[78, 100, 100]} text={detail.number}/>
-                  </div>
-                  <div className="footer">
-                    <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} text={detail.subText}/>
-                  </div>
-                </div>
-              </div>
-            </Slide>
-          );
-        }
-        return (
-          <FadeIn key={detail.text + idx} className="detail">
-            <div className="padded" style={{ background: detail.bg }}>
-              <div className="inner">
-                {detail.text &&
-                  <div className="heading">
-                    <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} fontWeight="400"  text={detail.text}/>
-                  </div>
-                }
-                <div className="body">
-                  <Typography className="rowValue" fontWeight="600" color="#212121" variant="h1" fontSizes={[78, 100, 100]} text={detail.number}/>
-                </div>
-                <div className="footer">
-                  <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} text={detail.subText}/>
-                </div>
+              <div className="footer">
+                <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[16, 18, 24]} text={detail.subText}/>
               </div>
             </div>
-          </FadeIn>
-        );
-      }
+          </div>
+        </Slide>
+      )
     )}
     </NumberContainerStyles>
   );

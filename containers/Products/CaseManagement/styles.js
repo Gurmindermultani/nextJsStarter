@@ -38,9 +38,6 @@ export const CaseManagmentStyles = styled.div`
     }
     .knowMore {
       margin-top: 80px;
-      button {
-        width: 172px;
-      }
     }
   }
   .topContainer {

@@ -65,8 +65,8 @@ function Faq(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Capabilities that help you build"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="an employee-friendly workplace"/>
+          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Exhibit the power of"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="outstanding employee service"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -74,8 +74,8 @@ function Faq(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
+          <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Capabilities that help you build"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="an employee-friendly workplace"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
@@ -95,7 +95,7 @@ function Faq(props) {
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
-          <KnowMore variant="contained" size="large" name="Know More" />
+          <KnowMore variant="contained" size="large" />
         </div>
       </section>
       <section className="section section7">

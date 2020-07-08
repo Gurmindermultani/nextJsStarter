@@ -21,13 +21,21 @@ import Dialog from './Dialog';
 
 const FormStyles = styled.div`
   width: 100%;
-  padding: 40px 40px;
-  margin: auto;
-  margin-right: 0;
-  box-shadow: 0px 6px 46px #0000001F;
-  border-radius: 16px;
-  background: #fff;
-  max-width: 400px;
+  background-image: url('/images/formbg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  .bgcont {
+    padding: 40px 40px;
+    margin-right: 0;
+    box-shadow: 0px 6px 46px #0000001F;
+    border-radius: 16px;
+    background: #fff;
+    width: 440px;
+  }
   .textCenter {
     margin-bottom: 30px;
   }
@@ -170,36 +178,38 @@ function Form(props) {
   });
   return (
     <FormStyles>
-      <div className="textCenter">
-        <Typography className="" fontSizes={[16, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
-      </div>
-      <form onSubmit={form.onSubmit}>
-        <Input {...firstName} placeholder='First name' name="firstName"/>
-        <Input {...lastName} placeholder='Last name' name="lastName"/>
-        <Input {...email} placeholder='Your work email' name="email"/>
-        <div className="phone">
-          <Select
-            placeholder='Number of employees'
-            options={phoneCountryOptions}
-            onChange={ e => setCountryCode(e.target.value)}
-            value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
-          />
-          <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
+      <div className="bgcont">
+        <div className="textCenter">
+          <Typography className="" fontSizes={[16, 16, 18]} variant="paragraph2" text="Tell us a few things about yourself"/>
         </div>
-        <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
-        <Input {...company} placeholder='Company name' name="company"/>
-        {/* <Select
-          {...numberOfEmployees}
-          placeholder='Number of employees'
-          options={options}
-          value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
-        /> */}
-        <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
-      </form>
-      <Dialog
-        setShowDialog={setShowDialog}
-        showDialog={showDialog}
-      />
+        <form onSubmit={form.onSubmit}>
+          <Input {...firstName} placeholder='First name' name="firstName"/>
+          <Input {...lastName} placeholder='Last name' name="lastName"/>
+          <Input {...email} placeholder='Your work email' name="email"/>
+          <div className="phone">
+            <Select
+              placeholder='Number of employees'
+              options={phoneCountryOptions}
+              onChange={ e => setCountryCode(e.target.value)}
+              value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
+            />
+            <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
+          </div>
+          <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
+          <Input {...company} placeholder='Company name' name="company"/>
+          {/* <Select
+            {...numberOfEmployees}
+            placeholder='Number of employees'
+            options={options}
+            value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
+          /> */}
+          <Button size="large" fullWidth type="submit" name="Schedule demo" variant="contained" />
+        </form>
+        <Dialog
+          setShowDialog={setShowDialog}
+          showDialog={showDialog}
+        />
+      </div>
     </FormStyles>
   );
 }

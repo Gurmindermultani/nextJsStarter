@@ -50,7 +50,7 @@ function Contact(props) {
         <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+1 650-690-6283"/>
       }
       <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
-      <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
+      <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
     </ContactStyles>
   );
 }

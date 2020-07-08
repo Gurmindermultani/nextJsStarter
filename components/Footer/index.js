@@ -137,6 +137,7 @@ function Footer(props) {
             ]
         }
       };
+      // setSubscribed(true);
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/subscribe`, {
         method: 'post',
         headers: {
@@ -182,8 +183,8 @@ function Footer(props) {
           <div className="email">
             <Typography className="halfBackground" variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="Email: "/>
             {" "}
-            <a href="mailto:sales@leena.ai">
-              <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#0F72EE" text="sales@leena.ai"/>
+            <a href="mailto:support@leena.ai">
+              <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#0F72EE" text="support@leena.ai"/>
             </a>
           </div>
         </div>
@@ -220,7 +221,7 @@ function Footer(props) {
         </div>
         {!subscribed && 
           <form onSubmit={form.onSubmit} className="subscribe">
-            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay Connected"/>
+            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <Input {...email} name="email" placeholder="Your Email"/>
             <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
@@ -228,7 +229,7 @@ function Footer(props) {
         }
         {subscribed && 
           <div className="subscribe">
-            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay Connected"/>
+            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <br />
             <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Successfully subscribed to the newsletter."/>

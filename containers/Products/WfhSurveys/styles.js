@@ -38,9 +38,6 @@ export const WfhSurveysStyles = styled.div`
     }
     .knowMore {
       margin-top: 80px;
-      button {
-        width: 172px;
-      }
     }
   }
   .topContainer {

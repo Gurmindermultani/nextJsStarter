@@ -40,7 +40,9 @@ function ContactUs(props) {
           </div>
           <div className="row mail">
             <img className="phoneImage" alt="phone" src="/images/icons/communications.svg"/>
-            <Typography fontWeight="500" color="#0F72EE" fontSize="16px" variant="paragraph2" text="sales@leena.ai"/>
+            <a href="mailto:support@leena.ai">
+              <Typography fontWeight="500" color="#0F72EE" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
+            </a>
           </div>
           <div className="row pin">
             <img className="phoneImage" alt="phone" src="/images/icons/pin.svg"/>

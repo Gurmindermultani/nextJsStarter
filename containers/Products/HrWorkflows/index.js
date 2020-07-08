@@ -65,8 +65,8 @@ function HrWorkflows(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Boost employee productivity"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people management"/>
+          <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Boost employee productivity"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people management"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -74,8 +74,8 @@ function HrWorkflows(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>

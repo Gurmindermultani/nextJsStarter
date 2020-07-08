@@ -16,7 +16,7 @@ function KnowMore(props) {
     <Slide>
       <Link href={props.to ? props.to : "/integrations"}>
         <div>
-          <Button name={props.name ? props.name : 'Know More'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+          <Button name={props.name ? props.name : 'See more integrations'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
         </div>
       </Link>
     </Slide>

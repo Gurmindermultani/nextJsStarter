@@ -95,7 +95,7 @@ export const ButtonWrapper = styled.button`
   &.contained {
     background-color: ${props => props.theme.palette.primary.main};
     border: 0.8px solid ${props => props.theme.palette.primary.main};
-    box-shadow: 0px 12px 16px #0F72EE4E;
+    box-shadow: 0px 8px 12px rgba(15, 114, 238, 0.24);
     i {
       color: ${props => props.theme.palette.white};
     }

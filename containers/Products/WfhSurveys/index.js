@@ -15,6 +15,7 @@ import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
 import ScheduleDemo from '../../../components/ScheduleDemo';
 import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
+import KnowMore from '../../../components/KnowMore';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import LottieAnimation from "../../../components/LottieAnimation";
@@ -85,8 +86,8 @@ function WfhSurveys(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography variant="h3" fontSizes={[20, 28, 28]} text="Take care of your employees"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="when they need you the most"/>
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Take care of your employees"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="when they need you the most"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -123,6 +124,9 @@ function WfhSurveys(props) {
           <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
         </FadeIn>
         <Platforms />
+        <div className="knowMore center">
+          <KnowMore variant="contained" size="large" />
+        </div>
       </section>
       <section className="section section7">
         <FadeIn className="quoteContainer">
@@ -139,7 +143,7 @@ function WfhSurveys(props) {
         <Reviews />
       </section>
       <section className="section section8 noMargin">
-        <ScheduleDemo variant="discover" />
+        <ScheduleDemo variant="wfh" />
       </section>
     </WfhSurveysStyles>
   );

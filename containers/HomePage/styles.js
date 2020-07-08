@@ -19,6 +19,9 @@ export const HomePageStyles = styled.div`
         margin: 0;
       }
     }
+    &.section9 {
+      margin-top: 80px;
+    }
     &.section4 {
       margin-top: 100px;
       margin-bottom: 80px;
@@ -29,9 +32,6 @@ export const HomePageStyles = styled.div`
     }
     .knowMore {
       margin-top: 80px;
-      button {
-        width: 172px;
-      }
     }
   }
   .quoteContainer {

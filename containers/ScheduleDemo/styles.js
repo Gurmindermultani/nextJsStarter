@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const ScheduleDemoStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 80px auto;
   margin-bottom: 0;
   justify-content: space-between;
-  align-items: center;
   .leftContainer {
     flex-basis: 45%;
+    margin-top: 80px;
     .textCenter {
       text-align: left;
     }
@@ -38,6 +38,8 @@ export const ScheduleDemoStyles = styled.div`
   }
   .rightContainer {
     flex-basis: 45%;
+    margin-top: 70px;
+    padding-right: 30px;
     .form {
       padding: 56px;
       width: 80%;
@@ -52,6 +54,9 @@ export const ScheduleDemoStyles = styled.div`
   .lower {
     border-top: 1px solid #EEEEEE;
     padding-top: 38px;
+  }
+  @media only screen and (min-width: 1400px) {
+    max-width: 1200px;
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;

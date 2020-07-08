@@ -112,8 +112,8 @@ function HomePage(props) {
       </section>
       <section className="section section1">
         <QuoteAnimator>
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Empower your organization"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="with an excellent HR efficiency"/>
+          <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Empower your organization"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="with an excellent HR efficiency"/>
         </QuoteAnimator>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -166,14 +166,14 @@ function HomePage(props) {
         </QuoteAnimator>
         <Reviews />
       </section>
-      <section className="section section8 noMargin">
-        <ScheduleDemo></ScheduleDemo>
-      </section>
-      <section className="section section9">
+      <section className="section section8">
         <QuoteAnimator className="quoteContainer">
           <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="We’re featured in"/>
         </QuoteAnimator>
         <Recognitions />
+      </section>
+      <section className="section section9 noMargin">
+        <ScheduleDemo></ScheduleDemo>
       </section>
     </HomePageStyles>
   );

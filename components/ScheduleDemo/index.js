@@ -27,11 +27,17 @@ const ScheduleDemoStyles = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    img {
+      width: 100px;
+    }
   }
   .bottomRight {
     position: absolute;
     bottom: 0;
     right: 0;
+    img {
+      width: 100px;
+    }
   }
   .demoInput {
     padding-top: 40px;
@@ -103,6 +109,34 @@ function ScheduleDemo(props) {
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know how Leena AI can add value"/>
             <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="to your organization."/>
+          </FadeIn>
+          <Slide className="demoInput center">
+            {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
+            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+              <div className="demoButton">
+                <Button name="Schedule Demo" variant="inverted" size="large"/>
+                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
+              </div>
+            </Link>
+          </Slide>
+        </div>
+        <div className="bottomRight">
+          <img alt="animationImputs" src="/images/demo/2.svg"/>
+        </div>
+      </ScheduleDemoStyles>
+    );
+  }
+  if (props.variant === "wfh") {
+    return (
+      <ScheduleDemoStyles>
+        <div className="topLeft">
+          <img alt="animationImputs" src="/images/demo/1.svg"/>
+        </div>
+        <div>
+          <FadeIn className="quoteContainer">
+            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Get started with remote employee engagement"/>
+            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="right away"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

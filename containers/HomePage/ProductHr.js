@@ -174,7 +174,7 @@ function ProductHr(props) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+    setExpanded(panel);
   };
   return (
     <ProductStyles>

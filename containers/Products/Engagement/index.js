@@ -18,6 +18,7 @@ import Customers from '../../../components/Customers';
 import Reviews from '../../../components/Reviews';
 import ScheduleDemo from '../../../components/ScheduleDemo';
 import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
+import KnowMore from '../../../components/KnowMore';
 import MobileDemo from '../../../components/MobileDemo';
 import MacDemo from '../../../components/MacDemo';
 
@@ -110,8 +111,8 @@ function Engagement(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
+          <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
+          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
         </FadeIn>
         <div className="products">
           <ProductHr />
@@ -144,6 +145,9 @@ function Engagement(props) {
           <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
         </FadeIn>
         <Platforms />
+        <div className="knowMore center">
+          <KnowMore variant="contained" size="large" />
+        </div>
       </section>
       <section className="section section6">
         <FadeIn className="quoteContainer">

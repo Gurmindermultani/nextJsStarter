@@ -43,7 +43,7 @@ const recognitions = [
 ];
 
 const RecognitionsStyles = styled.div`
-  margin-bottom: 48px;
+  margin-bottom: 0px;
   .contain{
     display: flex;
     justify-content: center;
