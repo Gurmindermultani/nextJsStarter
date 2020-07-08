@@ -16,7 +16,7 @@ const reviews = [
   {
     name: 'tataReview',
     bg: 'dark',
-    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. LeenaAI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
+    text: '“Employee experience is at epicentre of our digital transformation journey. We are developing partner ecosystem who believe in same philosophy. Leena AI is one such partner that we are glad to be associated with. Leveraging technology they have been able to solve some of our business problems, scale operations and dial up employee experience.”',
     user: {
       img: '/images/people/nikhil.png',
       name: '~ Nikhil Morade',

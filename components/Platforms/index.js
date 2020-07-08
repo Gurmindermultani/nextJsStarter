@@ -89,6 +89,10 @@ const collabTools = [
     name: "slack",
     image: "/images/home/slack.png"
   },
+  {
+    name: "whatsapp",
+    image: "/images/home/whatsapp.png"
+  },
 ];
 
 const apps = [
@@ -99,10 +103,6 @@ const apps = [
   {
     name: "ios",
     image: "/images/home/ios.png"
-  },
-  {
-    name: "whatsapp",
-    image: "/images/home/whatsapp.png"
   },
   {
     name: "microsoft",
