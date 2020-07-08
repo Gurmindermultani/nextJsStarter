@@ -83,9 +83,6 @@ const ProductStyles = styled.div`
   }
   .buttons {
     margin-top: 48px;
-    button {
-      min-width: 172px;
-    }
   }
   .image {
     position: relative;
@@ -232,7 +229,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <KnowMore to={"/employee-query-management"} type="link" variant="contained" size="large"/>
+            <KnowMore to={"/employee-query-management"} name="Know more" type="link" variant="contained" size="large"/>
           </div>
         </div>
         <div className="rightContainer">

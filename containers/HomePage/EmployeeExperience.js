@@ -71,7 +71,7 @@ const ProductStyles = styled.div`
           }
         }
         .MuiExpansionPanelDetails-root {
-          padding: 0 24px 16px 24px;
+          padding: 0 22px 16px 24px;
         }
         &.Mui-expanded {
           box-shadow: 0px 4px 16px #00000014;
@@ -85,9 +85,6 @@ const ProductStyles = styled.div`
   }
   .buttons {
     margin-top: 48px;
-    button {
-      min-width: 172px;
-    }
   }
   .image {
     position: relative;
@@ -232,7 +229,7 @@ function EmployeeExperience(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <KnowMore to="/employee-engagement"/>
+            <KnowMore name="Know more" to="/employee-engagement"/>
           </div>
         </div>
       </div>

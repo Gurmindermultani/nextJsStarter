@@ -44,7 +44,7 @@ function IconHighlightsAll(props) {
                   : "translateY(50px)",
             }}>
               {({ opacity, transform }) => (
-                <IconHighlight style={{opacity, transform}} name="resolution" heading="Quick resolution" description="Listen to your employees round the clock and help them on the go."/>
+                <IconHighlight style={{opacity, transform}} name="resolution" heading="Quick resolution" description="Listen to your employees round the clock and help them instantly on the go."/>
               )}
             </Spring>
           )}
