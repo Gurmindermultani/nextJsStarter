@@ -14,7 +14,7 @@ const FeaturesFirstStyles = styled.div`
   display: flex;
   margin-bottom: 120px;
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 48%;
     text-align: right;
     .headingText {
       line-height: 33px;
@@ -68,6 +68,7 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    margin-bottom: 64px;
     .leftContainer {
       display: none;
     }

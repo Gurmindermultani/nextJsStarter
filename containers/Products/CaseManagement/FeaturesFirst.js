@@ -63,6 +63,7 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    margin-bottom: 64px;
     .rightContainer {
       display: none;
     }
@@ -78,7 +79,7 @@ function FeaturesFirst(props) {
       <div className="leftContainer">
         <div from='left' className="first">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Conversational UI"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Chat interface ticketing platform that simply talks to your employee instead of throwing complicated forms on them."}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Chat interface ticketing platform that simply talks to your employees instead of throwing complicated forms on them."}/>
         </div>
         <div from='left' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Pre-built topics"}/>

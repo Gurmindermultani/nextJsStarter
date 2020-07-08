@@ -21,10 +21,16 @@ const IconHighlightStyles = styled.div`
   .descriptionText {
     line-height: 25px;
   }
+  .Parallel, .Personalized {
+    max-width: 270px;
+  }
   @media only screen and (max-width: 760px) {
     flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 32px;
+    .Parallel, .Personalized {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -46,7 +52,7 @@ function IconHighlight(props) {
         <GrowIcon setAnim={setAnim} name={props.name} />
       </div>
       <Typography className="middleText" variant="h4" fontSize="20px" text={props.heading}/>
-      <Typography variant="paragraph2" className="descriptionText" fontSize="16px" text={props.description}/>
+      <Typography variant="paragraph2" className={"descriptionText " + props.heading} fontSize="16px" text={props.description}/>
     </IconHighlightStyles>
   );
 }

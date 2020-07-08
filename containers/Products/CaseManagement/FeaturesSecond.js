@@ -68,11 +68,13 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
+    margin-bottom: 64px;
     .leftContainer {
       display: none;
     }
     .rightContainer {
       flex-basis: 100%;
+      text-align: left;
     }
   }
 `;
