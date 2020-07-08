@@ -65,7 +65,7 @@ const ProductStyles = styled.div`
           }
         }
         .MuiExpansionPanelDetails-root {
-          padding: 0 24px 16px 24px;
+          padding: 0 32px 16px 24px;
         }
         &.Mui-expanded {
           box-shadow: 0px 4px 16px #00000014;

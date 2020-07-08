@@ -106,7 +106,7 @@ function FeaturesFirst(props) {
         </div>
         <div from='right' className="second">
           <Typography className="headingText" variant="h4" fontSize="22px" text={"Know tax and deductions"}/>
-          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Don’t burden your HR folks with repetitive tax queries. Let the virtual HR assistant give instant replies to tax-related queries of your employees."}/>
+          <Typography className="descriptionText" variant="paragraph2" fontSize="18px" text={"Don’t burden your HR folks with repetitive tax queries. Let the virtual HR assistant give instant replies to your employees."}/>
         </div>
       </div>
     </FeaturesFirstStyles>

@@ -21,7 +21,13 @@ const IconHighlightStyles = styled.div`
   .descriptionText {
     line-height: 25px;
   }
+  &.Great {
+    max-width: 310px;
+  }
   @media only screen and (max-width: 760px) {
+    &.Great {
+      max-width: 100%;
+    }
     flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 32px;
@@ -41,7 +47,7 @@ function IconHighlight(props) {
     anim.play();
   };
   return (
-    <IconHighlightStyles style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <IconHighlightStyles className={props.heading} style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
       <div>
         <GrowIcon setAnim={setAnim} name={props.name} />
       </div>
