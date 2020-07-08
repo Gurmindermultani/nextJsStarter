@@ -165,7 +165,7 @@ function Header(props) {
           {props.router.pathname.indexOf('schedule-demo') === -1 &&
             <Link href="/schedule-demo">
               <div>
-                <Button variant="contained" size="medium" name="Schedule Demo" />
+                <Button variant="contained" size="medium" name="Schedule demo" />
               </div>
             </Link>
           }

@@ -173,7 +173,7 @@ function HomePage(props) {
         <Recognitions />
       </section>
       <section className="section section9 noMargin">
-        <ScheduleDemo></ScheduleDemo>
+        <ScheduleDemo variant="discover"></ScheduleDemo>
       </section>
     </HomePageStyles>
   );

@@ -26,7 +26,7 @@ const reviews = [
   {
     name: 'cocacolaReview',
     bg: 'primary',
-    text: '“Organisations must continuously experiment and fail fast or scale fast to be ahead of the curve. One also needs a good partner who shares the curiosity of solving business problems that were limited by the technology of the past. We found the right partner in Leena AI to collaborate and convert the ideas using the AI powered Chatbots, into the tangible results for the business.”',
+    text: '“Organisations must continuously experiment and fail fast or scale fast to be ahead of the curve. One also needs a good partner who shares the curiosity of solving business problems that were limited by the technology of the past. We found the right partner in Leena AI to collaborate and convert the ideas using the AI-powered chatbots, into the tangible results for the business.”',
     user: {
       img: '/images/people/alok.jpg',
       name: '~ Alok Saxena',
@@ -93,8 +93,8 @@ const ReviewsStyles = styled.div`
           margin-top: 34px;
           display: flex;
           align-items: center;
-          span {
-            margin-left: 15px;
+          .text {
+            margin-left: 12px;
           }
           img {
             width: 40px;
@@ -170,7 +170,9 @@ function Reviews(props) {
                   </div>
                   <div className="user">
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
-                    <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                    <Typography className="text" size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                    <Typography size="15px" variant="paragraph2" text={', '}/>
+                    &nbsp;
                     <Typography size="15px" variant="paragraph2" text={review.user.position}/>
                   </div>
                 </div>
@@ -195,8 +197,8 @@ function Reviews(props) {
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
                     <div className="text">
                       <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                      <Typography size="15px" variant="paragraph2" text={', '}/>
                       <Typography size="15px" variant="paragraph2" text={review.user.position}/>
-
                     </div>
                   </div>
                 </div>
