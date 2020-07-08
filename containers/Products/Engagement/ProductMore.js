@@ -180,7 +180,7 @@ function ProductHr(props) {
               </div>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get to know real-time actionable insights right on your dashboard. Know the factors that require improvement and challenges faced by employees."}/>
+              <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get to know real-time actionable insights right on your dashboard. Know the factors that require improvement, and challenges faced by employees."}/>
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
