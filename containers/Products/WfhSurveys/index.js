@@ -107,7 +107,7 @@ function WfhSurveys(props) {
         <FeaturesThird />
       </section>
       <section className="section buttonSection">
-        <ScheduleDemoButton name="Get WFH surveys" />
+        <ScheduleDemoButton />
       </section>
       <section className="section section5 noMargin">
         <div className="mobile">

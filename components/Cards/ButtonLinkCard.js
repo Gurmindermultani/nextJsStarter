@@ -51,7 +51,7 @@ function ButtonLinkCard(props) {
       <div className="footer">
         <Link href={`${props.data.link}`} >
           <a>
-            <Button variant="inverted" size="large" name="Read Case Study"/>
+            <Button variant="inverted" size="large" name="Read case study"/>
           </a>
         </Link>
       </div>
