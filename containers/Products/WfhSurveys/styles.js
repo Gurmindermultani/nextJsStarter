@@ -10,6 +10,7 @@ export const WfhSurveysStyles = styled.div`
     &.section0 {
       max-width: 100vw;
       padding: 178px 160px 0 160px !important;
+      overflow: hidden;
     }
     &.section5 {
       margin-bottom: 50px;

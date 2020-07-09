@@ -231,11 +231,6 @@ const GlobalStyle = createGlobalStyle`
       color: #0F72EE;
     }
   }
-  .topContainer {
-    .bowlImage {
-      transform: scale(1.2) !important;
-    }
-  }
   @media only screen and (max-width: 760px) {
     .desktop {
       display: none;

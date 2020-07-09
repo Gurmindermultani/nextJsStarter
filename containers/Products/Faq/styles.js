@@ -10,6 +10,7 @@ export const FaqStyles = styled.div`
     &.section0 {
       max-width: 100vw;
       padding: 178px 160px 0 160px !important;
+      overflow: hidden;
     }
     &.noPadding {
       max-width: 100vw;
@@ -45,7 +46,7 @@ export const FaqStyles = styled.div`
       flex-basis: 70%;
     }
     .secondHeading {
-      margin-top: 28px;
+      margin-top: 16px;
     }
     .bowlImage {
       position: relative;
@@ -59,7 +60,7 @@ export const FaqStyles = styled.div`
       }
     }
     .demoInput {
-      margin-top: 32px;
+      margin-top: 48px;
       width: 40%;
       display: flex;
       align-items: center;
