@@ -36,7 +36,7 @@ function Faq(props) {
             <Typography variant="h1" fontSizes={[20, 34, 40]} text="with enterprise conversational experience"/>
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Automatically reply policy-related HR queries"/>
             <br />
-            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="via AI-driven conversations."/>
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="instantly via AI-driven conversations."/>
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
