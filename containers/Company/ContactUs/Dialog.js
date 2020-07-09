@@ -90,7 +90,7 @@ function Dialog(props) {
           <Slide delay={200} className="body">
             <Typography className="" fontWeight="400" color="#212121" fontSizes={[14, 16, 18]} variant="paragraph2" text="Explore more about how we have helped enterprises enhance their employee experience."/>
           </Slide>
-          <Link href="/resources/caseStudies">
+          <Link href="/case-studies">
             <a>
               <Button size="large" className="caseStudy" variant="contained" name="Read Case Studies" />
             </a>

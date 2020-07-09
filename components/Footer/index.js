@@ -223,7 +223,7 @@ function Footer(props) {
           <form onSubmit={form.onSubmit} className="subscribe">
             <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
-            <Input {...email} name="email" placeholder="Your Email"/>
+            <Input {...email} name="email" placeholder="Your email"/>
             <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
           </form>
         }
@@ -238,17 +238,17 @@ function Footer(props) {
       </div>
       <div className="lowerContainer">
         <div className="copyright">
-          <Typography fontSizes={[14, 14, 14]} variant="paragraph2"  color="#212121" text="©"/>
+          <Typography fontWeight="600" fontSizes={[14, 14, 14]} variant="paragraph2"  color="#212121" text="©"/>
           {" "}
-          <Typography fontWeight="600" fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Leena AI Inc"/>
+          <Typography fontWeight="600" fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Leena AI Inc."/>
         </div>
         <div className="terms">
           <a target="_blank" href="https://leena.ai/docs/tnc.pdf">
-            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Terms of Use"/>
+            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Terms of use"/>
           </a>
           {" | "}
           <a target="_blank" href="https://leena.ai/docs/pp.pdf">
-            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Privacy Policy"/>
+            <Typography fontSizes={[14, 14, 14]} variant="paragraph2" color="#212121" text="Privacy policy"/>
           </a>
         </div>
         <div className="certs">
