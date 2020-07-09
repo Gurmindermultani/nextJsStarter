@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const ContactUsStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 80px auto;
   margin-bottom: 0;
   justify-content: space-between;
-  align-items: center;
   .leftContainer {
     flex-basis: 60%;
+    margin-top: 70px;
     .textCenter {
       text-align: left;
     }
@@ -55,6 +55,7 @@ export const ContactUsStyles = styled.div`
   }
   .rightContainer {
     flex-basis: 35%;
+    margin-top: 80px;
     .form {
       width: 80%;
       margin: auto;
@@ -75,6 +76,7 @@ export const ContactUsStyles = styled.div`
     .leftContainer {
       flex-basis: 100%;
       padding: 60px 30px;
+      margin-top: 0px;
       .textCenter {
         text-align: center;
       }
