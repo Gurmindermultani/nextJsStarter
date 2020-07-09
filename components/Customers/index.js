@@ -66,6 +66,7 @@ const CustomersStyles = styled.div`
         width: 73px;
         margin: auto;
         transition: transform 420ms cubic-bezier(.165,.84,.44,1);
+        filter: grayscale(100%);
         opacity: 0.5;
         &.rpg {
           width: 72px;
@@ -101,6 +102,7 @@ const CustomersStyles = styled.div`
       img {
         transform: scale(3);
         opacity: 1;
+        filter: none;
       }
     }
   }

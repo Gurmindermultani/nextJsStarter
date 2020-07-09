@@ -81,6 +81,10 @@ const ReviewsStyles = styled.div`
           &.cocacolaReview {
             width: 90%;
           }
+          &.kec {
+            width: 200px;
+            height: 100px;
+          }
         }
       }
       .rightContainer {

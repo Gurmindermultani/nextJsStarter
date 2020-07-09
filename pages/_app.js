@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { theme } from '../theme';
 import GlobalStyle from './_globalStyles';
 import CrashReporter from '../utils/carshReporter';
+import CookieBanner from '../components/CookieBanner';
 
 const tagManagerArgs = {
   gtmId: 'GTM-W2SN9RH'
@@ -25,6 +26,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
         <GlobalStyle />
+        <CookieBanner />
       </ThemeProvider>
     )
   }
