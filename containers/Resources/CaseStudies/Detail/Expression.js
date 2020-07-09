@@ -24,7 +24,6 @@ const ExpressionStyles = styled.div`
 `;
 
 function Expression(props) {
-  console.log(props);
   return (
     <FadeIn>
       <ExpressionStyles>

@@ -119,6 +119,11 @@ export const IntegrationsStyles = styled.div`
           display: none;
         }
       }
+      &.section1 {
+        .halfBackground {
+          padding: 0 20px;
+        }
+      }
       &.noMargin {
         margin-top: 120px;
         height: auto;

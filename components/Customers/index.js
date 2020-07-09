@@ -125,7 +125,7 @@ const CustomersStyles = styled.div`
           }
         }
         .details {
-          margin-top: 10px;
+          margin-top: 0px;
           display: none;
           justify-content: space-between;
           text-align: center;

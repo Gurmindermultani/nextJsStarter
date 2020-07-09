@@ -7,7 +7,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../Typography';
-import Button from '../Button';
+import ScheduleDemoButton from '../ScheduleDemoButton';
 import Link from 'next/link'
 
 import Slide from "../VisibilitySensor/Slide";
@@ -69,6 +69,13 @@ const Styles = styled.div`
       }
     }
   }
+  .buttons {
+    padding: 0 30px;
+    margin-top: 110px;
+    button {
+      width: 100%;
+    }
+  }
 `;
 
 function MobileMenu(props) {
@@ -118,6 +125,9 @@ function MobileMenu(props) {
           </ExpansionPanelDetails>
         </ExpansionPanel>
       )}
+      <div className="buttons">
+        <ScheduleDemoButton type="link" fullWidth />
+      </div>
     </Styles>
   )
 };

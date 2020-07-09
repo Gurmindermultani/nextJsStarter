@@ -75,7 +75,7 @@ export const ContactUsStyles = styled.div`
     }
     .leftContainer {
       flex-basis: 100%;
-      padding: 60px 30px;
+      padding: 30px 30px;
       margin-top: 0px;
       .textCenter {
         text-align: center;

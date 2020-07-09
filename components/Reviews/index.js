@@ -116,6 +116,7 @@ const ReviewsStyles = styled.div`
         display: block;
         width: 100%;
         box-shadow: 0px 3px 6px #00000029;
+        border-radius: 4px;
         margin: 0;
         margin-bottom: 10px;
         padding-bottom: 10px;
@@ -125,6 +126,7 @@ const ReviewsStyles = styled.div`
         .leftContainer {
           width: 100%;
           padding: 30px;
+          border-radius: 4px 4px 0 0;
           &.primary {
             background: ${props => props.theme.palette.primary.main};
           }
@@ -146,6 +148,7 @@ const ReviewsStyles = styled.div`
     }
     .slick-slide {
       padding: 0 12px;
+      border-radius: 4px;
     }
     .slick-center {
       

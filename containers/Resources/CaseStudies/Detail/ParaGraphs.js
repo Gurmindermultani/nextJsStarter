@@ -34,7 +34,6 @@ const ParaGraphsStyles = styled.div`
 `;
 
 function ParaGraphs(props) {
-  console.log(props);
   return (
     <FadeIn>
       <ParaGraphsStyles>

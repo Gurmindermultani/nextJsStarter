@@ -22,6 +22,7 @@ import Comment from './Comment';
 import NumberContainer from './NumberContainer';
 import Expression from './Expression';
 import ParaGraphs from './ParaGraphs';
+import DownloadDialog from '../DownloadDialog';
 
 
 const dataMap = {
@@ -37,8 +38,10 @@ const mapTypesToComponents = {
 };
 
 function CaseStudies(props) {
+  const [showDialog, setShowDialog] = useState('');
   const [ loading, setLoading ] = useState(true);
   const [ caseStudy, setCaseStudy ] = useState('');
+  const [ pdf, setPdf ] = useState({});
   useEffect(() => {
     setCaseStudy(dataMap[props.type]);
     setLoading(false);
@@ -49,11 +52,15 @@ function CaseStudies(props) {
   if (!caseStudy) {
     return <div className="pageLoader">No Data Found.</div>;
   }
+  const showDialogFn = (type, currentPdf) => {
+    setShowDialog(type);
+    setPdf(currentPdf);
+  };
   return (
     <CaseStudiesStyles>
       {caseStudy.map( (section, idx) => 
         <section key={section.type + idx} className={"section section0 " + section.type}>
-          {mapTypesToComponents[section.type] ? React.createElement(mapTypesToComponents[section.type], {...section.details}) : ''}
+          {mapTypesToComponents[section.type] ? React.createElement(mapTypesToComponents[section.type], {...section.details, showDialogFn}) : ''}
         </section>
       )}
       <section className="section readFull ">
@@ -70,6 +77,11 @@ function CaseStudies(props) {
           <img alt="animationImputs" src="/images/demo/2.svg"/>
         </div>
       </section>
+      <DownloadDialog
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+        pdf={pdf}
+      />
     </CaseStudiesStyles>
   );
 }

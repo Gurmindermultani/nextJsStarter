@@ -29,12 +29,25 @@ function Integrations(props) {
       <section className="section section0">
         <div className="bg" />
         <div className="topContainer">
-          <FadeIn className="text">
+          <FadeIn className="text desktop">
             <Typography className="topText" variant="h1" fontSizes={[28, 44, 40]} text="Bring it where you are"/>
             <br />
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Leena AI integrates with all the platforms"/>
             <br />
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="your workforce loves."/>
+            <Slide className="demoInput">
+              {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
+              <div className="buttons">
+                <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
+              </div>
+            </Slide>
+          </FadeIn>
+          <FadeIn className="text mobile">
+            <Typography className="topText" variant="h1" fontSizes={[28, 44, 40]} text="Bring it where you are"/>
+            <br />
+            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Leena AI integrates with all the"/>
+            <br />
+            <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="platforms your workforce loves."/>
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
