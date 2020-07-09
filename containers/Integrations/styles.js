@@ -94,7 +94,7 @@ export const IntegrationsStyles = styled.div`
     }
     .halfBackground {
       margin-top: 0px;
-      max-width: 670px;
+      max-width: 620px;
     }
   }
   @media only screen and (min-width: 1400px) {

@@ -59,7 +59,7 @@ const airasia = [
     type: 'expression',
     details: {
       heading: 'Results that speak for itself',
-      text: 'Mo Khurram Zia, Head of People Operations at AirAsia says, “We derived multiple RoI and advantages from the AskPac. It has helped Allstars in AirAsia to get their policy queries resolved quicker using our 24x7 available conversational platform. The stronger the FAQs, the lesser tickets are raised. We have built in a strong conversational AI with our existing policies, resulting in 30% of reduction in tickets as compared to the last year.”',
+      text: 'Mo Khurram Zia, Head of People Operations at AirAsia says, “We derived multiple ROI and advantages from the AskPac. It has helped Allstars in AirAsia to get their policy queries resolved quicker using our 24x7 available conversational platform. The stronger the FAQs, the lesser tickets are raised. We have built in a strong conversational AI with our existing policies, resulting in 30% reduction in tickets as compared to the last year.”',
     }
   },
   {

@@ -63,7 +63,7 @@ function CaseStudies(props) {
         <FadeIn className="text center">
           <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 28, 32]} text="Read complete case study"/>
           <a target="_blank" href={props.pdf} download={props.pdfName}>
-            <Button size="large" variant="inverted" name="Download Case Study"/>
+            <Button size="large" variant="inverted" name="Download case study"/>
           </a>
         </FadeIn>
         <div className="bottomRight">
