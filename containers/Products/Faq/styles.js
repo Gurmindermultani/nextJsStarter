@@ -10,7 +10,6 @@ export const FaqStyles = styled.div`
     &.section0 {
       max-width: 100vw;
       padding: 178px 160px 0 160px !important;
-      overflow: hidden;
     }
     &.noPadding {
       max-width: 100vw;
@@ -117,6 +116,18 @@ export const FaqStyles = styled.div`
   @media only screen and (max-width: 1400px) {
     .section {
       padding: 0 80px;
+    }
+  }
+  @media only screen and (min-width: 760px) and (max-width: 1150px) {
+    .section {
+      &.section0 {
+        padding: 178px 80px 0 80px !important;
+        .topContainer {
+          .topText {
+            font-size: 28px;
+          }
+        }
+      }
     }
   }
   @media only screen and (max-width: 760px) {

@@ -115,7 +115,7 @@ function DeskTop(props) {
       </div>
       <div className="rightContainer">
         <div>
-          <Carousal variant="leftMode">
+          <Carousal autoplay speed={5000} variant="leftMode">
             {props.slides.map( slide => 
               <div className="" key={slide.heading}>
                 <Typography variant="h6" color="#fff" fontSizes={[18, 18, 18]} text={slide.heading} />

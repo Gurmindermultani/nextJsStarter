@@ -10,7 +10,6 @@ export const HrWorflowsStyles = styled.div`
     &.section0 {
       max-width: 100vw;
       padding: 178px 160px 0 160px !important;
-      overflow: hidden;
     }
     &.noPadding {
       margin-top: 150px;
