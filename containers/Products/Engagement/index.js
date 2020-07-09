@@ -42,7 +42,7 @@ const mobileSlides = [
   },
   {
     heading: "Simple and customized",
-    text: "The survey is short, simple and employee-specific.",
+    text: "The survey is short, simple and specific for each employee.",
   },
 ];
 

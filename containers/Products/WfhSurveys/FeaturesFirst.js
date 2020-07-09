@@ -14,7 +14,7 @@ const FeaturesFirstStyles = styled.div`
   display: flex;
   margin-bottom: 120px;
   .leftContainer {
-    flex-basis: 50%;
+    flex-basis: 49%;
     .headingText {
       line-height: 33px;
       margin-bottom: 12px;
@@ -27,7 +27,7 @@ const FeaturesFirstStyles = styled.div`
     }
   }
   .rightContainer {
-    flex-basis: 50%;
+    flex-basis: 51%;
     position: relative;
     display: flex;
     justify-content: center;

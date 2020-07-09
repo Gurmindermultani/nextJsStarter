@@ -120,7 +120,7 @@ function DeskTop(props) {
               <div className="" key={slide.heading}>
                 <Typography variant="h6" color="#fff" fontSizes={[18, 18, 18]} text={slide.heading} />
                 <br />
-                <Typography className="subHeading" variant="h2" fontWeight="400" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
+                <Typography className={"subHeading " + slide.heading} variant="h2" fontWeight="400" color="#fff" fontSizes={[16, 16, 16]} text={slide.text} />
               </div>
             )}
           </Carousal>

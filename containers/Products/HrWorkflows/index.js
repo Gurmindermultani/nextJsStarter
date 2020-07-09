@@ -86,7 +86,7 @@ function HrWorkflows(props) {
         <FeaturesThird />
       </section>
       <section className="section buttonSection">
-        <ScheduleDemoButton name="Get HR workflows" />
+        <ScheduleDemoButton />
       </section>
       <section className="section section5">
         <FadeIn className="quoteContainer">

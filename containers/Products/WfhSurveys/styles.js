@@ -14,6 +14,9 @@ export const WfhSurveysStyles = styled.div`
     }
     &.section5 {
       margin-bottom: 50px;
+      .Conversational, .Employee {
+        width: 150px !important;
+      }
     }
     &.noPadding {
       margin-top: 150px;

@@ -31,9 +31,9 @@ function Faq(props) {
       <section className="section section0">
         <div className="topContainer">
           <FadeIn className="text desktop">
-            <Typography className="topText" variant="h1" fontSizes={[20, 34, 34]} text="Answer your employee queries instantly"/>
+            <Typography className="topText" variant="h1" fontSizes={[20, 34, 40]} text="Answer your employee queries instantly"/>
             <br />
-            <Typography variant="h1" fontSizes={[20, 34, 34]} text="with enterprise conversational experience"/>
+            <Typography variant="h1" fontSizes={[20, 34, 40]} text="with enterprise conversational experience"/>
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Automatically reply policy-related HR queries"/>
             <br />
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="via AI-driven conversations."/>
@@ -86,7 +86,7 @@ function Faq(props) {
         <FeaturesThird />
       </section>
       <section className="section buttonSection">
-        <ScheduleDemoButton name="Get FAQ automation" />
+        <ScheduleDemoButton />
       </section>
       <section className="section section5">
         <FadeIn className="quoteContainer">
