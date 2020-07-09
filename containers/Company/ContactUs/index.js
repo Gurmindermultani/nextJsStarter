@@ -19,7 +19,7 @@ function ContactUs(props) {
     <ContactUsStyles>
       <Slide from='left' className="leftContainer">
         <div className="textCenter">
-          <Typography className="demoText" variant="h1" fontSizes={[24, 40, 48]} text="We’d love to hear from you"/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 44, 48]} text="We’d love to hear from you"/>
         </div>
         <div className="desktop">
           <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Whether you have a question about product, features, pricing, "/>

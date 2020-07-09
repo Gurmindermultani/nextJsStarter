@@ -21,7 +21,7 @@ import Dialog from './Dialog';
 
 const FormStyles = styled.div`
   width: 100%;
-  padding: 40px 40px;
+  padding: 50px 40px 40px 40px;
   margin: auto;
   margin-right: 0;
   border-radius: 16px;
