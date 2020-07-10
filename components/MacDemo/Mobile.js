@@ -139,7 +139,6 @@ const MobileDemoStyles = styled.div`
 `;
 
 function MobileDemo(props) {
-  console.log(props.slides);
   return (
     <MobileDemoStyles>
       <VisibilitySensor once partialVisibility>
