@@ -60,7 +60,7 @@ export const CaseManagmentStyles = styled.div`
       }
     }
     .demoInput {
-      margin-top: 32px;
+      margin-top: 48px;
       width: 40%;
       display: flex;
       align-items: center;
