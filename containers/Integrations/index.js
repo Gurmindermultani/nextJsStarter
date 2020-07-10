@@ -12,6 +12,7 @@ import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Reviews from '../../components/Reviews';
 import ScheduleDemo from '../../components/ScheduleDemo';
+import ScheduleDemoButton from '../../components/ScheduleDemoButton';
 import FadeIn from '../../components/VisibilitySensor/FadeIn';
 import Slide from '../../components/VisibilitySensor/Slide';
 import LottieAnimation from "../../components/LottieAnimation";
@@ -38,7 +39,7 @@ function Integrations(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -51,7 +52,7 @@ function Integrations(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>

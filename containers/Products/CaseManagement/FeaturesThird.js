@@ -92,7 +92,7 @@ function FeaturesFirst(props) {
           <Slide from='right' className="a2">
             <img src="/images/caseManagement/featuresThird/a2.svg"/>
           </Slide>
-          <Slide from='up' className="a3">
+          <Slide from='right' className="a3">
             <img src="/images/caseManagement/featuresThird/a3.svg"/>
           </Slide>
         </div>

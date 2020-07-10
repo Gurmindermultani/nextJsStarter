@@ -67,7 +67,7 @@ const BlogHeaderStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     flex-wrap: wrap;
-    padding: 40px 30px;
+    padding: 0px 30px 40px 30px;
     .leftContainer {
       flex-basis: 100%;
       display: flex;
@@ -85,6 +85,9 @@ const BlogHeaderStyles = styled.div`
       margin: 48px 0 0 0;
       .featureImg {
         height: 200px;
+      }
+      .details {
+        padding: 36px 0 0 0;
       }
     }
   }
