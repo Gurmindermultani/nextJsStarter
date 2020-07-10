@@ -28,7 +28,7 @@ const ParaGraphsStyles = styled.div`
       padding: 40px 30px;
     }
     .rightContainer {
-      padding: 40px 30px;
+      padding: 0px 30px 40px 30px;
     }
   }
 `;

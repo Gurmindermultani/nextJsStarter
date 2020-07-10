@@ -35,9 +35,6 @@ export const HrWorflowsStyles = styled.div`
     }
     .knowMore {
       margin-top: 80px;
-      button {
-        width: 172px;
-      }
     }
   }
   .topContainer {
@@ -125,7 +122,7 @@ export const HrWorflowsStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
     }
     .section {
       padding: 0 30px;
@@ -148,6 +145,12 @@ export const HrWorflowsStyles = styled.div`
         button {
           margin-top: 30px;
         }
+      }
+      &.section8 {
+        margin-top: 40px;
+      }
+      .knowMore {
+        margin-top: 0;
       }
     }
     .topContainer {

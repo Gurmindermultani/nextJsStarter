@@ -73,13 +73,16 @@ export const HomePageStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
       padding: 0 0px;
     }
     .section {
       padding: 0 30px;
       &.section0 {
-        padding: 120px 20px 20px 20px;
+        padding: 120px 0px 0px 0px;
+      }
+      &.section2, .section3 {
+        padding: 0px;
       }
       &.section4, &.section6, &.section7, &.section9 {
         padding: 0;
@@ -91,15 +94,20 @@ export const HomePageStyles = styled.div`
         margin-top: 100px;
         margin-bottom: 0px;
         .quoteContainer {
-          margin: 10px 0 64px 0;
+          margin: 10px 0 40px 0;
           padding: 0 30px;
         }
       }
       &.section8 {
         padding: 0 00px;
       }
+      &.section5 {
+        .knowMore {
+          margin-top: 0px;
+        }
+      }
       &.noMargin {
-        margin-top: 120px;
+        margin-top: 70px;
         height: auto;
       }
     }

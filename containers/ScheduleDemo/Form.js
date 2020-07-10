@@ -63,9 +63,13 @@ const FormStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     max-width: none;
-    padding: 48px 0px;
+    padding: 48px 0px 0 0;
     .bgcont {
       width: 100%;
+      padding: 36px 12px;
+      .textCenter {
+        margin-bottom: 16px;
+      }
     }
   }
 `;

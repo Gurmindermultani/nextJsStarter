@@ -128,7 +128,9 @@ function WfhSurveys(props) {
       <section className="section section6 shortSection">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
@@ -138,7 +140,9 @@ function WfhSurveys(props) {
       <section className="section section7">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>

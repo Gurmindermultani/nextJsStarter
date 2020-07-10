@@ -121,7 +121,11 @@ function HomePage(props) {
       </section>
       <section className="section section2">
         <QuoteAnimator>
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Make employee service as smooth as"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Make employee service as smooth as"/>
+          <>
+            <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Make employee service"/>
+            <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="as smooth as"/>
+          </>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="your customer service"/>
         </QuoteAnimator>
         <div className="products">
@@ -136,7 +140,7 @@ function HomePage(props) {
       <section className="section section4 noMargin">
         <div className="mobile">
           <QuoteAnimator>
-            <Typography variant="h3" fontSizes={[20, 28, 28]} text="It’s simpler than you think"/>
+            <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="It’s simpler than you think"/>
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="A complete helpdesk that your employee needs"/>
           </QuoteAnimator>
         </div>
@@ -145,7 +149,9 @@ function HomePage(props) {
       <section className="section section5">
         <QuoteAnimator>
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="the platforms you love"/>
         </QuoteAnimator>
         <Platforms />
         <div className="knowMore center">
@@ -155,7 +161,9 @@ function HomePage(props) {
       <section className="section section6">
         <QuoteAnimator className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="across the globe use Leena AI"/>
         </QuoteAnimator>
         <Customers />
       </section>

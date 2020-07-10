@@ -4,7 +4,7 @@ export const ContactUsStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
   max-width: 1180px;
-  margin: 80px auto;
+  margin: 60px auto;
   margin-bottom: 0;
   justify-content: space-between;
   .leftContainer {
@@ -79,6 +79,12 @@ export const ContactUsStyles = styled.div`
       margin-top: 0px;
       .textCenter {
         text-align: center;
+      }
+      .demo {
+        margin-top: 64px;
+        .anchor {
+          margin-left: 0;
+        }
       }
     }
     .rightContainer {

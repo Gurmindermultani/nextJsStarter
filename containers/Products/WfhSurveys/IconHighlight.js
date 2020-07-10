@@ -21,10 +21,22 @@ const IconHighlightStyles = styled.div`
   .descriptionText {
     line-height: 25px;
   }
+  &.culture {
+    max-width: 312px;
+  }
   @media only screen and (max-width: 760px) {
+    &.culture {
+      max-width: 100%;
+    }
     flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .middleText {
+      margin: 16px 0 12px 0%;
+    }
   }
 `;
 
@@ -41,7 +53,7 @@ function IconHighlight(props) {
     anim.play();
   };
   return (
-    <IconHighlightStyles style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
+    <IconHighlightStyles className={props.name} style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>
       <div>
         <GrowIcon setAnim={setAnim} name={props.name} />
       </div>

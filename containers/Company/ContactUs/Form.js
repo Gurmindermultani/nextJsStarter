@@ -21,13 +21,21 @@ import Dialog from './Dialog';
 
 const FormStyles = styled.div`
   width: 100%;
-  padding: 50px 40px 40px 40px;
-  margin: auto;
-  margin-right: 0;
-  border-radius: 16px;
-  box-shadow: 0px 6px 46px #0000001F;
-  background: #fff;
-  width: 440px;
+  background-image: url('/images/formbg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  .bgcont {
+    padding: 40px 40px;
+    margin-right: 0;
+    box-shadow: 0px 6px 46px #0000001F;
+    border-radius: 16px;
+    background: #fff;
+    width: 412px;
+  }
   .textCenter {
     margin-bottom: 30px;
   }
@@ -54,8 +62,14 @@ const FormStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    width: 100%;
-    padding: 48px 24px;
+    padding: 12px 0px 0 0;
+    .bgcont {
+      width: 100%;
+      padding: 36px 12px;
+      .textCenter {
+        margin-bottom: 16px;
+      }
+    }
   }
 `;
 
@@ -171,32 +185,34 @@ function Form(props) {
   });
   return (
     <FormStyles>
-      <form onSubmit={form.onSubmit}>
-        <Input {...firstName} placeholder='First name' name="firstName"/>
-        <Input {...lastName} placeholder='Last name' name="lastName"/>
-        <Input {...email} placeholder='Your work email' name="email"/>
-        <div className="phone">
+      <div className="bgcont">
+        <form onSubmit={form.onSubmit}>
+          <Input {...firstName} placeholder='First name' name="firstName"/>
+          <Input {...lastName} placeholder='Last name' name="lastName"/>
+          <Input {...email} placeholder='Your work email' name="email"/>
+          <div className="phone">
+            <Select
+              placeholder='Number of employees'
+              options={phoneCountryOptions}
+              onChange={ e => setCountryCode(e.target.value)}
+              value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
+            />
+            <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
+          </div>
           <Select
-            placeholder='Number of employees'
-            options={phoneCountryOptions}
-            onChange={ e => setCountryCode(e.target.value)}
-            value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
+            {...queryType}
+            placeholder='Type of query'
+            options={options}
+            value={queryType.value ? options[options.findIndex( elem => elem.value === queryType.value )] : ''}
           />
-          <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
-        </div>
-        <Select
-          {...queryType}
-          placeholder='Type of query'
-          options={options}
-          value={queryType.value ? options[options.findIndex( elem => elem.value === queryType.value )] : ''}
+          <Input {...message} type="textArea" className="fullWidth" placeholder='Write your message...' name="message"/>
+          <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
+        </form>
+        <Dialog
+          setShowDialog={setShowDialog}
+          showDialog={showDialog}
         />
-        <Input {...message} type="textArea" className="fullWidth" placeholder='Write your message...' name="message"/>
-        <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
-      </form>
-      <Dialog
-        setShowDialog={setShowDialog}
-        showDialog={showDialog}
-      />
+      </div>
     </FormStyles>
   );
 }

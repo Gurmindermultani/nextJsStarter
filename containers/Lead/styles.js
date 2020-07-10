@@ -113,7 +113,7 @@ export const LeadStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
     }
     .section {
       padding: 0 30px;

@@ -81,16 +81,23 @@ const ScheduleDemoStyles = styled.div`
       display: none;
     }
     .topLeft {
+      top: -1px;
       img {
         width: 50px;
       }
     }
     .bottomRight {
+      bottom: -6px;
       img {
         width: 50px;
       }
     }
     .demoButton {
+      width: 80%;
+      button {
+        width: 100%;
+        height: 40px;
+      }
       img, .interested {
         display: none;
       }

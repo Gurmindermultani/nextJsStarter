@@ -25,6 +25,12 @@ const IconHighlightStyles = styled.div`
     flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .middleText {
+      margin: 16px 0 12px 0%;
+    }
   }
 `;
 

@@ -52,7 +52,9 @@ function CaseManagment(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Give your employees the mental peace"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Give your employees the mental peace"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Give your employees"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="the mental peace"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="they deserve"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
@@ -85,7 +87,9 @@ function CaseManagment(props) {
       <section className="section section5">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">

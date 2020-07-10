@@ -148,11 +148,13 @@ const ProductStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .productHeader {
       display: block;
+      padding: 0 30px;
       .text {
         margin: 24px 0 0 0;
       }
     }
     .body {
+      padding: 0 20px;
       .leftContainer {
         flex-basis: 100%;
       }

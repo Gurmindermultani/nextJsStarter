@@ -20,6 +20,10 @@ const ExpressionStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     padding: 40px 30px;
+    text-align: left;
+    .header {
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -28,7 +32,7 @@ function Expression(props) {
     <FadeIn>
       <ExpressionStyles>
         <div className="header">
-          <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[28, 34, 38]} text={props.heading}/>
+          <Typography className="rowValue" color="#212121" variant="h1" fontSizes={[24, 34, 38]} text={props.heading}/>
         </div>
         <div className="body">
           <Typography className="rowValue" fontWeight="400" color="#212121" variant="h1" fontSizes={[18, 20, 22]} text={props.text}/>

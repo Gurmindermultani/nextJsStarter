@@ -143,7 +143,7 @@ export const EngagementStyles = styled.div`
       display: none;
     }
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
       padding: 0 0px;
     }
     .section {
@@ -152,7 +152,7 @@ export const EngagementStyles = styled.div`
         padding: 120px 30px 0 30px !important;
       }
       &.noMargin {
-        margin-top: 120px;
+        margin-top: 70px;
         height: auto;
         padding: 0;
         .quoteContainer {
@@ -197,6 +197,8 @@ export const EngagementStyles = styled.div`
       .demoInput {
         width: 100%;
         flex-wrap: wrap;
+        margin-top: 0;
+        padding-bottom: 0;
         .form-group {
           width: 100%;
         }

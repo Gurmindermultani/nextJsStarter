@@ -123,7 +123,6 @@ const ReviewsStyles = styled.div`
         border-radius: 4px;
         margin: 0;
         margin-bottom: 10px;
-        padding-bottom: 10px;
         &:hover {
           transform: scale(1.0);
         }
@@ -131,6 +130,7 @@ const ReviewsStyles = styled.div`
           width: 100%;
           padding: 30px;
           border-radius: 4px 4px 0 0;
+          height: 116px;
           &.primary {
             background: ${props => props.theme.palette.primary.main};
           }
@@ -140,9 +140,19 @@ const ReviewsStyles = styled.div`
           &.light {
             background: ${props => props.theme.palette.primary.light};
           }
+          img {
+            transform: scale(0.8);
+            &.cocacolaReview {
+              transform: scale(0.8);
+            }
+            &.kec {
+              transform: scale(0.7);
+            }
+          }
         }
         .rightContainer {
-          padding: 10px;
+          padding: 20px 24px;
+          min-height: 544px;
           .user {
             display: flex;
             align-items: flex-start;
@@ -194,7 +204,7 @@ function Reviews(props) {
             <div className="carousalContainer" key={review.name}>
               <div className="review">
                 <div className={"leftContainer " + review.bg}>
-                  <img src={review.name} src={`/images/home/${review.name}.png`}/>
+                  <img className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">
@@ -203,9 +213,9 @@ function Reviews(props) {
                   <div className="user">
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
                     <div className="text">
-                      <Typography size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
-                      <Typography size="15px" variant="paragraph2" text={', '}/>
-                      <Typography size="15px" variant="paragraph2" text={review.user.position}/>
+                      <Typography color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                      <Typography variant="paragraph2" text={', '}/>
+                      <Typography variant="paragraph2" text={review.user.position}/>
                     </div>
                   </div>
                 </div>

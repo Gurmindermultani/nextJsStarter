@@ -133,7 +133,7 @@ export const FaqStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
     }
     .section {
       padding: 0 30px;
@@ -141,7 +141,7 @@ export const FaqStyles = styled.div`
         padding: 120px 30px 0 30px !important;
       }
       &.noMargin {
-        margin-top: 120px;
+        margin-top: 40px;
         height: auto;
         padding: 0;
       }
@@ -155,6 +155,11 @@ export const FaqStyles = styled.div`
         }
         button {
           margin-top: 30px;
+        }
+      }
+      &.section5 {
+        .knowMore {
+          margin-top: 0px;
         }
       }
     }

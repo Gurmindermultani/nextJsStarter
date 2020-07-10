@@ -63,7 +63,9 @@ function Integrations(props) {
       </section>
       <section className="section section1">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage all employee queries at one place"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Manage all employee queries at one place"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Manage all employee queries"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="at one place"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Make it simple for your employees to give feedback with easy-to-use AI-powered conversations. Eliminate the hassle of poor user interface and long feedback forms."/>
         </FadeIn>
         <div className="social icons">
@@ -76,7 +78,9 @@ function Integrations(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Carry out automated contextual conversation"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Carry out automated contextual conversation"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Carry out automated"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="contextual conversation"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Our conversational AI works in sync with your HRIS system. Thus, it makes it easy for your employees to access personal information like salary slips, and tax deductions via enterprise conversations."/>
         </FadeIn>
         <div className="social icons">
@@ -89,7 +93,10 @@ function Integrations(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Bring together all the information your employees need"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Bring together all the information your employees need"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Bring together all the"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="information your"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="employees need"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Enable your employees to access and sync all the information from third-party applications directly within enterprise conversational AI."/>
         </FadeIn>
         <div className="social icons">
@@ -102,7 +109,9 @@ function Integrations(props) {
       </section>
       <section className="section section2">
         <FadeIn className="quoteContainer">
-          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Move your tickets wherever you want to"/>
+          <Typography className="highlight desktop" variant="h3" fontSizes={[20, 28, 28]} text="Move your tickets wherever you want to"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="Move your tickets"/>
+          <Typography className="highlight mobile" variant="h3" fontSizes={[20, 28, 28]} text="wherever you want to"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="If you want to move your tickets out of Leena AI and collaborate with other departments, we handle it with complete efficiency."/>
         </FadeIn>
         <div className="social icons tickets">

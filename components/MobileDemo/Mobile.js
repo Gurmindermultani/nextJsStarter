@@ -108,6 +108,7 @@ const MobileDemoStyles = styled.div`
         border-radius: 4px;
         padding: 16px 20px;
         color: white;
+        min-height: 146px;
         &.dialog0 {
           background: #212121;
           box-shadow: 0px 4px 16px #00000014;

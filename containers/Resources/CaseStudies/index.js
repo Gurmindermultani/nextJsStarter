@@ -15,7 +15,6 @@ import ScheduleDemo from '../../../components/ScheduleDemo';
 import FadeIn from '../../../components/VisibilitySensor/FadeIn';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import { CaseStudiesStyles } from './styles';
-import { Card } from '@material-ui/core';
 
 const allCaseStudies = [
   {
@@ -43,9 +42,9 @@ function CaseStudies(props) {
             <br />
             <Typography className="topText" variant="h1" fontSizes={[28, 34, 40]} text="that speak volumes"/>
             <br />
-            <Typography className="highlight secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see real results and ROI our customers derived from us"/>
-            <br />
-            <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text=""/>
+            <Typography className="highlight first" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see real"/>
+            <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="results and ROI our customers"/>
+            <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="derived from us"/>
           </FadeIn>
       </div>
       </section>

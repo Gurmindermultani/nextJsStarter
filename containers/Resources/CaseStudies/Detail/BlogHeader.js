@@ -100,10 +100,8 @@ function BlogHeader(props) {
         <div className="logo">
           <img alt={props.name} src={props.img}/>
         </div>
-        <Typography className="headingText" variant="h1" fontSizes={[28, 34, 34]} text={props.mainHeading}/>
-        <br />
+        <Typography className="headingText" variant="h1" fontSizes={[28, 32, 36]} text={props.mainHeading}/>
         <Typography className="highlight secondHeading" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading1}/>
-        <br />
         <Typography className="lastHeadeing halfBackground" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading2}/>
         <div className="buttons">
           <Button onClick={() => props.showDialogFn('download', { name: props.pdfName, href: props.pdf })} size="large" variant="inverted" name="Download case study"/>

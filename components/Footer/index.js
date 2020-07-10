@@ -96,11 +96,20 @@ const FooterStyles = styled.div`
         width: 100%;
       }
       .navigation {
-        display: none;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        .groupNav {
+          width: 100%;
+          margin-bottom: 32px;
+        }
       }
       .subscribe {
-        margin: 64px 0 48px 0;
+        margin: 32px 0 48px 0;
         max-width: none;
+        text-align: center;
+        .errorContainer{
+          text-align: left;
+        }
       }
     }
     .lowerContainer {

@@ -109,7 +109,7 @@ export const IntegrationsStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
     }
     .section {
       padding: 0 30px;
@@ -148,8 +148,8 @@ export const IntegrationsStyles = styled.div`
         text-align: center;
       }
       .secondHeading {
-        margin-top: 28px;
-        margin-bottom: 10px;
+        margin-top: 16px;
+        margin-bottom: 0px;
       }
       .bowlImage {
         margin-bottom: 32px;

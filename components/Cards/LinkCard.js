@@ -22,10 +22,6 @@ const LinkCardStyles = styled.a`
     align-items: center;
     justify-content: center;
     border-radius: 4px 4px 0 0;
-    img {
-      width: 126px;
-      height: 110px;
-    }
   }
   .body {
     max-width: 150px;

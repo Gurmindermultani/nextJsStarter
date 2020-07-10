@@ -124,7 +124,7 @@ export const WfhSurveysStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
       padding: 0px;
     }
     .section {
@@ -133,7 +133,7 @@ export const WfhSurveysStyles = styled.div`
         padding: 120px 30px 0 30px !important;
       }
       &.noMargin {
-        margin-top: 120px;
+        margin-top: 72px;
         height: auto;
         padding: 0;
       }
@@ -144,12 +144,16 @@ export const WfhSurveysStyles = styled.div`
         }
       }
       &.section5 {
+        margin-bottom: 0;
         .carousalDialog {
           min-height: 146px;
         }
         .quoteContainer {
           margin-bottom: 48px;
         }
+      }
+      .knowMore {
+        margin-top: 0;
       }
       &.noPadding {
         padding: 0;

@@ -145,6 +145,9 @@ export const CaseManagmentStyles = styled.div`
           margin-top: 30px;
         }
       }
+      .knowMore {
+        margin-top: 0px;
+      }
     }
     .topContainer {
       display: flex;

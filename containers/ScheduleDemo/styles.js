@@ -4,7 +4,7 @@ export const ScheduleDemoStyles = styled.div`
   display: flex;
   height: calc(100vh - 80px);
   max-width: 1080px;
-  margin: 80px auto;
+  margin: 60px auto;
   margin-bottom: 0;
   justify-content: space-between;
   .leftContainer {
@@ -64,13 +64,13 @@ export const ScheduleDemoStyles = styled.div`
     .demoText, .halfBackground {
       text-align: center;
     }
-    .mobile {
-      margin-top: 36px;
-    }
     .leftContainer {
       flex-basis: 100%;
       padding: 60px 30px;
       margin-top: 0;
+      .demoText {
+        margin: 0px 0 16px 0;
+      }
       .textCenter {
         text-align: center;
       }
@@ -78,6 +78,7 @@ export const ScheduleDemoStyles = styled.div`
     .rightContainer {
       flex-basis: 100%;
       padding: 0px 0px;
+      margin-top: 0px;
     }
   }
 `;

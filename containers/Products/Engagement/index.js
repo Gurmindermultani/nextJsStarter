@@ -104,7 +104,9 @@ function Engagement(props) {
       <section className="section section1">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Boost organizational happiness"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with outstanding employee experience"/>
+          <Typography className="highlight halfBackground desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with outstanding employee experience"/>
+          <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with outstanding"/>
+          <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="employee experience"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -113,7 +115,9 @@ function Engagement(props) {
       <section className="section section2">
         <FadeIn className="quoteContainer">
           <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
+          <Typography className="highlight halfBackground desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
+          <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent"/>
+          <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="employee engagement"/>
         </FadeIn>
         <div className="products desktop">
           <ProductHr />
@@ -138,7 +142,9 @@ function Engagement(props) {
         <div className="mobile">
           <FadeIn className="quoteContainer">
             <Typography variant="h3" fontSizes={[20, 28, 28]} text="Enhance employee performance"/>
-            <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with real-time engagement metrics"/>
+            <Typography className="highlight halfBackground desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with real-time engagement metrics"/>
+            <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with real-time"/>
+            <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="engagement metrics"/>
           </FadeIn>
         </div>
         <MacDemo phoneJson="/images/engage/feature/mac.json" slides={macSlides} quote={{ heading1: "Enhance", heading2: "employee", heading3: " performance", text: "with real-time engagement metrics" }} />
@@ -146,7 +152,9 @@ function Engagement(props) {
       <section className="section section5 shortSection">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
@@ -156,7 +164,9 @@ function Engagement(props) {
       <section className="section section6">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>

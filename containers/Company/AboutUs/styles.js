@@ -60,7 +60,7 @@ export const AboutUsStyles = styled.div`
   }
   @media only screen and (max-width: 760px) {
     .quoteContainer {
-      margin: 100px 0 72px 0;
+      margin: 72px 0 48px 0;
       .halfBackground {
         margin-top: 12px;
         width: 80%;

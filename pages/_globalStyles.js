@@ -249,15 +249,20 @@ const GlobalStyle = createGlobalStyle`
     }
     .section.mobile {
       display: flex !important;
+      padding: 0 20px !important;
+      .quoteContainer {
+        padding: 0 10px !important;
+      }
+    }
+    .section0 {
+      .topContainer {
+        button {
+          height: 40px;
+        }
+      }
     }
     .highlight {
-      background: none;
-      padding: 0;
-    }
-    .halfBackground {
-      position: relative;
-      ${'' /* background: linear-gradient(to top, #fff, #fff, #CCF5FF 30%, #fff 50%); */}
-      background: none;
+      margin-bottom: 2px;
     }
     .invertedHighlight {
       padding: 0;

@@ -67,7 +67,9 @@ function HrWorkflows(props) {
       <section className="section section1">
         <FadeIn className="quoteContainer">
           <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Boost employee productivity"/>
-          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people management"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people management"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="with simplified people"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="management"/>
         </FadeIn>
         <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
@@ -99,11 +101,13 @@ function HrWorkflows(props) {
       <section className="section section5">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
-          <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all the platforms you love"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="We integrate with all"/>
+          <Typography className="halfBackground highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="the platforms you love"/>
         </FadeIn>
         <Platforms />
         <div className="knowMore center">
-          <KnowMore variant="contained" size="large" name="Know More" />
+          <KnowMore variant="contained" size="large" />
         </div>
       </section>
       <section className="section section7">

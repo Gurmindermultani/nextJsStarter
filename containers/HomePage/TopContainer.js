@@ -68,13 +68,14 @@ const TopContainerStyles = styled.div`
     }
     .leftContainer {
       flex-basis: 100%;
+      padding: 0 30px;
       .animatedText {
         text-align: center;
       }
       .animatedDemoInput {
         display: flex;
         align-items: center;
-        margin-top: 32px;
+        margin-top: 24px;
         flex-wrap: wrap;
         .form-group {
           margin-top: 0;
@@ -89,6 +90,9 @@ const TopContainerStyles = styled.div`
         }
         .buttons {
           width: 100%;
+          button {
+            height: 40px;
+          }
         }
       }
     }
@@ -112,11 +116,18 @@ function TopContainer(props) {
       <div className="bg">
       </div>
       <div className="leftContainer">
-        <FadeIn className="animatedText">
+        <FadeIn className="animatedText desktop">
           <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
           <br />
           <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational workflow automation"/>
           <br />
+        </FadeIn>
+        <FadeIn className="animatedText mobile">
+          <Typography className="highlight" variant="h1" fontSizes={[20, 38, 40]} text="Redefine employee experience"/>
+          <br />
+          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="with conversational"/>
+          <br />
+          <Typography fontWeight="300" color="#212121" fontSizes={[20, 38, 40]} variant="h4" text="workflow automation"/>
         </FadeIn>
         <Slide className="animatedDemoInput">
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}

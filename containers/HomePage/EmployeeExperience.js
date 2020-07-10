@@ -131,6 +131,7 @@ const ProductStyles = styled.div`
     padding-bottom: 40px;
   }
   @media only screen and (max-width: 760px) {
+    margin-top: 0px;
     .productHeader {
       display: flex;
       flex-direction: column-reverse;

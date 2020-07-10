@@ -16,7 +16,7 @@ export const CaseStudiesStyles = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin: 64px auto;
+      margin: 64px auto 48px auto;
       height: auto;
       .slideCard {
         flex-basis: 30%;
@@ -122,8 +122,8 @@ export const CaseStudiesStyles = styled.div`
       }
     }
     .topContainer {
-      .highlight {
-        margin-top: 16px;
+      .first {
+        margin-top: 24px;
       }
     }
   }

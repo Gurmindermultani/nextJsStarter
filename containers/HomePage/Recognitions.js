@@ -51,9 +51,7 @@ const RecognitionsStyles = styled.div`
     .singleCard {
       margin-right: 12px;
       img {
-        &.business {
-          height: 80px;
-        }
+        transform: scale(0.5);
       }
     } 
   }
@@ -65,9 +63,7 @@ const RecognitionsStyles = styled.div`
         width: 100%;
       }
       img {
-        &.business {
-          height: 80px;
-        }
+        transform: scale(0.5);
       }
     }
     .slick-slide {
