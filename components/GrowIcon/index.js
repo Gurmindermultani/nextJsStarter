@@ -38,7 +38,7 @@ function GrowIcon(props) {
     if(props.setAnim) {
       props.setAnim(newAnim);
     }
-    if (mobileCheck()) {
+    if (mobileCheck() && props.name !== "burger") {
       newAnim.play();
     }
     return () => {
