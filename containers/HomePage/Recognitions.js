@@ -52,8 +52,7 @@ const RecognitionsStyles = styled.div`
       margin-right: 12px;
       img {
         &.business {
-          width: 182px;
-          height: 28px;
+          height: 80px;
         }
       }
     } 
@@ -67,8 +66,7 @@ const RecognitionsStyles = styled.div`
       }
       img {
         &.business {
-          width: 182px;
-          height: 28px;
+          height: 80px;
         }
       }
     }
