@@ -217,10 +217,10 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
   .section.mobile {
-    display: none;
+    display: none !important;
   }
   .section.desktop {
-    display: block;
+    display: flex !important;
   }
   .textCenter {
     text-align: center;
@@ -245,10 +245,10 @@ const GlobalStyle = createGlobalStyle`
       display: block;
     }
     .section.desktop {
-      display: none;
+      display: none !important;
     }
     .section.mobile {
-      display: block;
+      display: flex !important;
     }
     .highlight {
       background: none;

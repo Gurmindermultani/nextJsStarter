@@ -92,7 +92,7 @@ function MobileMenu(props) {
             <div className="accordianHeader">
               <Typography
                 variant="h6"
-                fontSize="16px"
+                fontSizes={[16, 16, 16]}
                 text={groupNav.label}
               />
             </div>
@@ -105,7 +105,7 @@ function MobileMenu(props) {
                     <div className="link" key={link.name}>
                       <a href={`${link.href}`} target="_blank">
                         <div>
-                          <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                          <Typography variant="paragraph2" fontSizes={[15, 15, 15]} color="#212121" text={link.label}/>
                         </div>
                       </a>
                     </div>
@@ -115,7 +115,7 @@ function MobileMenu(props) {
                   <div className="link" key={link.name}>
                     <Link href={`/${link.name}`}>
                       <a>
-                        <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
+                        <Typography variant="paragraph2" fontSizes={[15, 15, 15]} color="#212121" text={link.label}/>
                       </a>
                     </Link>
                   </div>
