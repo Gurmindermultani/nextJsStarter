@@ -25,6 +25,7 @@ import MacDemo from '../../../components/MacDemo';
 import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import ProductMore from './ProductMore';
+import MobileFeatures from './MobileFeatures';
 import { EngagementStyles } from './styles';
 
 const mobileSlides = [
@@ -114,11 +115,14 @@ function Engagement(props) {
           <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Discover your path"/>
           <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="to excellent employee engagement"/>
         </FadeIn>
-        <div className="products">
+        <div className="products desktop">
           <ProductHr />
         </div>
-        <div className="products">
+        <div className="products desktop">
           <ProductMore />
+        </div>
+        <div className="products mobile">
+          <MobileFeatures />
         </div>
       </section>
       <section className="section section3 noMargin">

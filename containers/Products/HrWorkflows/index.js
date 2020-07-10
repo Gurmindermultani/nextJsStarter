@@ -23,6 +23,7 @@ import IconHighlightsAll from './IconHighlightsAll';
 import FeaturesFirst from './FeaturesFirst';
 import FeaturesSecond from './FeaturesSecond';
 import FeaturesThird from './FeaturesThird';
+import MobileFeatures from './MobileFeatures';
 import { HrWorflowsStyles } from './styles';
 
 function HrWorkflows(props) {
@@ -72,18 +73,25 @@ function HrWorkflows(props) {
           <IconHighlightsAll></IconHighlightsAll>
         </div>
       </section>
-      <section className="section section2">
+      <section className="section section2 desktop">
         <FadeIn className="quoteContainer">
           <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
-      <section className="section section3 shortSection">
+      <section className="section section3 shortSection desktop">
         <FeaturesSecond />
       </section>
-      <section className="section section3 shortSection">
+      <section className="section section3 shortSection desktop">
         <FeaturesThird />
+      </section>
+      <section className="section section2 mobile">
+        <FadeIn className="quoteContainer">
+          <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="Manage employee requests"/>
+          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="in the easiest possible way"/>
+        </FadeIn>
+        <MobileFeatures />
       </section>
       <section className="section buttonSection">
         <ScheduleDemoButton />

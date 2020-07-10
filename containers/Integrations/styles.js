@@ -19,9 +19,9 @@ export const IntegrationsStyles = styled.div`
         top: -103px;
         left: 0px;
         z-index: -1;
-        background: #f6fdff;
-        border: 1px solid #f6fdff;
-        border-color: #f6fdff #f6fdff #f6fdff #f6fdff;
+        background-image: linear-gradient(#ffffff, #F2FCFF);
+        border: 1px solid #F2FCFF;
+        border-color: #F2FCFF #F2FCFF #F2FCFF #F2FCFF;
         border-radius: 0px 0px 100% 100%;
       }
     }

@@ -16,6 +16,7 @@ const ScheduleDemoButtonStyles = styled.div`
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 760px) {
+    margin-top: 48px;
   }
 `;
 

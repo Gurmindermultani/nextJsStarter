@@ -216,6 +216,12 @@ const GlobalStyle = createGlobalStyle`
   .desktop {
     display: block;
   }
+  .section.mobile {
+    display: none;
+  }
+  .section.desktop {
+    display: block;
+  }
   .textCenter {
     text-align: center;
   }
@@ -236,6 +242,12 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     }
     .mobile {
+      display: block;
+    }
+    .section.desktop {
+      display: none;
+    }
+    .section.mobile {
       display: block;
     }
     .highlight {

@@ -23,6 +23,7 @@ import IconHighlightsAll from './IconHighlightsAll';
 import FeaturesFirst from './FeaturesFirst';
 import FeaturesSecond from './FeaturesSecond';
 import FeaturesThird from './FeaturesThird';
+import MobileFeatures from './MobileFeatures';
 import { FaqStyles } from './styles';
 
 function Faq(props) {
@@ -72,18 +73,25 @@ function Faq(props) {
           <IconHighlightsAll></IconHighlightsAll>
         </div>
       </section>
-      <section className="section section2">
+      <section className="section section2 desktop">
         <FadeIn className="quoteContainer">
           <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Capabilities that help you build"/>
           <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="an employee-friendly workplace"/>
         </FadeIn>
         <FeaturesFirst></FeaturesFirst>
       </section>
-      <section className="section section3">
+      <section className="section section3 desktop">
         <FeaturesSecond />
       </section>
-      <section className="section section3">
+      <section className="section section3 desktop">
         <FeaturesThird />
+      </section>
+      <section className="section section2 mobile">
+        <FadeIn className="quoteContainer">
+          <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Capabilities that help you build"/>
+          <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="an employee-friendly workplace"/>
+        </FadeIn>
+        <MobileFeatures />
       </section>
       <section className="section buttonSection">
         <ScheduleDemoButton />
