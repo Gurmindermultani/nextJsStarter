@@ -93,7 +93,7 @@ const ScheduleDemoStyles = styled.div`
       }
     }
     .demoButton {
-      width: 80%;
+      width: 86%;
       button {
         width: 100%;
         height: 40px;

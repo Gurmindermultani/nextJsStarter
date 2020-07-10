@@ -128,9 +128,9 @@ const ReviewsStyles = styled.div`
         }
         .leftContainer {
           width: 100%;
-          padding: 30px;
+          padding: 30px 40px;
           border-radius: 4px 4px 0 0;
-          height: 116px;
+          height: 140px;
           &.primary {
             background: ${props => props.theme.palette.primary.main};
           }
@@ -151,8 +151,8 @@ const ReviewsStyles = styled.div`
           }
         }
         .rightContainer {
-          padding: 20px 24px;
-          min-height: 544px;
+          padding: 20px 16px;
+          min-height: 464px;
           .user {
             display: flex;
             align-items: flex-start;
@@ -208,14 +208,14 @@ function Reviews(props) {
                 </div>
                 <div className="rightContainer">
                   <div className="content">
-                    <Typography size="16px" variant="paragraph2" text={review.text}/>
+                    <Typography fontSizes={[14, 14, 14]} size="16px" variant="paragraph2" text={review.text}/>
                   </div>
                   <div className="user">
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
                     <div className="text">
                       <Typography color="#0F72EE" variant="paragraph2" text={review.user.name}/>
                       <Typography variant="paragraph2" text={', '}/>
-                      <Typography variant="paragraph2" text={review.user.position}/>
+                      <Typography fontSizes={[14, 14, 14]} variant="paragraph2" text={review.user.position}/>
                     </div>
                   </div>
                 </div>
