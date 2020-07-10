@@ -230,7 +230,7 @@ function Footer(props) {
         </div>
         {!subscribed && 
           <form onSubmit={form.onSubmit} className="subscribe">
-            <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
+            <Typography variant="h6" fontSizes={[20, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <Input {...email} name="email" placeholder="Your email"/>
             <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
