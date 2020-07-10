@@ -32,7 +32,7 @@ const airasia = [
           bg: '#0F72EE',
         },
         {
-          text: 'reduction in average resolution time',
+          text: 'Resolution efficiency',
           number: '30%',
           subText: 'queries resolved autonomously',
           bg: '#103577'
