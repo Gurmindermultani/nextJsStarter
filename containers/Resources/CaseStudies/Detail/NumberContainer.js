@@ -53,6 +53,9 @@ const NumberContainerStyles = styled.div`
         padding: 40px 3rem;
         flex: 1;
         width: 100%;
+        .inner {
+          width: 100%;
+        }
       }
     }
   }

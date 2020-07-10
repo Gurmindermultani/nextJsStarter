@@ -150,10 +150,11 @@ const ProductStyles = styled.div`
       display: block;
       padding: 0 30px;
       .text {
-        margin: 24px 0 0 0;
+        margin: 8px 0 0 0;
       }
     }
     .body {
+      margin-top: 24px;
       padding: 0 20px;
       .leftContainer {
         flex-basis: 100%;

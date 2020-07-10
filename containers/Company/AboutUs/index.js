@@ -42,7 +42,9 @@ function ContactUs(props) {
       <section className="section section1">
         <FadeIn className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
-          <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
+          <Typography className="highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees"/>
+          <Typography className="highlight mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="across the globe use Leena AI"/>
         </FadeIn>
         <Customers />
       </section>

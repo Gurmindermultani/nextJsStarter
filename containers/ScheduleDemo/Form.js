@@ -32,7 +32,7 @@ const FormStyles = styled.div`
     padding: 40px 40px;
     margin-right: 0;
     box-shadow: 0px 6px 46px #0000001F;
-    border-radius: 16px;
+    border-radius: 8px;
     background: #fff;
     width: 440px;
   }

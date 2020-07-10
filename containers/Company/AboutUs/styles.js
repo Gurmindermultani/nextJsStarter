@@ -73,6 +73,12 @@ export const AboutUsStyles = styled.div`
         flex-wrap: wrap;
         .leftContainer {
           flex-basis: 100%;
+          .para {
+            margin-top: 16px;
+            &.first {
+              margin-top: 24px;
+            }
+          }
         }
         .rightContainer {
           display: none;

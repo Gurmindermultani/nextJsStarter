@@ -138,6 +138,12 @@ export const IntegrationsStyles = styled.div`
           margin-top: 30px;
         }
       }
+      .mobile {
+        margin-bottom: 2px;
+        &.marginBot {
+          margin-bottom: 16px;
+        }
+      }
     }
     .topContainer {
       display: flex;

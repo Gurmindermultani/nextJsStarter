@@ -42,8 +42,8 @@ function CaseStudies(props) {
             <br />
             <Typography className="topText" variant="h1" fontSizes={[28, 34, 40]} text="that speak volumes"/>
             <br />
-            <Typography className="highlight first" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see real"/>
-            <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="results and ROI our customers"/>
+            <Typography className="highlight first" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="Explore these case studies to see"/>
+            <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="real results and ROI our customers"/>
             <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="paragraph2" text="derived from us"/>
           </FadeIn>
       </div>

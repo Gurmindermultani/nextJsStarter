@@ -66,7 +66,7 @@ export const ScheduleDemoStyles = styled.div`
     }
     .leftContainer {
       flex-basis: 100%;
-      padding: 60px 30px;
+      padding: 40px 30px;
       margin-top: 0;
       .demoText {
         margin: 0px 0 16px 0;
