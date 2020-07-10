@@ -56,7 +56,7 @@ const BlogHeaderStyles = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding: 44px 90px 0 90px;
+      padding: 44px 190px 0 190px;
       .row {
         text-align: center;
         .rowValue {

@@ -12,7 +12,7 @@ import Typography from '../Typography';
 
 
 const ErrorContainer = styled.div`
-  padding: 10px 0;
+  padding: 0px 0 16px 0;
   .error {
     span{
       color: red;

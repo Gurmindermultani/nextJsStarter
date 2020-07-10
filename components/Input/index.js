@@ -98,20 +98,6 @@ const MainContainer = styled.div`
       right: 0;
     }
   }
-  .errorContainer {
-    padding: 10px 0;
-    .error {
-      span{
-        color: red;
-      }
-      color: red;
-      font-size: 14px;
-    }
-    .errorMessage{
-      color: ${props => props.theme.palette.accent.error };
-      margin-left: 16px;
-    }
-  }
 
   .required:after {
     content: ' *';

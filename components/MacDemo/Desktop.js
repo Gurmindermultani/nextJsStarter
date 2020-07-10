@@ -22,7 +22,7 @@ const DeskTopStyles = styled.div`
       width: 210px;
       position: absolute;
       top: 120px;
-      right: 160px;
+      right: 240px;
       .heading2 {
         margin: 4px 0 0px 0;
       }
@@ -38,7 +38,7 @@ const DeskTopStyles = styled.div`
       overflow: hidden;
       position: absolute;
       top: 60px;
-      right: -512px;
+      right: -442px;
       .mobileRim {
         width: 720px;
         height: 440px;
@@ -57,7 +57,7 @@ const DeskTopStyles = styled.div`
   .rightContainer {
     flex-basis: 60%;
     background: ${props => props.theme.palette.white};
-    padding: 200px 0 0 500px;
+    padding: 200px 0 0 430px;
     overflow: hidden;
     .carousalMainContainer {
       width: 500px;

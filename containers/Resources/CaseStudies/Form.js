@@ -46,9 +46,6 @@ const FormStyles = styled.div`
     }
     .fullWidth {
       .errorContainer {
-        > div {
-          min-height: 40px;
-        }
       }
     }
   }

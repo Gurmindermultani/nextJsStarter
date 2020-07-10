@@ -24,14 +24,14 @@ export const ContactUsStyles = styled.div`
       line-height: 32px;
     }
     .contact {
-      margin-top: 30px;
+      margin-top: 48px;
       .row {
         display: flex;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
         &.mail {
           span {
-            padding: 0 0 5px 5px;
+            padding: 0 0 0px 0px;
           }
         }
         &.pin {

@@ -22,9 +22,9 @@ function ContactUs(props) {
           <Typography className="demoText" variant="h1" fontSizes={[24, 44, 48]} text="We’d love to hear from you"/>
         </div>
         <div className="desktop">
-          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Whether you have a question about product, features, pricing, "/>
+          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="h6" text="Whether you have a question about product, features, pricing, "/>
           <br />
-          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="live demo, or anything else, we are here to help."/>
+          <Typography className="middleText halfBackground" fontWeight="300" color="#212121" fontSizes={[16, 18, 20]} variant="h6" text="live demo, or anything else, we are here to help."/>
           <br />
         </div>
         <div className="mobile textCenter">
@@ -58,9 +58,9 @@ function ContactUs(props) {
         <div className="demo">
           <Typography fontWeight="600" color="#212121" fontSizes={[16, 18, 20]} variant="paragraph2" text="Want to know more about our services?"/>
           <Link href="/schedule-demo">
-            <span>
+            <a>
               <Typography className="anchor" fontWeight="600" color="#0F72EE" fontSizes={[16, 18, 20]} variant="paragraph2" text="Schedule demo"/>
-            </span>
+            </a>
           </Link>
         </div>     
       </Slide>

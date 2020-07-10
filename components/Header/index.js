@@ -156,8 +156,6 @@ function Header(props) {
         <div className="buttons desktop">
           {props.router.pathname.indexOf('schedule-demo') > -1 &&
             <div className="demo">
-              <img className="phoneImage" alt="phone" src="/images/icons/phone.svg"/>
-              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
               <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
               <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
             </div>

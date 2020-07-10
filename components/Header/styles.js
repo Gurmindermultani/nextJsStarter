@@ -93,7 +93,7 @@ export const HeaderStyles = styled.div`
       margin-right: 16px;
     }
     .mailImage {
-      margin: 0 16px 0 32px;
+      margin: 0 8px 0 0px;
     }
     span {
       opacity: 0.8;

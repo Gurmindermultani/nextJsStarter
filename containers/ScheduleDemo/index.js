@@ -30,7 +30,7 @@ function HomePage(props) {
         <div className="rightContainer mobile">
           <Form />
         </div>
-        <Typography className="textDetail" fontWeight="500" color="#212121" fontSizes={[14, 14, 18]} variant="h1" text="In the demo session, our product consultants will walk you through the conversational AI platform, analytical dashboards, and how Leena AI can help you resolve your challenges."/>
+        <Typography className="textDetail" fontWeight="500" color="#212121" fontSizes={[14, 14, 16]} variant="h1" text="In the demo session, our product consultants will walk you through the conversational AI platform, analytical dashboards, and how Leena AI can help you resolve your challenges."/>
         {/* <div className="clients">
           {clients.map( client => 
             <img key={client} className={'client ' + client} alt={'client ' + client} src={`/images/clients/${client}.png`}/>
