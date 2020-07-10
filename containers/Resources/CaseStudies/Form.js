@@ -25,7 +25,7 @@ const FormStyles = styled.div`
   margin: auto;
   border-radius: 16px;
   background: #fff;
-  width: 280px;
+  width: 440px;
   .halfBackground {
     z-index: 0;
     margin-bottom: 16px;
@@ -50,7 +50,7 @@ const FormStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    max-width: none;
+    width: 100%;
     padding: 0px;
   }
 `;

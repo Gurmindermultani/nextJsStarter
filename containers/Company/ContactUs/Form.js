@@ -27,7 +27,7 @@ const FormStyles = styled.div`
   border-radius: 16px;
   box-shadow: 0px 6px 46px #0000001F;
   background: #fff;
-  max-width: 400px;
+  width: 440px;
   .textCenter {
     margin-bottom: 30px;
   }
@@ -54,7 +54,7 @@ const FormStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    max-width: none;
+    width: 100%;
     padding: 48px 24px;
   }
 `;
