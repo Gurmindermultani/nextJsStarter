@@ -13,6 +13,10 @@ export default function Home() {
         <meta name="keywords" content="AirAsia employee query resolution, AirAsia conversational AI, AirAsia Leena AI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
+        <meta property="og:image" content="https://home.leena.ai/images/og/airasia.png" />
+        <meta property="og:title" content="AirAsia employee query resolution - Case study" />
+        <meta property="og:description" content="Download the case study and discover the transformative journey of AirAsia." />
+        <meta property="og:url" content="https://home.leena.ai/airasia-employee-query-resolution" />
       </Head>
       <Header />
       <main>

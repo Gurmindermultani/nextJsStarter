@@ -13,6 +13,10 @@ export default function Home() {
         <meta name="keywords" content="enterprise conversational AI, HR helpdesk, employee engagement platform, AI in HR, artificial intelligence in HR, employee engagement platform, employee service delivery" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
+        <meta property="og:image" content="https://home.leena.ai/images/og/home.png" />
+        <meta property="og:title" content="Employee experience platform for enterprises" />
+        <meta property="og:description" content="Leena AI enhances employee experience via HR helpdesk automation and employee enagagement software." />
+        <meta property="og:url" content="https://home.leena.ai" />
       </Head>
       <Header />
       <main>

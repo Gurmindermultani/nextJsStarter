@@ -13,6 +13,10 @@ export default function Home() {
         <meta name="keywords" content="employee engagement platform, employee experience platform, employee engagement software, employee engagement automation, employee engagement, employee engagement surveys, AI-driven employee engagement" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
+        <meta property="og:image" content="https://home.leena.ai/images/og/engage.png" />
+        <meta property="og:title" content="Employee engagement platform with AI-driven insights" />
+        <meta property="og:description" content="Take conversational periodic surveys and amplify employee engagement." />
+        <meta property="og:url" content="https://home.leena.ai/employee-engagement" />
       </Head>
       <Header />
       <main>

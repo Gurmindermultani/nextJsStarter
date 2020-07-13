@@ -13,6 +13,10 @@ export default function Home() {
         <meta name="keywords" content="employee query management, employee query resolution, employee query handling system, employee query automation, HR automation, AI in HR, employee faq automation, virtual employee assistant" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
+        <meta property="og:image" content="https://home.leena.ai/images/og/faq.png" />
+        <meta property="og:title" content="Employee query management with conversational AI" />
+        <meta property="og:description" content="Get a virtual employee assistant and take a step ahead in HR automation." />
+        <meta property="og:url" content="https://home.leena.ai/employee-query-management" />
       </Head>
       <Header />
       <main>
