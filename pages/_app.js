@@ -17,7 +17,9 @@ export default class MyApp extends App {
   componentDidMount() {
     if (process.env.NEXT_PUBLIC_ENV === "staging" || process.env.NEXT_PUBLIC_ENV === "production") {
       CrashReporter();
-      TagManager.initialize(tagManagerArgs);
+      setTimeout(() => {
+        TagManager.initialize(tagManagerArgs);
+      }, 5000);
     }
   }
   render() {
