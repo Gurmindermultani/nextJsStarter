@@ -180,6 +180,7 @@ function Form(props) {
       value: code.dial_code
     }
   });
+  console.log(phoneCountryOptions.findIndex( elem => elem.value === countryCode ));
   return (
     <FormStyles>
       <div className="bgcont">
@@ -195,7 +196,7 @@ function Form(props) {
               placeholder='Number of employees'
               options={phoneCountryOptions}
               onChange={ e => setCountryCode(e.target.value)}
-              value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
+              value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].label, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
             />
             <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
           </div>

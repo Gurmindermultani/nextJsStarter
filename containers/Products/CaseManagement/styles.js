@@ -157,7 +157,7 @@ export const CaseManagmentStyles = styled.div`
       }
       .secondHeading {
         margin-top: 28px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
       }
       .bowlImage {
         display: none;
