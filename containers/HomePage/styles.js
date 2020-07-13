@@ -81,7 +81,7 @@ export const HomePageStyles = styled.div`
       &.section0 {
         padding: 120px 0px 0px 0px;
       }
-      &.section2, .section3 {
+      &.section2, &.section3 {
         padding: 0px;
       }
       &.section4, &.section6, &.section7, &.section9 {

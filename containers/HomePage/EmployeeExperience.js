@@ -135,6 +135,7 @@ const ProductStyles = styled.div`
     .productHeader {
       display: flex;
       flex-direction: column-reverse;
+      padding: 0 30px;
       .text {
         margin-top: 8px;
         text-align: left;
@@ -142,6 +143,7 @@ const ProductStyles = styled.div`
     }
     .body {
       margin-top: 24px;
+      padding: 0 20px;
       .rightContainer {
         flex-basis: 100%;
       }
