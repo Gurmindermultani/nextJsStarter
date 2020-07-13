@@ -181,6 +181,9 @@ export const EngagementStyles = styled.div`
           margin-top: 30px;
         }
       }
+      .knowMore {
+        margin-top: 0;
+      }
     }
     .topContainer {
       display: flex;

@@ -110,17 +110,17 @@ const ProductStyles = styled.div`
         width: 100%;
       }
       &.e2 {
-        top: 116px;
+        top: 136px;
         left: 38px;
         width: 110%;
       }
       &.e3 {
         top: 20px;
-        right: -20px;
+        right: -40px;
         width: 38%;
       }
       &.e4 {
-        bottom: -20px;
+        bottom: -70px;
         right: -60px;
         width: 100%;
       }

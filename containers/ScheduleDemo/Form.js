@@ -75,7 +75,7 @@ const FormStyles = styled.div`
 `;
 
 function Form(props) {
-  const [showDialog, setShowDialog] = useState('');
+  const [showDialog, setShowDialog] = useState('show');
   const [countryCode, setCountryCode] = useState('+91');
   useEffect(() => {
     let req = new XMLHttpRequest();

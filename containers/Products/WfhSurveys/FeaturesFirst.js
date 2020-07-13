@@ -55,9 +55,9 @@ const FeaturesFirstStyles = styled.div`
         width: 150%;
       }
       &.a3 {
-        bottom: -10px;
-        right: -150px;
-        width: 160%;
+        bottom: -25px;
+        right: -122px;
+        width: 140%;
       }
     }
   }

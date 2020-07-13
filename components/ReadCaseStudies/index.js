@@ -7,34 +7,29 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Link from 'next/link'
 import Typography from '../Typography';
+import Button from '../Button';
 import Slide from '../VisibilitySensor/Slide';
 
 const ReadCaseStudiesStyles = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
   .singleCaseStudy {
     max-width: 342px;
     border-radius: 4px;
-    background: #0F72EE;
     text-align: left;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 12px 36px #00000029;
-    .leftContainer {
-      width: 50%;
-      .logo {
-        width: 130px;
-        height: 100px;
-        background: white;
-        transform: rotate(15deg);
-        position: absolute;
-        img {
-          width: 100%;
-          height: 100%;
-        }
+    .cardBody {
+      img {
+        width: 342px;
+        box-shadow: 0px 12px 36px #00000029;
       }
-      .text {
-        margin-top: 00px;
-        padding: 0 16px;
+    }
+    .cardFooter {
+      margin-top: 16px;
+      button {
+        width: 152px;
       }
     }
   }
@@ -48,6 +43,7 @@ const caseStudies = [
     name: 'airasia',
     text: 'Discover how Airasia transformed employee query resolution with Leena AI',
     cover: '/images/airasia/book.png',
+    link: '/airasia-employee-query-resolution',
   }
 ];
 
@@ -57,13 +53,16 @@ function ReadCaseStudies(props) {
       <ReadCaseStudiesStyles className="caseStudies">
         {caseStudies.map( caseStudy => 
           <div key={caseStudy.name} className="singleCaseStudy">
-            <div className="leftContainer">
-              <div className="logo">
-                {/* <img alt="air asia" src={`/images/clients/${caseStudy.name}.png`} /> */}
-              </div>
-              <div className="text">
-                <Typography variant="h6" color="#ffffff" fontSizes={[14, 14, 14]} text={caseStudy.text}/>
-              </div>
+            <div className="cardBody">
+              <img alt="case studies" src={`/images/caseStudies/${caseStudy.name}.png`} />
+            </div>
+            <div className="cardFooter">
+              <Link href={caseStudy.link}>
+                <a>
+                  <Button name="Read now">
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
         )}
