@@ -15,7 +15,8 @@ function Image(props) {
   return (
     <StyledImage
       {...props}
-      src={require(`../../public${props.src}`)}
+      // src={require(`../../public${props.src}`)}
+      src={props.src}
     />
   );
 }
