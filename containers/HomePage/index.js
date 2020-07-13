@@ -51,45 +51,6 @@ function QuoteAnimator (props) {
 }
 
 function HomePage(props) {
-  const goDown = () => {
-    currentSection += 1;
-    try {
-      document.querySelector('.section' + (currentSection)).scrollIntoView({behavior: "smooth"}); 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const goUp = () => {
-    currentSection -= 1;
-    if (currentSection < 0) {
-      currentSection = 0;
-    }
-    try {
-      document.querySelector('.section' + (currentSection)).scrollIntoView({behavior: "smooth"}); 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const doSomething = (e) => {
-    // Do something with the scroll position
-    e.preventDefault();
-    if (e.deltaY > 0){
-        // downscroll code
-        goDown();
-    } else if (e.deltaY < 0){
-        // upscroll code
-        goUp();
-    }
-  }
-  useEffect(() => {
-    // window.scrollTo(0, 0);
-    // window.addEventListener('wheel', throttle(doSomething, 1000, { trailing: true, leading: false }));
-    // return () => {
-    //   window.removeEventListener('wheel', function(e) {
-    //     console.log('remved');
-    //   });
-    // }
-  },[]);
   return (
     <HomePageStyles>
       <section className="section section0">
