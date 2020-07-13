@@ -21,7 +21,7 @@ function LeftMode(props) {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 500);
+    }, 100);
   },[]);
   const settings = {
     infinite: true,
