@@ -8,14 +8,14 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledImage = styled.Img`
+const StyledImage = styled.img`
 `;
 
 function Image(props) {
   return (
     <StyledImage
       {...props}
-      src={require(props.src)}
+      src={require(`../../public${props.src}`)}
     />
   );
 }

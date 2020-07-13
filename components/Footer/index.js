@@ -12,6 +12,7 @@ import Link from 'next/link'
 import Button from '../Button';
 import Typography from '../Typography';
 import Input from '../Input';
+import Image from '../Image';
 import { navigation } from '../Header';
 import { useForm, useField } from '../Input/formHooks';
 import Utils from '../../utils';
@@ -261,8 +262,8 @@ function Footer(props) {
           </a>
         </div>
         <div className="certs">
-          <img className="soc" alt="security certifications LeenaAI" src="/images/certs/soc.svg" />
-          <img className="iso" alt="security certifications LeenaAI" src="/images/certs/iso.svg" />
+          <Image className="soc" alt="security certifications LeenaAI" src="/images/certs/soc.svg" />
+          <Image className="iso" alt="security certifications LeenaAI" src="/images/certs/iso.svg" />
         </div>
       </div>
       <Dialog

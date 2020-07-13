@@ -16,6 +16,7 @@ import LottieAnimation from "../../components/LottieAnimation";
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
+import Image from '../../components/Image';
 import Button from '../../components/Button';
 
 const MobileDemoStyles = styled.div`
@@ -152,7 +153,7 @@ function MobileDemo(props) {
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
-                <img className="mobileRim" alt={props.alt} src="/images/home/phone.png"/>
+                <Image className="mobileRim" alt={props.alt} src="/images/home/phone.png"/>
                 <LottieAnimation dataUrl={props.phoneJson} />
               </div>
             )}
