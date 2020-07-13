@@ -65,7 +65,7 @@ const FormStyles = styled.div`
     padding: 12px 0px 0 0;
     .bgcont {
       width: 100%;
-      padding: 36px 12px;
+      padding: 16px 12px;
       .textCenter {
         margin-bottom: 16px;
       }
