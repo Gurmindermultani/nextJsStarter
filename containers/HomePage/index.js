@@ -6,14 +6,9 @@
 
 import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
-import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
 import Slide from "../../components/VisibilitySensor/Slide";
-import { throttle, debounce } from 'lodash';
 
-import Button from '../../components/Button';
 import Typography from '../../components/Typography';
-import Input from '../../components/Input';
 import Customers from '../../components/Customers';
 import Reviews from '../../components/Reviews';
 import MobileDemo from '../../components/MobileDemo';
@@ -49,19 +44,9 @@ const mobileSlides = [
 
 function QuoteAnimator (props) {
   return (
-    <VisibilitySensor once partialVisibility>
-      {({ isVisible }) => (
-        <Spring delay={500} to={{ 
-          opacity: isVisible ? 1 : 0,
-        }}>
-          {({ opacity }) => (
-            <div style={ { opacity} } className="quoteContainer">
-              {props.children}
-            </div>
-          )}
-        </Spring>
-      )}
-    </VisibilitySensor>
+    <Slide className="quoteContainer">
+      {props.children}
+    </Slide>
   );
 }
 
