@@ -9,11 +9,8 @@ import React, { memo, useState, useEffect } from 'react';
 
 import Button from '../../../../components/Button';
 import Typography from '../../../../components/Typography';
-import Input from '../../../../components/Input';
-import ScheduleDemo from '../../../../components/ScheduleDemo';
+import Quote from '../../../../components/Quote';
 import FadeIn from '../../../../components/VisibilitySensor/FadeIn';
-import Slide from '../../../../components/VisibilitySensor/Slide';
-import Utils from '../../../../utils';
 
 import { CaseStudiesStyles } from './styles';
 import airasia from './airasia';
@@ -35,6 +32,7 @@ const mapTypesToComponents = {
   numberContainer: NumberContainer,
   expression: Expression,
   paraGraphs: ParaGraphs,
+  quote: Quote,
 };
 
 function CaseStudies(props) {

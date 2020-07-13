@@ -159,7 +159,7 @@ const CustomersStyles = styled.div`
 
 function Customers(props) {
   const moveCarousal = (e) => {
-    console.log(e.target);
+    // console.log(e.target);
   }
   return (
     <Slide>

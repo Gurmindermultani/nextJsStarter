@@ -12,6 +12,16 @@ export const CaseStudiesStyles = styled.div`
       max-width: 100vw;
       background: #F6F6F6;
     }
+    &.quote {
+      max-width: 100vw;
+      background: #F6F6F6;
+      .quoteContainer {
+        max-width: 1200px;
+        margin: auto;
+        padding: 48px 0;
+        align-items: flex-start;
+      }
+    }
     &.readFull {
       height: 300px;
       background: #0F72EE;
@@ -63,7 +73,7 @@ export const CaseStudiesStyles = styled.div`
     .section {
       &.readFull {
         .center {
-          flex-wrap: wrap;
+          flex-direction: column;
         }
         button {
           margin: 24px 0 0 0px;
@@ -77,6 +87,16 @@ export const CaseStudiesStyles = styled.div`
           img {
             width: 50px;
           }
+        }
+      }
+      &.quote {
+        background: #F6F6F6;
+        padding: 0 30px;
+        .quoteContainer {
+          max-width: 1200px;
+          margin: auto;
+          padding: 24px 0;
+          align-items: flex-start;
         }
       }
     }

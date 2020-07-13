@@ -71,7 +71,7 @@ const CommentStyles = styled.div`
 function Comment(props) {
   return (
     <Slide>
-      <CommentStyles>
+      <CommentStyles className="quoteContainer">
         <div className="body">
           <img className="quotation start" alt="quotation-start" src="/images/icons/quotation-mark-start.svg" />
           <img className="quotation end" alt="quotation-start" src="/images/icons/quotation-mark-end.svg" />

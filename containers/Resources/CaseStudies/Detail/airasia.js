@@ -15,11 +15,13 @@ const airasia = [
     }
   },
   {
-    type: 'comment',
+    type: 'quote',
     details: {
-      by: '- Attila Emam, Head of Talent, Learning & Culture, AirAsia',
+      by: 'Head of Talent, Learning & Culture, AirAsia',
       text: '“AskPAC, the conversational AI platform by Leena AI has transformed the way employee queries are handled at AirAsia. Now, the process is highly efficient, streamlined and quick. Our employees, Allstars, now get an instant reply to their queries. Our People and Culture (PAC) team takes less time to resolve employee tickets. AskPAC has automated one-third of our employee queries and significantly reduced average resolution time. Besides, Leena AI’s customer service is awesome. Their team is highly enthusiastic and is always willing to take up new challenges. They are doing a great job in enterprise conversational AI. “',
-    }
+      userIcon:"images/users/attila.png",
+      userName:"~ Attila Emam,"
+    },
   },
   {
     type: 'numberContainer',
