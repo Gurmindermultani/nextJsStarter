@@ -180,7 +180,6 @@ function Form(props) {
       value: code.dial_code
     }
   });
-  console.log(phoneCountryOptions.findIndex( elem => elem.value === countryCode ));
   return (
     <FormStyles>
       <div className="bgcont">
