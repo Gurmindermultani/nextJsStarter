@@ -109,8 +109,8 @@ const ProductStyles = styled.div`
         z-index: 1;
       }
       &.a3 {
-        right: 0;
-        bottom: 10px;
+        right: -36px;
+        bottom: -14px;
         width: 90%;
       }
       &.b1 {

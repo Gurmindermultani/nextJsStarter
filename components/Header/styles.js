@@ -36,18 +36,31 @@ export const HeaderStyles = styled.div`
   .navigation {
     display: flex;
     .groupNav {
-      padding: 6px 20px 6px 20px;
+      padding: 20px 20px 20px 20px;
       position: relative;
       transition: all 0.5s ease;
       .links {
         display: none;
         position: absolute;
-        top: 30px;
+        top: 60px;
         background: white;
         padding: 6px 16px 16px 16px;
-        min-width: 230px;
+        min-width: 200px;
         border-radius: 4px;
-        box-shadow: 0px 4px 16px #00000014;
+        box-shadow: 0 0 24px 1px rgba(19,24,29,.12);
+        .header-pointer {
+          content: "";
+          position: absolute;
+          border-color: transparent;
+          border-width: 1px 0 0 1px;
+          border-style: solid;
+          top: -7px;
+          left: 15px;
+          height: 15px;
+          width: 15px;
+          background: inherit;
+          transform: rotate(45deg);
+        }
         .link {
           margin-top: 10px;
           cursor: pointer;

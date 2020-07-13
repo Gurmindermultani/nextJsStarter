@@ -127,6 +127,7 @@ function Header(props) {
                 <img alt="down-arrow" src="/images/icons/down-arrow-blue.svg"/>
               </div>
               <div className="links">
+                <span className="header-pointer "/>
                 {groupNav.links.map( link => {
                   if (link.href) {
                     return (
