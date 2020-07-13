@@ -9,11 +9,9 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
 import KnowMore from '../../components/KnowMore';
+import Image from '../../components/Image';
 
-import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
 import Slide from "../../components/VisibilitySensor/Slide";
-import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -181,7 +179,7 @@ function ProductHr(props) {
     <ProductStyles>
     <div className="productHeader">
       <div>
-        <img src="/images/home/helpdesk.svg"/>
+        <Image src="/images/home/helpdesk.svg"/>
       </div>
       <div className="text">
         <Typography variant="h4" fontSize="20px" text={props.heading}/>
@@ -239,43 +237,43 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <img alt="faq automation" src="/images/bg1.svg"/>
+              <Image alt="faq automation" src="/images/bg1.svg"/>
               <Slide from='left' className="a1">
-                <img alt="faq automation" src="/images/home/helpdesk/a1.svg"/>
+                <Image alt="faq automation" src="/images/home/helpdesk/a1.svg"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img alt="faq automation" src="/images/home/helpdesk/a2.svg"/>
+                <Image alt="faq automation" src="/images/home/helpdesk/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img alt="faq automation" src="/images/home/helpdesk/a3.svg"/>
+                <Image alt="faq automation" src="/images/home/helpdesk/a3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <img alt="case management" src="/images/bg1.svg"/>
+              <Image alt="case management" src="/images/bg1.svg"/>
               <Slide from='left' className="b1">
-                <img alt="case management" src="/images/home/helpdesk/b1.svg"/>
+                <Image alt="case management" src="/images/home/helpdesk/b1.svg"/>
               </Slide>
               <Slide from='right' className="b2">
-                <img alt="case management" src="/images/home/helpdesk/b2.svg"/>
+                <Image alt="case management" src="/images/home/helpdesk/b2.svg"/>
               </Slide>
               <Slide from='up' className="b3">
-                <img alt="case management" src="/images/home/helpdesk/b3.svg"/>
+                <Image alt="case management" src="/images/home/helpdesk/b3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel3" &&
             <div className="image center">
-              <img alt="hr workflows" src="/images/bg1.svg"/>
+              <Image alt="hr workflows" src="/images/bg1.svg"/>
               <Slide from='left' className="c1">
-                <img alt="hr workflows" src="/images/home/helpdesk/c1.svg"/>
+                <Image alt="hr workflows" src="/images/home/helpdesk/c1.svg"/>
               </Slide>
               <Slide from='right' className="c2">
-                <img alt="hr workflows" src="/images/home/helpdesk/c2.svg"/>
+                <Image alt="hr workflows" src="/images/home/helpdesk/c2.svg"/>
               </Slide>
               <Slide from='up' className="c3">
-                <img alt="hr workflows" src="/images/home/helpdesk/c3.svg"/>
+                <Image alt="hr workflows" src="/images/home/helpdesk/c3.svg"/>
               </Slide>
             </div>
           }

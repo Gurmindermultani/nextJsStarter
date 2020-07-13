@@ -138,9 +138,6 @@ function TopContainer(props) {
           </Link>
         </Slide>
       </div>
-      {/* <Slide from="right" className="rightContainer">
-        <LottieAnimation dataUrl="/images/home/home.json" />
-      </Slide> */}
     </TopContainerStyles>
   );
 }

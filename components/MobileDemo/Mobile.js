@@ -13,11 +13,9 @@ import VisibilitySensor from "../../components/VisibilitySensor";
 import Carousal from "../../components/Carousal";
 import ScheduleDemoButton from "../../components/ScheduleDemoButton";
 import LottieAnimation from "../../components/LottieAnimation";
-import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
 import Image from '../../components/Image';
-import Button from '../../components/Button';
 
 const MobileDemoStyles = styled.div`
   overflow: hidden;
