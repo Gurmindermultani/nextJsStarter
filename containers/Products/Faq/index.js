@@ -58,7 +58,7 @@ function Faq(props) {
             </Slide>
           </FadeIn>
           <Slide from='right' className="bowlImage">
-            <img src="/images/home/mobile.png" />
+            <img alt="HR helpdesk" src="/images/home/mobile.png" />
             <img className="heroBg" src="/images/heroBg.svg" />
             <LottieAnimation dataUrl="/images/faq/phone.json" />
           </Slide>

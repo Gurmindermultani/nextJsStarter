@@ -84,18 +84,18 @@ function FeaturesFirst(props) {
     <FeaturesFirstStyles>
       <div className="leftContainer">
         <div className="image center">
-          <img src="/images/bg4.svg"/>
+          <img alt="employee faq automation" src="/images/bg4.svg"/>
           <Slide from='left' className="a1">
-            <img src="/images/faq/featuresSecond/a1.svg"/>
+            <img alt="employee faq automation" src="/images/faq/featuresSecond/a1.svg"/>
           </Slide>
           <Slide from='right' className="a2">
-            <img src="/images/faq/featuresSecond/a2.svg"/>
+            <img alt="multiple platforms leena AI" src="/images/faq/featuresSecond/a2.svg"/>
           </Slide>
           <Slide from='right' className="a3">
-            <img src="/images/faq/featuresSecond/a3.svg"/>
+            <img alt="employee faq automation" src="/images/faq/featuresSecond/a3.svg"/>
           </Slide>
           <Slide from='right' className="a4">
-            <img src="/images/faq/featuresSecond/a4.svg"/>
+            <img alt="employee faq automation" src="/images/faq/featuresSecond/a4.svg"/>
           </Slide>
         </div>
       </div>

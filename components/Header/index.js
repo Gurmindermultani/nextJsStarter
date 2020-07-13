@@ -115,7 +115,7 @@ function Header(props) {
         <div className="logo pointer">
           <Link href="/">
             <a>
-              <img src="/images/leenaLogo.svg"/>
+              <img alt="Logo LeenaAI" src="/images/leenaLogo.svg"/>
             </a>
           </Link>
         </div>

@@ -4,6 +4,7 @@ const airasia = [
     details: {
       name: 'airasia',
       img: '/images/clients/airasia.png',
+      alt: 'Leena AI customer success story AirAsia',
       mainHeading: 'AirAsia transforms',
       subHeading1: 'employee query resolution',
       subHeading2: 'with Leena AI',

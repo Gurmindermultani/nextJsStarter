@@ -57,7 +57,7 @@ function Integrations(props) {
             </Slide>
           </FadeIn>
           <Slide from='right' className="bowlImage">
-            <img src="/images/integrations/headerImage.png" />
+            <img alt="Leena AI integrations" src="/images/integrations/headerImage.png" />
           </Slide>
       </div>
       </section>
@@ -71,7 +71,7 @@ function Integrations(props) {
         <div className="social icons">
           {social.map( social => 
             <div className="icon" key={social}>
-              <img alt="" src={`/images/integrations/social/${social.indexOf('.') > -1 ? social : (social + '.png')}`} />
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/social/${social.indexOf('.') > -1 ? social : (social + '.png')}`} />
             </div>
           )}
         </div>
@@ -86,7 +86,7 @@ function Integrations(props) {
         <div className="social icons">
           {enterprise.map( enterprise => 
             <div className="icon" key={enterprise}>
-              <img alt="" src={`/images/integrations/enterprise/${enterprise.indexOf('.') > -1 ? enterprise : (enterprise + '.png')}`} />
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/enterprise/${enterprise.indexOf('.') > -1 ? enterprise : (enterprise + '.png')}`} />
             </div>
           )}
         </div>
@@ -102,7 +102,7 @@ function Integrations(props) {
         <div className="social icons">
           {services.map( services => 
             <div className="icon" key={services}>
-              <img alt="" src={`/images/integrations/services/${services.indexOf('.') > -1 ? services : (services + '.png')}`} />
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/services/${services.indexOf('.') > -1 ? services : (services + '.png')}`} />
             </div>
           )}
         </div>
@@ -117,7 +117,7 @@ function Integrations(props) {
         <div className="social icons tickets">
           {tickets.map( tickets => 
             <div className="icon" key={tickets}>
-              <img alt="" src={`/images/integrations/tickets/${tickets.indexOf('.') > -1 ? tickets : (tickets + '.png')}`} />
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/tickets/${tickets.indexOf('.') > -1 ? tickets : (tickets + '.png')}`} />
             </div>
           )}
         </div>

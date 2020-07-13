@@ -239,43 +239,43 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <img src="/images/bg1.svg"/>
+              <img alt="faq automation" src="/images/bg1.svg"/>
               <Slide from='left' className="a1">
-                <img src="/images/home/helpdesk/a1.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a1.svg"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img src="/images/home/helpdesk/a2.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img src="/images/home/helpdesk/a3.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <img src="/images/bg1.svg"/>
+              <img alt="case management" src="/images/bg1.svg"/>
               <Slide from='left' className="b1">
-                <img src="/images/home/helpdesk/b1.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b1.svg"/>
               </Slide>
               <Slide from='right' className="b2">
-                <img src="/images/home/helpdesk/b2.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b2.svg"/>
               </Slide>
               <Slide from='up' className="b3">
-                <img src="/images/home/helpdesk/b3.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel3" &&
             <div className="image center">
-              <img src="/images/bg1.svg"/>
+              <img alt="hr workflows" src="/images/bg1.svg"/>
               <Slide from='left' className="c1">
-                <img src="/images/home/helpdesk/c1.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c1.svg"/>
               </Slide>
               <Slide from='right' className="c2">
-                <img src="/images/home/helpdesk/c2.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c2.svg"/>
               </Slide>
               <Slide from='up' className="c3">
-                <img src="/images/home/helpdesk/c3.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c3.svg"/>
               </Slide>
             </div>
           }

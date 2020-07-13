@@ -180,26 +180,26 @@ function EmployeeExperience(props) {
         <div className="leftContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <img src="/images/bg2.svg"/>
+              <img alt="employee engagement" src="/images/bg2.svg"/>
               <Slide from='left' className="a1">
-                <img src="/images/home/experience/a1.svg"/>
+                <img alt="employee engagement" src="/images/home/experience/a1.svg"/>
               </Slide>
               <Slide from='right' className="a2">
-                <img src="/images/home/experience/a2.svg"/>
+                <img alt="employee engagement" src="/images/home/experience/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <img src="/images/home/experience/a3.svg"/>
+                <img alt="employee engagement" src="/images/home/experience/a3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <img src="/images/bg2.svg"/>
+              <img alt="employee engagement" src="/images/bg2.svg"/>
               <Slide from='right' className="b1">
-                <img src="/images/home/experience/b1.svg"/>
+                <img alt="employee engagement" src="/images/home/experience/b1.svg"/>
               </Slide>
               <Slide from='left' className="b2">
-                <img src="/images/home/experience/b2.svg"/>
+                <img alt="employee engagement" src="/images/home/experience/b2.svg"/>
               </Slide>
             </div>
           }

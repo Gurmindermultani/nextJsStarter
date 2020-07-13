@@ -136,7 +136,7 @@ function Engagement(props) {
             <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="can’t be any simpler"/>
           </FadeIn>
         </div>
-        <MobileDemo phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
+        <MobileDemo alt="employee engagement" phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
       </section>
       <section className="section section4 noMargin">
         <div className="mobile">
@@ -147,7 +147,7 @@ function Engagement(props) {
             <Typography className="highlight halfBackground mobile" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="engagement metrics"/>
           </FadeIn>
         </div>
-        <MacDemo phoneJson="/images/engage/feature/mac.json" slides={macSlides} quote={{ heading1: "Enhance", heading2: "employee", heading3: " performance", text: "with real-time engagement metrics" }} />
+        <MacDemo alt="employee engagement dashboard" phoneJson="/images/engage/feature/mac.json" slides={macSlides} quote={{ heading1: "Enhance", heading2: "employee", heading3: " performance", text: "with real-time engagement metrics" }} />
       </section>
       <section className="section section5 shortSection">
         <FadeIn className="quoteContainer">

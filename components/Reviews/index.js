@@ -179,7 +179,7 @@ function Reviews(props) {
             <div className="carousalContainer" key={review.name}>
               <div className="review">
                 <div className={"leftContainer " + review.bg}>
-                  <img className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
+                  <img alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">
@@ -204,14 +204,14 @@ function Reviews(props) {
             <div className="carousalContainer" key={review.name}>
               <div className="review">
                 <div className={"leftContainer " + review.bg}>
-                  <img className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
+                  <img alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">
                     <Typography fontSizes={[14, 14, 14]} size="16px" variant="paragraph2" text={review.text}/>
                   </div>
                   <div className="user">
-                    <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
+                    <UserAvatar alt="testimonials LeenaAI" src={`${review.user.img}`}/>
                     <div className="text">
                       <Typography color="#0F72EE" variant="paragraph2" text={review.user.name}/>
                       <Typography variant="paragraph2" text={', '}/>

@@ -82,7 +82,7 @@ function Recognitions(props) {
         <div className="contain">
           {recognitions.map( recognition => 
             <Slide key={recognition.name}>
-              <Card variant="linkCard" data={recognition} />
+              <Card alt="news LeenaAI" variant="linkCard" data={recognition} />
             </Slide>
           )}
         </div>
@@ -90,7 +90,7 @@ function Recognitions(props) {
       <RecognitionsStyles className="mobile">
         <Carousal variant="mobileCarousal">
           {recognitions.map( recognition => 
-            <Card key={recognition.name} variant="linkCard" data={recognition} />
+            <Card alt="news LeenaAI" key={recognition.name} variant="linkCard" data={recognition} />
           )}
         </Carousal>
       </RecognitionsStyles>

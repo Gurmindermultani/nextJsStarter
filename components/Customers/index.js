@@ -167,7 +167,7 @@ function Customers(props) {
         <Carousal variant="centerMode">
           {customers.map( customer => 
             <div onClick={(e) => moveCarousal(e)} className={"carousalContainer center " + customer.name} key={customer.name}>
-              <img name={customer.name} src={`/images/clients/${customer.name}.png`} />
+              <img alt="customers LeenaAI" name={customer.name} src={`/images/clients/${customer.name}.png`} />
               <div className="details">
                 <div className="row">
                   <Typography className="heading" variant="paragraph2" fontSize="13px" text="Industry"/>
@@ -189,7 +189,7 @@ function Customers(props) {
           {customers.map( customer => 
             <div className="carousalContainer center" key={customer.name}>
               <div className={"clientImage " +  customer.name}>
-                <img name={customer.name} src={`/images/clients/${customer.name}.png`} />
+                <img alt="customers LeenaAI" name={customer.name} src={`/images/clients/${customer.name}.png`} />
               </div>
               <FadeIn delay={10} className="details">
                 <div className="row">

@@ -43,7 +43,7 @@ function ButtonLinkCard(props) {
   return (
     <ButtonLinkCardStyles className="singleCard">
       <div className="header" style={{'background': props.data.bg}}>
-        <img className={props.data.name} alt={props.data.name} src={props.data.img} />
+        <img alt={props.data.alt} className={props.data.name} src={props.data.img} />
       </div>
       <div className="body">
         <Typography fontWeight="500" variant="paragraph2" fontSize="18px" color="#212121" text={props.data.text}/>

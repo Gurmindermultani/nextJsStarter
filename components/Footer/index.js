@@ -261,8 +261,8 @@ function Footer(props) {
           </a>
         </div>
         <div className="certs">
-          <img className="soc" alt="cert" src="/images/certs/soc.svg" />
-          <img className="iso" alt="cert" src="/images/certs/iso.svg" />
+          <img className="soc" alt="security certifications LeenaAI" src="/images/certs/soc.svg" />
+          <img className="iso" alt="security certifications LeenaAI" src="/images/certs/iso.svg" />
         </div>
       </div>
       <Dialog

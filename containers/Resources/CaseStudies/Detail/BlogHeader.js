@@ -98,7 +98,7 @@ function BlogHeader(props) {
     <BlogHeaderStyles>
       <Slide from='left' className="leftContainer">
         <div className="logo">
-          <img alt={props.name} src={props.img}/>
+          <img alt={props.alt} src={props.img}/>
         </div>
         <Typography className="headingText" variant="h1" fontSizes={[28, 32, 36]} text={props.mainHeading}/>
         <Typography className="highlight secondHeading" fontWeight="300" color="#212121" fontSizes={[24, 32, 34]} variant="h1" text={props.subHeading1}/>
@@ -109,7 +109,7 @@ function BlogHeader(props) {
       </Slide>
       <Slide from='right' className="rightContainer">
         <div className="featureImg">
-          <img alt="featureImg" src={props.featureImage}/>
+          <img alt={props.alt} src={props.featureImage}/>
         </div>
         <div className="details">
           <div className="row">

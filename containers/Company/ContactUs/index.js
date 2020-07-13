@@ -35,17 +35,17 @@ function ContactUs(props) {
         </div>
         <div className="contact">
           <div className="row">
-            <img className="phoneImage" alt="phone" src="/images/icons/call.svg"/>
+            <img className="phoneImage" alt="Contact Leena AI" src="/images/icons/call.svg"/>
             <Typography fontWeight="500" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
           </div>
           <div className="row mail">
-            <img className="phoneImage" alt="phone" src="/images/icons/communications.svg"/>
+            <img className="phoneImage" alt="Contact Leena AI" src="/images/icons/communications.svg"/>
             <a href="mailto:support@leena.ai">
               <Typography fontWeight="500" color="#0F72EE" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
             </a>
           </div>
           <div className="row pin">
-            <img className="phoneImage" alt="phone" src="/images/icons/pin.svg"/>
+            <img className="phoneImage" alt="Contact Leena AI" src="/images/icons/pin.svg"/>
             <div>
               <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="1013 Centre Road, Suite 403-B,"/>
               <br />

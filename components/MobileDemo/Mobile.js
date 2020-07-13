@@ -152,7 +152,7 @@ function MobileDemo(props) {
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
-                <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
+                <img className="mobileRim" alt={props.alt} src="/images/home/phone.png"/>
                 <LottieAnimation dataUrl={props.phoneJson} />
               </div>
             )}
