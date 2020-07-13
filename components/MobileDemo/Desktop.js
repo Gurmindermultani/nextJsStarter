@@ -109,7 +109,7 @@ function DeskTop(props) {
           <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
         <div className="mobileImage">
-          <img className="mobileRim" alt="Mobile View" src={require("../../public/images/home/phone.png")} />
+          <img className="mobileRim" alt="Mobile View" src={"/images/home/phone.png"} />
           <LottieAnimation dataUrl={props.phoneJson} />
         </div>
       </div>
