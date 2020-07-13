@@ -270,6 +270,11 @@ const GlobalStyle = createGlobalStyle`
       color: inherit;
     }
   }
+  @media only screen and (max-width: 399px) {
+    .highlight {
+      background: none;
+    }
+  }
 `;
 
 export default GlobalStyle;
