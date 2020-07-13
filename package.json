@@ -27,7 +27,9 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.10.4",
-    "babel-plugin-styled-components": "^1.10.7"
+    "babel-plugin-styled-components": "^1.10.7",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0"
   }
 }
