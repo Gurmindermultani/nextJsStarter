@@ -76,6 +76,7 @@ const ScheduleDemoStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       padding: 0 30px;
+      text-align: center;
     }
     .form-group, .left, .right {
       display: none;
