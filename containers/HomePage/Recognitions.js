@@ -9,7 +9,6 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Card from '../../components/Cards';
 import Slide from "../../components/VisibilitySensor/Slide";
-import FadeIn from "../../components/VisibilitySensor/FadeIn";
 import Carousal from "../../components/Carousal";
 const recognitions = [
   {
@@ -82,7 +81,7 @@ function Recognitions(props) {
         <div className="contain">
           {recognitions.map( recognition => 
             <Slide key={recognition.name}>
-              <Card variant="linkCard" data={recognition} />
+              <Card alt="news LeenaAI" variant="linkCard" data={recognition} />
             </Slide>
           )}
         </div>
@@ -90,7 +89,7 @@ function Recognitions(props) {
       <RecognitionsStyles className="mobile">
         <Carousal variant="mobileCarousal">
           {recognitions.map( recognition => 
-            <Card key={recognition.name} variant="linkCard" data={recognition} />
+            <Card alt="news LeenaAI" key={recognition.name} variant="linkCard" data={recognition} />
           )}
         </Carousal>
       </RecognitionsStyles>

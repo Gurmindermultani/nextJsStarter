@@ -11,7 +11,7 @@ import Form from './Form';
 import MaterialDialog from '@material-ui/core/Dialog';
 
 const DialogContainer = styled.div`
-  padding: 40px 100px;
+  padding: 40px 56px;
   .header {
     text-align: center;
   }

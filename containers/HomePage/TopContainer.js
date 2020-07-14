@@ -8,13 +8,10 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link'
-import { Spring } from 'react-spring/renderprops.cjs';
 import Slide from "../../components/VisibilitySensor/Slide";
 
 import Typography from '../../components/Typography';
-import Input from '../../components/Input';
 import Button from '../../components/Button';
-import LottieAnimation from "../../components/LottieAnimation";
 import FadeIn from '../../components/VisibilitySensor/FadeIn';
 
 const TopContainerStyles = styled.div`
@@ -138,9 +135,6 @@ function TopContainer(props) {
           </Link>
         </Slide>
       </div>
-      {/* <Slide from="right" className="rightContainer">
-        <LottieAnimation dataUrl="/images/home/home.json" />
-      </Slide> */}
     </TopContainerStyles>
   );
 }

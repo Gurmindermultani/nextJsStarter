@@ -9,6 +9,7 @@ import React, { memo, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Typography from '../../../components/Typography';
 import Button from '../../../components/Button';
+import ReadCaseStudies from '../../../components/ReadCaseStudies';
 import Link from 'next/link'
 import Slide from '../../../components/VisibilitySensor/Slide';
 import MaterialDialog from '@material-ui/core/Dialog';
@@ -90,11 +91,16 @@ function Dialog(props) {
           <Slide delay={200} className="body">
             <Typography className="" fontWeight="400" color="#212121" fontSizes={[14, 16, 18]} variant="paragraph2" text="Explore more about how we have helped enterprises enhance their employee experience."/>
           </Slide>
-          <Link href="/case-studies">
-            <a>
-              <Button size="large" className="caseStudy" variant="contained" name="Read Case Studies" />
-            </a>
-          </Link>
+          <div className="desktop">
+            <ReadCaseStudies />
+          </div>
+          <div className="mobile">
+            <Link href="/case-studies">
+              <a>
+                <Button size="large" className="caseStudy" variant="contained" name="Read Case Studies" />
+              </a>
+            </Link>
+          </div>
         </div>
       </DialogContainer>
     </MaterialDialog>

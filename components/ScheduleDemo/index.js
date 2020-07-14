@@ -76,6 +76,7 @@ const ScheduleDemoStyles = styled.div`
   @media only screen and (max-width: 760px) {
     .quoteContainer {
       padding: 0 30px;
+      text-align: center;
     }
     .form-group, .left, .right {
       display: none;
@@ -142,8 +143,9 @@ function ScheduleDemo(props) {
         </div>
         <div>
           <FadeIn className="quoteContainer">
-            <Typography variant="h3" fontSizes={[20, 28, 28]} text="Get started with remote employee engagement"/>
-            <Typography className="" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="right away"/>
+            <Typography className="desktop" variant="h3" fontSizes={[20, 28, 28]} text="Get started with remote employee engagement"/>
+            <Typography className="desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="paragraph2" text="right away"/>
+            <Typography className="mobile" variant="h3" fontSizes={[20, 28, 28]} text="Get started with remote employee engagement right away"/>
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}

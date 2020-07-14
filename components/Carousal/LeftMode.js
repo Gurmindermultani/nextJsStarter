@@ -21,7 +21,7 @@ function LeftMode(props) {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 500);
+    }, 100);
   },[]);
   const settings = {
     infinite: true,
@@ -29,7 +29,7 @@ function LeftMode(props) {
     speed: 500,
     variableWidth: true,
     autoplay: props.autoplay ? true : false,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     nextArrow: <props.SampleNextArrow />,
     prevArrow: <props.SamplePrevArrow />,
   };

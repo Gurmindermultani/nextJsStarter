@@ -218,46 +218,46 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel4" &&
             <div className="image center">
-              <img src="/images/bg4.svg"/>
+              <img alt="employee engagement insights" src="/images/bg4.svg"/>
               <Slide from='left' className="d1">
-                <img src="/images/engage/d1.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/d1.svg"/>
               </Slide>
               <Slide from='right' className="d2">
-                <img src="/images/engage/d2.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/d2.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel5" &&
             <div className="image center">
-              <img src="/images/bg4.svg"/>
+              <img alt="employee engagement insights" src="/images/bg4.svg"/>
               <Slide from='left' className="e1">
-                <img src="/images/engage/e1.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/e1.svg"/>
               </Slide>
               <Slide from='right' className="e2">
-                <img src="/images/engage/e2.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/e2.svg"/>
               </Slide>
               <Slide from='right' className="e3">
-                <img src="/images/engage/e3.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/e3.svg"/>
               </Slide>
               <Slide from='up' className="e4">
-                <img src="/images/engage/e4.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/e4.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel6" &&
             <div className="image center">
-              <img src="/images/bg4.svg"/>
+              <img alt="employee engagement insights" src="/images/bg4.svg"/>
               <Slide from='left' className="f1">
-                <img src="/images/engage/f1.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/f1.svg"/>
               </Slide>
               <Slide from='right' className="f2">
-                <img src="/images/engage/f2.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/f2.svg"/>
               </Slide>
               <Slide from='right' className="f3">
-                <img src="/images/engage/f3.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/f3.svg"/>
               </Slide>
               <Slide from='right' className="f4">
-                <img src="/images/engage/f4.svg"/>
+                <img alt="employee engagement insights" src="/images/engage/f4.svg"/>
               </Slide>
             </div>
           }

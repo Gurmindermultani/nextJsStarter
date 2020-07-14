@@ -22,6 +22,7 @@ const allCaseStudies = [
     text: 'AirAsia transforms employee query resolution with Leena AI',
     img: '/images/clients/airasia.png',
     link: '/airasia-employee-query-resolution',
+    alt: 'Leena AI customer AirAsia',
   },
 ];
 

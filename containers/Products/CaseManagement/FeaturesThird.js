@@ -85,15 +85,15 @@ function FeaturesFirst(props) {
       </div>
       <div className="rightContainer">
         <div className="image center">
-          <img src="/images/bg.svg"/>
+          <img alt="employee ticket status" src="/images/bg.svg"/>
           <Slide from='left' className="a1">
-            <img src="/images/caseManagement/featuresThird/a1.svg"/>
+            <img alt="employee ticket status" src="/images/caseManagement/featuresThird/a1.svg"/>
           </Slide>
           <Slide from='right' className="a2">
-            <img src="/images/caseManagement/featuresThird/a2.svg"/>
+            <img alt="employee ticket status" src="/images/caseManagement/featuresThird/a2.svg"/>
           </Slide>
           <Slide from='right' className="a3">
-            <img src="/images/caseManagement/featuresThird/a3.svg"/>
+            <img alt="employee ticket status" src="/images/caseManagement/featuresThird/a3.svg"/>
           </Slide>
         </div>
       </div>

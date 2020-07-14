@@ -3,7 +3,7 @@ import React from 'react'
 import TagManager from 'react-gtm-module'
 import { ThemeProvider } from 'styled-components'
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'lazysizes';
 import { theme } from '../theme';
 import GlobalStyle from './_globalStyles';
 import CrashReporter from '../utils/carshReporter';
@@ -17,7 +17,9 @@ export default class MyApp extends App {
   componentDidMount() {
     if (process.env.NEXT_PUBLIC_ENV === "staging" || process.env.NEXT_PUBLIC_ENV === "production") {
       CrashReporter();
-      TagManager.initialize(tagManagerArgs);
+      setTimeout(() => {
+        TagManager.initialize(tagManagerArgs);
+      }, 5000);
     }
   }
   render() {

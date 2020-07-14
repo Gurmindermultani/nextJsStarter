@@ -63,7 +63,7 @@ function LinkCard(props) {
   return (
     <LinkCardStyles href={props.data.href} target="_blank" className="singleCard">
       <div className="header" style={{'background': props.data.bg}}>
-        <img className={props.data.name} alt={props.data.name} src={props.data.img} />
+        <img alt={props.alt} className={props.data.name} src={props.data.img} />
       </div>
       <div className="body">
         <Typography fontSize="14px" variant="paragraph2" color="#212121" text={props.data.text}/>

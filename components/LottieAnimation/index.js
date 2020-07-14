@@ -12,9 +12,6 @@ import lottie from 'lottie-web';
 import Typography from '../../components/Typography';
 
 const LottieAnimationStyles = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: white;
 `;
 

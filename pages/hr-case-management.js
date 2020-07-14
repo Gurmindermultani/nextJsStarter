@@ -13,10 +13,10 @@ export default function Home() {
         <meta name="keywords" content="HR case management, employee case management, employee ticketing system, HR ticketing platform, HR service delivery" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
-        <meta property="og:image" content="https://home.leena.ai/images/og/case.png" />
+        <meta property="og:image" content="https://leena.ai/images/og/case.png" />
         <meta property="og:title" content="AI-driven HR case management platform" />
         <meta property="og:description" content="Discover the power of conversational employee ticketing platform." />
-        <meta property="og:url" content="https://home.leena.ai/hr-case-management" />
+        <meta property="og:url" content="https://leena.ai/hr-case-management" />
       </Head>
       <Header />
       <main>

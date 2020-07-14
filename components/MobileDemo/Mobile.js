@@ -13,10 +13,9 @@ import VisibilitySensor from "../../components/VisibilitySensor";
 import Carousal from "../../components/Carousal";
 import ScheduleDemoButton from "../../components/ScheduleDemoButton";
 import LottieAnimation from "../../components/LottieAnimation";
-import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 import Typography from '../../components/Typography';
-import Button from '../../components/Button';
+import Image from '../../components/Image';
 
 const MobileDemoStyles = styled.div`
   overflow: hidden;
@@ -152,7 +151,7 @@ function MobileDemo(props) {
           }}>
             {({ opacity, transform }) => (
               <div style={{opacity, transform}} className="mobileImage">
-                <img className="mobileRim" alt="Mobile View" src="/images/home/phone.png"/>
+                <Image className="mobileRim" alt={props.alt} src="/images/home/phone.png"/>
                 <LottieAnimation dataUrl={props.phoneJson} />
               </div>
             )}

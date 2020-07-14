@@ -7,7 +7,6 @@
 import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Typography from '../../components/Typography';
 import IconHighlight from './IconHighlight';
 import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";

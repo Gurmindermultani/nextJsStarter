@@ -4,16 +4,11 @@
  *
  */
 
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 // import PropTypes from 'prop-types';
-import { Spring } from 'react-spring/renderprops.cjs';
-import VisibilitySensor from "../../components/VisibilitySensor";
 import Slide from "../../components/VisibilitySensor/Slide";
-import { throttle, debounce } from 'lodash';
 
-import Button from '../../components/Button';
 import Typography from '../../components/Typography';
-import Input from '../../components/Input';
 import Customers from '../../components/Customers';
 import Reviews from '../../components/Reviews';
 import MobileDemo from '../../components/MobileDemo';
@@ -49,62 +44,13 @@ const mobileSlides = [
 
 function QuoteAnimator (props) {
   return (
-    <VisibilitySensor once partialVisibility>
-      {({ isVisible }) => (
-        <Spring delay={500} to={{ 
-          opacity: isVisible ? 1 : 0,
-        }}>
-          {({ opacity }) => (
-            <div style={ { opacity} } className="quoteContainer">
-              {props.children}
-            </div>
-          )}
-        </Spring>
-      )}
-    </VisibilitySensor>
+    <Slide className="quoteContainer">
+      {props.children}
+    </Slide>
   );
 }
 
 function HomePage(props) {
-  const goDown = () => {
-    currentSection += 1;
-    try {
-      document.querySelector('.section' + (currentSection)).scrollIntoView({behavior: "smooth"}); 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const goUp = () => {
-    currentSection -= 1;
-    if (currentSection < 0) {
-      currentSection = 0;
-    }
-    try {
-      document.querySelector('.section' + (currentSection)).scrollIntoView({behavior: "smooth"}); 
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const doSomething = (e) => {
-    // Do something with the scroll position
-    e.preventDefault();
-    if (e.deltaY > 0){
-        // downscroll code
-        goDown();
-    } else if (e.deltaY < 0){
-        // upscroll code
-        goUp();
-    }
-  }
-  useEffect(() => {
-    // window.scrollTo(0, 0);
-    // window.addEventListener('wheel', throttle(doSomething, 1000, { trailing: true, leading: false }));
-    // return () => {
-    //   window.removeEventListener('wheel', function(e) {
-    //     console.log('remved');
-    //   });
-    // }
-  },[]);
   return (
     <HomePageStyles>
       <section className="section section0">
@@ -144,7 +90,7 @@ function HomePage(props) {
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="A complete helpdesk that your employee needs"/>
           </QuoteAnimator>
         </div>
-        <MobileDemo phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
+        <MobileDemo alt="Hr helpdesk" phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
       </section>
       <section className="section section5">
         <QuoteAnimator>

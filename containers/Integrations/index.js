@@ -19,8 +19,8 @@ import LottieAnimation from "../../components/LottieAnimation";
 
 import { IntegrationsStyles } from './styles';
 
-const social = ['workplace', 'slack', 'teams', 'whatsapp', 'android', 'ios', 'twilio', 'sip', 'web.svg', 'facebook', 'windows', 'mac'];
-const enterprise = ['sap', 'oracle', 'workday', 'kronos', 'adp', 'darwin'];
+const social = ['workplace', 'slack', 'teams', 'whatsapp', 'android', 'ios', 'twilio', 'sip', 'outlook', 'facebook', 'windows', 'mac'];
+const enterprise = ['sap', 'oracle', 'workday', 'kronos', 'adp', 'darwin', 'peopleSoft'];
 const services = ['sheets', 'oneDrive', 'box', 'calender', 'office', 'sharePoint'];
 const tickets = ['bmc', 'summit', 'serviceNow'];
 
@@ -57,7 +57,7 @@ function Integrations(props) {
             </Slide>
           </FadeIn>
           <Slide from='right' className="bowlImage">
-            <img src="/images/integrations/headerImage.png" />
+            <img alt="Leena AI integrations" src="/images/integrations/headerImage.png" />
           </Slide>
       </div>
       </section>
@@ -71,7 +71,7 @@ function Integrations(props) {
         <div className="social icons">
           {social.map( social => 
             <div className="icon" key={social}>
-              <img alt="" src={`/images/integrations/social/${social.indexOf('.') > -1 ? social : (social + '.png')}`} />
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/social/${social.indexOf('.') > -1 ? social : (social + '.png')}`} />
             </div>
           )}
         </div>
@@ -86,7 +86,7 @@ function Integrations(props) {
         <div className="social icons">
           {enterprise.map( enterprise => 
             <div className="icon" key={enterprise}>
-              <img alt="" src={`/images/integrations/enterprise/${enterprise.indexOf('.') > -1 ? enterprise : (enterprise + '.png')}`} />
+              <img alt={`Leena AI integration with ${enterprise}`} src={`/images/integrations/enterprise/${enterprise.indexOf('.') > -1 ? enterprise : (enterprise + '.png')}`} />
             </div>
           )}
         </div>
@@ -100,9 +100,9 @@ function Integrations(props) {
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="Enable your employees to access and sync all the information from third-party applications directly within enterprise conversational AI."/>
         </FadeIn>
         <div className="social icons">
-          {services.map( services => 
-            <div className="icon" key={services}>
-              <img alt="" src={`/images/integrations/services/${services.indexOf('.') > -1 ? services : (services + '.png')}`} />
+          {services.map( service => 
+            <div className="icon" key={service}>
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/services/${service.indexOf('.') > -1 ? service : (service + '.png')}`} />
             </div>
           )}
         </div>
@@ -115,9 +115,9 @@ function Integrations(props) {
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 18, 18]} variant="paragraph2" text="If you want to move your tickets out of Leena AI and collaborate with other departments, we handle it with complete efficiency."/>
         </FadeIn>
         <div className="social icons tickets">
-          {tickets.map( tickets => 
-            <div className="icon" key={tickets}>
-              <img alt="" src={`/images/integrations/tickets/${tickets.indexOf('.') > -1 ? tickets : (tickets + '.png')}`} />
+          {tickets.map( ticket => 
+            <div className="icon" key={ticket}>
+              <img alt={`Leena AI integration with ${social}`} src={`/images/integrations/tickets/${ticket.indexOf('.') > -1 ? ticket : (ticket + '.png')}`} />
             </div>
           )}
         </div>

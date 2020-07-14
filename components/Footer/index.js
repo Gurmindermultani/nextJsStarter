@@ -12,6 +12,7 @@ import Link from 'next/link'
 import Button from '../Button';
 import Typography from '../Typography';
 import Input from '../Input';
+import Image from '../Image';
 import { navigation } from '../Header';
 import { useForm, useField } from '../Input/formHooks';
 import Utils from '../../utils';
@@ -241,7 +242,7 @@ function Footer(props) {
             <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <br />
-            <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Successfully subscribed to the newsletter."/>
+            <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Thank you for subscribing to the newsletter."/>
           </div>
         }
       </div>
@@ -261,8 +262,8 @@ function Footer(props) {
           </a>
         </div>
         <div className="certs">
-          <img className="soc" alt="cert" src="/images/certs/soc.svg" />
-          <img className="iso" alt="cert" src="/images/certs/iso.svg" />
+          <Image className="soc" alt="security certifications LeenaAI" src="/images/certs/soc.svg" />
+          <Image className="iso" alt="security certifications LeenaAI" src="/images/certs/iso.svg" />
         </div>
       </div>
       <Dialog
