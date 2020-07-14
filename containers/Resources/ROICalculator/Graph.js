@@ -75,6 +75,8 @@ const GraphStyles = styled.div`
           left:0;right:0;top:100%;
           padding:5px 1em 0;
           display:block;
+          font-size: 14px;
+          color: #212121;
           text-align:center;
           content:attr(title);
           word-wrap: break-word;
@@ -118,7 +120,7 @@ function Graph(props) {
             <span style={{height: '10%'}} title="Hr"></span>
           </li>
           <li>
-            <span style={{height: '40%'}} title="Employee"></span>
+            <span style={{height: '40%', background: '#00CEFF'}} title="Employee"></span>
           </li>
         </ul>  
       </div>

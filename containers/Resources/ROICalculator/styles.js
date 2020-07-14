@@ -56,7 +56,7 @@ export const ROIStyles = styled.div`
   }
   .result {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 180px auto;
     .header {
       text-align: center;
     }
@@ -64,18 +64,22 @@ export const ROIStyles = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 48px 0;
-      .text {
+      margin: 96px 0;
+      .textCont {
         display: flex;
-        height: 100%;
+        height: 280px;
         flex-direction: column;
-        align-items: space-between;
+        justify-content: space-between;
         .row {
           display: flex;
           padding: 24px;
           background: #FFFFFF 0% 0% no-repeat padding-box;
           box-shadow: 0px 10px 46px #00000029;
           border-radius: 10px;
+          .text {
+            display: flex;
+            flex-direction: column;
+          }
           .value {
             padding-top: 6px;
           }
@@ -84,6 +88,13 @@ export const ROIStyles = styled.div`
             margin-right: 16px;
           }
         }
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      button {
+        margin-left: 24px;
       }
     }
   }

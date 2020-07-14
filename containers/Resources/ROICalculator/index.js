@@ -8,6 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 
 import Typography from '../../../components/Typography';
+import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
 import Slide from '../../../components/VisibilitySensor/Slide';
 import { ROIStyles } from './styles';
 import Form from './Form';
@@ -43,7 +44,7 @@ function CaseStudies(props) {
         </div>
         <div className="body">
           <Graph />
-          <div className="text">
+          <div className="textCont">
             <div className="row">
               <img alt="roi result time" src="/images/roi/time.svg" />
               <div className="text">
@@ -59,6 +60,10 @@ function CaseStudies(props) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="footer">
+          <Typography className="highlight" fontWeight="300" color="#212121" fontSizes={[20, 22, 24]} variant="h1" text="Turn estimated RoI into reality"/>
+          <ScheduleDemoButton size="medium" type="link" />
         </div>
       </div>
     </ROIStyles>
