@@ -4,24 +4,29 @@
  *
  */
 
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
+import dynamic from 'next/dynamic'
 // import PropTypes from 'prop-types';
 import Slide from "../../components/VisibilitySensor/Slide";
 
 import Typography from '../../components/Typography';
-import Customers from '../../components/Customers';
-import Reviews from '../../components/Reviews';
-import MobileDemo from '../../components/MobileDemo';
-import Platforms from '../../components/Platforms';
 import KnowMore from '../../components/KnowMore';
 import ScheduleDemo from '../../components/ScheduleDemo';
 
 import IconHighlightsAll from './IconHighlightsAll';
-import ProductHr from './ProductHr';
-import EmployeeExperience from './EmployeeExperience';
-import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
 import TopContainer from './TopContainer';
+
+// dynamic imports
+const Reviews = dynamic(() => import('../../components/Reviews'));
+const Customers = dynamic(() => import('../../components/Customers'));
+const MobileDemo = dynamic(() => import('../../components/MobileDemo'));
+const Platforms = dynamic(() => import('../../components/Platforms'));
+
+// local dynamic
+const ProductHr = dynamic(() => import('./ProductHr'));
+const EmployeeExperience = dynamic(() => import('./EmployeeExperience'));
+const Recognitions = dynamic(() => import('./Recognitions'));
 
 const mobileSlides = [
   {

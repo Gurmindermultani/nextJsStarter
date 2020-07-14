@@ -23,7 +23,7 @@ function Image(props) {
 }
 
 Image.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   className: PropTypes.string,
 };
 
