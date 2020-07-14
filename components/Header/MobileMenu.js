@@ -10,8 +10,6 @@ import Typography from '../Typography';
 import ScheduleDemoButton from '../ScheduleDemoButton';
 import Link from 'next/link'
 
-import Slide from "../VisibilitySensor/Slide";
-import VisibilitySensor from "../VisibilitySensor";
 import { navigation } from './index';
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';

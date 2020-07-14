@@ -9,7 +9,6 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Card from '../../components/Cards';
 import Slide from "../../components/VisibilitySensor/Slide";
-import FadeIn from "../../components/VisibilitySensor/FadeIn";
 import Carousal from "../../components/Carousal";
 const recognitions = [
   {

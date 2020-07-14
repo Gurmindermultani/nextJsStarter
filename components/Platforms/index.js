@@ -8,7 +8,6 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
-import FadeIn from '../../components/VisibilitySensor/FadeIn';
 import Slide from '../../components/VisibilitySensor/Slide';
 
 const PlatformsStyles = styled.div`
