@@ -165,6 +165,11 @@ const GlobalStyle = createGlobalStyle`
       color: #0F72EE;
     }
   }
+  .MuiDialog-container {
+    .MuiDialog-paper {
+      border-radius: 12px;
+    }
+  }
   @media only screen and (max-width: 760px) {
     .desktop {
       display: none;
