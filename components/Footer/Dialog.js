@@ -13,7 +13,6 @@ import Slide from '../../components/VisibilitySensor/Slide';
 import MaterialDialog from '@material-ui/core/Dialog';
 
 const DialogContainer = styled.div`
-  min-width: 1000px;
   padding: 80px 100px;
   .header {
     text-align: center;
@@ -31,10 +30,14 @@ const DialogContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 32px;
+    text-align: center;
     button {
       width: 232px;
       margin-top: 16px;
     }
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 40px 30px;
   }
 `;
 
@@ -79,12 +82,12 @@ function Dialog(props) {
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>
         <Slide delay={400} className="body">
-          <Typography className="demoText" variant="h1" fontSize="28px" text="Check your inbox."/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text="Check your inbox."/>
           <br />
-          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSize="24px" variant="paragraph2" text="Successfully subscribed to the newsletter."/>
+          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSizes={[20, 24, 28]} variant="paragraph2" text="Successfully subscribed to the newsletter."/>
         </Slide>
         <Slide delay={600} className="footer">
-          <Typography fontWeight="400" color="#212121" fontSize="16px" variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
+          <Typography fontWeight="400" color="#212121" fontSizes={[16, 16, 16]} variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
           <a href="/schedule-demo" target="_blank">
             <Button size="large" variant="contained" name="Schedule demo" />
           </a>
