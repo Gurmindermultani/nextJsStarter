@@ -13,17 +13,23 @@ const GraphStyles = styled.div`
   position: relative;
   box-shadow: 0px 10px 46px #00000029;
   border-radius: 10px;
+  .header {
+    padding: 16px 24px;
+    box-shadow: 0px 1px 0px var(--grey-medium);
+    background: #F2F8FF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 0px #9E9E9E;
+    border-radius: 10px 10px 0px 0px;
+    text-align: left !important;
+  }
   .graphContainer {
-    .header {
-      box-shadow: 0px 1px 0px #9E9E9E;
-      border-radius: 10px 10px 0px 0px;
-    }
+    width: 348px;
+    padding: 48px 24px 48px 24px;
     .yAxis {
       display: flex;
       flex-direction: column;
       position: absolute;
-      left: 0px;
-      bottom: -10px;
+      left: 20px;
+      bottom: 38px;
       text-align: right;
       span {
         margin-top: 27.5px;
@@ -33,8 +39,9 @@ const GraphStyles = styled.div`
       position: absolute;
       z-index: -1;
       width: 300px;
-      left: 0;
-      bottom: -2px;
+      padding-left: 62px;
+      left: 23px;
+      bottom: 47px;
       .border {
         border: 1px solid #f6f6f6;
         margin-top: 48px;
@@ -87,10 +94,10 @@ const GraphStyles = styled.div`
 function Graph(props) {
   return (
     <GraphStyles>
+      <div className="header">
+        <Typography fontWeight="500" color="#212121" fontSizes={[14, 14, 14]} variant="h1" text="Money saved"/>
+      </div>
       <div className="graphContainer">
-        <div className="header">
-          <Typography fontWeight="500" color="#212121" fontSizes={[14, 14, 14]} variant="h1" text="Money saved"/>
-        </div>
         <div className="xAxis">
           <div className="border" />
           <div className="border" />
@@ -108,10 +115,10 @@ function Graph(props) {
         </div>
         <ul class="chart">
           <li>
-            <span style={{height: '10%'}} title="ActionScript"></span>
+            <span style={{height: '10%'}} title="Hr"></span>
           </li>
           <li>
-            <span style={{height: '40%'}} title="JavaScript"></span>
+            <span style={{height: '40%'}} title="Employee"></span>
           </li>
         </ul>  
       </div>

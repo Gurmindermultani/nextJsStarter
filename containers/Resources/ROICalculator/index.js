@@ -43,6 +43,22 @@ function CaseStudies(props) {
         </div>
         <div className="body">
           <Graph />
+          <div className="text">
+            <div className="row">
+              <img alt="roi result time" src="/images/roi/time.svg" />
+              <div className="text">
+                <Typography fontWeight="500" color="#616161" fontSizes={[14, 14, 14]} variant="h1" text="Total time saved"/>
+                <Typography className="value" fontWeight="600" color="#212121" fontSizes={[18, 18, 18]} variant="h1" text="14,200 hrs"/>
+              </div>
+            </div>
+            <div className="row">
+              <img alt="roi result time" src="/images/roi/money.svg" />
+              <div className="text">
+                <Typography fontWeight="500" color="#616161" fontSizes={[14, 14, 14]} variant="h1" text="Total money saved"/>
+                <Typography className="value" fontWeight="600" color="#212121" fontSizes={[18, 18, 18]} variant="h1" text="$16,000,000"/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </ROIStyles>

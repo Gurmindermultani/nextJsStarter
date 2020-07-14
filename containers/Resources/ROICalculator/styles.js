@@ -65,6 +65,26 @@ export const ROIStyles = styled.div`
       align-items: center;
       justify-content: space-between;
       margin: 48px 0;
+      .text {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: space-between;
+        .row {
+          display: flex;
+          padding: 24px;
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          box-shadow: 0px 10px 46px #00000029;
+          border-radius: 10px;
+          .value {
+            padding-top: 6px;
+          }
+          img {
+            width: 56px;
+            margin-right: 16px;
+          }
+        }
+      }
     }
   }
   @media only screen and (max-width: 760px) {
