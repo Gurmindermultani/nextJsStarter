@@ -13,10 +13,10 @@ export default function Home() {
         <meta name="keywords" content="HR workflows, HR workflow automation, Grievance management software, employee request management, ‎employee self service platform" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
-        <meta property="og:image" content="https://home.leena.ai/images/og/hrWorkflows.png" />
+        <meta property="og:image" content="https://leena.ai/images/og/hrWorkflows.png" />
         <meta property="og:title" content="HR workflows and employee request management" />
         <meta property="og:description" content="Take HR workflows one notch up with enterprise conversations." />
-        <meta property="og:url" content="https://home.leena.ai/hr-workflows" />
+        <meta property="og:url" content="https://leena.ai/hr-workflows" />
       </Head>
       <Header />
       <main>

@@ -13,10 +13,10 @@ export default function Home() {
         <meta name="keywords" content="work from home surveys, wfh surveys, work from home employee surveys, remote employee surveys, employee pulse survey, remote working survey, WFH survey for remote employees, wfh pulse surveys" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="mobile-web-app-capable" content="yes"></meta>
-        <meta property="og:image" content="https://home.leena.ai/images/og/wfh.png" />
+        <meta property="og:image" content="https://leena.ai/images/og/wfh.png" />
         <meta property="og:title" content="Work from home surveys for remote employees" />
         <meta property="og:description" content="Monitor mental wellbeing and engagement of your remote workforce." />
-        <meta property="og:url" content="https://home.leena.ai/wfh-surveys" />
+        <meta property="og:url" content="https://leena.ai/wfh-surveys" />
       </Head>
       <Header />
       <main>
