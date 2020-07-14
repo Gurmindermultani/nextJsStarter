@@ -242,7 +242,7 @@ function Footer(props) {
             <Typography variant="h6" fontSizes={[16, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <br />
-            <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Successfully subscribed to the newsletter."/>
+            <Typography className="successText" fontSize="14px" variant="paragraph2" color="#39B54A" text="Thank you for subscribing."/>
           </div>
         }
       </div>
