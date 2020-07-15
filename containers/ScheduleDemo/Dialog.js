@@ -78,7 +78,7 @@ function Dialog(props) {
       fullWidth={false}
       maxWidth="lg"
     >
-      <DialogContainer>
+      <DialogContainer id="scheduleDemoSucess">
         <Slide className="header">
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>
