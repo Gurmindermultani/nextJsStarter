@@ -90,7 +90,7 @@ function HomePage(props) {
             <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="A complete helpdesk that your employee needs"/>
           </QuoteAnimator>
         </div>
-        <MobileDemo alt="Hr helpdesk" phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
+        <MobileDemo className="homePageMobileDemo" alt="Hr helpdesk" phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
       </section>
       <section className="section section5">
         <QuoteAnimator>
@@ -127,7 +127,7 @@ function HomePage(props) {
         <Recognitions />
       </section>
       <section className="section section9 noMargin">
-        <ScheduleDemo variant="discover"></ScheduleDemo>
+        <ScheduleDemo className="homePageCta" variant="discover"></ScheduleDemo>
       </section>
     </HomePageStyles>
   );

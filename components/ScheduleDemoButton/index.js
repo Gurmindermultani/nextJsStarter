@@ -25,7 +25,7 @@ function ScheduleDemoButton(props) {
     return (
       <Link href="/schedule-demo">
         <div>
-          <Button fullWidth={props.fullWidth} name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+          <Button className={props.className} fullWidth={props.fullWidth} name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
         </div>
       </Link>
     );
@@ -34,7 +34,7 @@ function ScheduleDemoButton(props) {
     <Slide>
       <Link href="/schedule-demo">
         <ScheduleDemoButtonStyles>
-          <Button name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
+          <Button className={props.className} name={props.name ? props.name : 'Schedule demo'} variant={props.variant ? props.variant : 'contained'} size={props.size ? props.size : 'large'}/>
         </ScheduleDemoButtonStyles>
       </Link>
     </Slide>

@@ -232,7 +232,7 @@ function EmployeeExperience(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <KnowMore name="Know more" to="/employee-engagement"/>
+            <KnowMore className="experienceKnowMore" name="Know more" to="/employee-engagement"/>
           </div>
         </div>
       </div>

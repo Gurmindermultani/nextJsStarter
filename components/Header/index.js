@@ -115,7 +115,7 @@ function Header(props) {
         <div className="logo pointer">
           <Link href="/">
             <a>
-              <img alt="Logo LeenaAI" src="/images/leenaLogo.svg"/>
+              <img className="leenaMainLogo" alt="Logo LeenaAI" src="/images/leenaLogo.svg"/>
             </a>
           </Link>
         </div>
@@ -164,7 +164,7 @@ function Header(props) {
           {props.router.pathname.indexOf('schedule-demo') === -1 &&
             <Link href="/schedule-demo">
               <div>
-                <Button variant="contained" size="medium" name="Schedule demo" />
+                <Button className="headerScheduleDemo" variant="contained" size="medium" name="Schedule demo" />
               </div>
             </Link>
           }

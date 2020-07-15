@@ -231,7 +231,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <KnowMore to={"/employee-query-management"} name="Know more" type="link" variant="contained" size="large"/>
+            <KnowMore className="hrHelpdeskKnowMore" to={"/employee-query-management"} name="Know more" type="link" variant="contained" size="large"/>
           </div>
         </div>
         <div className="rightContainer">

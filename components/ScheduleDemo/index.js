@@ -122,7 +122,7 @@ function ScheduleDemo(props) {
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
-                <Button name="Schedule demo" variant="inverted" size="large"/>
+                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
                 <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
@@ -151,7 +151,7 @@ function ScheduleDemo(props) {
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
-                <Button name="Schedule demo" variant="inverted" size="large"/>
+                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
                 <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
@@ -179,7 +179,7 @@ function ScheduleDemo(props) {
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
-                <Button name="Schedule demo" variant="inverted" size="large"/>
+                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
                 <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
@@ -207,7 +207,7 @@ function ScheduleDemo(props) {
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
-                <Button name="Schedule demo" variant="inverted" size="large"/>
+                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
                 <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
@@ -235,7 +235,7 @@ function ScheduleDemo(props) {
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
               <div className="demoButton">
-                <Button name="Schedule demo" variant="inverted" size="large"/>
+                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
                 <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
               </div>
@@ -262,7 +262,7 @@ function ScheduleDemo(props) {
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
             <div className="demoButton">
-              <Button name="Schedule demo" variant="inverted" size="large"/>
+              <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
               <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
               <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
             </div>

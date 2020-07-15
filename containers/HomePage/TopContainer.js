@@ -130,7 +130,7 @@ function TopContainer(props) {
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
           <Link href="/schedule-demo">
             <div className="buttons">
-              <Button fullWidth name="Schedule demo" variant="contained" size="large"/>
+              <Button className="homeMainScheduleDemo" fullWidth name="Schedule demo" variant="contained" size="large"/>
             </div>
           </Link>
         </Slide>

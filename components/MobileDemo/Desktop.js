@@ -127,7 +127,7 @@ function DeskTop(props) {
           </Carousal>
         </div>
         <div>
-          <ScheduleDemoButton type="link" variant="invertedLight"/>
+          <ScheduleDemoButton className={props.className} type="link" variant="invertedLight"/>
         </div>
       </div>
     </DeskTopStyles>
