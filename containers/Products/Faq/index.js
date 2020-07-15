@@ -46,8 +46,7 @@ function Faq(props) {
             </Slide>
           </FadeIn>
           <FadeIn className="text mobile">
-            <Typography className="topText" variant="h1" fontSizes={[20, 34, 34]} text="Answer your"/>
-            <Typography className="topText" variant="h1" fontSizes={[20, 34, 34]} text="employee queries"/>
+            <Typography className="topText" variant="h1" fontSizes={[20, 34, 34]} text="Answer your employee queries"/>
             <Typography variant="h1" fontSizes={[20, 34, 34]} text="with enterprise conversational experience"/>
             <Typography className="secondHeading halfBackground" fontWeight="300" color="#212121" fontSizes={[18, 20, 22]} variant="h2" text="Automatically reply policy-related HR queries instantly via AI-driven conversations."/>
             <Slide className="demoInput">
