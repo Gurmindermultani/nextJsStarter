@@ -1,0 +1,6 @@
+Sitemap: https://leena.ai/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
