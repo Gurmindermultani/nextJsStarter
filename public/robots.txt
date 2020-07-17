@@ -1,0 +1,6 @@
+Sitemap: https://leena.ai/api/posts-sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
