@@ -85,7 +85,7 @@ function CustomError({ statusCode }) {
 }
 
 function getInitialProps({ req, res, err }) {
-  if (req.url && redirections[req.url]) {
+  if (req.url && redirections[req.url.replace(/\/$/, "")]) {
     res.writeHead(302, { Location: redirections[req.url] }).end();
   }
   let statusCode;
