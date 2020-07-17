@@ -86,7 +86,7 @@ function CustomError({ statusCode }) {
 
 function getInitialProps({ req, res, err }) {
   if (req.url && redirections[req.url.replace(/\/$/, "")]) {
-    res.writeHead(302, { Location: redirections[req.url.replace(/\/$/, "")] }).end();
+    res.writeHead(301, { Location: redirections[req.url.replace(/\/$/, "")] }).end();
   }
   let statusCode;
   // If the res variable is defined it means nextjs
