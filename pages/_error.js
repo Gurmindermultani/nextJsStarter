@@ -84,7 +84,11 @@ function CustomError({ statusCode }) {
   );
 }
 
-function getInitialProps({ res, err }) {
+function getInitialProps({ req, res, err }) {
+  if (req.url === "/test") {
+    console.log(req.url);
+    res.writeHead(302, { Location: '/' }).end();
+  }
   let statusCode;
   // If the res variable is defined it means nextjs
   // is in server side
