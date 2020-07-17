@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-
+import redirections from '../data/redirections';
 
 const Styles = styled.div`
   padding: 48px 64px;
@@ -85,9 +85,8 @@ function CustomError({ statusCode }) {
 }
 
 function getInitialProps({ req, res, err }) {
-  if (req.url === "/test") {
-    console.log(req.url);
-    res.writeHead(302, { Location: '/' }).end();
+  if (req.url && redirections[req.url]) {
+    res.writeHead(302, { Location: redirections[req.url] }).end();
   }
   let statusCode;
   // If the res variable is defined it means nextjs
