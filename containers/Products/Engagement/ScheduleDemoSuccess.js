@@ -82,7 +82,7 @@ const ScheduleDemoSucessContainer = styled.div`
 function ScheduleDemoSucess(props) {
 
   return (
-    <ScheduleDemoSucessContainer>
+    <ScheduleDemoSucessContainer className="engageSuccessPopup">
       <Slide delay={200} className="header">
         <img alt="correct icon" src="/images/icons/correct.svg"/>
       </Slide>
