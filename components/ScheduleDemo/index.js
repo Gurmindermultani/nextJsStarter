@@ -177,13 +177,11 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
-              <div className="demoButton">
-                <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
-                <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
-                <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
-              </div>
-            </Link>
+            <div className="demoButton">
+              <Button onClick={props.scheduleDemoClickFn} className={props.className} name="Schedule demo" variant="inverted" size="large"/>
+              <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
+              <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
+            </div>
           </Slide>
         </div>
         <div className="bottomRight">
