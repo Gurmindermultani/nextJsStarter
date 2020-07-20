@@ -16,7 +16,7 @@ const CookieBannerContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100vw;
-  background: #212121;
+  background: #fff;
   z-index: 5;
   .animatedDiv {
     display: flex;
@@ -24,6 +24,7 @@ const CookieBannerContainer = styled.div`
     justify-content: center;
     padding: 28px 30px;
     box-shadow: 0px -9px 22px #00000029;
+    background: #212121;
     button {
       margin-left: 24px;
       width: 128px;
