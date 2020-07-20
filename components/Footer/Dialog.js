@@ -82,12 +82,13 @@ function Dialog(props) {
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>
         <Slide delay={400} className="body">
-          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text="Check your inbox."/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text="Check your inbox"/>
           <br />
-          <Typography className="halfBackground" fontWeight="400" color="#212121" fontSizes={[20, 24, 28]} variant="paragraph2" text="Successfully subscribed to the newsletter."/>
+          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text=" for the confirmation email"/>
+          <br />
         </Slide>
         <Slide delay={600} className="footer">
-          <Typography fontWeight="400" color="#212121" fontSizes={[16, 16, 16]} variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
+          <Typography fontWeight="400" color="#212121" fontSizes={[16, 18, 18]} variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
           <a href="/schedule-demo">
             <Button size="large" variant="contained" name="Schedule demo" />
           </a>
