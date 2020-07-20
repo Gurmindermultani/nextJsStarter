@@ -16,18 +16,30 @@ const CookieBannerContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100vw;
-  background: white;
+  background: #212121;
   z-index: 5;
   .animatedDiv {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 30px;
-    box-shadow: 0px -2px 12px #0000001F;
+    padding: 28px 30px;
+    box-shadow: 0px -9px 22px #00000029;
     button {
       margin-left: 24px;
-      width: 106px;
+      width: 128px;
+      height: 44px;
       box-shadow: none;
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    .animatedDiv {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 24px 30px;
+      button {
+        margin-top: 24px;
+        margin-left: 0;
+      }
     }
   }
 `;
@@ -62,8 +74,8 @@ function CookieBanner(props) {
           ({ item, key, props }) =>
             item && (
               <animated.div className="animatedDiv" key={key} style={props}>
-                <Typography fontSizes={[14, 14, 14]} color="#0f72ee" className="message" variant="h6" text="This website uses cookies to improve your experience. By using this site, you agree with our use of cookies." />
-                <Button onClick={() => hideBanner()} size="small" variant="contained" name="Got it" />
+                <Typography fontSizes={[16, 16, 16]} color="#fff" className="message" variant="h6" text="This website uses cookies to improve your experience. By using this site, you agree with our use of cookies." />
+                <Button onClick={() => hideBanner()} size="medium" variant="invertedBlack" name="Got it" />
               </animated.div>
             )
         )

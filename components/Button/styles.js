@@ -153,6 +153,38 @@ export const ButtonWrapper = styled.button`
     }
   }
 
+  &.invertedBlack {
+    background-color: ${props => props.theme.palette.white};
+    border: 0.8px solid ${props => props.theme.palette.white};
+    box-shadow: none;
+    i {
+      color: ${props => props.theme.palette.primary.main};
+    }
+    span {
+      color: ${props => props.theme.palette.text.primary};
+    }
+
+    &:hover {
+      background-color: ${props => props.theme.palette.primary.main};
+      border: 0.8px solid ${props => props.theme.palette.primary.main};
+      box-shadow: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+    }
+    &.disabled {
+      background-color: ${props => props.theme.palette.border.main};
+      border-color: ${props => props.theme.palette.border.main};
+      pointer-events: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+      &:hover {
+        background-color: ${props => props.theme.palette.border.main};
+      }
+    }
+  }
+
   &.invertedLight {
     background-color: ${props => props.theme.palette.white};
     border: 0.8px solid ${props => props.theme.palette.white};
