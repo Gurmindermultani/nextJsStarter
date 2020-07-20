@@ -158,7 +158,9 @@ function Header(props) {
           {props.router.pathname.indexOf('schedule-demo') > -1 &&
             <div className="demo">
               <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
-              <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
+              <a href="mailto:support@leena.ai">
+                <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
+              </a>
             </div>
           }
           {props.router.pathname.indexOf('schedule-demo') === -1 &&
