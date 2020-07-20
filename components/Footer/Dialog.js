@@ -38,6 +38,9 @@ const DialogContainer = styled.div`
   }
   @media only screen and (max-width: 760px) {
     padding: 40px 30px;
+    .body {
+      margin-top: 16px;
+    }
   }
 `;
 
@@ -82,9 +85,9 @@ function Dialog(props) {
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>
         <Slide delay={400} className="body">
-          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text="Check your inbox"/>
+          <Typography className="demoText" variant="h1" fontSizes={[20, 28, 28]} text="Check your inbox"/>
           <br />
-          <Typography className="demoText" variant="h1" fontSizes={[24, 28, 28]} text=" for the confirmation email"/>
+          <Typography className="demoText" variant="h1" fontSizes={[20, 28, 28]} text=" for the confirmation email"/>
           <br />
         </Slide>
         <Slide delay={600} className="footer">

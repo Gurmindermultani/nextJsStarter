@@ -34,7 +34,10 @@ const DialogContainer = styled.div`
     right: 20px;
   }
   @media only screen and (max-width: 760px) {
-
+    .closeDialog {
+      top: 12px;
+      right: 12px;
+    }
   }
 `;
 

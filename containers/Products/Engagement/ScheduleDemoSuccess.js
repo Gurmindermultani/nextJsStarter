@@ -19,7 +19,7 @@ const ScheduleDemoSucessContainer = styled.div`
     padding: 0px 110px;
   }
   .footer {
-    margin-top: 8px;
+    margin-top: 12px;
     padding: 0px 110px;
     text-align: center;
   }
@@ -90,8 +90,8 @@ function ScheduleDemoSucess(props) {
         <Typography className="demoText" variant="h1" fontSizes={[16, 18, 18]} text="Check your inbox for the confirmation email"/>
       </Slide>
       <Slide delay={600} className="footer">
-        <Typography fontWeight="400" color="#212121" fontSizes={[14, 14, 14]} variant="paragraph2" text="We have sent you the link to explore your employee engagement dashboard"/>
-        <Typography fontWeight="400" color="#212121" fontSizes={[14, 14, 14]} variant="paragraph2" text="while our product experts get in touch."/>
+        <Typography fontWeight="400" color="#212121" fontSizes={[14, 14, 14]} variant="h1" text="We have sent you the link to explore your employee engagement dashboard"/>
+        <Typography fontWeight="400" color="#212121" fontSizes={[14, 14, 14]} variant="h1" text="while our product experts get in touch."/>
       </Slide>
       <div className="images">
         <div className="roundBg">

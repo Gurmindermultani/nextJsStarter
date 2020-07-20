@@ -60,10 +60,10 @@ const FormStyles = styled.div`
     max-width: none;
     .bgcont {
       padding: 0px;
-      margin: 32px;
+      margin: 42px 16px;
       width: 380px;
       .textCenter {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
       }
     }
   }
