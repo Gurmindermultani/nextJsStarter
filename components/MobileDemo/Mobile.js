@@ -12,6 +12,7 @@ import { Spring } from 'react-spring/renderprops.cjs';
 import VisibilitySensor from "../../components/VisibilitySensor";
 import Carousal from "../../components/Carousal";
 import Button from "../../components/Button";
+import ScheduleDemoButton from "../../components/ScheduleDemoButton";
 import LottieAnimation from "../../components/LottieAnimation";
 
 import Typography from '../../components/Typography';
@@ -171,7 +172,11 @@ function MobileDemo(props) {
         </Carousal>
       </div>
       <div className="button">
-      <Button onClick={() => props.scheduleDemoClickFn()} size="large" variant="contained" name="Schedule demo"/>
+        {props.scheduleDemoClickFn ? (
+          <Button name="Schedule demo" size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="contained"/>
+        ) : (
+          <ScheduleDemoButton className={props.className} type="link"/>
+        )}
       </div>
     </MobileDemoStyles>
   );
