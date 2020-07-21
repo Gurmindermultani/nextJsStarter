@@ -32,7 +32,7 @@ export const customStyles = {
     cursor: "pointer",
     fontSize : '13px',
     color: '#212121',
-    background: state.isSelected ? '#f6f6f6' : theme.palette.white,
+    background: state.isFocused || state.isSelected ? '#f6f6f6' : theme.palette.white,
     '&:hover': {
       background: '#f6f6f6',
     },

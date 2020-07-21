@@ -108,6 +108,11 @@ export const ButtonWrapper = styled.button`
       border: 0.8px solid ${props => props.theme.palette.primary.dark};
       box-shadow: none;
     }
+    &:focus {
+      background-color: ${props => props.theme.palette.primary.dark};
+      border: 0.8px solid ${props => props.theme.palette.primary.dark};
+      box-shadow: none;
+    }
     &.disabled {
       background-color: ${props => props.theme.palette.border.main};
       border-color: ${props => props.theme.palette.border.main};

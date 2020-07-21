@@ -18,6 +18,7 @@ const ValueWrapper = styled.div`
 const ValueContainer = ({ children, ...props }) => {
   const { getValue, hasValue } = props;
   const nbValues = getValue();
+  console.log(nbValues);
   if (!hasValue) {
     return (
       <components.ValueContainer {...props}>
