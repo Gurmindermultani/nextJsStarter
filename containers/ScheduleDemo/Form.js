@@ -12,6 +12,7 @@ import Button from '../../components/Button';
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
+import SelectWithFlags from '../../components/Select/SelectWithFlags';
 import { useForm, useField } from '../../components/Input/formHooks';
 import Utils from '../../utils';
 import Codes from '../../data/contries';
@@ -51,9 +52,9 @@ const FormStyles = styled.div`
   .phone {
     display: flex;
     .single-select {
-      min-width: 90px;
+      min-width: 120px;
       > div {
-        width: 80px;
+        width: 110px;
       }
     }
     .fullWidth {
@@ -77,6 +78,10 @@ const FormStyles = styled.div`
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
+  const [country, setCountry] = useState({
+    code: 'IN',
+    dial_code: '+91',
+  });
   useEffect(() => {
     let req = new XMLHttpRequest();
     req.open('GET', document.location, false);
@@ -86,7 +91,7 @@ function Form(props) {
     if (countryName) {
       const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
       if (foundIndex > -1) {
-        setCountryCode(phoneCountryOptions[foundIndex].dial_code);
+        setCountry(phoneCountryOptions[foundIndex]);
       }
     }
   },[]);
@@ -94,7 +99,7 @@ function Form(props) {
     onSubmit: (formData, valid) => {
       if (!valid) return;
       let body = {...formData};
-      body.phone = countryCode + body.phone;
+      body.phone = (country && country.dial_code ? country.dial_code : '+91') + body.phone;
       body.siteUrl = window.location.href;
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-demo`, {
         method: 'post',
@@ -180,6 +185,13 @@ function Form(props) {
       value: code.dial_code
     }
   });
+  const getSelectedOption = (idx) => {
+    let value = {};
+    return phoneCountryOptions[idx];
+  }
+  const handleChange = (value) => {
+    setCountry(value);
+  }
   return (
     <FormStyles>
       <div className="bgcont">
@@ -191,11 +203,12 @@ function Form(props) {
           <Input {...lastName} placeholder='Last name' name="lastName"/>
           <Input {...email} placeholder='Your work email' name="email"/>
           <div className="phone">
-            <Select
+            <SelectWithFlags
               placeholder='Number of employees'
               options={phoneCountryOptions}
-              onChange={ e => setCountryCode(e.target.value)}
-              value={phoneCountryOptions.findIndex( elem => elem.value === countryCode ) > -1 ? { label: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value, value: phoneCountryOptions[phoneCountryOptions.findIndex( elem => elem.value === countryCode )].value } : ''}
+              handleFieldChange={ e => handleChange(e)}
+              onChange={(e) => setCountry({})}
+              value={phoneCountryOptions.findIndex( elem => elem.code === country.code ) > -1 ? getSelectedOption(phoneCountryOptions.findIndex( elem => elem.code === country.code )) : ''}
             />
             <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
           </div>

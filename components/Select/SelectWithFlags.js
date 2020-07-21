@@ -12,23 +12,42 @@ import Error from '../Error';
 import { customStyles } from './index';
 
 const ValueWrapper = styled.div`
-  
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px 2px 0px;
+  }
+  div {
+    min-width: fit-content;
+  }
 `;
 
+const Option = ({ children, ...props }) => {
+  // console.log(props.getValue());
+  const value = props.data;
+  return (
+    <components.Option {...props}>
+      <img src={`https://www.countryflags.io/${value.code.toLowerCase()}/shiny/64.png`} />
+      {children}
+    </components.Option>
+  );
+};
+
 const ValueContainer = ({ children, ...props }) => {
-  const { getValue, hasValue } = props;
-  const nbValues = getValue();
-  console.log(nbValues);
-  if (!hasValue) {
-    return (
-      <components.ValueContainer {...props}>
-        {children}
-      </components.ValueContainer>
-    );
-  }
+  // console.log(props.getValue());
+  const value = props.getValue() ? props.getValue()[0] : '';
   return (
     <components.ValueContainer {...props}>
-      {`${nbValues.label}`}
+      {children[1]}
+      {value && value.code &&
+        <ValueWrapper>
+          <img src={`https://www.countryflags.io/${value.code.toLowerCase()}/shiny/64.png`} />
+          <div>{value ? value.value : ''}</div>
+        </ValueWrapper>
+      }
     </components.ValueContainer>
   );
 };
@@ -47,6 +66,11 @@ const SelectWrapper = styled.div`
   }
   #react-select-2-input {
     height: 28px;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px 2px 0px;
   }
 `;
 
@@ -78,7 +102,7 @@ class SelectComponent extends React.PureComponent {
           closeMenuOnSelect={!props.closeMenuOnSelect}
           styles={customStyles}
           value={props.value}
-          components={{ ValueContainer }}
+          components={{ ValueContainer, Option }}
           isDisabled={!!props.disabled}
           maxMenuHeight={220}
           options={props.options}

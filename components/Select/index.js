@@ -33,6 +33,8 @@ export const customStyles = {
     fontSize : '13px',
     color: '#212121',
     background: state.isFocused || state.isSelected ? '#f6f6f6' : theme.palette.white,
+    display: 'flex',
+    alignItems: 'center',
     '&:hover': {
       background: '#f6f6f6',
     },
@@ -55,7 +57,7 @@ export const customStyles = {
     border: 'none',
     boxShadow: 'rgba(9, 30, 66, 0.13) 0px 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 4px 11px',
     overFlow: 'hidden',
-    minWidth: '220px'
+    minWidth: '240px'
   }),
   input: base => ({
     ...base,
@@ -76,7 +78,8 @@ export const customStyles = {
     ...base,
     fontSize : '14px',
     color: `${theme.palette.text.primary}`,
-    padding: '2px 15px',
+    padding: '2px 0px 2px 15px',
+    flexWrap: 'nowrap'
   })
 };
 
