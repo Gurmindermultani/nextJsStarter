@@ -53,7 +53,7 @@ export const HrWorflowsStyles = styled.div`
       position: relative;
       .animation {
         position: absolute;
-        top: 20px;
+        top: 13px;
         left: 56px;
         z-index: -1;
         width: 200px;
