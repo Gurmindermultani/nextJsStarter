@@ -1,6 +1,7 @@
 // next.config.js
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
+const withSourceMaps = require('@zeit/next-source-maps')
 const path = require("path");
 
 module.exports = withPlugins([
@@ -33,6 +34,7 @@ module.exports = withPlugins([
       quality: 75,
     },
   }],
+  [withSourceMaps]
 ]);
 
 // module.exports = {
