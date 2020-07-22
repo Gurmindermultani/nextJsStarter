@@ -90,6 +90,7 @@ function Form(props) {
     let countryName = req.getResponseHeader('cc');
     if (countryName) {
       const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
+      console.log(foundIndex, 'wohoo');
       if (foundIndex > -1) {
         setCountry(phoneCountryOptions[foundIndex]);
       }
