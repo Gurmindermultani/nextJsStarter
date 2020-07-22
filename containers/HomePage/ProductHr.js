@@ -41,6 +41,7 @@ const ProductStyles = styled.div`
       padding-left: 10px;
       padding-right: 10px;
       padding-bottom: 40px;
+      min-height: 452px;
       .MuiExpansionPanel-root {
         box-shadow: none;
         margin: 0px;

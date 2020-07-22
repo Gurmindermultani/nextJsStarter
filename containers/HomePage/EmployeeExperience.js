@@ -158,7 +158,7 @@ const ProductStyles = styled.div`
 `;
 
 function EmployeeExperience(props) {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState('panel4');
   const [panelInterval, setPanelInterval] = useState('');
 
   const mobileCheck = () => {
@@ -168,7 +168,7 @@ function EmployeeExperience(props) {
   };
 
   useEffect(() => {
-    const myInterval = setInterval(() => setExpanded(c => 'panel' + ( (Number(c.match(/\d+/)[0]) === 2 ? 0 : Number(c.match(/\d+/)[0]) ) + 1)), 3000);
+    const myInterval = setInterval(() => setExpanded(c => 'panel' + ( (Number(c.match(/\d+/)[0]) === 5 ? 3 : Number(c.match(/\d+/)[0]) ) + 1)), 3000);
     setPanelInterval(myInterval);
     if (mobileCheck()) {
       clearInterval(myInterval);
@@ -193,7 +193,7 @@ function EmployeeExperience(props) {
       </div>
       <div className="body">
         <div className="leftContainer">
-          {expanded === "panel1" &&
+          {expanded === "panel4" &&
             <div className="image center">
               <Image alt="employee engagement" src="/images/bg2.svg"/>
               <Slide from='left' className="a1">
@@ -207,7 +207,7 @@ function EmployeeExperience(props) {
               </Slide>
             </div>
           }
-          {expanded === "panel2" &&
+          {expanded === "panel5" &&
             <div className="image center">
               <Image alt="employee engagement" src="/images/bg2.svg"/>
               <Slide from='right' className="b1">
@@ -220,7 +220,7 @@ function EmployeeExperience(props) {
           }
         </div>
         <div className="rightContainer">
-          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+          <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
             <ExpansionPanelSummary>
               <div className="accordianHeader">
                 <Typography
@@ -234,7 +234,7 @@ function EmployeeExperience(props) {
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct AI-driven surveys throughout the employees’ lifecycle. Build an open and transparent work culture."}/>
             </ExpansionPanelDetails>
           </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+          <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
             <ExpansionPanelSummary>
               <div className="questionHeader">
                 <Typography
