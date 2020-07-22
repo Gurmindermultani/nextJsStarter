@@ -187,7 +187,7 @@ function Reviews(props) {
                   </div>
                   <div className="user">
                     <UserAvatar alt="User Icon" src={`${review.user.img}`}/>
-                    <Typography className="text" size="15px" color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                    <Typography className="text" size="15px" variant="h6" text={review.user.name}/>
                     <Typography size="15px" variant="paragraph2" text={', '}/>
                     &nbsp;
                     <Typography size="15px" variant="paragraph2" text={review.user.position}/>
@@ -213,7 +213,7 @@ function Reviews(props) {
                   <div className="user">
                     <UserAvatar alt="testimonials LeenaAI" src={`${review.user.img}`}/>
                     <div className="text">
-                      <Typography color="#0F72EE" variant="paragraph2" text={review.user.name}/>
+                      <Typography variant="h6" text={review.user.name}/>
                       <Typography variant="paragraph2" text={', '}/>
                       <Typography fontSizes={[14, 14, 14]} variant="paragraph2" text={review.user.position}/>
                     </div>
