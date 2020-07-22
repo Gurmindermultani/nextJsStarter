@@ -11,7 +11,6 @@ import styled from 'styled-components';
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
 import Input from '../../components/Input';
-import Select from '../../components/Select';
 import SelectWithFlags from '../../components/Select/SelectWithFlags';
 import { useForm, useField } from '../../components/Input/formHooks';
 import Utils from '../../utils';
@@ -77,7 +76,6 @@ const FormStyles = styled.div`
 
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
-  const [countryCode, setCountryCode] = useState('+91');
   const [country, setCountry] = useState({
     code: 'IN',
     dial_code: '+91',
@@ -86,11 +84,9 @@ function Form(props) {
     let req = new XMLHttpRequest();
     req.open('GET', document.location, false);
     req.send(null);
-    let headers = req.getAllResponseHeaders();
     let countryName = req.getResponseHeader('cc');
     if (countryName) {
       const foundIndex = phoneCountryOptions.findIndex( elem => elem.code === countryName);
-      console.log(foundIndex, 'wohoo');
       if (foundIndex > -1) {
         setCountry(phoneCountryOptions[foundIndex]);
       }
@@ -205,7 +201,6 @@ function Form(props) {
           <Input {...email} placeholder='Your work email' name="email"/>
           <div className="phone">
             <SelectWithFlags
-              placeholder='Number of employees'
               options={phoneCountryOptions}
               handleFieldChange={ e => handleChange(e)}
               onChange={(e) => setCountry({})}
