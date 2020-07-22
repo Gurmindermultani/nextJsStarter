@@ -36,12 +36,11 @@ const ProductStyles = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    min-height: 490px;
     .leftContainer {
       flex-basis: 50%;
       padding-left: 10px;
       padding-right: 10px;
-      padding-bottom: 40px;
-      min-height: 452px;
       .MuiExpansionPanel-root {
         box-shadow: none;
         margin: 0px;
@@ -189,8 +188,13 @@ function ProductHr(props) {
     return () => clearInterval(myInterval);
   }, []);
 
+  useEffect(() => {
+    if (expanded === "panel3") {
+      clearInterval(panelInterval);
+    }
+  }, [expanded]);
+
   const handleChange = (panel) => (event, isExpanded) => {
-    clearInterval(panelInterval);
     setExpanded(panel);
   };
   return (
