@@ -16,6 +16,7 @@ import FadeIn from '../VisibilitySensor/FadeIn';
 import Slide from '../VisibilitySensor/Slide';
 
 import MobileMenu from './MobileMenu';
+import ScheduleDemoDialog from './ScheduleDemoDialog';
 import { HeaderStyles } from './styles';
 
 export const navigation = [
@@ -91,6 +92,7 @@ export const navigation = [
 function Header(props) {
   const [ anim, setAnim ] = useState({});
   const [ showMenu, setShowMenu ] = useState(false);
+  const [showDialog, setShowDialog] = useState('');
   const play = () => {
     if (showMenu) {
       toggleAlt();
@@ -163,12 +165,17 @@ function Header(props) {
               </a>
             </div>
           }
-          {props.router.pathname.indexOf('schedule-demo') === -1 &&
+          {props.router.pathname.indexOf('schedule-demo') === -1 && props.router.pathname.indexOf('employee-engagement') === -1 &&
             <Link href="/schedule-demo">
               <div>
                 <Button className="headerScheduleDemo" variant="contained" size="medium" name="Schedule demo" />
               </div>
             </Link>
+          }
+          {props.router.pathname.indexOf('employee-engagement') > -1 &&
+            <div>
+              <Button onClick={() => setShowDialog('form')} className="headerScheduleDemo" variant="contained" size="medium" name="Start free trial" />
+            </div>
           }
         </div>
         <div className="buttons mobile">
@@ -182,6 +189,10 @@ function Header(props) {
           <MobileMenu />
         </FadeIn>
       }
+      <ScheduleDemoDialog
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+      />
     </HeaderStyles>
   );
 }
