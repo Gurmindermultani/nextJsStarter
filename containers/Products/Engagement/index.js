@@ -128,7 +128,7 @@ function Engagement(props) {
           <ProductMore setShowDialog={setShowDialog} />
         </div>
         <div className="products mobile">
-          <MobileFeatures />
+          <MobileFeatures scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} />
         </div>
       </section>
       <section className="section section3 noMargin">

@@ -170,9 +170,6 @@ function MobileDemo(props) {
           )}
         </Carousal>
       </div>
-      <div className="button">
-        <ScheduleDemoButton type="link" size="large" variant="contained" name="Schedule demo"/>
-      </div>
     </MobileDemoStyles>
   );
 }
