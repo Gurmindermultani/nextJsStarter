@@ -990,11 +990,6 @@ const Codes = [
   code: "AX"
   },
   {
-  name: "Antarctica",
-  dial_code: null,
-  code: "AQ"
-  },
-  {
   name: "Bolivia, Plurinational State of",
   dial_code: "+591",
   code: "BO"

@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import Link from 'next/link'
 
@@ -15,6 +15,19 @@ import { ContactUsStyles } from './styles';
 import Form from './Form';
 
 function ContactUs(props) {
+  const [countryCode, setCountryCode] = useState('+91');
+  useEffect(() => {
+    let req = new XMLHttpRequest();
+    req.open('GET', document.location, false);
+    req.send(null);
+    let countryName = req.getResponseHeader('cc');
+    if (countryName === "IN") {
+      setCountryCode('+91')
+    }
+    if (countryName === "US") {
+      setCountryCode('+1')
+    }
+  },[]);
   return (
     <ContactUsStyles>
       <Slide from='left' className="leftContainer">
@@ -36,7 +49,12 @@ function ContactUs(props) {
         <div className="contact">
           <div className="row">
             <img className="phoneImage" alt="Contact Leena AI" src="/images/icons/call.svg"/>
-            <Typography fontWeight="500" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
+            {countryCode === "+91" && 
+              <Typography fontWeight="500" color="#212121" fontSize="16px" variant="paragraph2" text="+91 8851168842"/>
+            }
+            {countryCode === "+1" && 
+              <Typography fontWeight="500" color="#212121" fontSize="16px" variant="paragraph2" text="+1 650-690-6283"/>
+            }
           </div>
           <div className="row mail">
             <img className="phoneImage" alt="Contact Leena AI" src="/images/icons/communications.svg"/>
