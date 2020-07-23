@@ -138,7 +138,7 @@ function Engagement(props) {
             <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="can’t be any simpler"/>
           </FadeIn>
         </div>
-        <MobileDemo scheduleDemoClickFn={() => setShowDialog('form')} alt="employee engagement" phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
+        <MobileDemo scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} alt="employee engagement" phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
       </section>
       <section className="section section4 noMargin">
         <div className="mobile">
@@ -180,7 +180,7 @@ function Engagement(props) {
         <Reviews />
       </section>
       <section className="section section8 noMargin">
-        <ScheduleDemo scheduleDemoClickFn={() => setShowDialog('form')} variant="engage" />
+        <ScheduleDemo scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} variant="engage" />
       </section>
       <ScheduleDemoDialog
         setShowDialog={setShowDialog}

@@ -129,7 +129,7 @@ function DeskTop(props) {
         </div>
         <div>
           {props.scheduleDemoClickFn ? (
-            <Button name="Schedule demo" size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="invertedLight"/>
+            <Button name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="invertedLight"/>
           ) : (
             <ScheduleDemoButton className={props.className} type="link" variant="invertedLight"/>
           )}

@@ -209,7 +209,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <Button size="large" onClick={() => props.setShowDialog('form')} name="Schedule demo" />
+            <Button size="large" onClick={() => props.setShowDialog('form')} name="Start free trial" />
           </div>
         </div>
         <div className="rightContainer">

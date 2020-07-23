@@ -173,7 +173,7 @@ function MobileDemo(props) {
       </div>
       <div className="button">
         {props.scheduleDemoClickFn ? (
-          <Button name="Schedule demo" size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="contained"/>
+          <Button name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="contained"/>
         ) : (
           <ScheduleDemoButton className={props.className} type="link"/>
         )}

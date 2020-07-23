@@ -178,7 +178,7 @@ function ScheduleDemo(props) {
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
             <div className="demoButton">
-              <Button onClick={props.scheduleDemoClickFn} className={props.className} name="Schedule demo" variant="inverted" size="large"/>
+              <Button onClick={props.scheduleDemoClickFn} className={props.className} name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} variant="inverted" size="large"/>
               <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
               <Typography className="interested" fontWeight="600" color="#fff" fontSizes={[20, 20, 20]} variant="h2" text="Interested?"/>
             </div>
