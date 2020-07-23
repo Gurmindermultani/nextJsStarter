@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { withRouter } from 'next/router'
@@ -135,6 +135,19 @@ const FooterStyles = styled.div`
 function Footer(props) {
   const [showDialog, setShowDialog] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [countryCode, setCountryCode] = useState('+91');
+  useEffect(() => {
+    let req = new XMLHttpRequest();
+    req.open('GET', document.location, false);
+    req.send(null);
+    let countryName = req.getResponseHeader('cc');
+    if (countryName === "IN") {
+      setCountryCode('+91')
+    }
+    if (countryName === "US") {
+      setCountryCode('+1')
+    }
+  },[]);
   const form = useForm({
     onSubmit: (formData, valid) => {
       if (!valid) return;
@@ -188,7 +201,12 @@ function Footer(props) {
           <div className="phone">
             <Typography className="halfBackground" variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="Phone: "/>
             {" "}
-            <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="+91 8851168842"/>
+            {countryCode === "+91" && 
+              <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="+91 8851168842"/>
+            }
+            {countryCode === "+1" && 
+              <Typography variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="+1 650-690-6283"/>
+            }
           </div>
           <div className="email">
             <Typography className="halfBackground" variant="paragraph2" fontSizes={[16, 16, 16]} color="#212121" text="Email: "/>

@@ -9,6 +9,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../Typography';
 import Carousal from '../Carousal';
+import Button from '../Button';
 import ScheduleDemoButton from '../ScheduleDemoButton';
 import LottieAnimation from "../../components/LottieAnimation";
 import Image from '../Image';
@@ -127,7 +128,11 @@ function DeskTop(props) {
           </Carousal>
         </div>
         <div>
-          <ScheduleDemoButton className={props.className} type="link" variant="invertedLight"/>
+          {props.scheduleDemoClickFn ? (
+            <Button name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="invertedLight"/>
+          ) : (
+            <ScheduleDemoButton className={props.className} type="link" variant="invertedLight"/>
+          )}
         </div>
       </div>
     </DeskTopStyles>

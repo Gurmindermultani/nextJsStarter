@@ -1,6 +1,6 @@
 {
   "name": "leena_website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "next dev -p 80",
@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@sentry/browser": "^5.17.0",
+    "@zeit/next-source-maps": "0.0.3",
     "babel-polyfill": "^6.26.0",
     "core-js": "^2.6.11",
     "lazysizes": "^5.2.2",

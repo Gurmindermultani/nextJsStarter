@@ -8,7 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../../components/Typography';
-import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
+import Button from '../../../components/Button';
 
 import { Spring } from 'react-spring/renderprops.cjs';
 import Slide from "../../../components/VisibilitySensor/Slide";
@@ -191,7 +191,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <ScheduleDemoButton type="link" />
+            <Button size="large" variant="contained" name={props.scheduleDemoName} onClick={() => props.scheduleDemoClickFn()} />
           </div>
         </div>
       </div>

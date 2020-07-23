@@ -8,34 +8,40 @@ import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Button from '../../../components/Button';
-import Typography from '../../../components/Typography';
-import Input from '../../../components/Input';
-import Select from '../../../components/Select';
-import SelectWithFlags from '../../../components/Select/SelectWithFlags';
-import { useForm, useField } from '../../../components/Input/formHooks';
-import Utils from '../../../utils';
-import Codes from '../../../data/contries';
-
-import Dialog from './Dialog';
+import Button from '../Button';
+import Typography from '../Typography';
+import Input from '../Input';
+import SelectWithFlags from '../Select/SelectWithFlags';
+import { useForm, useField } from '../Input/formHooks';
+import Utils from '../../utils';
+import Codes from '../../data/contries';
 
 
 const FormStyles = styled.div`
   width: 100%;
-  padding: 0px 0px;
-  margin: auto;
-  border-radius: 16px;
-  background: #fff;
-  width: 440px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  display: flex;
+  justify-content: center;
+  .bgcont {
+    margin: 48px;
+    border-radius: 8px;
+    background: #fff;
+    width: 380px;
+  }
+  .textCenter {
+    margin-bottom: 30px;
+  }
   .halfBackground {
     z-index: 0;
-    margin-bottom: 16px;
   }
   .form-group, .single-select {
     margin-top: 0;
   }
   button {
     margin-top: 10px;
+    height: 42px !important;
   }
   .phone {
     display: flex;
@@ -51,24 +57,23 @@ const FormStyles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    width: 100%;
-    padding: 0px;
+    max-width: none;
+    .bgcont {
+      padding: 0px;
+      margin: 42px 16px;
+      width: 380px;
+      .textCenter {
+        margin-bottom: 24px;
+      }
+    }
   }
 `;
 
 function Form(props) {
-  const [showDialog, setShowDialog] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
   const [country, setCountry] = useState({
     code: 'IN',
     dial_code: '+91',
-  });
-  const phoneCountryOptions = Codes.map( code => {
-    return {
-      ...code,
-      label: code.dial_code + ", " + code.name,
-      value: code.dial_code
-    }
   });
   useEffect(() => {
     let req = new XMLHttpRequest();
@@ -88,7 +93,7 @@ function Form(props) {
       let body = {...formData};
       body.phone = (country && country.dial_code ? country.dial_code : '+91') + body.phone;
       body.siteUrl = window.location.href;
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/lead`, {
+      fetch(`${process.env.NEXT_PUBLIC_API_ENGAGE_URL}/api/engagement/users/register`, {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -99,9 +104,7 @@ function Form(props) {
       .then((result) => result.json())
       .then((res) => {
         if (res.message) {
-          // setShowDialog('success');
-          window.open(props.pdf.href, '_blank');
-          props.handleClose();
+          props.setShowDialog('success');
         } else {
           const message = res.errors && res.errors[0] ? res.errors[0].message : '';
           alert(message || 'Some Error Occurred!');
@@ -145,11 +148,6 @@ function Form(props) {
     validations: [formData => !formData['company'] && 'Please enter company name.'],
     fieldsToValidateOnChange: [],
   });
-  const numberOfEmployees = useField('numberOfEmployees', form, {
-    defaultValue: '',
-    validations: [formData => !formData['numberOfEmployees'] && 'Please select number of employees.'],
-    fieldsToValidateOnChange: [],
-  });
   const options = [
     {
       label: '1-100',
@@ -172,6 +170,13 @@ function Form(props) {
       value: '1000+',
     },
   ];
+  const phoneCountryOptions = Codes.map( code => {
+    return {
+      ...code,
+      label: code.dial_code + ", " + code.name,
+      value: code.dial_code
+    }
+  });
   const getSelectedOption = (idx) => {
     let value = {};
     return phoneCountryOptions[idx];
@@ -181,36 +186,34 @@ function Form(props) {
   }
   return (
     <FormStyles>
-      <div className="textCenter">
-        <Typography className="halfBackground" fontSizes={[24,24,24]} variant="paragraph2" text="Download case study"/>
-      </div>
-      <form onSubmit={form.onSubmit}>
-        <Input {...firstName} placeholder='First name' name="firstName"/>
-        <Input {...lastName} placeholder='Last name' name="lastName"/>
-        <Input {...email} placeholder='Your work email' name="email"/>
-        <div className="phone">
-          <SelectWithFlags
-            options={phoneCountryOptions}
-            handleFieldChange={ e => handleChange(e)}
-            onChange={(e) => setCountry({})}
-            value={phoneCountryOptions.findIndex( elem => elem.code === country.code ) > -1 ? getSelectedOption(phoneCountryOptions.findIndex( elem => elem.code === country.code )) : ''}
-          />
-          <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
+      <div className="bgcont">
+        <div className="textCenter">
+          <Typography fontWeight="500" className="highlight" fontSizes={[20, 24, 24]} variant="h6" text="You’re just a step away"/>
         </div>
-        <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
-        <Input {...company} placeholder='Company name' name="company"/>
-        <Select
-          {...numberOfEmployees}
-          placeholder='Number of employees'
-          options={options}
-          value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
-        />
-        <Button className="dowloadCaseStudy" size="large" fullWidth type="submit" name="Download" variant="contained" />
-      </form>
-      <Dialog
-        setShowDialog={setShowDialog}
-        showDialog={showDialog}
-      />
+        <form onSubmit={form.onSubmit}>
+          <Input {...firstName} placeholder='First name' name="firstName"/>
+          <Input {...lastName} placeholder='Last name' name="lastName"/>
+          <Input {...email} placeholder='Your work email' name="email"/>
+          <div className="phone">
+          <SelectWithFlags
+              options={phoneCountryOptions}
+              handleFieldChange={ e => handleChange(e)}
+              onChange={(e) => setCountry({})}
+              value={phoneCountryOptions.findIndex( elem => elem.code === country.code ) > -1 ? getSelectedOption(phoneCountryOptions.findIndex( elem => elem.code === country.code )) : ''}
+            />
+            <Input {...phone} className="fullWidth" placeholder='Your phone number' name="phone"/>
+          </div>
+          <Input {...jobTitle} placeholder='Job title' name="jobTitle"/>
+          <Input {...company} placeholder='Company name' name="company"/>
+          {/* <Select
+            {...numberOfEmployees}
+            placeholder='Number of employees'
+            options={options}
+            value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
+          /> */}
+          <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
+        </form>
+      </div>
     </FormStyles>
   );
 }

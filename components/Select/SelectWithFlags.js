@@ -7,80 +7,49 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 import Error from '../Error';
+import { customStyles } from './index';
 
-import { theme } from '../../theme';
+const ValueWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px 2px 0px;
+  }
+  div {
+    min-width: fit-content;
+  }
+`;
 
-export const customStyles = {
-  control: (base, state) => ({
-    ...base,
-    minHeight: 45,
-    borderRadius: '4px',
-    borderWidth : '0.5px !important',
-    border: state.isFocused
-      ? `solid 0.5px ${theme.palette.primary.main}`
-      : `solid 0.5px ${theme.palette.text.secondary}`,
-    overFlow: 'visible',
-    fontSize : '14px',
-    color: `${theme.palette.text.primary}`,
-    boxShadow: 'none',
-  }),
-  option: (base,state) => ({
-    ...base,
-    padding: 10,
-    cursor: "pointer",
-    fontSize : '13px',
-    color: '#212121',
-    background: state.isFocused || state.isSelected ? '#f6f6f6' : theme.palette.white,
-    display: 'flex',
-    alignItems: 'center',
-    '&:hover': {
-      background: '#f6f6f6',
-    },
-  }),
-  dropdownIndicator: base => ({
-    ...base,
-    padding: 4,
-  }),
-  clearIndicator: base => ({
-    ...base,
-    padding: 4,
-  }),
-  multiValue: base => ({
-    ...base,
-  }),
-  menu: base => ({
-    ...base,
-    'z-index': 4,
-    marginTop: 5,
-    border: 'none',
-    boxShadow: 'rgba(9, 30, 66, 0.13) 0px 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 4px 11px',
-    overFlow: 'hidden',
-    minWidth: '240px'
-  }),
-  input: base => ({
-    ...base,
-    margin: 0,
-    padding: 0,
-  }),
-  placeholder: base => ({
-    ...base,
-    fontSize : '14px',
-    color: '#616161',
-    opacity: '0.9',
-  }),
-  indicatorSeparator: base => ({
-    ...base,
-    display: 'none',
-  }),
-  valueContainer: (base, state) => ({
-    ...base,
-    fontSize : '14px',
-    color: `${theme.palette.text.primary}`,
-    padding: '2px 0px 2px 15px',
-    flexWrap: 'nowrap'
-  })
+const Option = ({ children, ...props }) => {
+  // console.log(props.getValue());
+  const value = props.data;
+  return (
+    <components.Option {...props}>
+      <img src={`https://www.countryflags.io/${value.code.toLowerCase()}/shiny/64.png`} />
+      {children}
+    </components.Option>
+  );
+};
+
+const ValueContainer = ({ children, ...props }) => {
+  // console.log(props.getValue());
+  const value = props.getValue() ? props.getValue()[0] : '';
+  return (
+    <components.ValueContainer {...props}>
+      {children[1]}
+      {value && value.code &&
+        <ValueWrapper>
+          <img src={`https://www.countryflags.io/${value.code.toLowerCase()}/shiny/64.png`} />
+          <div>{value ? value.value : ''}</div>
+        </ValueWrapper>
+      }
+    </components.ValueContainer>
+  );
 };
 
 const SelectWrapper = styled.div`
@@ -97,6 +66,11 @@ const SelectWrapper = styled.div`
   }
   #react-select-2-input {
     height: 28px;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px 2px 0px;
   }
 `;
 
@@ -128,6 +102,7 @@ class SelectComponent extends React.PureComponent {
           closeMenuOnSelect={!props.closeMenuOnSelect}
           styles={customStyles}
           value={props.value}
+          components={{ ValueContainer, Option }}
           isDisabled={!!props.disabled}
           maxMenuHeight={220}
           options={props.options}

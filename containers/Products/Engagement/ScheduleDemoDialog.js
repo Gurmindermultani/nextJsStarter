@@ -7,19 +7,17 @@
 import React, { memo, useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Typography from '../../components/Typography';
-import Button from '../../components/Button';
-import Slide from '../../components/VisibilitySensor/Slide';
+import Form from './Form';
+import ScheduleDemoSuccess from './ScheduleDemoSuccess';
 import MaterialDialog from '@material-ui/core/Dialog';
 
 const DialogContainer = styled.div`
-  padding: 80px 100px;
+  position: relative;
   .header {
     text-align: center;
   }
   .body {
     text-align: center;
-    margin-top: 32px;
     .halfBackground {
       margin-top: 5px;
     }
@@ -29,17 +27,16 @@ const DialogContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 32px;
-    text-align: center;
-    button {
-      width: 232px;
-      margin-top: 16px;
-    }
+  }
+  .closeDialog {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
   @media only screen and (max-width: 760px) {
-    padding: 40px 30px;
-    .body {
-      margin-top: 16px;
+    .closeDialog {
+      top: 12px;
+      right: 12px;
     }
   }
 `;
@@ -80,22 +77,14 @@ function Dialog(props) {
       fullWidth={false}
       maxWidth="lg"
     >
-      <DialogContainer>
-        <Slide delay={200} className="header">
-          <img alt="correct icon" src="/images/icons/correct.svg"/>
-        </Slide>
-        <Slide delay={400} className="body">
-          <Typography className="demoText" variant="h1" fontSizes={[20, 28, 28]} text="Check your inbox"/>
-          <br />
-          <Typography className="demoText" variant="h1" fontSizes={[20, 28, 28]} text=" for the confirmation email"/>
-          <br />
-        </Slide>
-        <Slide delay={600} className="footer">
-          <Typography fontWeight="400" color="#212121" fontSizes={[16, 18, 18]} variant="paragraph2" text="Want to know how Leena AI can add value to your enterprise?"/>
-          <a href="/schedule-demo">
-            <Button size="large" variant="contained" name="Schedule demo" />
-          </a>
-        </Slide>
+      <DialogContainer id="engageSchedulePopup">
+        {props.showDialog === "form" &&
+          <Form setShowDialog={props.setShowDialog} handleClose={handleClose} />
+        }
+        {props.showDialog === "success" &&
+          <ScheduleDemoSuccess handleClose={handleClose} />
+        }
+        <img onClick={() => handleClose(true) } className="closeDialog pointer" alt="closeDialog" src="/images/icons/close.svg" />
       </DialogContainer>
     </MaterialDialog>
   );

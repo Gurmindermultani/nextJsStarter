@@ -26,6 +26,7 @@ import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import ProductMore from './ProductMore';
 import MobileFeatures from './MobileFeatures';
+import ScheduleDemoDialog from './ScheduleDemoDialog';
 import { EngagementStyles } from './styles';
 
 const mobileSlides = [
@@ -59,6 +60,7 @@ const macSlides = [
 ];
 
 function Engagement(props) {
+  const [showDialog, setShowDialog] = useState('');
   return (
     <EngagementStyles>
       <section className="section section0">
@@ -74,7 +76,7 @@ function Engagement(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <Button onClick={() => setShowDialog('form')} fullWidth name="Start free trial" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -90,7 +92,7 @@ function Engagement(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <ScheduleDemoButton type="link" fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <Button onClick={() => setShowDialog('form')} fullWidth name="Start free trial" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -123,10 +125,10 @@ function Engagement(props) {
           <ProductHr />
         </div>
         <div className="products desktop">
-          <ProductMore />
+          <ProductMore setShowDialog={setShowDialog} />
         </div>
         <div className="products mobile">
-          <MobileFeatures />
+          <MobileFeatures scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} />
         </div>
       </section>
       <section className="section section3 noMargin">
@@ -136,7 +138,7 @@ function Engagement(props) {
             <Typography className="highlight halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h2" text="can’t be any simpler"/>
           </FadeIn>
         </div>
-        <MobileDemo alt="employee engagement" phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
+        <MobileDemo scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} alt="employee engagement" phoneJson="/images/engage/feature/mobile.json" slides={mobileSlides} quote={{ heading1: "Employee  ", heading2: "engagement", text: "can’t be any simpler" }} />
       </section>
       <section className="section section4 noMargin">
         <div className="mobile">
@@ -178,8 +180,12 @@ function Engagement(props) {
         <Reviews />
       </section>
       <section className="section section8 noMargin">
-        <ScheduleDemo variant="engage" />
+        <ScheduleDemo scheduleDemoName="Start free trial" scheduleDemoClickFn={() => setShowDialog('form')} variant="engage" />
       </section>
+      <ScheduleDemoDialog
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+      />
     </EngagementStyles>
   );
 }

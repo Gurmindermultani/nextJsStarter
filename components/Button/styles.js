@@ -108,6 +108,11 @@ export const ButtonWrapper = styled.button`
       border: 0.8px solid ${props => props.theme.palette.primary.dark};
       box-shadow: none;
     }
+    &:focus {
+      background-color: ${props => props.theme.palette.primary.dark};
+      border: 0.8px solid ${props => props.theme.palette.primary.dark};
+      box-shadow: none;
+    }
     &.disabled {
       background-color: ${props => props.theme.palette.border.main};
       border-color: ${props => props.theme.palette.border.main};
@@ -135,6 +140,38 @@ export const ButtonWrapper = styled.button`
     &:hover {
       background-color: ${props => props.theme.palette.primary.dark};
       border: 0.8px solid ${props => props.theme.palette.primary.dark};
+      box-shadow: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+    }
+    &.disabled {
+      background-color: ${props => props.theme.palette.border.main};
+      border-color: ${props => props.theme.palette.border.main};
+      pointer-events: none;
+      span {
+        color: ${props => props.theme.palette.white};
+      }
+      &:hover {
+        background-color: ${props => props.theme.palette.border.main};
+      }
+    }
+  }
+
+  &.invertedBlack {
+    background-color: ${props => props.theme.palette.white};
+    border: 0.8px solid ${props => props.theme.palette.white};
+    box-shadow: none;
+    i {
+      color: ${props => props.theme.palette.primary.main};
+    }
+    span {
+      color: ${props => props.theme.palette.text.primary};
+    }
+
+    &:hover {
+      background-color: ${props => props.theme.palette.primary.main};
+      border: 0.8px solid ${props => props.theme.palette.primary.main};
       box-shadow: none;
       span {
         color: ${props => props.theme.palette.white};

@@ -8,7 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../../components/Typography';
-import ScheduleDemoButton from '../../../components/ScheduleDemoButton';
+import Button from '../../../components/Button';
 
 import { Spring } from 'react-spring/renderprops.cjs';
 import Slide from "../../../components/VisibilitySensor/Slide";
@@ -80,9 +80,6 @@ const ProductStyles = styled.div`
   }
   .buttons {
     margin-top: 48px;
-    button {
-      min-width: 172px;
-    }
   }
   .image {
     position: relative;
@@ -212,7 +209,7 @@ function ProductHr(props) {
             </ExpansionPanelDetails>
           </ExpansionPanel>
           <div className="buttons">
-            <ScheduleDemoButton type="link" />
+            <Button size="large" onClick={() => props.setShowDialog('form')} name="Start free trial" />
           </div>
         </div>
         <div className="rightContainer">

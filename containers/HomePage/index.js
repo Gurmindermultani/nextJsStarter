@@ -7,6 +7,7 @@
 import React, { memo } from 'react';
 // import PropTypes from 'prop-types';
 import Slide from "../../components/VisibilitySensor/Slide";
+import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
 import Customers from '../../components/Customers';
@@ -74,14 +75,26 @@ function HomePage(props) {
           </>
           <Typography className="halfBackground" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="your customer service"/>
         </QuoteAnimator>
-        <div className="products">
-          <ProductHr heading="HR helpdesk" description="Take a step ahead to make your workplace happier. Let the virtual HR assistant be available for your employees round the clock."/>
-        </div>
+        <VisibilitySensor once partialVisibility>
+          {({ isVisible }) => (
+            <div className="products">
+              {isVisible &&
+                <ProductHr heading="HR helpdesk" description="Take a step ahead to make your workplace happier. Let the virtual HR assistant be available for your employees round the clock."/>
+              }
+            </div>
+          )}
+        </VisibilitySensor>
       </section>
       <section className="section section3">
-        <div className="products">
-          <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
-        </div>
+        <VisibilitySensor once partialVisibility>
+          {({ isVisible }) => (
+            <div className="products">
+              {isVisible &&
+                <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
+              }
+            </div>
+          )}
+        </VisibilitySensor>
       </section>
       <section className="section section4 noMargin">
         <div className="mobile">

@@ -61,6 +61,9 @@ export const HomePageStyles = styled.div`
       }
     }
   }
+  .products {
+    min-height: 400px;
+  }
   @media only screen and (min-width: 1400px) {
     .section {
       padding: 0 40px;
