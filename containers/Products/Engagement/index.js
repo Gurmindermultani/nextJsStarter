@@ -76,7 +76,7 @@ function Engagement(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button onClick={() => setShowDialog('form')} fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <Button onClick={() => setShowDialog('form')} fullWidth name="Start free trial" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
@@ -92,7 +92,7 @@ function Engagement(props) {
             <Slide className="demoInput">
               {/* <Input className="fullWidth" name="schedule" placeholder="Your work email"/> */}
               <div className="buttons">
-                <Button onClick={() => setShowDialog('form')} fullWidth name="Schedule demo" variant="contained" size="large"/>
+                <Button onClick={() => setShowDialog('form')} fullWidth name="Start free trial" variant="contained" size="large"/>
               </div>
             </Slide>
           </FadeIn>
