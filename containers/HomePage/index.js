@@ -10,8 +10,8 @@ import Slide from "../../components/VisibilitySensor/Slide";
 import VisibilitySensor from "../../components/VisibilitySensor";
 
 import Typography from '../../components/Typography';
-// import Customers from '../../components/Customers';
-// import Reviews from '../../components/Reviews';
+import Customers from '../../components/Customers';
+import Reviews from '../../components/Reviews';
 import MobileDemo from '../../components/MobileDemo';
 import Platforms from '../../components/Platforms';
 import KnowMore from '../../components/KnowMore';
@@ -20,7 +20,7 @@ import ScheduleDemo from '../../components/ScheduleDemo';
 // import IconHighlightsAll from './IconHighlightsAll';
 import ProductHr from './ProductHr';
 import EmployeeExperience from './EmployeeExperience';
-// import Recognitions from './Recognitions';
+import Recognitions from './Recognitions';
 import { HomePageStyles } from './styles';
 import TopContainer from './TopContainer';
 
