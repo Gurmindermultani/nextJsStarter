@@ -46,7 +46,7 @@ const DeskTopStyles = styled.div`
         z-index: 2;
         position: relative;
       }
-      .animation {
+      .animation, video {
         position: absolute;
         top: 14px;
         left: 18px;
@@ -112,7 +112,11 @@ function DeskTop(props) {
         </div>
         <div className="mobileImage">
           <Image className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
-          <LottieAnimation dataUrl={props.phoneJson} />
+          {/* <LottieAnimation dataUrl={props.phoneJson} /> */}
+          <video loop autoPlay muted>
+            <source src="/images/home/phone.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
       <div className="rightContainer">
