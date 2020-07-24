@@ -117,7 +117,7 @@ function HomePage(props) {
           <KnowMore />
         </div>
       </section>
-      <section className="section section6">
+      {/* <section className="section section6">
         <QuoteAnimator className="quoteContainer">
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Know our extended family"/>
           <Typography className="halfBackground highlight desktop" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="300000+ employees across the globe use Leena AI"/>
@@ -138,7 +138,7 @@ function HomePage(props) {
           <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="We’re featured in"/>
         </QuoteAnimator>
         <Recognitions />
-      </section>
+      </section> */}
       <section className="section section9 noMargin">
         <ScheduleDemo className="homePageCta" variant="discover"></ScheduleDemo>
       </section>
