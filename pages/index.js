@@ -18,7 +18,7 @@ export default function Home() {
         <meta property="og:description" content="Leena AI enhances employee experience via HR helpdesk automation and employee enagagement software." />
         <meta property="og:url" content="https://leena.ai" />
       </Head>
-      {/* <Header /> */}
+      <Header />
       <main>
         <HomePage />
       </main>

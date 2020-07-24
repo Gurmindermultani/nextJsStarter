@@ -11,7 +11,9 @@ import Typography from '../Typography';
 import Carousal from '../Carousal';
 import Button from '../Button';
 import ScheduleDemoButton from '../ScheduleDemoButton';
+import LottieAnimation from "../../components/LottieAnimation";
 import Image from '../Image';
+import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 const DeskTopStyles = styled.div`
   display: flex;
