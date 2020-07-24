@@ -26,11 +26,10 @@ function MobileDemo(props) {
   };
 
   useEffect(() => {
-    console.log(mobileCheck());
     if (mobileCheck()) {
-      setView('mobile');
+      setTimeout(() => setView('mobile'), 5000);
     } else {
-      setView('desktop');
+      setTimeout(() => setView('desktop'), 5000);
     }
   }, []);
 
