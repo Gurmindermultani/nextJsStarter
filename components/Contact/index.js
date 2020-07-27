@@ -23,6 +23,13 @@ const ContactStyles = styled.div`
   span {
     opacity: 0.8;
   }
+  a {
+    &:hover {
+      span {
+        color: #212121;
+      }
+    }
+  }
 `;
 
 function Contact(props) {
@@ -50,7 +57,9 @@ function Contact(props) {
         <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="+1 650-690-6283"/>
       }
       <img className="mailImage" alt="mail" src="/images/icons/mail.svg"/>
-      <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
+      <a href="mailto:support@leena.ai">
+        <Typography fontWeight="300" color="#212121" fontSize="16px" variant="paragraph2" text="support@leena.ai"/>
+      </a>
     </ContactStyles>
   );
 }
