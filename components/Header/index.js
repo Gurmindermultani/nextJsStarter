@@ -50,10 +50,11 @@ export const navigation = [
     name: 'resources',
     label: 'Resources',
     links: [
-      // {
-      //   name: 'blog',
-      //   label: 'Blog',
-      // },
+      {
+        name: 'blog',
+        label: 'Blog',
+        href: 'https://leena.ai/blog'
+      },
       {
         name: 'case-studies',
         label: 'Case studies',

@@ -112,11 +112,11 @@ function DeskTop(props) {
         </div>
         <div className="mobileImage">
           <Image className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
-          {/* <LottieAnimation dataUrl={props.phoneJson} /> */}
-          <video loop autoPlay muted>
+          <LottieAnimation dataUrl={props.phoneJson} />
+          {/* <video loop autoPlay muted>
             <source src="/images/home/phone.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
       </div>
       <div className="rightContainer">
