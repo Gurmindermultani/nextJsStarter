@@ -16,6 +16,7 @@ function Image(props) {
     <StyledImage
       {...props}
       className={props.className + ' ' + 'lazyload'}
+      loading="lazy"
       // src={require(`../../public${props.src}`)}
       src={props.src}
     />

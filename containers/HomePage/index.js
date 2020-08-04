@@ -86,15 +86,9 @@ function HomePage(props) {
         </VisibilitySensor>
       </section>
       <section className="section section3">
-        <VisibilitySensor once partialVisibility>
-          {({ isVisible }) => (
-            <div className="products">
-              {isVisible &&
-                <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
-              }
-            </div>
-          )}
-        </VisibilitySensor>
+        <div className="products">
+          <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
+        </div>
       </section>
       <section className="section section4 noMargin">
         <div className="mobile">

@@ -40,6 +40,9 @@ const PrevArrowStyles = styled.div`
   img {
     transform: scale(1) translate(-1px, 0px);
   }
+  &:hover {
+    background: ${props => props.theme.palette.primary.dark};
+  }
 `;
 
 const NextArrowStyles = styled.div`
@@ -55,6 +58,9 @@ const NextArrowStyles = styled.div`
   right: -40px;
   img {
     transform: scale(-1) translate(-1px, 0px);
+  }
+  &:hover {
+    background: ${props => props.theme.palette.primary.dark};
   }
 `;
 
