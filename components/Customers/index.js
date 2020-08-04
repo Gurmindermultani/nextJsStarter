@@ -46,7 +46,7 @@ const customers = [
   },
   {
     name: 'tata',
-    type: 'Technology',
+    type: 'Information Technology',
     employees: '8500+'
   },
 ];
@@ -54,7 +54,7 @@ const customers = [
 const CustomersStyles = styled.div`
   &.deskTop {
     .carousalContainer {
-      height: 100%;
+      position: relative;
       .details {
         margin-top: 60px;
         display: none;
@@ -95,6 +95,9 @@ const CustomersStyles = styled.div`
       .details {
         display: flex;
         border-top: 1px solid #EEEEEE;
+        position: absolute;
+        top: 30px;
+        min-width: 200px;
         .heading {
           margin-top: 20px;
           margin-bottom: 10px;

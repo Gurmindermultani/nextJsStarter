@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect, useRef } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
@@ -17,6 +17,35 @@ const CenterModeStyles = styled.div`
 `;
 
 function CenterMode(props) {
+  const carousalRef = useRef(null);
+  const nextArrowClick = () => {
+    if (carousalRef.current.querySelector('.nextArrow')) {
+      carousalRef.current.querySelector('.nextArrow').click();
+    }
+  }
+  const prevArrowClick = () => {
+    if (carousalRef.current.querySelector('.prevArrow')) {
+      carousalRef.current.querySelector('.prevArrow').click();
+    }
+  }
+  useEffect(() => {
+    if (carousalRef.current) {
+      carousalRef.current.querySelectorAll('.slick-slide').forEach( (slide) => {
+        slide.addEventListener('click', function(e) {
+          if (e.target.closest('.slick-slide') && e.target.closest('.slick-slide').getAttribute('data-index')) {
+            const numSlide = parseInt(e.target.closest('.slick-slide').getAttribute('data-index'));
+            const centerSlide = parseInt(carousalRef.current.querySelector('.slick-active.slick-center').getAttribute('data-index'));
+            if (numSlide > centerSlide) {
+              nextArrowClick();
+            };
+            if (numSlide < centerSlide) {
+              prevArrowClick();
+            };
+          }
+        })
+      });
+    }
+  }, []);
   const settings = {
     className: "center",
     centerMode: true,
@@ -28,7 +57,7 @@ function CenterMode(props) {
     prevArrow: <props.SamplePrevArrow />,
   };
   return (
-    <CenterModeStyles>
+    <CenterModeStyles ref={carousalRef}>
       <Slider {...settings}>
         {props.children}
       </Slider>
