@@ -65,12 +65,24 @@ const DeskTopStyles = styled.div`
       .prevArrow {
         left: 0;
         top: -85px;
-        background: ${props => props.theme.palette.primary.dark};
+        background: ${props => props.theme.palette.primary.main};
+        &:hover {
+          background: ${props => props.theme.palette.primary.dark};
+          svg path {
+            fill: #fff;
+          }
+        }
       }
       .nextArrow {
         left: 60px;
         top: -85px;
-        background: ${props => props.theme.palette.primary.dark};
+        background: ${props => props.theme.palette.primary.main};
+        &:hover {
+          background: ${props => props.theme.palette.primary.dark};
+          svg path {
+            fill: #fff;
+          }
+        }
       }
       .slick-slide {
         width: 260px;

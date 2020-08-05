@@ -166,7 +166,7 @@ function Header(props) {
             </div>
           }
           {props.router.pathname.indexOf('schedule-demo') === -1 && props.router.pathname.indexOf('employee-engagement') === -1 &&
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: { fromPage: props.router.pathname } }}>
               <div>
                 <Button className="headerScheduleDemo" variant="contained" size="medium" name="Schedule demo" />
               </div>
