@@ -13,14 +13,21 @@ import ScheduleDemo from '../../components/ScheduleDemo';
 import { AboutUsStyles } from './styles';
 
 function ContactUs(props) {
+  const [iframeHeight, setIframeHeight] = useState('800px');
   return (
     <AboutUsStyles>
       <section className="section section0">
         <iframe
           src="https://leena.ai/blog"
-          frameBorder={'0'}
-          width={'100%'}
-          height={'100%'}
+          frameBorder='0'
+          width='100%'
+          height={iframeHeight}
+          onLoad={(e) => {
+            console.log(e.target);
+            const obj = e.target;
+            console.log(obj.contentWindow.document.body.scrollHeight + 'px');
+            setIframeHeight(obj.contentWindow.document.body.scrollHeight + 'px');
+          }} 
         />
       </section>
       <section className="section section2 noMargin">
