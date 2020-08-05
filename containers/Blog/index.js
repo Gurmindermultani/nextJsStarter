@@ -23,10 +23,14 @@ function ContactUs(props) {
           width='100%'
           height={iframeHeight}
           onLoad={(e) => {
-            console.log(e.target);
-            const obj = e.target;
-            console.log(obj.contentWindow.document.body.scrollHeight + 'px');
-            setIframeHeight(obj.contentWindow.document.body.scrollHeight + 'px');
+            try {
+              console.log(e.target);
+              const obj = e.target;
+              console.log(obj.contentWindow.document.body.scrollHeight + 'px');
+              setIframeHeight(obj.contentWindow.document.body.scrollHeight + 'px');
+            } catch(e) {
+              console.log(e);
+            }
           }} 
         />
       </section>
