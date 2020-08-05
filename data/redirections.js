@@ -4,6 +4,7 @@ const redirections = {
   '/wfh-slack': '/wfh-surveys',
   '/aboutus': '/about-us',
   '/engagement': '/employee-engagement',
+  '/engage': '/employee-engagement',
   '/HR-Ticketing': '/hr-case-management',
   '/HR-Transactions': '/hr-workflows',
   '/get-started.html': '/schedule-demo',
