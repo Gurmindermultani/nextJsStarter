@@ -53,7 +53,6 @@ export const navigation = [
       {
         name: 'blog',
         label: 'Blog',
-        href: 'https://leena.ai/blog'
       },
       {
         name: 'case-studies',
