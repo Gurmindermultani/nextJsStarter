@@ -172,7 +172,7 @@ const ReviewsStyles = styled.div`
 
 function Reviews(props) {
   return (
-    <ReviewsStyles>
+    <ReviewsStyles className="reviews">
       <FadeIn className="deskTop">
         <Carousal variant="singleMode">
           {reviews.map( review => 

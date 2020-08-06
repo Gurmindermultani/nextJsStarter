@@ -115,7 +115,7 @@ const apps = [
 
 function Platforms(props) {
   return (
-    <PlatformsStyles>
+    <PlatformsStyles className="platforms">
       <Slide from='up' className="platform">
         <Typography variant="paragraph2" fontSize="16px" text="HRIS"/>
         <div className="tools">

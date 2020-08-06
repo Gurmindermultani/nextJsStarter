@@ -34,7 +34,7 @@ function MobileDemo(props) {
   }, []);
 
   return (
-    <MobileDemoStyles>
+    <MobileDemoStyles className="mobileDemo">
       {view === "desktop" &&
         <div className="desktop">
           <Desktop {...props} />
