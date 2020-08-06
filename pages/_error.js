@@ -3,17 +3,17 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import redirections from '../data/redirections';
 
 const Styles = styled.div`
-  padding: 48px 64px;
+  padding: 160px 30px 100px 30px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   .body {
     width: 1000px;
     margin: auto;
-    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,14 +32,14 @@ const Styles = styled.div`
     }
   }
   @media only screen and (max-width: 760px) {
-    padding: 30px;
+    padding: 60px 30px 60px 30px;
     .body {
       width: calc(100vw - 60px);
       flex-wrap: wrap-reverse;
-      margin-top: 32px;
+      margin: 32px 0 0 0;
       .leftContainer {
         flex-basis: 100%;
-        margin-top: 32px;
+        margin-top: 16px;
         text-align: center;
         .buttons {
           width: 100%;
@@ -57,30 +57,50 @@ const Styles = styled.div`
 
 function CustomError({ statusCode }) {
   return (
-    <Styles>
-      <div className="header">
-        <Link href="/">
-          <a>
-            <img src="/images/leenaLogo.svg"/>
-          </a>
-        </Link>
-      </div>
-      <div className="body">
-        <div className="leftContainer">
-          <Typography  variant="h1" fontSizes={[36, 42, 46]} text="Page not found" />
-          <br />
-          <Typography className="text" fontWeight="400" variant="h1" fontSizes={[18, 20, 24]} text="We can’t find the page you’re looking for. Go back or visit our homepage." />
-          <Link href="/">
-            <div className="buttons">
-              <Button fullWidth name="Visit Homepage" variant="contained" size="large"/>
-            </div>
-          </Link>
+    <>
+      <Header />
+      <Styles>
+        <div className="body">
+          <div className="leftContainer">
+            <Typography  variant="h1" fontSizes={[36, 42, 46]} text="Page not found" />
+            <br />
+            <Typography className="text" fontWeight="400" variant="h1" fontSizes={[18, 20, 24]} text="We can’t find the page you’re looking for. Go back or visit our homepage." />
+            <Link href="/">
+              <div className="buttons">
+                <Button className="errorVisitHomepage" fullWidth name="Visit Homepage" variant="contained" size="large"/>
+              </div>
+            </Link>
+          </div>
+          <div className="rightContainer">
+            <img src="/images/error.svg"/>
+          </div>
         </div>
-        <div className="rightContainer">
-          <img src="/images/error.svg"/>
-        </div>
-      </div>
-    </Styles>
+      </Styles>
+      <footer>
+        <Footer />
+      </footer>
+
+      <style jsx>{`
+        .container {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        main {
+          flex: 1;
+          width: 100%;
+        }
+
+        footer {
+          width: 100%;
+          border-top: 1px solid #eaeaea;
+          background-image: linear-gradient(#F2FCFF, #ffffff);
+        }
+      `}</style>
+    </>
   );
 }
 

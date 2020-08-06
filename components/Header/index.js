@@ -112,7 +112,7 @@ function Header(props) {
     // anim.stop();
   };
   return (
-    <HeaderStyles>
+    <HeaderStyles className="mainHeader">
       <Slide onLoad from='down' className="animatedHeader">
         <div className="logo pointer">
           <Link href="/">

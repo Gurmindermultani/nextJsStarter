@@ -190,7 +190,7 @@ function Footer(props) {
     fieldsToValidateOnChange: [],
   });
   return (
-    <FooterStyles>
+    <FooterStyles className="mainFooter">
       <div className="upperContainer">
         <div className="logo">
           <div className="image pointer">
