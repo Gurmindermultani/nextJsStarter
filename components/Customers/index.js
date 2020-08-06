@@ -167,7 +167,7 @@ function Customers(props) {
   }
   return (
     <Slide>
-      <CustomersStyles className="deskTop">
+      <CustomersStyles className="deskTop clientLogosCarousal">
         <Carousal variant="centerMode">
           {customers.map( customer => 
             <div onClick={(e) => moveCarousal(e)} className={"carousalContainer center " + customer.name} key={customer.name}>
@@ -188,7 +188,7 @@ function Customers(props) {
           )}
         </Carousal>
       </CustomersStyles>
-      <CustomersStyles className="mobile">
+      <CustomersStyles className="mobile clientLogosCarousal">
         <Carousal variant="mobileCarousal">
           {customers.map( customer => 
             <div className="carousalContainer center" key={customer.name}>
