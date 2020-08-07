@@ -18,6 +18,7 @@ const CenterModeStyles = styled.div`
 
 function CenterMode(props) {
   const carousalRef = useRef(null);
+  const sliderRef = useRef(null);
   const nextArrowClick = () => {
     if (carousalRef.current.querySelector('.nextArrow')) {
       carousalRef.current.querySelector('.nextArrow').click();
@@ -35,12 +36,9 @@ function CenterMode(props) {
           if (e.target.closest('.slick-slide') && e.target.closest('.slick-slide').getAttribute('data-index')) {
             const numSlide = parseInt(e.target.closest('.slick-slide').getAttribute('data-index'));
             const centerSlide = parseInt(carousalRef.current.querySelector('.slick-active.slick-center').getAttribute('data-index'));
-            if (numSlide > centerSlide) {
-              nextArrowClick();
-            };
-            if (numSlide < centerSlide) {
-              prevArrowClick();
-            };
+            if (sliderRef && sliderRef.current) {
+              sliderRef.current.slickGoTo(numSlide);
+            }
           }
         })
       });
@@ -58,7 +56,7 @@ function CenterMode(props) {
   };
   return (
     <CenterModeStyles ref={carousalRef}>
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings}>
         {props.children}
       </Slider>
     </CenterModeStyles>
