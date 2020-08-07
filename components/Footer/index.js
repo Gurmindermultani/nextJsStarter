@@ -135,6 +135,7 @@ const FooterStyles = styled.div`
 function Footer(props) {
   const [showDialog, setShowDialog] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [countryCode, setCountryCode] = useState('+91');
   useEffect(() => {
     let req = new XMLHttpRequest();
@@ -160,6 +161,7 @@ function Footer(props) {
             ]
         }
       };
+      setLoading(true);
       // setSubscribed(true);
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/subscribe`, {
         method: 'post',
@@ -171,6 +173,7 @@ function Footer(props) {
       })
       .then((result) => result.json())
       .then((res) => {
+        setLoading(false);
         if (res.message) {
           setShowDialog('success');
           setSubscribed(true);
@@ -180,6 +183,7 @@ function Footer(props) {
         }
       }).catch((e) => {
         console.log(e);
+        setLoading(false);
         // alert('Some Error Occurred!');
       });
     }
@@ -252,7 +256,7 @@ function Footer(props) {
             <Typography variant="h6" fontSizes={[20, 16, 16]} color="#212121" text="Stay connected"/>
             <Typography className="middleText" variant="paragraph2" color="#212121" text="Be the first to hear about exciting product updates & latest trends in HR technology."/>
             <Input {...email} name="email" placeholder="Your email"/>
-            <Button type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
+            <Button disabled={loading} loading={loading} type="submit" fullWidth size="large" variant="contained" name="Subscribe"/>
           </form>
         }
         {subscribed && 
@@ -287,6 +291,7 @@ function Footer(props) {
       <Dialog
         setShowDialog={setShowDialog}
         showDialog={showDialog}
+        loading={loading}
       />
     </FooterStyles>
   );

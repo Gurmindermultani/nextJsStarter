@@ -59,6 +59,7 @@ const FormStyles = styled.div`
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
+  const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState({
     code: 'IN',
     dial_code: '+91',
@@ -88,6 +89,7 @@ function Form(props) {
       let body = {...formData};
       body.phone = (country && country.dial_code ? country.dial_code : '+91') + body.phone;
       body.siteUrl = window.location.href;
+      setLoading(true);
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/lead`, {
         method: 'post',
         headers: {
@@ -98,6 +100,7 @@ function Form(props) {
       })
       .then((result) => result.json())
       .then((res) => {
+        setLoading(false);
         if (res.message) {
           setShowDialog('success');
         } else {
@@ -106,6 +109,7 @@ function Form(props) {
         }
       }).catch((e) => {
         console.log(e);
+        setLoading(false);
         // alert('Some Error Occurred!');
       });
     }
@@ -203,7 +207,7 @@ function Form(props) {
           options={options}
           value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
         />
-        <Button className="dowloadCaseStudy" size="large" fullWidth type="submit" name="Download case study" variant="contained" />
+        <Button disabled={loading} loading={loading} className="dowloadCaseStudy" size="large" fullWidth type="submit" name="Download case study" variant="contained" />
       </form>
       <Dialog
         setShowDialog={setShowDialog}

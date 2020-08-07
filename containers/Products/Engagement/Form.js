@@ -71,6 +71,7 @@ const FormStyles = styled.div`
 
 function Form(props) {
   const [countryCode, setCountryCode] = useState('+91');
+  const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState({
     code: 'IN',
     dial_code: '+91',
@@ -93,6 +94,7 @@ function Form(props) {
       let body = {...formData};
       body.phone = (country && country.dial_code ? country.dial_code : '+91') + body.phone;
       body.siteUrl = window.location.href;
+      setLoading(true);
       fetch(`${process.env.NEXT_PUBLIC_API_ENGAGE_URL}/api/engagement/users/register`, {
         method: 'post',
         headers: {
@@ -103,6 +105,7 @@ function Form(props) {
       })
       .then((result) => result.json())
       .then((res) => {
+        setLoading(false);
         if (res.message) {
           props.setShowDialog('success');
         } else {
@@ -111,6 +114,7 @@ function Form(props) {
         }
       }).catch((e) => {
         console.log(e);
+        setLoading(false);
         // alert('Some Error Occurred!');
       });
     }
@@ -211,7 +215,7 @@ function Form(props) {
             options={options}
             value={numberOfEmployees.value ? options[options.findIndex( elem => elem.value === numberOfEmployees.value )] : ''}
           /> */}
-          <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
+          <Button disabled={loading} loading={loading} size="large" fullWidth type="submit" name="Submit" variant="contained" />
         </form>
       </div>
     </FormStyles>

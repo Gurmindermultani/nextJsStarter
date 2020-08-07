@@ -75,6 +75,7 @@ const FormStyles = styled.div`
 
 function Form(props) {
   const [showDialog, setShowDialog] = useState('');
+  const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState({
     code: 'IN',
     dial_code: '+91',
@@ -97,6 +98,7 @@ function Form(props) {
       let body = {...formData};
       body.phone = (country && country.dial_code ? country.dial_code : '+91') + body.phone;
       body.siteUrl = window.location.href;
+      setLoading(true);
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/leena/request-contact`, {
         method: 'post',
         headers: {
@@ -107,6 +109,7 @@ function Form(props) {
       })
       .then((result) => result.json())
       .then((res) => {
+        setLoading(false);
         if (res.message) {
           setShowDialog('success');
         } else {
@@ -115,6 +118,7 @@ function Form(props) {
         }
       }).catch((e) => {
         console.log(e);
+        setLoading(false);
         // alert('Some Error Occurred!');
       });
     }
@@ -215,7 +219,7 @@ function Form(props) {
             value={queryType.value ? options[options.findIndex( elem => elem.value === queryType.value )] : ''}
           />
           <Input {...message} type="textArea" className="fullWidth" placeholder='Write your message...' name="message"/>
-          <Button size="large" fullWidth type="submit" name="Submit" variant="contained" />
+          <Button disabled={loading} loading={loading} size="large" fullWidth type="submit" name="Submit" variant="contained" />
         </form>
         <Dialog
           setShowDialog={setShowDialog}

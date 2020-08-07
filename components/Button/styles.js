@@ -117,6 +117,7 @@ export const ButtonWrapper = styled.button`
       background-color: ${props => props.theme.palette.border.main};
       border-color: ${props => props.theme.palette.border.main};
       pointer-events: none;
+      box-shadow: none;
       span {
         color: ${props => props.theme.palette.white};
       }
