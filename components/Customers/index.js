@@ -88,6 +88,7 @@ const CustomersStyles = styled.div`
       min-height: 240px;
       padding-top: 30px;
       width: 150px;
+      cursor: pointer;
     }
     .slick-center {
       padding: 0px 0px;
@@ -144,6 +145,7 @@ const CustomersStyles = styled.div`
       }
       .slick-slide {
         padding: 0 0px;
+        cursor: pointer;
       }
       .slick-center {
         .clientImage {
