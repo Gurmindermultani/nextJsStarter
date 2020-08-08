@@ -15,17 +15,21 @@ function Image(props) {
   const imageRef = useRef(null);
   const loadImages = () => {
     setTimeout(() => {
-      let imgDefer = document.getElementsByTagName('img');
-      for (var i = 0; i < imgDefer.length; i++) {
-        if (imgDefer[i].getAttribute('data-src')) {
-          imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-        }
+      // let imgDefer = document.getElementsByTagName('img');
+      // for (var i = 0; i < imgDefer.length; i++) {
+      //   if (imgDefer[i].getAttribute('data-src')) {
+      //     imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+      //   }
+      // }
+      if (imageRef.current) {
+        imageRef.current.setAttribute('src',imageRef.current.getAttribute('data-src'));
       }
-    }, 5000);
+    }, 2000);
   };
  
   useEffect(() => {
-    window.onload = loadImages;
+    // window.onload = loadImages;
+    loadImages();
   }, []);
   return (
     <StyledImage
