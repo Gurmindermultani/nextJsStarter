@@ -8,6 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
+import Image from '../../components/Image';
 import Slide from '../../components/VisibilitySensor/Slide';
 
 const PlatformsStyles = styled.div`
@@ -121,7 +122,7 @@ function Platforms(props) {
         <div className="tools">
           {hris.map( tool => 
             <div key={tool.name} className="tool">
-              <img alt="hris tool" src={tool.image}/>
+              <Image alt="hris tool" src={tool.image}/>
             </div>
           )}
         </div>
@@ -131,7 +132,7 @@ function Platforms(props) {
         <div className="tools">
           {collabTools.map( tool => 
             <div key={tool.name} className="tool">
-              <img alt="collabTools tool" src={tool.image}/>
+              <Image alt="collabTools tool" src={tool.image}/>
             </div>
           )}
         </div>
@@ -141,7 +142,7 @@ function Platforms(props) {
         <div className="tools">
           {apps.map( tool => 
             <div key={tool.name} className="tool">
-              <img alt="Mobile and desktop apps" src={tool.image}/>
+              <Image alt="Mobile and desktop apps" src={tool.image}/>
             </div>
           )}
         </div>

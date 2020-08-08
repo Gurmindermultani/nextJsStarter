@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { AvatarContainer } from './styles';
 
+import Image from '../Image';
+
 const DefaultUserImage = "defaultAvatarImage";
 
 function UserAvatar(props) {
@@ -38,13 +40,13 @@ function UserAvatar(props) {
         className={props.className ? props.className : ''}
       >
         {variant === "defaultUser" &&
-            <img src={DefaultUserImage} alt="Default User Image" />
+            <Image src={DefaultUserImage} alt="Default User Image" />
         }
         {variant === "namedInitial" &&
             <div className="namedInitial">{namedInitial}</div>
         }
         {variant === "imageSrc" &&
-            <img src={props.src} alt="User Image" />
+            <Image src={props.src} alt="User Image" />
         }
       </AvatarContainer>
     );
