@@ -8,6 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
+import Image from '../../components/Image';
 
 const LinkCardStyles = styled.a`
   box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
@@ -63,14 +64,14 @@ function LinkCard(props) {
   return (
     <LinkCardStyles href={props.data.href} target="_blank" className="singleCard">
       <div className="header" style={{'background': props.data.bg}}>
-        <img alt={props.alt} className={props.data.name} src={props.data.img} />
+        <Image alt={props.alt} className={props.data.name} src={props.data.img} />
       </div>
       <div className="body">
         <Typography fontSize="14px" variant="paragraph2" color="#212121" text={props.data.text}/>
       </div>
       <div className="footer">
         <Typography className="readMore" variant="paragraphS2" fontSize="12px" color="#616161" text={"Read More"}/>
-        <img alt="right arrow" src="/images/icons/down-arrow.svg"/>
+        <Image alt="right arrow" src="/images/icons/down-arrow.svg"/>
       </div>
     </LinkCardStyles>
   );
