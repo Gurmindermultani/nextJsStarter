@@ -12,7 +12,6 @@ import Carousal from '../Carousal';
 import Button from '../Button';
 import ScheduleDemoButton from '../ScheduleDemoButton';
 import LottieAnimation from "../../components/LottieAnimation";
-import Image from '../Image';
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 const DeskTopStyles = styled.div`
@@ -111,7 +110,7 @@ function DeskTop(props) {
           <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
         <div className="mobileImage">
-          <Image className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
+          <img className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
           <LottieAnimation dataUrl={props.phoneJson} />
           {/* <video loop autoPlay muted>
             <source src="/images/home/phone.mp4" type="video/mp4" />
