@@ -201,7 +201,7 @@ function ProductHr(props) {
     <ProductStyles>
     <div className="productHeader">
       <div>
-        <Image src="/images/home/helpdesk.svg"/>
+        <img src="/images/home/helpdesk.svg"/>
       </div>
       <div className="text">
         <Typography variant="h4" fontSize="20px" text={props.heading}/>
@@ -259,43 +259,43 @@ function ProductHr(props) {
         <div className="rightContainer">
           {expanded === "panel1" &&
             <div className="image center">
-              <Image alt="faq automation" src="/images/bg1.svg"/>
+              <img alt="faq automation" src="/images/bg1.svg"/>
               <Slide from='left' className="a1">
-                <Image alt="faq automation" src="/images/home/helpdesk/a1.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a1.svg"/>
               </Slide>
               <Slide from='right' className="a2">
-                <Image alt="faq automation" src="/images/home/helpdesk/a2.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a2.svg"/>
               </Slide>
               <Slide from='up' className="a3">
-                <Image alt="faq automation" src="/images/home/helpdesk/a3.svg"/>
+                <img alt="faq automation" src="/images/home/helpdesk/a3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel2" &&
             <div className="image center">
-              <Image alt="case management" src="/images/bg1.svg"/>
+              <img alt="case management" src="/images/bg1.svg"/>
               <Slide from='left' className="b1">
-                <Image alt="case management" src="/images/home/helpdesk/b1.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b1.svg"/>
               </Slide>
               <Slide from='right' className="b2">
-                <Image alt="case management" src="/images/home/helpdesk/b2.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b2.svg"/>
               </Slide>
               <Slide from='up' className="b3">
-                <Image alt="case management" src="/images/home/helpdesk/b3.svg"/>
+                <img alt="case management" src="/images/home/helpdesk/b3.svg"/>
               </Slide>
             </div>
           }
           {expanded === "panel3" &&
             <div className="image center">
-              <Image alt="hr workflows" src="/images/bg1.svg"/>
+              <img alt="hr workflows" src="/images/bg1.svg"/>
               <Slide from='left' className="c1">
-                <Image alt="hr workflows" src="/images/home/helpdesk/c1.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c1.svg"/>
               </Slide>
               <Slide from='right' className="c2">
-                <Image alt="hr workflows" src="/images/home/helpdesk/c2.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c2.svg"/>
               </Slide>
               <Slide from='up' className="c3">
-                <Image alt="hr workflows" src="/images/home/helpdesk/c3.svg"/>
+                <img alt="hr workflows" src="/images/home/helpdesk/c3.svg"/>
               </Slide>
             </div>
           }

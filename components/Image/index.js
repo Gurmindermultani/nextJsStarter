@@ -14,12 +14,14 @@ const StyledImage = styled.img`
 function Image(props) {
   const imageRef = useRef(null);
   const loadImages = () => {
-    let imgDefer = document.getElementsByTagName('img');
-    for (var i = 0; i < imgDefer.length; i++) {
-      if (imgDefer[i].getAttribute('data-src')) {
-        imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+    setTimeout(() => {
+      let imgDefer = document.getElementsByTagName('img');
+      for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+          imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        }
       }
-    }
+    }, 5000);
   };
  
   useEffect(() => {
