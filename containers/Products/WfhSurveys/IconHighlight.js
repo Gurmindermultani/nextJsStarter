@@ -41,13 +41,17 @@ function IconHighlight(props) {
   const [ anim, setAnim ] = useState({});
 
   const mouseEnter = () => {
-    anim.setDirection(1);
-    anim.play();
+    if (anim.play) {
+      anim.setDirection(1);
+      anim.play();
+    }
   };
 
   const mouseLeave = () => {
-    anim.setDirection(-1);
-    anim.play();
+    if (anim.play) {
+      anim.setDirection(-1);
+      anim.play();
+    }
   };
   return (
     <IconHighlightStyles className={props.name} style={props.style} onMouseEnter={() => mouseEnter()} onMouseLeave={() => mouseLeave()}>

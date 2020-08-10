@@ -61,13 +61,17 @@ function GrowIcon(props) {
   }, []);
 
   const mouseEnter = () => {
-    anim.setDirection(1);
-    anim.play();
+    if (anim.play) {
+      anim.setDirection(1);
+      anim.play();
+    }
   };
 
   const mouseLeave = () => {
-    anim.setDirection(-1);
-    anim.play();
+    if (anim.play) {
+      anim.setDirection(-1);
+      anim.play();
+    }
   };
 
   return (
