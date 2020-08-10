@@ -11,11 +11,11 @@ import { withRouter } from 'next/router'
 
 import Button from '../Button';
 import Typography from '../Typography';
-import GrowIcon from '../GrowIcon';
 import FadeIn from '../VisibilitySensor/FadeIn';
 import Slide from '../VisibilitySensor/Slide';
 
 import MobileMenu from './MobileMenu';
+import BurgerMenu from './BurgerMenu';
 import ScheduleDemoDialog from './ScheduleDemoDialog';
 import { HeaderStyles } from './styles';
 
@@ -91,27 +91,8 @@ export const navigation = [
 ];
 
 function Header(props) {
-  const [ anim, setAnim ] = useState({});
-  const [ showMenu, setShowMenu ] = useState(false);
+  const [isOpen, toggle] = useState(false);
   const [showDialog, setShowDialog] = useState('');
-  const play = () => {
-    if (showMenu) {
-      toggleAlt();
-    } else {
-      toggle();
-    }
-    anim.setSpeed(2);
-    setShowMenu(!showMenu);
-  }
-  const toggle = () => {
-    anim.playSegments([0,40], true);
-    // anim.stop();
-  };
-
-  const toggleAlt = () => {
-    anim.playSegments([40, 75]);
-    // anim.stop();
-  };
   return (
     <HeaderStyles className="mainHeader">
       <Slide onLoad from='down' className="animatedHeader">
@@ -180,12 +161,10 @@ function Header(props) {
           }
         </div>
         <div className="buttons mobile">
-          <div className="playDiv" onClick={() => play()}>
-            <GrowIcon setAnim={setAnim} name='burger' />
-          </div>
+          <BurgerMenu isOpen={isOpen} toggle={toggle} />
         </div>
       </Slide>
-      {showMenu && 
+      {isOpen && 
         <FadeIn delay={1} className="mobileMenu">
           <MobileMenu />
         </FadeIn>
