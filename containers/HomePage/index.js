@@ -62,9 +62,9 @@ function HomePage(props) {
           <Typography className="" variant="h3" fontSizes={[20, 28, 28]} text="Empower your organization"/>
           <Typography className="halfBackground highlight" fontWeight="300" color="#212121" fontSizes={[20, 28, 28]} variant="h1" text="with an excellent HR efficiency"/>
         </QuoteAnimator>
-        {/* <div className="iconHighlightsContainer">
+        <div className="iconHighlightsContainer">
           <IconHighlightsAll></IconHighlightsAll>
-        </div> */}
+        </div>
       </section>
       <section className="section section2">
         <QuoteAnimator>
@@ -90,7 +90,7 @@ function HomePage(props) {
           <EmployeeExperience heading="Employee engagement" description="Know the pulse of your employees by accessing their motivation and challenges through periodic conversational surveys."/>  
         </div>
       </section>
-      {/* <section className="section section4 noMargin">
+      <section className="section section4 noMargin">
         <div className="mobile">
           <QuoteAnimator>
             <Typography className="highlight" variant="h3" fontSizes={[20, 28, 28]} text="It’s simpler than you think"/>
@@ -98,7 +98,7 @@ function HomePage(props) {
           </QuoteAnimator>
         </div>
         <MobileDemo className="homePageMobileDemo" alt="Hr helpdesk" phoneJson="/images/home/phone.json" slides={mobileSlides} quote={{ heading1: "It’s simpler", heading2: "than you think", text: "A complete helpdesk that your employee needs" }} />
-      </section> */}
+      </section>
       <section className="section section5">
         <QuoteAnimator>
           <Typography variant="h3" fontSizes={[20, 28, 28]} text="Bring it where you are"/>
