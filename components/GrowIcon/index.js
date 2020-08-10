@@ -48,9 +48,9 @@ function GrowIcon(props) {
 
   useEffect(() => {
     if (mobileCheck()) {
-      setTimeout(() => renderAnim(true), 1000);
+      setTimeout(() => renderAnim(true), 2000);
     } else {
-      setTimeout(() => renderAnim(true), 1000);
+      setTimeout(() => renderAnim(true), 2000);
     }
     return () => {
       // Clean up the subscription

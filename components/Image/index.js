@@ -24,7 +24,7 @@ function Image(props) {
       if (imageRef.current) {
         imageRef.current.setAttribute('src',imageRef.current.getAttribute('data-src'));
       }
-    }, 2000);
+    }, 3000);
   };
  
   useEffect(() => {
