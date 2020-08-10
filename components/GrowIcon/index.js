@@ -54,8 +54,8 @@ function GrowIcon(props) {
     }
     return () => {
       // Clean up the subscription
-      if (newAnim && newAnim.destroy) {
-        newAnim.destroy();
+      if (anim && anim.destroy) {
+        anim.destroy();
       }
     };
   }, []);
