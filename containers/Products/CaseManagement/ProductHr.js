@@ -10,9 +10,9 @@ import styled from 'styled-components';
 import Typography from '../../../components/Typography';
 import Button from '../../../components/Button';
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 const ProductStyles = styled.div`
   .productHeader {
@@ -32,17 +32,17 @@ const ProductStyles = styled.div`
     margin-top: 48px;
     .leftContainer {
       flex-basis: 50%;
-      .MuiExpansionPanel-root {
+      .MuiAccordion-root {
         box-shadow: none;
         margin: 0px;
         margin-bottom: 16px;
         &::before {
           height: 0px;
         }
-        .MuiExpansionPanelSummary-root {
+        .MuiAccordionSummary-root {
           padding: 0px;
           min-height: auto;
-          .MuiExpansionPanelSummary-content {
+          .MuiAccordionSummary-content {
             margin: 0;
             min-height: 60px;
             display: flex;
@@ -54,11 +54,11 @@ const ProductStyles = styled.div`
               background: ${props => props.theme.palette.white};
             }
           }
-          .MuiExpansionPanelSummary-expandIcon {
+          .MuiAccordionSummary-expandIcon {
             padding: 0px;
           }
         }
-        .MuiExpansionPanelDetails-root {
+        .MuiAccordionDetails-root {
           padding: 0 24px 16px 24px;
         }
         &.Mui-expanded {
@@ -95,8 +95,8 @@ function ProductHr(props) {
       </div>
       <div className="body">
         <div className="leftContainer">
-          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-            <ExpansionPanelSummary>
+          <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <AccordionSummary>
               <div className="accordianHeader">
                 <Typography
                   variant="h4" 
@@ -104,13 +104,13 @@ function ProductHr(props) {
                   text={`FAQ Automation`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Transform your policy queries into AI-enabled conversational chat. Give instant automatic replies for all employee queries that’s documented in your knowledge base."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-            <ExpansionPanelSummary>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <AccordionSummary>
               <div className="questionHeader">
                 <Typography
                   variant="h4" 
@@ -118,13 +118,13 @@ function ProductHr(props) {
                   text={`Case Management`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Transform your policy queries into AI-enabled conversational chat. Give instant automatic replies for all employee queries that’s documented in your knowledge base."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-            <ExpansionPanelSummary>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <AccordionSummary>
               <div className="questionHeader">
                 <Typography
                   variant="h4" 
@@ -132,11 +132,11 @@ function ProductHr(props) {
                   text={`Employee Transactions`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make it easy for your employees to access the services they need. Get rid of complicated forms and tedious workflows."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            </AccordionDetails>
+          </Accordion>
           <div className="buttons">
             <Button variant="contained" size="large" name="Get HR helpdesk"/>
           </div>

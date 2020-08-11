@@ -12,26 +12,26 @@ import Link from 'next/link'
 
 import { navigation } from './index';
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 const Styles = styled.div`
   height: calc(100vh - 60px);
   background: white;
   overflow: hidden;
-  .MuiExpansionPanel-root {
+  .MuiAccordion-root {
     box-shadow: none;
     margin: 0px;
     &::before {
       height: 0px;
     }
-    .MuiExpansionPanelSummary-root {
+    .MuiAccordionSummary-root {
       padding: 0px;
       padding-right: 34px;
       min-height: auto;
       background: ${props => props.theme.palette.smoke};
-      .MuiExpansionPanelSummary-content {
+      .MuiAccordionSummary-content {
         margin: 0;
         min-height: 60px;
         display: flex;
@@ -39,11 +39,11 @@ const Styles = styled.div`
         align-items: center;
         padding: 16px 30px;
       }
-      .MuiExpansionPanelSummary-expandIcon {
+      .MuiAccordionSummary-expandIcon {
         /* padding: 0px; */
       }
     }
-    .MuiExpansionPanelDetails-root {
+    .MuiAccordionDetails-root {
       padding: 16px 30px 16px 30px;
     }
     &.Mui-expanded {
@@ -85,8 +85,8 @@ function MobileMenu(props) {
   return (
     <Styles>
       {navigation.map( groupNav => 
-        <ExpansionPanel key={groupNav.name} expanded={expanded === groupNav.name} onChange={handleChange(groupNav.name)}>
-          <ExpansionPanelSummary expandIcon={<img src='/images/icons/down-arrow-blue.svg' />}>
+        <Accordion key={groupNav.name} expanded={expanded === groupNav.name} onChange={handleChange(groupNav.name)}>
+          <AccordionSummary expandIcon={<img src='/images/icons/down-arrow-blue.svg' />}>
             <div className="accordianHeader">
               <Typography
                 variant="h6"
@@ -94,8 +94,8 @@ function MobileMenu(props) {
                 text={groupNav.label}
               />
             </div>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
+          </AccordionSummary>
+          <AccordionDetails>
             <div className="links">
               {groupNav.links.map( link => {
                 if (link.href) {
@@ -120,8 +120,8 @@ function MobileMenu(props) {
                 )
               })}
             </div>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
+          </AccordionDetails>
+        </Accordion>
       )}
       <div className="buttons">
         <ScheduleDemoButton type="link" fullWidth />

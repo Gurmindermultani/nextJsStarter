@@ -109,7 +109,7 @@ function Form(props) {
         if (res.message) {
           props.setShowDialog('success');
         } else {
-          const message = res.errors && res.errors[0] ? res.errors[0].message : '';
+          const message = 'There was an error in processing your request. Please try again later.';
           alert(message || 'Some Error Occurred!');
         }
       }).catch((e) => {
