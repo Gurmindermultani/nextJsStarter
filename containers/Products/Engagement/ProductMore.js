@@ -209,7 +209,7 @@ function ProductHr(props) {
             </AccordionDetails>
           </Accordion>
           <div className="buttons">
-            <Button size="large" onClick={() => props.setShowDialog('form')} name="Start free trial" />
+            <Button className="enagageFeaturesStartFreeTrialButton" size="large" onClick={() => props.setShowDialog('form')} name="Start free trial" />
           </div>
         </div>
         <div className="rightContainer">

@@ -150,13 +150,13 @@ function Header(props) {
           {props.router.pathname.indexOf('schedule-demo') === -1 && props.router.pathname.indexOf('employee-engagement') === -1 &&
             <Link href={{ pathname: "/schedule-demo", query: { fromPage: props.router.pathname } }}>
               <div>
-                <Button className="headerScheduleDemo" variant="contained" size="medium" name="Schedule demo" />
+                <Button className={"headerScheduleDemo "  + props.router.pathname} variant="contained" size="medium" name="Schedule demo" />
               </div>
             </Link>
           }
           {props.router.pathname.indexOf('employee-engagement') > -1 &&
             <div>
-              <Button onClick={() => setShowDialog('form')} className="headerScheduleDemo" variant="contained" size="medium" name="Start free trial" />
+              <Button onClick={() => setShowDialog('form')} className="headerScheduleDemo employee-engagement" variant="contained" size="medium" name="Start free trial" />
             </div>
           }
         </div>

@@ -89,7 +89,7 @@ function Dialog(props) {
       fullWidth={false}
       maxWidth="lg"
     >
-      <DialogContainer>
+      <DialogContainer className="subscribeSuccessDialog">
         <Slide delay={200} className="header">
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>

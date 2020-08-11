@@ -191,7 +191,7 @@ function ProductHr(props) {
             </AccordionDetails>
           </Accordion>
           <div className="buttons">
-            <Button size="large" variant="contained" name={props.scheduleDemoName} onClick={() => props.scheduleDemoClickFn()} />
+            <Button className={props.scheduleDemoClassName} size="large" variant="contained" name={props.scheduleDemoName} onClick={() => props.scheduleDemoClickFn()} />
           </div>
         </div>
       </div>
