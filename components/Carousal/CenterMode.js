@@ -45,6 +45,8 @@ function CenterMode(props) {
     }
   }, []);
   const settings = {
+    respondTo : 'window',
+    mobileFirst : true,
     className: "center",
     centerMode: true,
     infinite: true,
@@ -53,6 +55,16 @@ function CenterMode(props) {
     adaptiveHeight: true,
     nextArrow: <props.SampleNextArrow />,
     prevArrow: <props.SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+    ]
   };
   return (
     <CenterModeStyles ref={carousalRef}>

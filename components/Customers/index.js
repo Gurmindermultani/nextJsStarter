@@ -98,7 +98,7 @@ const CustomersStyles = styled.div`
         border-top: 1px solid #EEEEEE;
         position: absolute;
         top: 30px;
-        min-width: 200px;
+        min-width: 100%;
         .heading {
           margin-top: 20px;
           margin-bottom: 10px;

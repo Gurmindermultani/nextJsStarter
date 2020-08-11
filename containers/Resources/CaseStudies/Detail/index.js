@@ -66,8 +66,8 @@ function CaseStudies(props) {
           <img alt="animationImputs" src="/images/demo/1.svg"/>
         </div>
         <FadeIn className="text center">
-          <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 28, 32]} text="Read complete case study"/>
-          <Button onClick={() => showDialogFn('download', { name: props.pdfName, href: props.pdf })} size="large" variant="inverted" name="Download case study"/>
+          <Typography className="topText" variant="h1" color="#fff" fontSizes={[18, 28, 32]} text="Do you want to witness this transformative journey of AirAsia?"/>
+          <Button onClick={() => showDialogFn('download', { name: props.pdfName, href: props.pdf })} size="large" variant="inverted" name="Yes, I want the case study"/>
         </FadeIn>
         <div className="bottomRight">
           <img alt="animationImputs" src="/images/demo/2.svg"/>
