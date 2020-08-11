@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo, useState, useEffect, useRef } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
@@ -83,18 +83,36 @@ function SamplePrevArrow(props) {
 }
 
 const LeftModeStyles = styled.div`
-  .slick-center {
-    
+  .slick-slide {
+    cursor: pointer;
   }
 `;
 
 function LeftMode(props) {
+  const carousalRef = useRef(null);
+  const sliderRef = useRef(null);
   const [show, setShow] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
     }, 100);
   },[]);
+
+  useEffect(() => {
+    if (carousalRef.current) {
+      carousalRef.current.querySelectorAll('.slick-slide').forEach( (slide) => {
+        slide.addEventListener('click', function(e) {
+          if (e.target.closest('.slick-slide') && e.target.closest('.slick-slide').getAttribute('data-index')) {
+            const numSlide = parseInt(e.target.closest('.slick-slide').getAttribute('data-index'));
+            if (sliderRef && sliderRef.current) {
+              sliderRef.current.slickGoTo(numSlide);
+            }
+          }
+        })
+      });
+    }
+  }, [show]);
+
   const settings = {
     infinite: true,
     slidesToShow: 1,
@@ -106,9 +124,9 @@ function LeftMode(props) {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <LeftModeStyles>
+    <LeftModeStyles ref={carousalRef}>
       {show && 
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {props.children}
         </Slider>
       }
