@@ -120,7 +120,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+            <Link href={{ pathname: "/schedule-demo", query: {...props.router.query, fromPage: props.router.pathname} }}>
               <div className="demoButton">
                 <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -149,7 +149,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+            <Link href={{ pathname: "/schedule-demo", query: {...props.router.query, fromPage: props.router.pathname} }}>
               <div className="demoButton">
                 <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -203,7 +203,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+            <Link href={{ pathname: "/schedule-demo", query: {...props.router.query, fromPage: props.router.pathname} }}>
               <div className="demoButton">
                 <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -231,7 +231,7 @@ function ScheduleDemo(props) {
           </FadeIn>
           <Slide className="demoInput center">
             {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-            <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+            <Link href={{ pathname: "/schedule-demo", query: {...props.router.query, fromPage: props.router.pathname} }}>
               <div className="demoButton">
                 <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
                 <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />
@@ -258,7 +258,7 @@ function ScheduleDemo(props) {
         </FadeIn>
         <Slide className="demoInput center">
           {/* <Input onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-          <Link href={{ pathname: "/schedule-demo", query: props.router.query }}>
+          <Link href={{ pathname: "/schedule-demo", query: {...props.router.query, fromPage: props.router.pathname} }}>
             <div className="demoButton">
               <Button className={props.className} name="Schedule demo" variant="inverted" size="large"/>
               <img alt="interedtedLine" src="images/icons/arrow-interested.svg" />

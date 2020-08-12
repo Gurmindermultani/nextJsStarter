@@ -9,9 +9,9 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../../components/Typography';
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 const ProductStyles = styled.div`
   .body {
@@ -19,17 +19,17 @@ const ProductStyles = styled.div`
     .leftContainer {
       padding-left: 10px;
       padding-right: 10px;
-      .MuiExpansionPanel-root {
+      .MuiAccordion-root {
         box-shadow: none;
         margin: 0px;
         margin-bottom: 16px;
         &::before {
           height: 0px;
         }
-        .MuiExpansionPanelSummary-root {
+        .MuiAccordionSummary-root {
           padding: 0px;
           min-height: auto;
-          .MuiExpansionPanelSummary-content {
+          .MuiAccordionSummary-content {
             margin: 0;
             min-height: 60px;
             display: flex;
@@ -41,11 +41,11 @@ const ProductStyles = styled.div`
               background: ${props => props.theme.palette.white};
             }
           }
-          .MuiExpansionPanelSummary-expandIcon {
+          .MuiAccordionSummary-expandIcon {
             padding: 0px;
           }
         }
-        .MuiExpansionPanelDetails-root {
+        .MuiAccordionDetails-root {
           padding: 0 24px 16px 24px;
         }
         &.Mui-expanded {
@@ -98,8 +98,8 @@ function ProductHr(props) {
       <div className="body">
         <div className="leftContainer">
           {faqData.map( (data, idx) => 
-            <ExpansionPanel key={'panel' + idx} expanded={expanded === ('panel' + idx)} onChange={handleChange('panel' + idx)}>
-              <ExpansionPanelSummary>
+            <Accordion key={'panel' + idx} expanded={expanded === ('panel' + idx)} onChange={handleChange('panel' + idx)}>
+              <AccordionSummary>
                 <div className="accordianHeader">
                   <Typography
                     variant="h4" 
@@ -107,11 +107,11 @@ function ProductHr(props) {
                     text={data.heading}
                   />
                 </div>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              </AccordionSummary>
+              <AccordionDetails>
                 <Typography className="description" variant="paragraph2" fontSize="16px" text={data.text}/>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+              </AccordionDetails>
+            </Accordion>
           )}
         </div>
       </div>

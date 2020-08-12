@@ -123,6 +123,12 @@ export const HeaderStyles = styled.div`
     button {
       width: 142px;
     }
+    &.mobile {
+      padding-top: 4px;
+      svg {
+        fill: #212121;
+      }
+    }
   }
   .mobileMenu {
     z-index: 2;
@@ -133,7 +139,7 @@ export const HeaderStyles = styled.div`
   @media only screen and (max-width: 760px) {
     height: 60px;
     .animatedHeader {
-      padding: 0 6px 0 30px;
+      padding: 0 25px 0 30px;
       .groupNav {
         display: none;
       }

@@ -46,7 +46,7 @@ const customers = [
   },
   {
     name: 'tata',
-    type: 'Technology',
+    type: 'Information Technology',
     employees: '8500+'
   },
 ];
@@ -54,7 +54,7 @@ const customers = [
 const CustomersStyles = styled.div`
   &.deskTop {
     .carousalContainer {
-      height: 100%;
+      position: relative;
       .details {
         margin-top: 60px;
         display: none;
@@ -88,6 +88,7 @@ const CustomersStyles = styled.div`
       min-height: 240px;
       padding-top: 30px;
       width: 150px;
+      cursor: pointer;
     }
     .slick-center {
       padding: 0px 0px;
@@ -95,6 +96,9 @@ const CustomersStyles = styled.div`
       .details {
         display: flex;
         border-top: 1px solid #EEEEEE;
+        position: absolute;
+        top: 30px;
+        min-width: 100%;
         .heading {
           margin-top: 20px;
           margin-bottom: 10px;
@@ -141,6 +145,7 @@ const CustomersStyles = styled.div`
       }
       .slick-slide {
         padding: 0 0px;
+        cursor: pointer;
       }
       .slick-center {
         .clientImage {
@@ -164,7 +169,7 @@ function Customers(props) {
   }
   return (
     <Slide>
-      <CustomersStyles className="deskTop">
+      <CustomersStyles className="deskTop clientLogosCarousal">
         <Carousal variant="centerMode">
           {customers.map( customer => 
             <div onClick={(e) => moveCarousal(e)} className={"carousalContainer center " + customer.name} key={customer.name}>
@@ -185,7 +190,7 @@ function Customers(props) {
           )}
         </Carousal>
       </CustomersStyles>
-      <CustomersStyles className="mobile">
+      <CustomersStyles className="mobile clientLogosCarousal">
         <Carousal variant="mobileCarousal">
           {customers.map( customer => 
             <div className="carousalContainer center" key={customer.name}>

@@ -11,11 +11,11 @@ import { withRouter } from 'next/router'
 
 import Button from '../Button';
 import Typography from '../Typography';
-import GrowIcon from '../GrowIcon';
 import FadeIn from '../VisibilitySensor/FadeIn';
 import Slide from '../VisibilitySensor/Slide';
 
 import MobileMenu from './MobileMenu';
+import BurgerMenu from './BurgerMenu';
 import ScheduleDemoDialog from './ScheduleDemoDialog';
 import { HeaderStyles } from './styles';
 
@@ -53,6 +53,7 @@ export const navigation = [
       // {
       //   name: 'blog',
       //   label: 'Blog',
+      //   href: 'https://leena.ai/blog'
       // },
       {
         name: 'case-studies',
@@ -90,29 +91,10 @@ export const navigation = [
 ];
 
 function Header(props) {
-  const [ anim, setAnim ] = useState({});
-  const [ showMenu, setShowMenu ] = useState(false);
+  const [isOpen, toggle] = useState(false);
   const [showDialog, setShowDialog] = useState('');
-  const play = () => {
-    if (showMenu) {
-      toggleAlt();
-    } else {
-      toggle();
-    }
-    anim.setSpeed(2);
-    setShowMenu(!showMenu);
-  }
-  const toggle = () => {
-    anim.playSegments([0,40], true);
-    // anim.stop();
-  };
-
-  const toggleAlt = () => {
-    anim.playSegments([40, 75]);
-    // anim.stop();
-  };
   return (
-    <HeaderStyles>
+    <HeaderStyles className="mainHeader">
       <Slide onLoad from='down' className="animatedHeader">
         <div className="logo pointer">
           <Link href="/">
@@ -166,25 +148,23 @@ function Header(props) {
             </div>
           }
           {props.router.pathname.indexOf('schedule-demo') === -1 && props.router.pathname.indexOf('employee-engagement') === -1 &&
-            <Link href="/schedule-demo">
+            <Link href={{ pathname: "/schedule-demo", query: { fromPage: props.router.pathname } }}>
               <div>
-                <Button className="headerScheduleDemo" variant="contained" size="medium" name="Schedule demo" />
+                <Button className={"headerScheduleDemo "  + props.router.pathname} variant="contained" size="medium" name="Schedule demo" />
               </div>
             </Link>
           }
           {props.router.pathname.indexOf('employee-engagement') > -1 &&
             <div>
-              <Button onClick={() => setShowDialog('form')} className="headerScheduleDemo" variant="contained" size="medium" name="Start free trial" />
+              <Button onClick={() => setShowDialog('form')} className="headerScheduleDemo employee-engagement" variant="contained" size="medium" name="Start free trial" />
             </div>
           }
         </div>
         <div className="buttons mobile">
-          <div className="playDiv" onClick={() => play()}>
-            <GrowIcon setAnim={setAnim} name='burger' />
-          </div>
+          <BurgerMenu isOpen={isOpen} toggle={toggle} />
         </div>
       </Slide>
-      {showMenu && 
+      {isOpen && 
         <FadeIn delay={1} className="mobileMenu">
           <MobileMenu />
         </FadeIn>

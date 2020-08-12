@@ -37,8 +37,17 @@ const DialogContainer = styled.div`
       margin-top: 24px;
     }
   }
+  .closeDialog {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
   @media only screen and (max-width: 760px) {
     padding: 40px 30px;
+    .closeDialog {
+      top: 12px;
+      right: 12px;
+    }
   }
 `;
 
@@ -102,6 +111,7 @@ function Dialog(props) {
             </Link>
           </div>
         </div>
+        <img onClick={() => handleClose(true) } className="closeDialog pointer" alt="closeDialog" src="/images/icons/close.svg" />
       </DialogContainer>
     </MaterialDialog>
   );

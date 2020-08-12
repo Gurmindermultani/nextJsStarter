@@ -14,9 +14,9 @@ import { Spring } from 'react-spring/renderprops.cjs';
 import Slide from "../../../components/VisibilitySensor/Slide";
 import VisibilitySensor from "../../../components/VisibilitySensor";
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 const ProductStyles = styled.div`
   margin-bottom: 100px;
@@ -38,17 +38,17 @@ const ProductStyles = styled.div`
     justify-content: space-between;
     .leftContainer {
       flex-basis: 50%;
-      .MuiExpansionPanel-root {
+      .MuiAccordion-root {
         box-shadow: none;
         margin: 0px;
         margin-bottom: 16px;
         &::before {
           height: 0px;
         }
-        .MuiExpansionPanelSummary-root {
+        .MuiAccordionSummary-root {
           padding: 0px;
           min-height: auto;
-          .MuiExpansionPanelSummary-content {
+          .MuiAccordionSummary-content {
             margin: 0;
             min-height: 60px;
             display: flex;
@@ -60,11 +60,11 @@ const ProductStyles = styled.div`
               background: ${props => props.theme.palette.white};
             }
           }
-          .MuiExpansionPanelSummary-expandIcon {
+          .MuiAccordionSummary-expandIcon {
             padding: 0px;
           }
         }
-        .MuiExpansionPanelDetails-root {
+        .MuiAccordionDetails-root {
           padding: 0 32px 16px 24px;
         }
         &.Mui-expanded {
@@ -160,8 +160,8 @@ function ProductHr(props) {
     <ProductStyles>
       <div className="body">
         <div className="leftContainer">
-          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-            <ExpansionPanelSummary>
+          <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <AccordionSummary>
               <div className="accordianHeader">
                 <Typography
                   variant="h4" 
@@ -169,13 +169,13 @@ function ProductHr(props) {
                   text={`Conversational surveys`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Make your surveys conversational and employee-friendly. Get rid of long boring forms and poor user interface."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-            <ExpansionPanelSummary>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <AccordionSummary>
               <div className="questionHeader">
                 <Typography
                   variant="h4" 
@@ -183,13 +183,13 @@ function ProductHr(props) {
                   text={`Analytical reports`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Access survey feedback instantly on your dashboard. Get high-quality actionable insights about happiness score of your organization, and know about your unhappy employees."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-            <ExpansionPanelSummary>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <AccordionSummary>
               <div className="questionHeader">
                 <Typography
                   variant="h4" 
@@ -197,11 +197,11 @@ function ProductHr(props) {
                   text={`Periodic surveys`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct surveys periodically throughout the employees’ lifecycle. Save your HR from biased and inaccurate feedback."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            </AccordionDetails>
+          </Accordion>
         </div>
         <div className="rightContainer">
           {expanded === "panel1" &&

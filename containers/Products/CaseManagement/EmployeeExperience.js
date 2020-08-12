@@ -10,9 +10,9 @@ import styled from 'styled-components';
 import Typography from '../../../components/Typography';
 import Button from '../../../components/Button';
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 const ProductStyles = styled.div`
   margin-top: 96px;
@@ -35,17 +35,17 @@ const ProductStyles = styled.div`
     margin-top: 48px;
     .rightContainer {
       flex-basis: 50%;
-      .MuiExpansionPanel-root {
+      .MuiAccordion-root {
         box-shadow: none;
         margin: 0px;
         margin-bottom: 16px;
         &::before {
           height: 0px;
         }
-        .MuiExpansionPanelSummary-root {
+        .MuiAccordionSummary-root {
           padding: 0px;
           min-height: auto;
-          .MuiExpansionPanelSummary-content {
+          .MuiAccordionSummary-content {
             margin: 0;
             min-height: 60px;
             display: flex;
@@ -57,11 +57,11 @@ const ProductStyles = styled.div`
               background: ${props => props.theme.palette.white};
             }
           }
-          .MuiExpansionPanelSummary-expandIcon {
+          .MuiAccordionSummary-expandIcon {
             padding: 0px;
           }
         }
-        .MuiExpansionPanelDetails-root {
+        .MuiAccordionDetails-root {
           padding: 0 24px 16px 24px;
         }
         &.Mui-expanded {
@@ -103,8 +103,8 @@ function EmployeeExperience(props) {
           </div>
         </div>
         <div className="rightContainer">
-          <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-            <ExpansionPanelSummary>
+          <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <AccordionSummary>
               <div className="accordianHeader">
                 <Typography
                   variant="h4" 
@@ -112,13 +112,13 @@ function EmployeeExperience(props) {
                   text={`Connect with your employees`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Conduct AI-driven surveys throughout the employees’ lifecycle. Build an open and transparent work culture."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-            <ExpansionPanelSummary>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <AccordionSummary>
               <div className="questionHeader">
                 <Typography
                   variant="h4" 
@@ -126,11 +126,11 @@ function EmployeeExperience(props) {
                   text={`Intelligent analytics`}
                 />
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <Typography className="description" variant="paragraph2" fontSize="16px" text={"Get personalized reports about the happiness score of your employees. Know if they are aligned with the organization goals."}/>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            </AccordionDetails>
+          </Accordion>
           <div className="buttons">
             <Button variant="contained" size="large" name="Schedule demo"/>
           </div>

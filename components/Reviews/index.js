@@ -8,6 +8,7 @@ import React, { memo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Typography from '../../components/Typography';
+import Image from '../../components/Image';
 import Carousal from '../../components/Carousal';
 import UserAvatar from '../../components/UserAvatar';
 import FadeIn from '../../components/VisibilitySensor/FadeIn';
@@ -172,14 +173,14 @@ const ReviewsStyles = styled.div`
 
 function Reviews(props) {
   return (
-    <ReviewsStyles>
+    <ReviewsStyles className="reviews">
       <FadeIn className="deskTop">
         <Carousal variant="singleMode">
           {reviews.map( review => 
             <div className="carousalContainer" key={review.name}>
               <div className="review">
                 <div className={"leftContainer " + review.bg}>
-                  <img alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
+                  <Image alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">
@@ -204,7 +205,7 @@ function Reviews(props) {
             <div className="carousalContainer" key={review.name}>
               <div className="review">
                 <div className={"leftContainer " + review.bg}>
-                  <img alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
+                  <Image alt="testimonials LeenaAI" className={review.name} src={review.name} src={`/images/home/${review.name}.png`}/>
                 </div>
                 <div className="rightContainer">
                   <div className="content">

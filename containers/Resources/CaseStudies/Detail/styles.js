@@ -27,15 +27,24 @@ export const CaseStudiesStyles = styled.div`
       background: #0F72EE;
       max-width: 100vw;
       position: relative;
+      .text {
+        padding: 0 30px;
+      }
       .topLeft {
         position: absolute;
         top: 0;
         left: 0;
+        img {
+          width: 80px;
+        }
       }
       .bottomRight {
         position: absolute;
         bottom: 0;
         right: 0;
+        img {
+          width: 80px;
+        }
       }
       button {
         margin: 5px 0 0 80px;
@@ -74,6 +83,7 @@ export const CaseStudiesStyles = styled.div`
       &.readFull {
         .center {
           flex-direction: column;
+          text-align: center;
         }
         button {
           margin: 24px 0 0 0px;

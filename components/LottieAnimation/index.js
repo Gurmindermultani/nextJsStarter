@@ -27,6 +27,7 @@ function LottieAnimation(props) {
       path: props.dataUrl // the path to the animation json
     });
     setAnim(newAnim);
+    newAnim.setSubframe(false);
     if(props.setAnim) {
       props.setAnim(newAnim);
     }

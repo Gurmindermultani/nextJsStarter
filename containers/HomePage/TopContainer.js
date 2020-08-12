@@ -128,7 +128,7 @@ function TopContainer(props) {
         </FadeIn>
         <Slide className="animatedDemoInput">
           {/* <Input className="fullWidth" onChange={() => null} name="schedule" placeholder="Your work email"/> */}
-          <Link href="/schedule-demo">
+          <Link href={{ pathname: "/schedule-demo", query: { fromPage: '/' } }}>
             <div className="buttons">
               <Button className="homeMainScheduleDemo" fullWidth name="Schedule demo" variant="contained" size="large"/>
             </div>

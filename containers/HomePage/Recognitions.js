@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import Card from '../../components/Cards';
 import Slide from "../../components/VisibilitySensor/Slide";
 import Carousal from "../../components/Carousal";
+
 const recognitions = [
   {
     name: 'forbes',
@@ -77,7 +78,7 @@ const RecognitionsStyles = styled.div`
 function Recognitions(props) {
   return (
     <>
-      <RecognitionsStyles className="desktop">
+      <RecognitionsStyles className="desktop recognitions">
         <div className="contain">
           {recognitions.map( recognition => 
             <Slide key={recognition.name}>
@@ -86,7 +87,7 @@ function Recognitions(props) {
           )}
         </div>
       </RecognitionsStyles>
-      <RecognitionsStyles className="mobile">
+      <RecognitionsStyles className="mobile recognitions">
         <Carousal variant="mobileCarousal">
           {recognitions.map( recognition => 
             <Card alt="news LeenaAI" key={recognition.name} variant="linkCard" data={recognition} />

@@ -19,7 +19,7 @@ const MobileDemoStyles = styled.div`
 
 function MobileDemo(props) {
   return (
-    <MobileDemoStyles>
+    <MobileDemoStyles className="macDemo">
       <div className="desktop">
         <Desktop {...props} />
       </div>

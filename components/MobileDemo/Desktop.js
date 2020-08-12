@@ -12,7 +12,6 @@ import Carousal from '../Carousal';
 import Button from '../Button';
 import ScheduleDemoButton from '../ScheduleDemoButton';
 import LottieAnimation from "../../components/LottieAnimation";
-import Image from '../Image';
 import FadeIn from "../../components/VisibilitySensor/FadeIn";
 
 const DeskTopStyles = styled.div`
@@ -46,7 +45,7 @@ const DeskTopStyles = styled.div`
         z-index: 2;
         position: relative;
       }
-      .animation {
+      .animation, video {
         position: absolute;
         top: 14px;
         left: 18px;
@@ -111,8 +110,12 @@ function DeskTop(props) {
           <Typography className="" fontWeight="400" color="#212121" fontSizes={[18, 18, 18]} variant="h2" text={props.quote.text}/>
         </div>
         <div className="mobileImage">
-          <Image className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
+          <img className="mobileRim" alt={props.alt} src={"/images/home/phone.png"} />
           <LottieAnimation dataUrl={props.phoneJson} />
+          {/* <video loop autoPlay muted>
+            <source src="/images/home/phone.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> */}
         </div>
       </div>
       <div className="rightContainer">
@@ -129,7 +132,7 @@ function DeskTop(props) {
         </div>
         <div>
           {props.scheduleDemoClickFn ? (
-            <Button name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} size="large" onClick={() => props.scheduleDemoClickFn()} className={props.className} type="link" variant="invertedLight"/>
+            <Button className={props.scheduleDemoClassName + ' ' + props.className} name={props.scheduleDemoName ? props.scheduleDemoName : "Schedule demo"} size="large" onClick={() => props.scheduleDemoClickFn()} type="link" variant="invertedLight"/>
           ) : (
             <ScheduleDemoButton className={props.className} type="link" variant="invertedLight"/>
           )}

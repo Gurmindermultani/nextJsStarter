@@ -36,10 +36,19 @@ const DialogContainer = styled.div`
       margin-top: 16px;
     }
   }
+  .closeDialog {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
   @media only screen and (max-width: 760px) {
     padding: 40px 30px;
     .body {
       margin-top: 16px;
+    }
+    .closeDialog {
+      top: 12px;
+      right: 12px;
     }
   }
 `;
@@ -80,7 +89,7 @@ function Dialog(props) {
       fullWidth={false}
       maxWidth="lg"
     >
-      <DialogContainer>
+      <DialogContainer className="subscribeSuccessDialog">
         <Slide delay={200} className="header">
           <img alt="correct icon" src="/images/icons/correct.svg"/>
         </Slide>
@@ -96,6 +105,7 @@ function Dialog(props) {
             <Button size="large" variant="contained" name="Schedule demo" />
           </a>
         </Slide>
+        <img onClick={() => handleClose(true) } className="closeDialog pointer" alt="closeDialog" src="/images/icons/close.svg" />
       </DialogContainer>
     </MaterialDialog>
   );

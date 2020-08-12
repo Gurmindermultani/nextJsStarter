@@ -4,6 +4,7 @@ const redirections = {
   '/wfh-slack': '/wfh-surveys',
   '/aboutus': '/about-us',
   '/engagement': '/employee-engagement',
+  '/engage': '/employee-engagement',
   '/HR-Ticketing': '/hr-case-management',
   '/HR-Transactions': '/hr-workflows',
   '/get-started.html': '/schedule-demo',
@@ -40,7 +41,16 @@ const redirections = {
   '/footer-boxed.html': '/',
   '/terms-conditions.html': '/docs/tnc.pdf',
   '/homepage-shop-side-nav.html': '/',
-  '/homepage-shop-side-nav.html': '/',
+  '/product-dipstick': '/',
+  '/vs/infeedo-amber': '/',
+  '/pricing': '/',
+  '/pricing-india': '/',
+  '/workplace-by-facebook': '/',
+  '/support': '/contact-us',
+  '/product-learning-and-development': '/',
+  '/product-hr-services': '/hr-workflows',
+  '/product-faq': '/employee-query-management',
+  '/employeeengagement': '/employee-engagement',
 
 };
 
