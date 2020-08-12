@@ -229,7 +229,7 @@ function Footer(props) {
                     if (link.href) {
                       return (
                         <div className="link" key={link.name}>
-                          <a href={`${link.href}`} target="_blank">
+                          <a href={`${link.href}`} target={link.newTab ? "_blank" : ""}>
                             <div>
                               <Typography variant="paragraph2" fontSize="14px" color="#212121" text={link.label}/>
                             </div>

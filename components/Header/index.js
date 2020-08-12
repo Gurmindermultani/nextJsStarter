@@ -76,7 +76,8 @@ export const navigation = [
       {
         name: 'careers',
         label: 'Careers',
-        href: 'https://angel.co/company/leena_ai/jobs'
+        href: 'https://angel.co/company/leena_ai/jobs',
+        newTab: true,
       },
       {
         name: 'about-us',
@@ -116,7 +117,7 @@ function Header(props) {
                   if (link.href) {
                     return (
                       <div className="link" key={link.name}>
-                        <a href={`${link.href}`} target="_blank">
+                        <a href={`${link.href}`} target={link.newTab ? "_blank" : ""}>
                           <div>
                             <Typography variant="paragraph2" fontWeight="500" fontSize="15px" color="#212121" text={link.label}/>
                           </div>
