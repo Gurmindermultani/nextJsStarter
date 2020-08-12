@@ -18,7 +18,7 @@ export default class MyApp extends App {
       CrashReporter();
       setTimeout(() => {
         TagManager.initialize(tagManagerArgs);
-      }, 5000);
+      }, 2000);
     }
   }
   render() {
