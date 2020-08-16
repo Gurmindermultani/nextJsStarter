@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components'
 import "slick-carousel/slick/slick.css";
 import { theme } from '../theme';
 import GlobalStyle from './_globalStyles';
-import CrashReporter from '../utils/carshReporter';
 import CookieBanner from '../components/CookieBanner';
 
 const tagManagerArgs = {
